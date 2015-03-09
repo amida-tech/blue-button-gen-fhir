@@ -1,0 +1,1190 @@
+{
+    "resourceType": "Bundle",
+    "totalResults": 26,
+    "entry": [
+        {
+            "id": "Patient/some-id-here-1987",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "http://www.midea-tecg.com",
+                        "value": "JOE_DOE_IDENTIFIER"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": [
+                            "DOE"
+                        ],
+                        "given": [
+                            "JOE"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AdverseReaction/5121b512-f462-4140-ae95-6d58966335a0",
+            "content": {
+                "resourceType": "AdverseReaction",
+                "symptom": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "247472004",
+                                    "display": "Hives"
+                                }
+                            ],
+                            "text": "Hives"
+                        }
+                    }
+                ],
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AllergyIntolerance/1578d7ec-554f-407b-8f25-29118dfab13d",
+            "content": {
+                "resourceType": "AllergyIntolerance",
+                "criticality": "medium",
+                "sensitivityType": "allergy",
+                "recordedDate": "2007-05-01",
+                "status": "resolved",
+                "contained": [
+                    {
+                        "id": "allergen",
+                        "resourceType": "Substance",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "7982",
+                                    "display": "Penicillin G benzathine"
+                                }
+                            ],
+                            "text": "Penicillin G benzathine"
+                        }
+                    }
+                ],
+                "substance": {
+                    "reference": "#allergen",
+                    "display": "Penicillin G benzathine"
+                },
+                "reaction": [
+                    {
+                        "reference": "AdverseReaction/5121b512-f462-4140-ae95-6d58966335a0",
+                        "display": "Hives"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AdverseReaction/397ce65b-1a86-4200-b12e-0e5f99809a94",
+            "content": {
+                "resourceType": "AdverseReaction",
+                "symptom": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "267036007",
+                                    "display": "Shortness of Breath"
+                                }
+                            ],
+                            "text": "Shortness of Breath"
+                        }
+                    }
+                ],
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AllergyIntolerance/62253542-573d-462e-ba75-b8313e4af1d9",
+            "content": {
+                "resourceType": "AllergyIntolerance",
+                "criticality": "medium",
+                "sensitivityType": "allergy",
+                "recordedDate": "2006-05-01",
+                "status": "confirmed",
+                "contained": [
+                    {
+                        "id": "allergen",
+                        "resourceType": "Substance",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "2670",
+                                    "display": "Codeine"
+                                }
+                            ],
+                            "text": "Codeine"
+                        }
+                    }
+                ],
+                "substance": {
+                    "reference": "#allergen",
+                    "display": "Codeine"
+                },
+                "reaction": [
+                    {
+                        "reference": "AdverseReaction/397ce65b-1a86-4200-b12e-0e5f99809a94",
+                        "display": "Shortness of Breath"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AdverseReaction/768181c7-d694-4bb9-b310-13c7609d1698",
+            "content": {
+                "resourceType": "AdverseReaction",
+                "symptom": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "247472004",
+                                    "display": "Hives"
+                                }
+                            ],
+                            "text": "Hives"
+                        }
+                    }
+                ],
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AllergyIntolerance/d455f495-0f58-4111-8606-cd22e3582ac8",
+            "content": {
+                "resourceType": "AllergyIntolerance",
+                "criticality": "low",
+                "sensitivityType": "allergy",
+                "recordedDate": "2008-05-01",
+                "status": "confirmed",
+                "contained": [
+                    {
+                        "id": "allergen",
+                        "resourceType": "Substance",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "1191",
+                                    "display": "Aspirin"
+                                }
+                            ],
+                            "text": "Aspirin"
+                        }
+                    }
+                ],
+                "substance": {
+                    "reference": "#allergen",
+                    "display": "Aspirin"
+                },
+                "reaction": [
+                    {
+                        "reference": "AdverseReaction/768181c7-d694-4bb9-b310-13c7609d1698",
+                        "display": "Hives"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/2bfcf6f9-4b6a-4971-b32a-44c49577f1e6",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8302-2",
+                            "display": "Height"
+                        }
+                    ],
+                    "text": "Height"
+                },
+                "valueQuantity": {
+                    "value": 69,
+                    "units": "in",
+                    "code": "in",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2008-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v2/0078",
+                            "code": "N",
+                            "display": "Normal"
+                        }
+                    ],
+                    "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/4b4d8a94-68ce-4ce3-a8f0-1e258808eb8f",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "3141-9",
+                            "display": "Patient Body Weight - Measured"
+                        }
+                    ],
+                    "text": "Patient Body Weight - Measured"
+                },
+                "valueQuantity": {
+                    "value": 189,
+                    "units": "lbs",
+                    "code": "lbs",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2011-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v2/0078",
+                            "code": "N",
+                            "display": "Normal"
+                        }
+                    ],
+                    "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/b58afbc5-5bc0-4979-9d5b-0d158c1141ab",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8480-6",
+                            "display": "Intravascular Systolic"
+                        }
+                    ],
+                    "text": "Intravascular Systolic"
+                },
+                "valueQuantity": {
+                    "value": 132,
+                    "units": "mm[Hg]",
+                    "code": "mm[Hg]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2011-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v2/0078",
+                            "code": "N",
+                            "display": "Normal"
+                        }
+                    ],
+                    "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/6cc93a37-31d7-40ce-9ee0-8e3a1756864e",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8302-2",
+                            "display": "Height"
+                        }
+                    ],
+                    "text": "Height"
+                },
+                "valueQuantity": {
+                    "value": 69,
+                    "units": "in",
+                    "code": "in",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2012-08-06",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v2/0078",
+                            "code": "N",
+                            "display": "Normal"
+                        }
+                    ],
+                    "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/5e952327-7444-411a-bc83-d5509f0addb6",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "3141-9",
+                            "display": "Patient Body Weight - Measured"
+                        }
+                    ],
+                    "text": "Patient Body Weight - Measured"
+                },
+                "valueQuantity": {
+                    "value": 194,
+                    "units": "lbs",
+                    "code": "lbs",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2012-08-06",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v2/0078",
+                            "code": "N",
+                            "display": "Normal"
+                        }
+                    ],
+                    "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/a4f5a750-1f83-4400-b955-19a6181d8b88",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8480-6",
+                            "display": "Intravascular Systolic"
+                        }
+                    ],
+                    "text": "Intravascular Systolic"
+                },
+                "valueQuantity": {
+                    "value": 145,
+                    "units": "mm[Hg]",
+                    "code": "mm[Hg]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2012-08-06",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v2/0078",
+                            "code": "N",
+                            "display": "Normal"
+                        }
+                    ],
+                    "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/443890f4-5723-48de-bbba-02f6a29a3c25",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2008-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/2bfcf6f9-4b6a-4971-b32a-44c49577f1e6"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/ec504324-6e4e-41b8-9edc-a47766079bb2",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2011-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/4b4d8a94-68ce-4ce3-a8f0-1e258808eb8f"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/80b01087-842c-4618-8e09-d776e9aabe63",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2012-08-06",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/6cc93a37-31d7-40ce-9ee0-8e3a1756864e"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/5e952327-7444-411a-bc83-d5509f0addb6"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/06ef8f88-fd3b-4c11-9a71-004d35e2f7f7",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
+                "issued": "2011-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/b58afbc5-5bc0-4979-9d5b-0d158c1141ab"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/04b49841-6757-4c00-b00a-ce62b21bdd9f",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
+                "issued": "2012-08-06",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/a4f5a750-1f83-4400-b955-19a6181d8b88"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Condition/aed92ca1-792b-4c22-b817-1aa87e9eb5e2",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "onsetDate": "2012-08-06",
+                "dateAsserted": "2012-08-06",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "233604007",
+                            "display": "Pneumonia"
+                        }
+                    ],
+                    "text": "Pneumonia"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Condition/b03a6d5a-0170-41fb-8461-845b389a7d19",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "onsetDate": "2012-08-06",
+                "dateAsserted": "2012-08-06",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "195967001",
+                            "display": "Asthma"
+                        }
+                    ],
+                    "text": "Asthma"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/c22d626b-794a-48ae-a57d-082ccaa68cbe",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "30313-1",
+                            "display": "HGB"
+                        }
+                    ],
+                    "text": "HGB"
+                },
+                "valueQuantity": {
+                    "value": 10.2,
+                    "units": "g/dl",
+                    "code": "g/dl",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2012-08-10",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v2/0078",
+                            "code": "N",
+                            "display": "Normal"
+                        }
+                    ],
+                    "text": "Normal"
+                },
+                "referenceRange": [
+                    {
+                        "meaning": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/referencerange-meaning",
+                                    "code": "normal",
+                                    "display": "Normal Range"
+                                }
+                            ],
+                            "text": "Normal Range"
+                        },
+                        "text": "M 13-18 g/dl; F 12-16 g/dl"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/ff7bafd0-8682-4ee9-9d37-2c616c5021fb",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "33765-9",
+                            "display": "WBC"
+                        }
+                    ],
+                    "text": "WBC"
+                },
+                "valueQuantity": {
+                    "value": 12.3,
+                    "units": "10+3/ul",
+                    "code": "10+3/ul",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2012-08-10",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v2/0078",
+                            "code": "N",
+                            "display": "Normal"
+                        }
+                    ],
+                    "text": "Normal"
+                },
+                "referenceRange": [
+                    {
+                        "meaning": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/referencerange-meaning",
+                                    "code": "normal",
+                                    "display": "Normal Range"
+                                }
+                            ],
+                            "text": "Normal Range"
+                        },
+                        "low": {
+                            "value": 4.3,
+                            "units": "10+3/ul",
+                            "code": "10+3/ul",
+                            "system": "http://unitsofmeasure.org"
+                        },
+                        "high": {
+                            "value": 10.8,
+                            "units": "10+3/ul",
+                            "code": "10+3/ul",
+                            "system": "http://unitsofmeasure.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/0fc93b4b-c2af-4603-ae3b-484783fdff73",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "26515-7",
+                            "display": "PLT"
+                        }
+                    ],
+                    "text": "PLT"
+                },
+                "valueQuantity": {
+                    "value": 123,
+                    "units": "10+3/ul",
+                    "code": "10+3/ul",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2012-08-10",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v2/0078",
+                            "code": "L",
+                            "display": "Low"
+                        }
+                    ],
+                    "text": "Low"
+                },
+                "referenceRange": [
+                    {
+                        "meaning": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/referencerange-meaning",
+                                    "code": "normal",
+                                    "display": "Normal Range"
+                                }
+                            ],
+                            "text": "Normal Range"
+                        },
+                        "low": {
+                            "value": 150,
+                            "units": "10+3/ul",
+                            "code": "10+3/ul",
+                            "system": "http://unitsofmeasure.org"
+                        },
+                        "high": {
+                            "value": 350,
+                            "units": "10+3/ul",
+                            "code": "10+3/ul",
+                            "system": "http://unitsofmeasure.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/81c2af1c-95a0-4467-955a-35fff32b4034",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "43789009",
+                            "display": "CBC WO DIFFERENTIAL"
+                        }
+                    ],
+                    "text": "CBC WO DIFFERENTIAL"
+                },
+                "status": "final",
+                "reliability": "ok",
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/c22d626b-794a-48ae-a57d-082ccaa68cbe"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/ff7bafd0-8682-4ee9-9d37-2c616c5021fb"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/0fc93b4b-c2af-4603-ae3b-484783fdff73"
+                        }
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationPrescription/c313f7ad-a48f-457e-b8e1-be5299c92696",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dosageInstruction": [
+                    {
+                        "route": {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                                    "code": "C38216",
+                                    "display": "RESPIRATORY (INHALATION)"
+                                }
+                            ],
+                            "text": "RESPIRATORY (INHALATION)"
+                        },
+                        "doseQuantity": {
+                            "value": 0.09,
+                            "units": "mg/actuat",
+                            "code": "mg/actuat",
+                            "system": "http://unitsofmeasure.org"
+                        },
+                        "timingSchedule": {
+                            "repeat": {
+                                "frequency": 1,
+                                "duration": 12,
+                                "units": "h",
+                                "end": "2012-08-06"
+                            }
+                        },
+                        "asNeededCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "56018004",
+                                    "display": "Wheezing"
+                                }
+                            ],
+                            "text": "Wheezing"
+                        }
+                    }
+                ],
+                "text": {
+                    "status": "generated",
+                    "div": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                },
+                "contained": [
+                    {
+                        "id": "med",
+                        "resourceType": "Medication",
+                        "name": "Albuterol 0.09 MG/ACTUAT inhalant solution",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "573621",
+                                    "display": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                                }
+                            ],
+                            "text": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "#med",
+                    "display": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationAdministration/615847bd-2b9d-455c-be18-585e223c8cdd",
+            "content": {
+                "resourceType": "MedicationAdministration",
+                "status": "completed",
+                "practitioner": {
+                    "reference": "Practitioner/unknown",
+                    "display": "Unknown"
+                },
+                "whenGiven": {
+                    "end": "2012-08-06"
+                },
+                "dosage": [
+                    {
+                        "route": {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                                    "code": "C38216",
+                                    "display": "RESPIRATORY (INHALATION)"
+                                }
+                            ],
+                            "text": "RESPIRATORY (INHALATION)"
+                        },
+                        "quantity": {
+                            "value": 0.09,
+                            "units": "mg/actuat",
+                            "code": "mg/actuat",
+                            "system": "http://unitsofmeasure.org"
+                        },
+                        "timingPeriod": {
+                            "end": "2012-08-06"
+                        },
+                        "asNeededCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "56018004",
+                                    "display": "Wheezing"
+                                }
+                            ],
+                            "text": "Wheezing"
+                        }
+                    }
+                ],
+                "prescription": {
+                    "reference": "MedicationPrescription/c313f7ad-a48f-457e-b8e1-be5299c92696",
+                    "display": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                },
+                "contained": [
+                    {
+                        "id": "med",
+                        "resourceType": "Medication",
+                        "name": "Albuterol 0.09 MG/ACTUAT inhalant solution",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "573621",
+                                    "display": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                                }
+                            ],
+                            "text": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "#med",
+                    "display": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        }
+    ]
+}

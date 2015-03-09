@@ -1,0 +1,1525 @@
+{
+    "resourceType": "Bundle",
+    "totalResults": 44,
+    "entry": [
+        {
+            "id": "Patient/some-id-here-1987",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "http://www.midea-tecg.com",
+                        "value": "JOE_DOE_IDENTIFIER"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": [
+                            "DOE"
+                        ],
+                        "given": [
+                            "JOE"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AdverseReaction/7a13ee1a-98fb-4e77-a368-9777ad44254e",
+            "content": {
+                "resourceType": "AdverseReaction",
+                "symptom": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "247472004",
+                                    "display": "Hives"
+                                }
+                            ],
+                            "text": "Hives"
+                        }
+                    }
+                ],
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AllergyIntolerance/0f47ae9a-655f-4de3-a8b4-e3b29258dadb",
+            "content": {
+                "resourceType": "AllergyIntolerance",
+                "sensitivityType": "allergy",
+                "recordedDate": "1998-01-10",
+                "status": "confirmed",
+                "substance": {
+                    "reference": "Substance/740428a1-71e6-4072-9c56-4df9055a09c6",
+                    "display": "Penicillin G benzathine"
+                },
+                "reaction": [
+                    {
+                        "reference": "AdverseReaction/7a13ee1a-98fb-4e77-a368-9777ad44254e",
+                        "display": "Hives"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AdverseReaction/0492ae58-56e2-452a-8a63-d73d12ab9bf7",
+            "content": {
+                "resourceType": "AdverseReaction",
+                "symptom": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "65124004",
+                                    "display": "Swelling"
+                                }
+                            ],
+                            "text": "Swelling"
+                        }
+                    }
+                ],
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AllergyIntolerance/c3a2bfd7-ca92-4935-900c-67fbde391993",
+            "content": {
+                "resourceType": "AllergyIntolerance",
+                "sensitivityType": "allergy",
+                "recordedDate": "2011-01-10",
+                "status": "confirmed",
+                "substance": {
+                    "reference": "Substance/26d1516d-92e3-48b6-8348-2dfc26800b81",
+                    "display": "Aspirin"
+                },
+                "reaction": [
+                    {
+                        "reference": "AdverseReaction/0492ae58-56e2-452a-8a63-d73d12ab9bf7",
+                        "display": "Swelling"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/0269ace1-fc0a-4a08-be58-7dc2e0f1df0f",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8302-2",
+                            "display": "Height"
+                        }
+                    ],
+                    "text": "Height"
+                },
+                "valueQuantity": {
+                    "value": 74,
+                    "units": "[in_us]",
+                    "code": "[in_us]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-30",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/85b9b543-9527-41c2-8fec-312e15b129ad",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "3141-9",
+                            "display": "Weight"
+                        }
+                    ],
+                    "text": "Weight"
+                },
+                "valueQuantity": {
+                    "value": 218,
+                    "units": "[lb_av]",
+                    "code": "[lb_av]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-30",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/b48c3f94-74b6-4e14-8d89-0ce827896709",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8480-6",
+                            "display": "BP Systolic"
+                        }
+                    ],
+                    "text": "BP Systolic"
+                },
+                "valueQuantity": {
+                    "value": 150,
+                    "units": "mm[Hg]",
+                    "code": "mm[Hg]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-30",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/2504c95c-2f36-4ae7-acd7-2f6891f64a18",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8462-4",
+                            "display": "BP Diastolic"
+                        }
+                    ],
+                    "text": "BP Diastolic"
+                },
+                "valueQuantity": {
+                    "value": 90,
+                    "units": "mm[Hg]",
+                    "code": "mm[Hg]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-30",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/735bb0d4-107c-416a-a656-3da9ac9f4208",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "39156-5",
+                            "display": "Body Mass Index Calculated"
+                        }
+                    ],
+                    "text": "Body Mass Index Calculated"
+                },
+                "valueQuantity": {
+                    "value": 28
+                },
+                "issued": "2013-01-30",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/c586b663-2e76-46d6-8940-cad650ed7eea",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8302-2",
+                            "display": "Height"
+                        }
+                    ],
+                    "text": "Height"
+                },
+                "valueQuantity": {
+                    "value": 74,
+                    "units": "[in_us]",
+                    "code": "[in_us]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2011-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/e5421506-1554-4321-9972-07bbefa527c9",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "3141-9",
+                            "display": "Weight"
+                        }
+                    ],
+                    "text": "Weight"
+                },
+                "valueQuantity": {
+                    "value": 218,
+                    "units": "[lb_av]",
+                    "code": "[lb_av]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2011-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/8301b0e0-5084-4be9-8529-aaf53bb497c2",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8480-6",
+                            "display": "BP Systolic"
+                        }
+                    ],
+                    "text": "BP Systolic"
+                },
+                "valueQuantity": {
+                    "value": 141,
+                    "units": "mm[Hg]",
+                    "code": "mm[Hg]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2011-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/f50f8083-c0dd-4dd2-8f29-ac96efd79f2c",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8462-4",
+                            "display": "BP Diastolic"
+                        }
+                    ],
+                    "text": "BP Diastolic"
+                },
+                "valueQuantity": {
+                    "value": 87,
+                    "units": "mm[Hg]",
+                    "code": "mm[Hg]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2011-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/21199f33-1e44-4d32-8a4a-1c9d2dcf8a15",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "39156-5",
+                            "display": "Body Mass Index Calculated"
+                        }
+                    ],
+                    "text": "Body Mass Index Calculated"
+                },
+                "valueQuantity": {
+                    "value": 28
+                },
+                "issued": "2011-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/b8358a0d-57f2-4e7d-b1fc-41759980417b",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8302-2",
+                            "display": "Height"
+                        }
+                    ],
+                    "text": "Height"
+                },
+                "valueQuantity": {
+                    "value": 74,
+                    "units": "[in_us]",
+                    "code": "[in_us]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2010-10-02",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/f7f73166-086e-4ff2-b4a4-4c18404aac7a",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "3141-9",
+                            "display": "Weight"
+                        }
+                    ],
+                    "text": "Weight"
+                },
+                "valueQuantity": {
+                    "value": 205,
+                    "units": "[lb_av]",
+                    "code": "[lb_av]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2010-10-02",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/6c9812c8-cf53-4931-bc49-eaf8d74f998a",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8480-6",
+                            "display": "BP Systolic"
+                        }
+                    ],
+                    "text": "BP Systolic"
+                },
+                "valueQuantity": {
+                    "value": 132,
+                    "units": "mm[Hg]",
+                    "code": "mm[Hg]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2010-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/e1b8a827-18e3-49e0-88a9-3faa48b01284",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8462-4",
+                            "display": "BP Diastolic"
+                        }
+                    ],
+                    "text": "BP Diastolic"
+                },
+                "valueQuantity": {
+                    "value": 86,
+                    "units": "mm[Hg]",
+                    "code": "mm[Hg]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2010-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/a44b0829-1498-49c2-b9ae-b06c058ef9e2",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "39156-5",
+                            "display": "Body Mass Index Calculated"
+                        }
+                    ],
+                    "text": "Body Mass Index Calculated"
+                },
+                "valueQuantity": {
+                    "value": 26.3
+                },
+                "issued": "2010-10-02",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/3a92e861-015f-4279-8bf5-927d0fbef917",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2010-10-02",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/b8358a0d-57f2-4e7d-b1fc-41759980417b"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/f7f73166-086e-4ff2-b4a4-4c18404aac7a"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/a44b0829-1498-49c2-b9ae-b06c058ef9e2"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/de07d74c-e4c4-4dca-8332-af5757b4c04f",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2011-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/c586b663-2e76-46d6-8940-cad650ed7eea"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/e5421506-1554-4321-9972-07bbefa527c9"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/21199f33-1e44-4d32-8a4a-1c9d2dcf8a15"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/5d454d1e-c912-43bc-86b3-c507036f125e",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2013-01-30",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/0269ace1-fc0a-4a08-be58-7dc2e0f1df0f"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/85b9b543-9527-41c2-8fec-312e15b129ad"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/735bb0d4-107c-416a-a656-3da9ac9f4208"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/ba516214-9eaf-4400-8ef1-8de5740ca9d8",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
+                "issued": "2010-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/6c9812c8-cf53-4931-bc49-eaf8d74f998a"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/e1b8a827-18e3-49e0-88a9-3faa48b01284"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/261fa096-c42f-4f59-904d-6563d062d54f",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
+                "issued": "2011-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/8301b0e0-5084-4be9-8529-aaf53bb497c2"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/f50f8083-c0dd-4dd2-8f29-ac96efd79f2c"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/7a41c70d-479b-483d-b4a0-f7c29137407c",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
+                "issued": "2013-01-30",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/b48c3f94-74b6-4e14-8d89-0ce827896709"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/2504c95c-2f36-4ae7-acd7-2f6891f64a18"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Condition/25612d62-e2f5-4f1e-9854-94f30c7d7e9f",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "onsetDate": "2010-01-10",
+                "dateAsserted": "2010-01-10",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "363746003",
+                            "display": "Hypertension"
+                        }
+                    ],
+                    "text": "Hypertension"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Condition/b2d7a355-6c4a-4016-aa53-d9f3b5da6104",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "onsetDate": "2013-01-30",
+                "dateAsserted": "2013-01-30",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "48440001",
+                            "display": "Gout"
+                        }
+                    ],
+                    "text": "Gout"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Condition/10637337-0306-4a12-9d5f-8d9249d67b27",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "onsetDate": "2011-03-10",
+                "dateAsserted": "2011-03-10",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "195967001",
+                            "display": "Type II DIabetes"
+                        }
+                    ],
+                    "text": "Type II DIabetes"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/d3e9bd3d-8d26-4281-adb7-01648e0561b6",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "30313-1",
+                            "display": "HGB"
+                        }
+                    ],
+                    "text": "HGB"
+                },
+                "valueQuantity": {
+                    "value": 14.5,
+                    "units": "g/dl",
+                    "code": "g/dl",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-30",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/61456b63-d095-4023-a7e1-549f1c76dc22",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "20570-8",
+                            "display": "HCT"
+                        }
+                    ],
+                    "text": "HCT"
+                },
+                "valueQuantity": {
+                    "value": 50,
+                    "units": "%",
+                    "code": "%",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-30",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/935e6774-6cfb-4d2f-a514-82f866719a07",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "33765-9",
+                            "display": "WBC"
+                        }
+                    ],
+                    "text": "WBC"
+                },
+                "valueQuantity": {
+                    "value": 5.2,
+                    "units": "10^3/ul",
+                    "code": "10^3/ul",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-30",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/0c2ed5c8-18a3-4f69-ace2-15b698660592",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "26515-7",
+                            "display": "PLT"
+                        }
+                    ],
+                    "text": "PLT"
+                },
+                "valueQuantity": {
+                    "value": 388,
+                    "units": "10^3/ul",
+                    "code": "10^3/ul",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-30",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/0e435dd2-7d92-4c09-be66-6b6bd0b05894",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.6.12",
+                            "code": "85025",
+                            "display": "CBC"
+                        }
+                    ],
+                    "text": "CBC"
+                },
+                "status": "final",
+                "reliability": "ok",
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/d3e9bd3d-8d26-4281-adb7-01648e0561b6"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/61456b63-d095-4023-a7e1-549f1c76dc22"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/935e6774-6cfb-4d2f-a514-82f866719a07"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/0c2ed5c8-18a3-4f69-ace2-15b698660592"
+                        }
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationPrescription/1f97493d-22c9-4e9e-8c98-0d72537c44d6",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dateWritten": "2010-01-10",
+                "dosageInstruction": [
+                    {
+                        "doseQuantity": {
+                            "value": 1
+                        },
+                        "timingSchedule": {
+                            "event": [
+                                {
+                                    "start": "2010-01-10"
+                                }
+                            ],
+                            "repeat": {
+                                "frequency": 1,
+                                "duration": 24,
+                                "units": "h"
+                            }
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "Medication/a198f69a-6d16-4b83-b434-05a2948e4c12",
+                    "display": "Lisinopril"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationPrescription/3d6bda80-9e1f-4689-8c94-1263362d97bb",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dateWritten": "2013-01-30",
+                "dosageInstruction": [
+                    {
+                        "doseQuantity": {
+                            "value": 1
+                        },
+                        "timingPeriod": {
+                            "start": "2013-01-30"
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "Medication/bd440fb3-0d76-4174-b646-06bfa3cafa2e",
+                    "display": "Allopurinol 200 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationPrescription/3232d393-2183-4431-b498-d165f261f7db",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "completed",
+                "dateWritten": "2013-01-30",
+                "dosageInstruction": [
+                    {
+                        "doseQuantity": {
+                            "value": 1
+                        },
+                        "timingSchedule": {
+                            "event": [
+                                {
+                                    "start": "2013-01-30"
+                                }
+                            ],
+                            "repeat": {
+                                "frequency": 1,
+                                "duration": 12,
+                                "units": "h",
+                                "end": "2013-02-06"
+                            }
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "Medication/aa3c2c5e-0934-42d9-a949-43773a2a2945",
+                    "display": "Clarithromycin 250 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationPrescription/bf271fdb-7ac3-42e9-aaeb-9b6be4d287ff",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dateWritten": "2011-04-13T04:00:00.000Z",
+                "dosageInstruction": [
+                    {
+                        "route": {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                                    "code": "C38288",
+                                    "display": "ORAL"
+                                }
+                            ],
+                            "text": "ORAL"
+                        },
+                        "doseQuantity": {
+                            "value": 1
+                        },
+                        "timingSchedule": {
+                            "event": [
+                                {
+                                    "start": "2011-04-13T04:00:00.000Z"
+                                }
+                            ],
+                            "repeat": {
+                                "frequency": 1,
+                                "duration": 12,
+                                "units": "h"
+                            }
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "Medication/7b5b08e6-93f9-4a7e-9ac9-dc1659846b0c",
+                    "display": "Metformin 850 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Substance/740428a1-71e6-4072-9c56-4df9055a09c6",
+            "content": {
+                "resourceType": "Substance",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "7982",
+                            "display": "Penicillin G benzathine"
+                        }
+                    ],
+                    "text": "Penicillin G benzathine"
+                }
+            }
+        },
+        {
+            "id": "Substance/26d1516d-92e3-48b6-8348-2dfc26800b81",
+            "content": {
+                "resourceType": "Substance",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1191",
+                            "display": "Aspirin"
+                        }
+                    ],
+                    "text": "Aspirin"
+                }
+            }
+        },
+        {
+            "id": "Medication/a198f69a-6d16-4b83-b434-05a2948e4c12",
+            "content": {
+                "resourceType": "Medication",
+                "name": "Lisinopril",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "258395",
+                            "display": "Lisinopril"
+                        }
+                    ],
+                    "text": "Lisinopril"
+                }
+            }
+        },
+        {
+            "id": "Medication/bd440fb3-0d76-4174-b646-06bfa3cafa2e",
+            "content": {
+                "resourceType": "Medication",
+                "name": "Allopurinol 200 MG Oral Tablet",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "197319",
+                            "display": "Allopurinol 200 MG Oral Tablet"
+                        }
+                    ],
+                    "text": "Allopurinol 200 MG Oral Tablet"
+                }
+            }
+        },
+        {
+            "id": "Medication/aa3c2c5e-0934-42d9-a949-43773a2a2945",
+            "content": {
+                "resourceType": "Medication",
+                "name": "Clarithromycin 250 MG Oral Tablet",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "197517",
+                            "display": "Clarithromycin 250 MG Oral Tablet"
+                        }
+                    ],
+                    "text": "Clarithromycin 250 MG Oral Tablet"
+                }
+            }
+        },
+        {
+            "id": "Medication/7b5b08e6-93f9-4a7e-9ac9-dc1659846b0c",
+            "content": {
+                "resourceType": "Medication",
+                "name": "Metformin 850 MG Oral Tablet",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "860978",
+                            "display": "Metformin 850 MG Oral Tablet"
+                        }
+                    ],
+                    "text": "Metformin 850 MG Oral Tablet"
+                }
+            }
+        }
+    ]
+}

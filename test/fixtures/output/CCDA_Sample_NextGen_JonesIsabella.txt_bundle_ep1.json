@@ -1,0 +1,729 @@
+{
+    "resourceType": "Bundle",
+    "totalResults": 26,
+    "entry": [
+        {
+            "id": "Patient/some-id-here-1987",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "http://www.midea-tecg.com",
+                        "value": "JOE_DOE_IDENTIFIER"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": [
+                            "DOE"
+                        ],
+                        "given": [
+                            "JOE"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AdverseReaction/804906ab-0ae2-4383-b6db-ed1299766d23",
+            "content": {
+                "resourceType": "AdverseReaction",
+                "symptom": [
+                    {
+                        "code": {
+                            "text": "Shortness of Breath"
+                        }
+                    }
+                ],
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AllergyIntolerance/92a689c5-3885-43a2-94dd-2f6a1ac75ea3",
+            "content": {
+                "resourceType": "AllergyIntolerance",
+                "sensitivityType": "allergy",
+                "recordedDate": "2012-08-06",
+                "status": "confirmed",
+                "substance": {
+                    "reference": "Substance/65a527f5-356f-4f03-89ca-bac487102108",
+                    "display": "Codeine"
+                },
+                "reaction": [
+                    {
+                        "reference": "AdverseReaction/804906ab-0ae2-4383-b6db-ed1299766d23",
+                        "display": "Shortness of Breath"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AdverseReaction/a51e194d-f22b-4768-9ae3-2f2269758767",
+            "content": {
+                "resourceType": "AdverseReaction",
+                "symptom": [
+                    {
+                        "code": {
+                            "text": "Hives"
+                        }
+                    }
+                ],
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AllergyIntolerance/45bafc3f-b667-49fb-9fee-29f49d255fa4",
+            "content": {
+                "resourceType": "AllergyIntolerance",
+                "sensitivityType": "allergy",
+                "recordedDate": "2012-08-06",
+                "status": "confirmed",
+                "substance": {
+                    "reference": "Substance/08bdc3d1-cf19-461f-9428-010651455119",
+                    "display": "Aspirin"
+                },
+                "reaction": [
+                    {
+                        "reference": "AdverseReaction/a51e194d-f22b-4768-9ae3-2f2269758767",
+                        "display": "Hives"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AdverseReaction/c2c58c3f-ec6d-4593-8b59-c1ad9f974ff4",
+            "content": {
+                "resourceType": "AdverseReaction",
+                "symptom": [
+                    {
+                        "code": {
+                            "text": "Hives"
+                        }
+                    }
+                ],
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AllergyIntolerance/de6eb581-fbfb-40ab-a324-14f7707eadf9",
+            "content": {
+                "resourceType": "AllergyIntolerance",
+                "sensitivityType": "allergy",
+                "recordedDate": "2012-08-06",
+                "status": "confirmed",
+                "substance": {
+                    "reference": "Substance/4881124c-88c9-4ba9-9bcd-c8fd0d6eab5d",
+                    "display": "penicillin G benzathine"
+                },
+                "reaction": [
+                    {
+                        "reference": "AdverseReaction/c2c58c3f-ec6d-4593-8b59-c1ad9f974ff4",
+                        "display": "Hives"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/a2d22357-44d7-4e06-9bdd-b045cd856a8e",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8302-2",
+                            "display": "Body Height (Measured)"
+                        }
+                    ],
+                    "text": "Body Height (Measured)"
+                },
+                "valueQuantity": {
+                    "value": 69.69,
+                    "units": "[in_us]",
+                    "code": "[in_us]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2012-08-06",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/d8e0f2db-cb85-48e4-984f-8c786ba08951",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "3141-9",
+                            "display": "Body Weight (Measured)"
+                        }
+                    ],
+                    "text": "Body Weight (Measured)"
+                },
+                "valueQuantity": {
+                    "value": 194.01,
+                    "units": "[lb_av]",
+                    "code": "[lb_av]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2012-08-06",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/07a71246-b539-46d9-9b75-261115bba393",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8480-6",
+                            "display": "Intravascular Systolic"
+                        }
+                    ],
+                    "text": "Intravascular Systolic"
+                },
+                "valueQuantity": {
+                    "value": 135,
+                    "units": "mm[Hg]",
+                    "code": "mm[Hg]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2012-08-06",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/62e1697b-df1b-428a-a695-cabba95a28ec",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8462-4",
+                            "display": "Intravascular Diastolic"
+                        }
+                    ],
+                    "text": "Intravascular Diastolic"
+                },
+                "valueQuantity": {
+                    "value": 92,
+                    "units": "mm[Hg]",
+                    "code": "mm[Hg]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2012-08-06",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/de2c8ca9-6e4e-475d-bcd0-82d0746d9b57",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "39156-5",
+                            "display": "BMI (Body Mass Index)"
+                        }
+                    ],
+                    "text": "BMI (Body Mass Index)"
+                },
+                "valueQuantity": {
+                    "value": 28.08
+                },
+                "issued": "2012-08-06",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/da2f2f95-edf2-4836-8d32-8a5183964836",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2012-08-06",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/a2d22357-44d7-4e06-9bdd-b045cd856a8e"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/d8e0f2db-cb85-48e4-984f-8c786ba08951"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/de2c8ca9-6e4e-475d-bcd0-82d0746d9b57"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/a130817d-0a2b-47ad-bd2a-d329e61399ed",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
+                "issued": "2012-08-06",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/07a71246-b539-46d9-9b75-261115bba393"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/62e1697b-df1b-428a-a695-cabba95a28ec"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/0d93b20d-890b-44b4-b055-54da264ecec5",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "UNK"
+                        }
+                    ]
+                },
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationPrescription/89e56a57-0fbd-4fbe-a2fc-7a15fe043840",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dateWritten": "2013-02-12",
+                "dosageInstruction": [
+                    {
+                        "doseQuantity": {
+                            "value": 1,
+                            "units": "tablet",
+                            "code": "tablet",
+                            "system": "http://unitsofmeasure.org"
+                        },
+                        "timingSchedule": {
+                            "event": [
+                                {
+                                    "start": "2013-02-12"
+                                }
+                            ],
+                            "repeat": {
+                                "frequency": 1,
+                                "duration": 24,
+                                "units": "h"
+                            }
+                        }
+                    }
+                ],
+                "text": {
+                    "status": "generated",
+                    "div": "take 1 tablet by oral route every day"
+                },
+                "medication": {
+                    "reference": "Medication/50270cd4-ff41-4f1e-8497-acd5b888e4e0",
+                    "display": "metoprolol tartrate 25 mg tablet"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationPrescription/2af4e8ad-244d-483e-bf6d-817ccf0ca0a1",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dateWritten": "2012-08-06",
+                "dosageInstruction": [
+                    {
+                        "timingPeriod": {
+                            "start": "2012-08-06"
+                        }
+                    }
+                ],
+                "text": {
+                    "status": "generated",
+                    "div": "take 1 tablet by oral route 2 times daily for 7 days"
+                },
+                "medication": {
+                    "reference": "Medication/2fcdff05-329d-4f43-a629-a59f28f50e0f",
+                    "display": "clarithromycin 500 mg tablet"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationPrescription/db0efeda-e087-4846-b64b-581ef17b65ef",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "completed",
+                "dateWritten": "2012-04-02",
+                "dosageInstruction": [
+                    {
+                        "doseQuantity": {
+                            "value": 2,
+                            "units": "puff",
+                            "code": "puff",
+                            "system": "http://unitsofmeasure.org"
+                        },
+                        "timingSchedule": {
+                            "event": [
+                                {
+                                    "start": "2012-04-02"
+                                }
+                            ],
+                            "repeat": {
+                                "frequency": 1,
+                                "duration": 4,
+                                "units": "h",
+                                "end": "2013-04-02"
+                            }
+                        }
+                    }
+                ],
+                "text": {
+                    "status": "generated",
+                    "div": "inhale 2 puff by inhalation route every 4 - 6 hours as needed as needed for Wheezing"
+                },
+                "medication": {
+                    "reference": "Medication/d26c6110-6d4c-4349-9826-616cf48af484",
+                    "display": "albuterol sulfate HFA 90 mcg/actuation Aerosol Inhaler"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationPrescription/17177e36-05ea-41f7-aebd-f9f3924f74f3",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dateWritten": "2012-08-06",
+                "dosageInstruction": [
+                    {
+                        "timingPeriod": {
+                            "start": "2012-08-06",
+                            "end": "2012-08-06"
+                        }
+                    }
+                ],
+                "text": {
+                    "status": "generated",
+                    "div": "inhale 2 puffs once as needed"
+                },
+                "medication": {
+                    "reference": "Medication/e03f86bc-0eb9-458b-866a-d88865cbe56e",
+                    "display": "albuterol sulfate HFA 90 mcg/actuation Aerosol Inhaler"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Substance/65a527f5-356f-4f03-89ca-bac487102108",
+            "content": {
+                "resourceType": "Substance",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "2670",
+                            "display": "Codeine"
+                        }
+                    ],
+                    "text": "Codeine"
+                }
+            }
+        },
+        {
+            "id": "Substance/08bdc3d1-cf19-461f-9428-010651455119",
+            "content": {
+                "resourceType": "Substance",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1191",
+                            "display": "Aspirin"
+                        }
+                    ],
+                    "text": "Aspirin"
+                }
+            }
+        },
+        {
+            "id": "Substance/4881124c-88c9-4ba9-9bcd-c8fd0d6eab5d",
+            "content": {
+                "resourceType": "Substance",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "7982",
+                            "display": "penicillin G benzathine"
+                        }
+                    ],
+                    "text": "penicillin G benzathine"
+                }
+            }
+        },
+        {
+            "id": "Medication/50270cd4-ff41-4f1e-8497-acd5b888e4e0",
+            "content": {
+                "resourceType": "Medication",
+                "name": "metoprolol tartrate 25 mg tablet",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "866924",
+                            "display": "Metoprolol Tartrate 25 MG Oral Tablet"
+                        }
+                    ],
+                    "text": "Metoprolol Tartrate 25 MG Oral Tablet"
+                }
+            }
+        },
+        {
+            "id": "Medication/2fcdff05-329d-4f43-a629-a59f28f50e0f",
+            "content": {
+                "resourceType": "Medication",
+                "name": "clarithromycin 500 mg tablet",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "197517",
+                            "display": "Clarithromycin 500 MG Oral Tablet"
+                        }
+                    ],
+                    "text": "Clarithromycin 500 MG Oral Tablet"
+                }
+            }
+        },
+        {
+            "id": "Medication/d26c6110-6d4c-4349-9826-616cf48af484",
+            "content": {
+                "resourceType": "Medication",
+                "name": "albuterol sulfate HFA 90 mcg/actuation Aerosol Inhaler",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "745679",
+                            "display": "200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler"
+                        }
+                    ],
+                    "text": "200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler"
+                }
+            }
+        },
+        {
+            "id": "Medication/e03f86bc-0eb9-458b-866a-d88865cbe56e",
+            "content": {
+                "resourceType": "Medication",
+                "name": "albuterol sulfate HFA 90 mcg/actuation Aerosol Inhaler",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "745679",
+                            "display": "200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler"
+                        }
+                    ],
+                    "text": "200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler"
+                }
+            }
+        }
+    ]
+}

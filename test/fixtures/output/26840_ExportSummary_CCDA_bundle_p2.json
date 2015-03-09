@@ -1,0 +1,1150 @@
+{
+    "resourceType": "Bundle",
+    "totalResults": 28,
+    "entry": [
+        {
+            "id": "Patient/some-id-here-1987",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "http://www.midea-tecg.com",
+                        "value": "JOE_DOE_IDENTIFIER"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": [
+                            "DOE"
+                        ],
+                        "given": [
+                            "JOE"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AllergyIntolerance/d21a2d23-435d-465b-abab-3e51e5030e57",
+            "content": {
+                "resourceType": "AllergyIntolerance",
+                "sensitivityType": "allergy",
+                "status": "confirmed",
+                "contained": [
+                    {
+                        "id": "allergen",
+                        "resourceType": "Substance",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "215674",
+                                    "display": "Bicillin L-A"
+                                }
+                            ],
+                            "text": "Bicillin L-A"
+                        }
+                    }
+                ],
+                "substance": {
+                    "reference": "#allergen",
+                    "display": "Bicillin L-A"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/d2443a84-a13a-4ce3-9b82-19e91a0530c7",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8462-4",
+                            "display": "BP Diastolic"
+                        }
+                    ],
+                    "text": "BP Diastolic"
+                },
+                "valueQuantity": {
+                    "value": 86,
+                    "units": "mm[Hg]",
+                    "code": "mm[Hg]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/b6b5df4a-73a3-4cae-86c4-d0b76af17406",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8480-6",
+                            "display": "BP Systolic"
+                        }
+                    ],
+                    "text": "BP Systolic"
+                },
+                "valueQuantity": {
+                    "value": 120,
+                    "units": "mm[Hg]",
+                    "code": "mm[Hg]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/1b591206-59e4-44ac-9f8e-fc71f85d3aab",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "41909-3",
+                            "display": "Body Mass Index"
+                        }
+                    ],
+                    "text": "Body Mass Index"
+                },
+                "valueQuantity": {
+                    "value": 44.3429,
+                    "units": "kg/m²",
+                    "code": "kg/m²",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/fcc47ef3-e18d-4e63-9904-5a5c15060aac",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8867-4",
+                            "display": "Heart Rate"
+                        }
+                    ],
+                    "text": "Heart Rate"
+                },
+                "valueQuantity": {
+                    "value": 88,
+                    "units": "/min",
+                    "code": "/min",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/2b9d8cdf-a968-4346-b995-d69b4572fae7",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8302-2",
+                            "display": "Body Height (Measured)"
+                        }
+                    ],
+                    "text": "Body Height (Measured)"
+                },
+                "valueQuantity": {
+                    "value": 48.032,
+                    "units": "[in_us]",
+                    "code": "[in_us]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/cbd12d3b-55a4-417b-9bc9-4784ac64c13c",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "9279-1",
+                            "display": "Respiratory Rate"
+                        }
+                    ],
+                    "text": "Respiratory Rate"
+                },
+                "valueQuantity": {
+                    "value": 22,
+                    "units": "/min",
+                    "code": "/min",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/0197950b-43fa-4f2a-a9aa-07027d9ca0c1",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8310-5",
+                            "display": "Body Temperature"
+                        }
+                    ],
+                    "text": "Body Temperature"
+                },
+                "valueQuantity": {
+                    "value": 37,
+                    "units": "C",
+                    "code": "C",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/24554047-5cf1-427c-9d52-6905ccd43978",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "3141-9",
+                            "display": "Body Weight (Measured)"
+                        }
+                    ],
+                    "text": "Body Weight (Measured)"
+                },
+                "valueQuantity": {
+                    "value": 145.505,
+                    "units": "[lb_av]",
+                    "code": "[lb_av]",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/c4c2ab22-cb7f-4cfd-925b-db3352357c50",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/d2443a84-a13a-4ce3-9b82-19e91a0530c7"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/b6b5df4a-73a3-4cae-86c4-d0b76af17406"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/2b5e1770-5f38-4599-b068-5dde7c9ba72f",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/2b9d8cdf-a968-4346-b995-d69b4572fae7"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/24554047-5cf1-427c-9d52-6905ccd43978"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/3f0dbf8d-c97c-4cb1-a9c5-d0b5294b8621",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "718-7",
+                            "display": "Hgb Bld-mCnc"
+                        }
+                    ],
+                    "text": "Hgb Bld-mCnc"
+                },
+                "valueQuantity": {
+                    "value": 12.6,
+                    "units": "g/dL",
+                    "code": "g/dL",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/e7e22e02-8d09-4e36-9f72-da6fce00f4ac",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "4544-3",
+                            "display": "Hct Fr Bld Auto"
+                        }
+                    ],
+                    "text": "Hct Fr Bld Auto"
+                },
+                "valueQuantity": {
+                    "value": 44.5,
+                    "units": "%",
+                    "code": "%",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/3908f1d1-e834-42c4-a51b-21e7f96638c6",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "6690-2",
+                            "display": "WBC # Bld Auto"
+                        }
+                    ],
+                    "text": "WBC # Bld Auto"
+                },
+                "valueQuantity": {
+                    "value": 12.8,
+                    "units": "x10E3/uL",
+                    "code": "x10E3/uL",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/f20ed0df-1b7b-4776-81f6-ce4674543bef",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "777-3",
+                            "display": "Platelet # Bld Auto"
+                        }
+                    ],
+                    "text": "Platelet # Bld Auto"
+                },
+                "valueQuantity": {
+                    "value": 394,
+                    "units": "x10E3/uL",
+                    "code": "x10E3/uL",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/90045bce-ef04-4be7-9a38-52e00cbe8c55",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "2093-3",
+                            "display": "Cholest SerPl-mCnc"
+                        }
+                    ],
+                    "text": "Cholest SerPl-mCnc"
+                },
+                "valueQuantity": {
+                    "value": 299,
+                    "units": "mg/dL",
+                    "code": "mg/dL",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/037771d9-974b-4105-9134-b191b7b9162c",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "2085-9",
+                            "display": "HDLc SerPl-mCnc"
+                        }
+                    ],
+                    "text": "HDLc SerPl-mCnc"
+                },
+                "valueQuantity": {
+                    "value": 18,
+                    "units": "mg/dL",
+                    "code": "mg/dL",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/a7194819-21f8-4ece-9090-d100ae988fbb",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "2089-1",
+                            "display": "LDLc SerPl-mCnc"
+                        }
+                    ],
+                    "text": "LDLc SerPl-mCnc"
+                },
+                "valueQuantity": {
+                    "value": 189,
+                    "units": "mg/dL",
+                    "code": "mg/dL",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/6a35d2e5-5a74-479a-8bf7-f97e3f297404",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "2575-9",
+                            "display": "PreB-LP SerPl-mCnc"
+                        }
+                    ],
+                    "text": "PreB-LP SerPl-mCnc"
+                },
+                "valueQuantity": {
+                    "value": 35,
+                    "units": "mg/dL",
+                    "code": "mg/dL",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/a003ed29-02eb-4719-9d85-258d363ce4fd",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "2571-8",
+                            "display": "Trigl SerPl-mCnc"
+                        }
+                    ],
+                    "text": "Trigl SerPl-mCnc"
+                },
+                "valueQuantity": {
+                    "value": 5000,
+                    "units": "mg/dL",
+                    "code": "mg/dL",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/6ec57ba4-4f6d-4be8-b708-02545ec20558",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "30522-7",
+                            "display": "CRP SerPl High Sens-mCnc"
+                        }
+                    ],
+                    "text": "CRP SerPl High Sens-mCnc"
+                },
+                "valueQuantity": {
+                    "value": 1.8,
+                    "units": "mg/L",
+                    "code": "mg/L",
+                    "system": "http://unitsofmeasure.org"
+                },
+                "issued": "2013-01-22",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationPrescription/1239db5e-31df-4597-a4df-6ec4eb1dae83",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dosageInstruction": [
+                    {
+                        "doseQuantity": {
+                            "value": 1,
+                            "units": "tablet",
+                            "code": "tablet",
+                            "system": "http://unitsofmeasure.org"
+                        }
+                    }
+                ],
+                "text": {
+                    "status": "generated",
+                    "div": "take 1 tablet (2 mg) by oral route every 6 hours as needed"
+                },
+                "contained": [
+                    {
+                        "id": "med",
+                        "resourceType": "Medication",
+                        "name": "Hydromorphone Hydrochloride 2 MG Oral Tablet",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "897696",
+                                    "display": "Hydromorphone Hydrochloride 2 MG Oral Tablet"
+                                }
+                            ],
+                            "text": "Hydromorphone Hydrochloride 2 MG Oral Tablet"
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "#med",
+                    "display": "Hydromorphone Hydrochloride 2 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationAdministration/6dadcf06-85a5-4d23-adcd-351b9f8cfba0",
+            "content": {
+                "resourceType": "MedicationAdministration",
+                "status": "completed",
+                "practitioner": {
+                    "reference": "Practitioner/unknown",
+                    "display": "Unknown"
+                },
+                "dosage": [
+                    {
+                        "quantity": {
+                            "value": 1,
+                            "units": "tablet",
+                            "code": "tablet",
+                            "system": "http://unitsofmeasure.org"
+                        }
+                    }
+                ],
+                "prescription": {
+                    "reference": "MedicationPrescription/1239db5e-31df-4597-a4df-6ec4eb1dae83",
+                    "display": "take 1 tablet (2 mg) by oral route every 6 hours as needed"
+                },
+                "contained": [
+                    {
+                        "id": "med",
+                        "resourceType": "Medication",
+                        "name": "Hydromorphone Hydrochloride 2 MG Oral Tablet",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "897696",
+                                    "display": "Hydromorphone Hydrochloride 2 MG Oral Tablet"
+                                }
+                            ],
+                            "text": "Hydromorphone Hydrochloride 2 MG Oral Tablet"
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "#med",
+                    "display": "Hydromorphone Hydrochloride 2 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationPrescription/c7071895-5514-4326-802b-61aaec90b8dc",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dosageInstruction": [
+                    {
+                        "doseQuantity": {
+                            "value": 1,
+                            "units": "milliliter",
+                            "code": "milliliter",
+                            "system": "http://unitsofmeasure.org"
+                        }
+                    }
+                ],
+                "text": {
+                    "status": "generated",
+                    "div": "inject 1 milliliter now in offce"
+                },
+                "contained": [
+                    {
+                        "id": "med",
+                        "resourceType": "Medication",
+                        "name": "Meperidine Hydrochloride 50 MG/ML Injectable Solution",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "861463",
+                                    "display": "Meperidine Hydrochloride 50 MG/ML Injectable Solution"
+                                }
+                            ],
+                            "text": "Meperidine Hydrochloride 50 MG/ML Injectable Solution"
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "#med",
+                    "display": "Meperidine Hydrochloride 50 MG/ML Injectable Solution"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationAdministration/710f60f0-87c2-456f-9502-594a0aec8160",
+            "content": {
+                "resourceType": "MedicationAdministration",
+                "status": "completed",
+                "practitioner": {
+                    "reference": "Practitioner/unknown",
+                    "display": "Unknown"
+                },
+                "dosage": [
+                    {
+                        "quantity": {
+                            "value": 1,
+                            "units": "milliliter",
+                            "code": "milliliter",
+                            "system": "http://unitsofmeasure.org"
+                        }
+                    }
+                ],
+                "prescription": {
+                    "reference": "MedicationPrescription/c7071895-5514-4326-802b-61aaec90b8dc",
+                    "display": "inject 1 milliliter now in offce"
+                },
+                "contained": [
+                    {
+                        "id": "med",
+                        "resourceType": "Medication",
+                        "name": "Meperidine Hydrochloride 50 MG/ML Injectable Solution",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "861463",
+                                    "display": "Meperidine Hydrochloride 50 MG/ML Injectable Solution"
+                                }
+                            ],
+                            "text": "Meperidine Hydrochloride 50 MG/ML Injectable Solution"
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "#med",
+                    "display": "Meperidine Hydrochloride 50 MG/ML Injectable Solution"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationPrescription/a27debe3-689a-415b-ac37-e63c65d2e967",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dateWritten": "2013-01-22",
+                "dosageInstruction": [
+                    {
+                        "doseQuantity": {
+                            "value": 1,
+                            "units": "suppository",
+                            "code": "suppository",
+                            "system": "http://unitsofmeasure.org"
+                        },
+                        "timingPeriod": {
+                            "start": "2013-01-22",
+                            "end": "2013-01-29"
+                        }
+                    }
+                ],
+                "text": {
+                    "status": "generated",
+                    "div": "insert 1 suppository (25 mg) by rectal route 3 times per day for 7 days"
+                },
+                "contained": [
+                    {
+                        "id": "med",
+                        "resourceType": "Medication",
+                        "name": "Hydrocortisone 25 MG Rectal Suppository",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "310896",
+                                    "display": "Hydrocortisone 25 MG Rectal Suppository"
+                                }
+                            ],
+                            "text": "Hydrocortisone 25 MG Rectal Suppository"
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "#med",
+                    "display": "Hydrocortisone 25 MG Rectal Suppository"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationPrescription/ec00417e-6c9e-4984-8583-fbf885ca3447",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dateWritten": "2013-01-22",
+                "dosageInstruction": [
+                    {
+                        "doseQuantity": {
+                            "value": 1,
+                            "units": "tablet",
+                            "code": "tablet",
+                            "system": "http://unitsofmeasure.org"
+                        },
+                        "timingPeriod": {
+                            "start": "2013-01-22",
+                            "end": "2013-02-01"
+                        }
+                    }
+                ],
+                "text": {
+                    "status": "generated",
+                    "div": "take 1 tablet by oral route every 4-6 hours as needed for pain for 10 days"
+                },
+                "contained": [
+                    {
+                        "id": "med",
+                        "resourceType": "Medication",
+                        "name": "Acetaminophen 500 MG / Hydrocodone Bitartrate 10 MG Oral Tablet",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "857107",
+                                    "display": "Acetaminophen 500 MG / Hydrocodone Bitartrate 10 MG Oral Tablet"
+                                }
+                            ],
+                            "text": "Acetaminophen 500 MG / Hydrocodone Bitartrate 10 MG Oral Tablet"
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "#med",
+                    "display": "Acetaminophen 500 MG / Hydrocodone Bitartrate 10 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        }
+    ]
+}

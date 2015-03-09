@@ -1,0 +1,375 @@
+{
+    "resourceType": "Bundle",
+    "totalResults": 14,
+    "entry": [
+        {
+            "id": "Patient/some-id-here-1987",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "http://www.midea-tecg.com",
+                        "value": "JOE_DOE_IDENTIFIER"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": [
+                            "DOE"
+                        ],
+                        "given": [
+                            "JOE"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AdverseReaction/de1dac98-20fd-474f-888f-c3f10327251e",
+            "content": {
+                "resourceType": "AdverseReaction",
+                "symptom": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "247472004",
+                                    "display": "Hives"
+                                }
+                            ],
+                            "text": "Hives"
+                        }
+                    }
+                ],
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AllergyIntolerance/f0997b1b-579a-42c2-8554-f9179dd12513",
+            "content": {
+                "resourceType": "AllergyIntolerance",
+                "criticality": "medium",
+                "sensitivityType": "allergy",
+                "recordedDate": "2009-09-02",
+                "status": "confirmed",
+                "substance": {
+                    "reference": "Substance/8a75ccdd-c300-4798-89c2-0b867964e96f",
+                    "display": "ALLERGENIC EXTRACT, PENICILLIN"
+                },
+                "reaction": [
+                    {
+                        "reference": "AdverseReaction/de1dac98-20fd-474f-888f-c3f10327251e",
+                        "display": "Hives"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AdverseReaction/da963ca9-5383-4f18-89be-b69ddfef1a22",
+            "content": {
+                "resourceType": "AdverseReaction",
+                "symptom": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "56018004",
+                                    "display": "Wheezing"
+                                }
+                            ],
+                            "text": "Wheezing"
+                        }
+                    }
+                ],
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AllergyIntolerance/dadba124-60ed-44f9-a498-adabebc6bbaf",
+            "content": {
+                "resourceType": "AllergyIntolerance",
+                "criticality": "medium",
+                "sensitivityType": "allergy",
+                "recordedDate": "2009-09-02",
+                "status": "confirmed",
+                "substance": {
+                    "reference": "Substance/1fcf6127-7ec0-4b09-8448-55e1ba2a3ba8",
+                    "display": "ASPIRIN"
+                },
+                "reaction": [
+                    {
+                        "reference": "AdverseReaction/da963ca9-5383-4f18-89be-b69ddfef1a22",
+                        "display": "Wheezing"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AdverseReaction/cff72d34-4223-4da3-8d35-af6bd2be37a3",
+            "content": {
+                "resourceType": "AdverseReaction",
+                "symptom": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "73879007",
+                                    "display": "Nausea"
+                                }
+                            ],
+                            "text": "Nausea"
+                        }
+                    }
+                ],
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "AllergyIntolerance/a7e07697-b1b5-4622-b870-e52290116db3",
+            "content": {
+                "resourceType": "AllergyIntolerance",
+                "criticality": "medium",
+                "sensitivityType": "allergy",
+                "recordedDate": "2009-09-02",
+                "status": "confirmed",
+                "substance": {
+                    "reference": "Substance/32cfcd92-b6d7-4f17-ad2a-035d1504eac7",
+                    "display": "Codeine"
+                },
+                "reaction": [
+                    {
+                        "reference": "AdverseReaction/cff72d34-4223-4da3-8d35-af6bd2be37a3",
+                        "display": "Nausea"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationPrescription/2ec8bfbc-65cd-4e5c-a477-7b82a11102e0",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dateWritten": "2011-03-01",
+                "dosageInstruction": [
+                    {
+                        "route": {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                                    "code": "C38216",
+                                    "display": "RESPIRATORY (INHALATION)"
+                                }
+                            ],
+                            "text": "RESPIRATORY (INHALATION)"
+                        },
+                        "doseQuantity": {
+                            "value": 1
+                        },
+                        "timingSchedule": {
+                            "event": [
+                                {
+                                    "start": "2011-03-01"
+                                }
+                            ],
+                            "repeat": {
+                                "frequency": 1,
+                                "duration": 6,
+                                "units": "h",
+                                "end": "2012-03-01"
+                            }
+                        },
+                        "asNeededCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "56018004",
+                                    "display": "Wheezing"
+                                }
+                            ],
+                            "text": "Wheezing"
+                        }
+                    }
+                ],
+                "text": {
+                    "status": "generated",
+                    "div": "Proventil 0.09 MG/ACTUAT inhalant solution"
+                },
+                "medication": {
+                    "reference": "Medication/a67861a6-635e-4d1a-84ce-c761885fb416",
+                    "display": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationAdministration/49c26f01-ffc5-43cc-afd3-8962f8bd6c06",
+            "content": {
+                "resourceType": "MedicationAdministration",
+                "status": "completed",
+                "practitioner": {
+                    "reference": "Practitioner/unknown",
+                    "display": "Unknown"
+                },
+                "whenGiven": {
+                    "start": "2011-03-01",
+                    "end": "2012-03-01"
+                },
+                "dosage": [
+                    {
+                        "route": {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                                    "code": "C38216",
+                                    "display": "RESPIRATORY (INHALATION)"
+                                }
+                            ],
+                            "text": "RESPIRATORY (INHALATION)"
+                        },
+                        "quantity": {
+                            "value": 1
+                        },
+                        "timingPeriod": {
+                            "start": "2011-03-01",
+                            "end": "2012-03-01"
+                        },
+                        "asNeededCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "56018004",
+                                    "display": "Wheezing"
+                                }
+                            ],
+                            "text": "Wheezing"
+                        }
+                    }
+                ],
+                "prescription": {
+                    "reference": "MedicationPrescription/2ec8bfbc-65cd-4e5c-a477-7b82a11102e0",
+                    "display": "Proventil 0.09 MG/ACTUAT inhalant solution"
+                },
+                "medication": {
+                    "reference": "Medication/50ffee6b-e875-44d1-b9e3-bba3be77f747",
+                    "display": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Substance/8a75ccdd-c300-4798-89c2-0b867964e96f",
+            "content": {
+                "resourceType": "Substance",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "314422",
+                            "display": "ALLERGENIC EXTRACT, PENICILLIN"
+                        }
+                    ],
+                    "text": "ALLERGENIC EXTRACT, PENICILLIN"
+                }
+            }
+        },
+        {
+            "id": "Substance/1fcf6127-7ec0-4b09-8448-55e1ba2a3ba8",
+            "content": {
+                "resourceType": "Substance",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1191",
+                            "display": "ASPIRIN"
+                        }
+                    ],
+                    "text": "ASPIRIN"
+                }
+            }
+        },
+        {
+            "id": "Substance/32cfcd92-b6d7-4f17-ad2a-035d1504eac7",
+            "content": {
+                "resourceType": "Substance",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "2670",
+                            "display": "Codeine"
+                        }
+                    ],
+                    "text": "Codeine"
+                }
+            }
+        },
+        {
+            "id": "Medication/a67861a6-635e-4d1a-84ce-c761885fb416",
+            "content": {
+                "resourceType": "Medication",
+                "name": "Albuterol 0.09 MG/ACTUAT inhalant solution",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "329498",
+                            "display": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                        }
+                    ],
+                    "text": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                }
+            }
+        },
+        {
+            "id": "Medication/50ffee6b-e875-44d1-b9e3-bba3be77f747",
+            "content": {
+                "resourceType": "Medication",
+                "name": "Albuterol 0.09 MG/ACTUAT inhalant solution",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "329498",
+                            "display": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                        }
+                    ],
+                    "text": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,234 @@
+{
+    "resourceType": "Bundle",
+    "totalResults": 7,
+    "entry": [
+        {
+            "id": "AllergyIntolerance/9610e32b-a1b5-499f-99e0-e59701cd9699",
+            "content": {
+                "resourceType": "AllergyIntolerance",
+                "sensitivityType": "allergy",
+                "contained": [
+                    {
+                        "id": "allergen",
+                        "resourceType": "Substance",
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": {
+                                        "name": "sulfa drug",
+                                        "code_system_name": "RXNORM"
+                                    },
+                                    "display": "sulfa drug"
+                                }
+                            ],
+                            "text": "sulfa drug"
+                        }
+                    }
+                ],
+                "substance": {
+                    "reference": "#allergen",
+                    "display": "sulfa drug"
+                }
+            }
+        },
+        {
+            "id": "Condition/b7c13f6b-bfbc-4eeb-9d07-b699c435e96d",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "onsetDate": "2012-08-05",
+                "dateAsserted": "2012-08-05",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "40930008",
+                            "display": "Hypothyroidism"
+                        }
+                    ],
+                    "text": "Hypothyroidism"
+                }
+            }
+        },
+        {
+            "id": "Condition/e4947840-e717-4aaa-bc91-7371e63fd00c",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "onsetDate": "2012-10-02",
+                "dateAsserted": "2012-10-02",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "10509002",
+                            "display": "Acute bronchitis"
+                        }
+                    ],
+                    "text": "Acute bronchitis"
+                }
+            }
+        },
+        {
+            "id": "Observation/2c99360a-291a-4a98-b9a1-a4e423ffc7f9",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "30954-2",
+                            "display": "Results"
+                        }
+                    ],
+                    "text": "Results"
+                },
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v2/0078",
+                            "code": "N",
+                            "display": "Normal"
+                        }
+                    ],
+                    "text": "Normal"
+                }
+            }
+        },
+        {
+            "id": "Observation/6d5d424f-f318-4d99-847c-8fec2b4e28bc",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.6.12",
+                            "code": "99499",
+                            "display": "No Procedure Performed"
+                        }
+                    ],
+                    "text": "No Procedure Performed"
+                },
+                "status": "final",
+                "reliability": "ok",
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/2c99360a-291a-4a98-b9a1-a4e423ffc7f9"
+                        }
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "MedicationPrescription/609ef962-4099-414a-b198-93d20c476c0d",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dateWritten": "2015-03-09T00:00:00.000Z",
+                "dosageInstruction": [
+                    {
+                        "route": {
+                            "text": "PO"
+                        },
+                        "timingPeriod": {
+                            "start": "2015-03-09T00:00:00.000Z"
+                        }
+                    }
+                ],
+                "contained": [
+                    {
+                        "id": "med",
+                        "resourceType": "Medication",
+                        "name": "acetaminophen-aspirin",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "432638",
+                                    "display": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet"
+                                }
+                            ],
+                            "text": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet"
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "#med",
+                    "display": "acetaminophen-aspirin"
+                }
+            }
+        },
+        {
+            "id": "MedicationAdministration/ac7e0052-6208-4323-9b1f-2f9da8e96cc8",
+            "content": {
+                "resourceType": "MedicationAdministration",
+                "status": "completed",
+                "practitioner": {
+                    "reference": "Practitioner/unknown",
+                    "display": "Unknown"
+                },
+                "whenGiven": {
+                    "start": "2015-03-09T00:00:00.000Z"
+                },
+                "dosage": [
+                    {
+                        "route": {
+                            "text": "PO"
+                        },
+                        "timingPeriod": {
+                            "start": "2015-03-09T00:00:00.000Z"
+                        }
+                    }
+                ],
+                "prescription": {
+                    "reference": "MedicationPrescription/609ef962-4099-414a-b198-93d20c476c0d"
+                },
+                "contained": [
+                    {
+                        "id": "med",
+                        "resourceType": "Medication",
+                        "name": "acetaminophen-aspirin",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "432638",
+                                    "display": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet"
+                                }
+                            ],
+                            "text": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet"
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "#med",
+                    "display": "acetaminophen-aspirin"
+                }
+            }
+        }
+    ]
+}

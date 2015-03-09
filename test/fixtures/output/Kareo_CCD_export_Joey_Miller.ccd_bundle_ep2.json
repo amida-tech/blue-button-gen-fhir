@@ -1,0 +1,278 @@
+{
+    "resourceType": "Bundle",
+    "totalResults": 11,
+    "entry": [
+        {
+            "id": "Patient/some-id-here-1987",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "http://www.midea-tecg.com",
+                        "value": "JOE_DOE_IDENTIFIER"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": [
+                            "DOE"
+                        ],
+                        "given": [
+                            "JOE"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AllergyIntolerance/568d7415-1281-4370-827c-278086a187c9",
+            "content": {
+                "resourceType": "AllergyIntolerance",
+                "sensitivityType": "allergy",
+                "substance": {
+                    "reference": "Substance/693c0f37-be15-478c-90d9-e82c639ab8be",
+                    "display": "sulfa drug"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Condition/be1d5102-8025-4bc0-a156-c81a0a37c932",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "onsetDate": "2012-08-05",
+                "dateAsserted": "2012-08-05",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "40930008",
+                            "display": "Hypothyroidism"
+                        }
+                    ],
+                    "text": "Hypothyroidism"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Condition/ea9676fb-829e-4974-bf70-f8c1266fcc9b",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "onsetDate": "2012-10-02",
+                "dateAsserted": "2012-10-02",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "10509002",
+                            "display": "Acute bronchitis"
+                        }
+                    ],
+                    "text": "Acute bronchitis"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/1f9fed91-c666-4bbc-b860-d90be6c7402e",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "30954-2",
+                            "display": "Results"
+                        }
+                    ],
+                    "text": "Results"
+                },
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v2/0078",
+                            "code": "N",
+                            "display": "Normal"
+                        }
+                    ],
+                    "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Observation/9797b6a9-b4be-48fd-b1b1-9168d2deb35f",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.6.12",
+                            "code": "99499",
+                            "display": "No Procedure Performed"
+                        }
+                    ],
+                    "text": "No Procedure Performed"
+                },
+                "status": "final",
+                "reliability": "ok",
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/1f9fed91-c666-4bbc-b860-d90be6c7402e"
+                        }
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "11502-2",
+                            "display": "Laboratory report",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationPrescription/ec8e54c2-9d44-4adc-9ea9-dfab372ceb4a",
+            "content": {
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dateWritten": "2015-03-09",
+                "dosageInstruction": [
+                    {
+                        "timingPeriod": {
+                            "start": "2015-03-09"
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "Medication/e29042f0-e3c7-4572-bb19-4b4f746eb929",
+                    "display": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "MedicationAdministration/6f41c40c-657b-48c4-bc2d-9d4c1daf510c",
+            "content": {
+                "resourceType": "MedicationAdministration",
+                "status": "completed",
+                "practitioner": {
+                    "reference": "Practitioner/unknown",
+                    "display": "Unknown"
+                },
+                "whenGiven": {
+                    "start": "2015-03-09"
+                },
+                "dosage": [
+                    {
+                        "timingPeriod": {
+                            "start": "2015-03-09"
+                        }
+                    }
+                ],
+                "prescription": {
+                    "reference": "MedicationPrescription/ec8e54c2-9d44-4adc-9ea9-dfab372ceb4a"
+                },
+                "medication": {
+                    "reference": "Medication/6608ed6f-5998-4cf5-b299-4148cdc92384",
+                    "display": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet"
+                },
+                "patient": {
+                    "reference": "Patient/some-id-here-1987",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "id": "Substance/693c0f37-be15-478c-90d9-e82c639ab8be",
+            "content": {
+                "resourceType": "Substance",
+                "type": {
+                    "coding": [
+                        {
+                            "code": {
+                                "name": "sulfa drug",
+                                "code_system_name": "RXNORM"
+                            },
+                            "display": "sulfa drug"
+                        }
+                    ],
+                    "text": "sulfa drug"
+                }
+            }
+        },
+        {
+            "id": "Medication/e29042f0-e3c7-4572-bb19-4b4f746eb929",
+            "content": {
+                "resourceType": "Medication",
+                "name": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "432638",
+                            "display": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet"
+                        }
+                    ],
+                    "text": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet"
+                }
+            }
+        },
+        {
+            "id": "Medication/6608ed6f-5998-4cf5-b299-4148cdc92384",
+            "content": {
+                "resourceType": "Medication",
+                "name": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "432638",
+                            "display": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet"
+                        }
+                    ],
+                    "text": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet"
+                }
+            }
+        }
+    ]
+}
