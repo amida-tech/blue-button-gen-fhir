@@ -1,9 +1,83 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 11,
+    "totalResults": 12,
     "entry": [
         {
-            "id": "AllergyIntolerance/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.3.441.1.50.300011.51",
+                        "value": "26620"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Everyman"
+                    ],
+                    "given": [
+                        "Adam",
+                        "TOC"
+                    ]
+                },
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "M",
+                            "display": "Male"
+                        }
+                    ],
+                    "text": "Male"
+                },
+                "birthdate": "1962-10-22",
+                "address": [
+                    {
+                        "state": "GA",
+                        "country": "US"
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/MaritalStatus",
+                            "code": "S",
+                            "display": "Never Married"
+                        }
+                    ],
+                    "text": "Never Married"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "2106-3",
+                                    "display": "White"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#ethnicity",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Ethnicity",
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AllergyIntolerance/1",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "sensitivityType": "allergy",
@@ -27,11 +101,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Bicillin L-A"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/1",
+            "id": "Observation/2",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -62,11 +140,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/2",
+            "id": "Observation/3",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -97,11 +179,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/3",
+            "id": "Observation/4",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -132,11 +218,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -167,11 +257,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/5",
+            "id": "Observation/6",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -202,11 +296,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -236,20 +334,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/1"
+                            "reference": "Observation/2"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/2"
+                            "reference": "Observation/3"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/7",
+            "id": "Observation/8",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -279,12 +381,6 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
                             "reference": "Observation/4"
                         }
                     },
@@ -293,12 +389,22 @@
                         "target": {
                             "reference": "Observation/5"
                         }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/6"
+                        }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/8",
+            "id": "Observation/9",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -329,11 +435,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "MedicationPrescription/9",
+            "id": "MedicationPrescription/10",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -376,11 +486,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/10",
+            "id": "MedicationAdministration/11",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -407,7 +521,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/9",
+                    "reference": "MedicationPrescription/10",
                     "display": "inhale 2 puffs by inhalation route every 6 hours for 30 days prn wheezing"
                 },
                 "contained": [
@@ -430,6 +544,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }

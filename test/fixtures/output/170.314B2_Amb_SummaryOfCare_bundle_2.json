@@ -1,9 +1,86 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 14,
+    "totalResults": 15,
     "entry": [
         {
-            "id": "AdverseReaction/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:1.3.6.1.4.1.22812.3.99930.3",
+                        "value": "110107073916280"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Everyman"
+                    ],
+                    "given": [
+                        "Adam",
+                        null
+                    ]
+                },
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "+1-(555)555-3333",
+                        "use": "home"
+                    }
+                ],
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "M",
+                            "display": "Male"
+                        }
+                    ],
+                    "text": "Male"
+                },
+                "birthdate": "1962-10-22",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "1234 Six Forks"
+                        ],
+                        "city": "Portland",
+                        "state": "OR",
+                        "zip": "97005",
+                        "country": "US"
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "2106-3",
+                                    "display": "White"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#ethnicity",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Ethnicity",
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AdverseReaction/1",
             "content": {
                 "resourceType": "AdverseReaction",
                 "symptom": [
@@ -20,11 +97,15 @@
                         }
                     }
                 ],
-                "didNotOccurFlag": false
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "AllergyIntolerance/1",
+            "id": "AllergyIntolerance/2",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "sensitivityType": "allergy",
@@ -52,14 +133,18 @@
                 },
                 "reaction": [
                     {
-                        "reference": "AdverseReaction/0",
+                        "reference": "AdverseReaction/1",
                         "display": "Hives"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/2",
+            "id": "Observation/3",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -90,11 +175,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/3",
+            "id": "Observation/4",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -125,11 +214,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -160,11 +253,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/5",
+            "id": "Observation/6",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -195,11 +292,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -227,11 +328,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/7",
+            "id": "Observation/8",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -261,26 +366,30 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/2"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
                             "reference": "Observation/3"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/4"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/7"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/8",
+            "id": "Observation/9",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -310,20 +419,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/4"
+                            "reference": "Observation/5"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/5"
+                            "reference": "Observation/6"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Condition/9",
+            "id": "Condition/10",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -338,11 +451,15 @@
                         }
                     ],
                     "text": "Costochondritis"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Condition/10",
+            "id": "Condition/11",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -357,11 +474,15 @@
                         }
                     ],
                     "text": "Asthma"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/11",
+            "id": "Observation/12",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -392,11 +513,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/12",
+            "id": "Observation/13",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -415,7 +540,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/11"
+                            "reference": "Observation/12"
                         }
                     }
                 ],
@@ -428,11 +553,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "MedicationPrescription/13",
+            "id": "MedicationPrescription/14",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -489,6 +618,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Albuterol 0.09 MG/ACTUAT metered dose"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }

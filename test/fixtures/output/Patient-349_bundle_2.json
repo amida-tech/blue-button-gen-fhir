@@ -1,9 +1,112 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 30,
+    "totalResults": 31,
     "entry": [
         {
-            "id": "AllergyIntolerance/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.19.5.99999.2",
+                        "value": "998991"
+                    },
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.4.1",
+                        "value": "111-00-2330"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Howard"
+                    ],
+                    "given": [
+                        "Arthur",
+                        null
+                    ]
+                },
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "(617)659-9978",
+                        "use": "mobile"
+                    }
+                ],
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "M",
+                            "display": "Male"
+                        }
+                    ],
+                    "text": "Male"
+                },
+                "birthdate": "1933-11-08",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "4267 Valley View Drive"
+                        ],
+                        "city": "Newton",
+                        "state": "MA",
+                        "zip": "2160",
+                        "country": "US"
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/MaritalStatus",
+                            "code": "M",
+                            "display": "Married"
+                        }
+                    ],
+                    "text": "Married"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/us-core-religion",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/vs/ReligiousAffiliation",
+                                    "code": "1074",
+                                    "display": "Native American"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "2106-3",
+                                    "display": "White"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#ethnicity",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Ethnicity",
+                                    "code": "2135-2",
+                                    "display": "Hispanic or Latino"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AllergyIntolerance/1",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
@@ -29,11 +132,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Eggs"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "AllergyIntolerance/1",
+            "id": "AllergyIntolerance/2",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
@@ -58,11 +165,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Codeine"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "AllergyIntolerance/2",
+            "id": "AllergyIntolerance/3",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "fatal",
@@ -88,11 +199,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Neomycin Sulfate 500 MG"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/3",
+            "id": "Observation/4",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -123,11 +238,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -158,11 +277,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/5",
+            "id": "Observation/6",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -193,11 +316,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -228,11 +355,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/7",
+            "id": "Observation/8",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -263,11 +394,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/8",
+            "id": "Observation/9",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -298,11 +433,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/9",
+            "id": "Observation/10",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -333,11 +472,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/10",
+            "id": "Observation/11",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -368,11 +511,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/11",
+            "id": "Observation/12",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -403,11 +550,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/12",
+            "id": "Observation/13",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -438,11 +589,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/13",
+            "id": "Observation/14",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -473,11 +628,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/14",
+            "id": "Observation/15",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -508,44 +667,11 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
-            }
-        },
-        {
-            "id": "Observation/15",
-            "content": {
-                "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "55418-8",
-                            "display": "Weight and Height tracking panel"
-                        }
-                    ],
-                    "text": "Weight and Height tracking panel"
-                },
-                "issued": "2010-05-25",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
                 ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/3"
-                        }
-                    }
-                ]
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
@@ -561,80 +687,6 @@
                         }
                     ],
                     "text": "Weight and Height tracking panel"
-                },
-                "issued": "2010-07-10",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/7"
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Observation/17",
-            "content": {
-                "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "55418-8",
-                            "display": "Weight and Height tracking panel"
-                        }
-                    ],
-                    "text": "Weight and Height tracking panel"
-                },
-                "issued": "2010-09-15",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/11"
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Observation/18",
-            "content": {
-                "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "35094-2",
-                            "display": "Blood pressure panel"
-                        }
-                    ],
-                    "text": "Blood pressure panel"
                 },
                 "issued": "2010-05-25",
                 "status": "final",
@@ -655,18 +707,145 @@
                         "target": {
                             "reference": "Observation/4"
                         }
-                    },
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
+            }
+        },
+        {
+            "id": "Observation/17",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2010-07-10",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/8"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
+            }
+        },
+        {
+            "id": "Observation/18",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2010-09-15",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/12"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
             "id": "Observation/19",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
+                "issued": "2010-05-25",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/5"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/7"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
+            }
+        },
+        {
+            "id": "Observation/20",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -696,20 +875,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/8"
+                            "reference": "Observation/9"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/10"
+                            "reference": "Observation/11"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/20",
+            "id": "Observation/21",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -739,20 +922,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/12"
+                            "reference": "Observation/13"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/14"
+                            "reference": "Observation/15"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Condition/21",
+            "id": "Condition/22",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -767,11 +954,15 @@
                         }
                     ],
                     "text": "Essential hypertension"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Condition/22",
+            "id": "Condition/23",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -786,11 +977,15 @@
                         }
                     ],
                     "text": "Malignant tumor of prostate"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Condition/23",
+            "id": "Condition/24",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -805,11 +1000,15 @@
                         }
                     ],
                     "text": "Tumor stage T1c"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/24",
+            "id": "Observation/25",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -865,11 +1064,15 @@
                         },
                         "text": "<2.5 ng/mL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/25",
+            "id": "Observation/26",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -888,7 +1091,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/24"
+                            "reference": "Observation/25"
                         }
                     }
                 ],
@@ -901,11 +1104,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/26",
+            "id": "Observation/27",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -961,11 +1168,15 @@
                         },
                         "text": "2-10"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/27",
+            "id": "Observation/28",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -984,7 +1195,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/26"
+                            "reference": "Observation/27"
                         }
                     }
                 ],
@@ -997,11 +1208,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "MedicationPrescription/28",
+            "id": "MedicationPrescription/29",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1033,11 +1248,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/29",
+            "id": "MedicationAdministration/30",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -1056,7 +1275,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/28"
+                    "reference": "MedicationPrescription/29"
                 },
                 "contained": [
                     {
@@ -1078,6 +1297,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }

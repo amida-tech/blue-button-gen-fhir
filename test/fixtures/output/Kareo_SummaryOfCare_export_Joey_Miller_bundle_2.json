@@ -1,9 +1,74 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 14,
+    "totalResults": 15,
     "entry": [
         {
-            "id": "Observation/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.19",
+                        "value": "28366080"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "DEMO"
+                    ],
+                    "given": [
+                        "MILLER",
+                        null
+                    ]
+                },
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "3108391111",
+                        "use": "home"
+                    }
+                ],
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "M",
+                            "display": "Male"
+                        }
+                    ],
+                    "text": "Male"
+                },
+                "birthdate": "1947-10-10",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "26 N. Martin Street"
+                        ],
+                        "city": "Los Angeles",
+                        "state": "CA",
+                        "zip": "90005",
+                        "country": "United States of America"
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "2106-3",
+                                    "display": "White"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Observation/1",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -44,11 +109,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/1",
+            "id": "Observation/2",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -89,11 +158,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/2",
+            "id": "Observation/3",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -134,11 +207,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/3",
+            "id": "Observation/4",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -179,11 +256,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -224,11 +305,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/5",
+            "id": "Observation/6",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -258,12 +343,6 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/0"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
                             "reference": "Observation/1"
                         }
                     },
@@ -272,12 +351,22 @@
                         "target": {
                             "reference": "Observation/2"
                         }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/3"
+                        }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -307,20 +396,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
+                            "reference": "Observation/4"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/4"
+                            "reference": "Observation/5"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Condition/7",
+            "id": "Condition/8",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -335,11 +428,15 @@
                         }
                     ],
                     "text": "Hypothyroidism"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Condition/8",
+            "id": "Condition/9",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -354,11 +451,15 @@
                         }
                     ],
                     "text": "Acute bronchitis"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/9",
+            "id": "Observation/10",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -382,11 +483,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "MedicationPrescription/10",
+            "id": "MedicationPrescription/11",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -422,11 +527,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/11",
+            "id": "MedicationAdministration/12",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -445,7 +554,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/10",
+                    "reference": "MedicationPrescription/11",
                     "display": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet, [RxNorm: 432638]"
                 },
                 "contained": [
@@ -468,11 +577,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/12",
+            "id": "MedicationPrescription/13",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -509,11 +622,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Lipitor 10 mg oral tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/13",
+            "id": "MedicationAdministration/14",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -534,7 +651,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/12",
+                    "reference": "MedicationPrescription/13",
                     "display": "Lipitor 10 mg oral tablet, [RxNorm: 617312]"
                 },
                 "contained": [
@@ -557,6 +674,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Lipitor 10 mg oral tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }

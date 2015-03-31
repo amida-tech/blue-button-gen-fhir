@@ -1,9 +1,112 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 16,
+    "totalResults": 17,
     "entry": [
         {
-            "id": "AdverseReaction/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.19",
+                        "value": "12345"
+                    },
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.4.1",
+                        "value": "111-00-1234"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Everyman"
+                    ],
+                    "given": [
+                        "Adam",
+                        "Frankie"
+                    ]
+                },
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "(781)555-1212",
+                        "use": "home"
+                    }
+                ],
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "M",
+                            "display": "Male"
+                        }
+                    ],
+                    "text": "Male"
+                },
+                "birthdate": "1954-11-25",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "17 Daws Rd."
+                        ],
+                        "city": "Blue Bell",
+                        "state": "MA",
+                        "zip": "02368",
+                        "country": "US"
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/MaritalStatus",
+                            "code": "M",
+                            "display": "Married"
+                        }
+                    ],
+                    "text": "Married"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/us-core-religion",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/vs/ReligiousAffiliation",
+                                    "code": "1013",
+                                    "display": "Christian (non-Catholic, non-specific)"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "2106-3",
+                                    "display": "White"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#ethnicity",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Ethnicity",
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AdverseReaction/1",
             "content": {
                 "resourceType": "AdverseReaction",
                 "symptom": [
@@ -20,11 +123,15 @@
                         }
                     }
                 ],
-                "didNotOccurFlag": false
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "AllergyIntolerance/1",
+            "id": "AllergyIntolerance/2",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
@@ -53,14 +160,18 @@
                 },
                 "reaction": [
                     {
-                        "reference": "AdverseReaction/0",
+                        "reference": "AdverseReaction/1",
                         "display": "Hives"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "AdverseReaction/2",
+            "id": "AdverseReaction/3",
             "content": {
                 "resourceType": "AdverseReaction",
                 "symptom": [
@@ -77,11 +188,15 @@
                         }
                     }
                 ],
-                "didNotOccurFlag": false
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "AllergyIntolerance/3",
+            "id": "AllergyIntolerance/4",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
@@ -110,14 +225,18 @@
                 },
                 "reaction": [
                     {
-                        "reference": "AdverseReaction/2",
+                        "reference": "AdverseReaction/3",
                         "display": "Wheezing"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "AdverseReaction/4",
+            "id": "AdverseReaction/5",
             "content": {
                 "resourceType": "AdverseReaction",
                 "symptom": [
@@ -134,11 +253,15 @@
                         }
                     }
                 ],
-                "didNotOccurFlag": false
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "AllergyIntolerance/5",
+            "id": "AllergyIntolerance/6",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
@@ -167,14 +290,18 @@
                 },
                 "reaction": [
                     {
-                        "reference": "AdverseReaction/4",
+                        "reference": "AdverseReaction/5",
                         "display": "Nausea"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -215,11 +342,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/7",
+            "id": "Observation/8",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -260,11 +391,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/8",
+            "id": "Observation/9",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -305,11 +440,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/9",
+            "id": "Observation/10",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -350,11 +489,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/10",
+            "id": "Observation/11",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -395,11 +538,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/11",
+            "id": "Observation/12",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -440,11 +587,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/12",
+            "id": "Observation/13",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -474,20 +625,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/7"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/8"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/13",
+            "id": "Observation/14",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -501,6 +656,53 @@
                     "text": "Weight and Height tracking panel"
                 },
                 "issued": "2000-04-07",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/10"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/11"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
+            }
+        },
+        {
+            "id": "Observation/15",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
+                "issued": "1999-11-14",
                 "status": "final",
                 "reliability": "ok",
                 "extension": [
@@ -519,55 +721,16 @@
                         "target": {
                             "reference": "Observation/9"
                         }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/10"
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Observation/14",
-            "content": {
-                "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "35094-2",
-                            "display": "Blood pressure panel"
-                        }
-                    ],
-                    "text": "Blood pressure panel"
-                },
-                "issued": "1999-11-14",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
                     }
                 ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/8"
-                        }
-                    }
-                ]
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/15",
+            "id": "Observation/16",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -597,10 +760,14 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/11"
+                            "reference": "Observation/12"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         }
     ]

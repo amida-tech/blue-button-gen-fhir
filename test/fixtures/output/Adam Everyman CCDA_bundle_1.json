@@ -1,9 +1,83 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 33,
+    "totalResults": 34,
     "entry": [
         {
-            "id": "AdverseReaction/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.3.441.1.50.300011.51",
+                        "value": "26604"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Everyman"
+                    ],
+                    "given": [
+                        "Adam",
+                        null
+                    ]
+                },
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "M",
+                            "display": "Male"
+                        }
+                    ],
+                    "text": "Male"
+                },
+                "birthdate": "1962-10-22",
+                "address": [
+                    {
+                        "state": "GA",
+                        "country": "US"
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/MaritalStatus",
+                            "code": "S",
+                            "display": "Never Married"
+                        }
+                    ],
+                    "text": "Never Married"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "2106-3",
+                                    "display": "White"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#ethnicity",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Ethnicity",
+                                    "code": "2135-2",
+                                    "display": "Hispanic or Latino"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AdverseReaction/1",
             "content": {
                 "resourceType": "AdverseReaction",
                 "symptom": [
@@ -13,11 +87,15 @@
                         }
                     }
                 ],
-                "didNotOccurFlag": false
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "AllergyIntolerance/1",
+            "id": "AllergyIntolerance/2",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "sensitivityType": "allergy",
@@ -44,14 +122,18 @@
                 },
                 "reaction": [
                     {
-                        "reference": "AdverseReaction/0",
+                        "reference": "AdverseReaction/1",
                         "display": "hives"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "AdverseReaction/2",
+            "id": "AdverseReaction/3",
             "content": {
                 "resourceType": "AdverseReaction",
                 "symptom": [
@@ -61,11 +143,15 @@
                         }
                     }
                 ],
-                "didNotOccurFlag": false
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "AllergyIntolerance/3",
+            "id": "AllergyIntolerance/4",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "sensitivityType": "allergy",
@@ -92,14 +178,18 @@
                 },
                 "reaction": [
                     {
-                        "reference": "AdverseReaction/2",
+                        "reference": "AdverseReaction/3",
                         "display": "shortness of breath"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -130,11 +220,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/5",
+            "id": "Observation/6",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -165,11 +259,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -200,11 +298,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/7",
+            "id": "Observation/8",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -235,11 +337,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/8",
+            "id": "Observation/9",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -270,11 +376,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/9",
+            "id": "Observation/10",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -305,11 +415,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/10",
+            "id": "Observation/11",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -340,11 +454,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/11",
+            "id": "Observation/12",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -375,11 +493,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/12",
+            "id": "Observation/13",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -410,11 +532,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/13",
+            "id": "Observation/14",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -445,11 +571,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/14",
+            "id": "Observation/15",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -480,11 +610,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/15",
+            "id": "Observation/16",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -515,11 +649,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/16",
+            "id": "Observation/17",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -550,11 +688,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/17",
+            "id": "Observation/18",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -585,11 +727,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/18",
+            "id": "Observation/19",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -620,50 +766,11 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
-            }
-        },
-        {
-            "id": "Observation/19",
-            "content": {
-                "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "35094-2",
-                            "display": "Blood pressure panel"
-                        }
-                    ],
-                    "text": "Blood pressure panel"
-                },
-                "issued": "2011-09-25",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
                 ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/4"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/5"
-                        }
-                    }
-                ]
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
@@ -680,6 +787,53 @@
                     ],
                     "text": "Blood pressure panel"
                 },
+                "issued": "2011-09-25",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/5"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/6"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
+            }
+        },
+        {
+            "id": "Observation/21",
+            "content": {
+                "resourceType": "Observation",
+                "name": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
                 "issued": "2012-03-30",
                 "status": "final",
                 "reliability": "ok",
@@ -697,20 +851,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/9"
+                            "reference": "Observation/10"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/10"
+                            "reference": "Observation/11"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/21",
+            "id": "Observation/22",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -740,20 +898,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/14"
+                            "reference": "Observation/15"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/15"
+                            "reference": "Observation/16"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/22",
+            "id": "Observation/23",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -783,20 +945,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/8"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/8"
+                            "reference": "Observation/9"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/23",
+            "id": "Observation/24",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -826,20 +992,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/12"
+                            "reference": "Observation/13"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/13"
+                            "reference": "Observation/14"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/24",
+            "id": "Observation/25",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -869,20 +1039,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/17"
+                            "reference": "Observation/18"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/18"
+                            "reference": "Observation/19"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/25",
+            "id": "Observation/26",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -928,11 +1102,15 @@
                         },
                         "text": "13.5 - 18"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/26",
+            "id": "Observation/27",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -978,11 +1156,15 @@
                         },
                         "text": "41 - 53"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/27",
+            "id": "Observation/28",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -1028,11 +1210,15 @@
                         },
                         "text": "4.3 - 10.8"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/28",
+            "id": "Observation/29",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -1078,11 +1264,15 @@
                         },
                         "text": "150 - 400"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "MedicationPrescription/29",
+            "id": "MedicationPrescription/30",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1125,11 +1315,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Viagra Oral Tablet 50 mg"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/30",
+            "id": "MedicationPrescription/31",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1169,11 +1363,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "azithromycin Oral Tablet 500 mg"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/31",
+            "id": "MedicationAdministration/32",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -1197,7 +1395,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/30",
+                    "reference": "MedicationPrescription/31",
                     "display": "take 1 tablet by oral route daily for 30 days then 250 mg tablet once daily for the next 4 days"
                 },
                 "contained": [
@@ -1220,11 +1418,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "azithromycin Oral Tablet 500 mg"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/32",
+            "id": "MedicationPrescription/33",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1267,6 +1469,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "albuterol sulfate Inhalation HFA Aerosol Inhaler 90 mcg/actuation"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }

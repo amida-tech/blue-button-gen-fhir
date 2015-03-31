@@ -1,12 +1,57 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 7,
+    "totalResults": 8,
     "entry": [
         {
-            "id": "AllergyIntolerance/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:ProviderID",
+                        "value": "28366080"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "MILLER"
+                    ],
+                    "given": [
+                        "JOEY",
+                        "null"
+                    ]
+                },
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "M",
+                            "display": "Male"
+                        }
+                    ],
+                    "text": "Male"
+                },
+                "birthdate": "1947-10-10",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "26 N. Martin Street"
+                        ],
+                        "city": "Los Angeles",
+                        "state": "CA",
+                        "zip": "90005",
+                        "country": "United States of America"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AllergyIntolerance/1",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "sensitivityType": "allergy",
+                "status": "resolved",
                 "contained": [
                     {
                         "id": "allergen",
@@ -28,11 +73,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "sulfa drug"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Condition/1",
+            "id": "Condition/2",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -47,11 +96,15 @@
                         }
                     ],
                     "text": "Hypothyroidism"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Condition/2",
+            "id": "Condition/3",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -66,11 +119,15 @@
                         }
                     ],
                     "text": "Acute bronchitis"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/3",
+            "id": "Observation/4",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -104,11 +161,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -127,7 +188,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
+                            "reference": "Observation/4"
                         }
                     }
                 ],
@@ -140,22 +201,26 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "MedicationPrescription/5",
+            "id": "MedicationPrescription/6",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
-                "dateWritten": "2015-03-09T00:00:00.000Z",
+                "dateWritten": "2015-03-31T00:00:00.000Z",
                 "dosageInstruction": [
                     {
                         "route": {
                             "text": "PO"
                         },
                         "timingPeriod": {
-                            "start": "2015-03-09T00:00:00.000Z"
+                            "start": "2015-03-31T00:00:00.000Z"
                         }
                     }
                 ],
@@ -179,11 +244,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "acetaminophen-aspirin"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/6",
+            "id": "MedicationAdministration/7",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -192,7 +261,7 @@
                     "display": "Unknown"
                 },
                 "whenGiven": {
-                    "start": "2015-03-09T00:00:00.000Z"
+                    "start": "2015-03-31T00:00:00.000Z"
                 },
                 "dosage": [
                     {
@@ -200,12 +269,12 @@
                             "text": "PO"
                         },
                         "timingPeriod": {
-                            "start": "2015-03-09T00:00:00.000Z"
+                            "start": "2015-03-31T00:00:00.000Z"
                         }
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/5"
+                    "reference": "MedicationPrescription/6"
                 },
                 "contained": [
                     {
@@ -227,6 +296,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "acetaminophen-aspirin"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }

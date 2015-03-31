@@ -1,9 +1,112 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 23,
+    "totalResults": 24,
     "entry": [
         {
-            "id": "AllergyIntolerance/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.19.5.99999.2",
+                        "value": "998991"
+                    },
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.4.1",
+                        "value": "111-00-2330"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Morris"
+                    ],
+                    "given": [
+                        "Sean",
+                        null
+                    ]
+                },
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "(740)447-0566",
+                        "use": "mobile"
+                    }
+                ],
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "M",
+                            "display": "Male"
+                        }
+                    ],
+                    "text": "Male"
+                },
+                "birthdate": "1940-05-08",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "105 Irving Road"
+                        ],
+                        "city": "Athens",
+                        "state": "OH",
+                        "zip": "45701",
+                        "country": "US"
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/MaritalStatus",
+                            "code": "M",
+                            "display": "Married"
+                        }
+                    ],
+                    "text": "Married"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/us-core-religion",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/vs/ReligiousAffiliation",
+                                    "code": "1077",
+                                    "display": "Protestant"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "2106-3",
+                                    "display": "White"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#ethnicity",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Ethnicity",
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AllergyIntolerance/1",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
@@ -29,11 +132,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Eggs"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "AllergyIntolerance/1",
+            "id": "AllergyIntolerance/2",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
@@ -59,11 +166,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "AllergyIntolerance/2",
+            "id": "AllergyIntolerance/3",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "fatal",
@@ -88,11 +199,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Penicillin V"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/3",
+            "id": "Observation/4",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -123,11 +238,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -158,11 +277,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/5",
+            "id": "Observation/6",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -193,11 +316,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -228,11 +355,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/7",
+            "id": "Observation/8",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -263,11 +394,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/8",
+            "id": "Observation/9",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -298,11 +433,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/9",
+            "id": "Observation/10",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -333,11 +472,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/10",
+            "id": "Observation/11",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -368,11 +511,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/11",
+            "id": "Observation/12",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -402,20 +549,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
+                            "reference": "Observation/4"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/5"
+                            "reference": "Observation/6"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/12",
+            "id": "Observation/13",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -445,20 +596,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/8"
+                            "reference": "Observation/9"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/10"
+                            "reference": "Observation/11"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/13",
+            "id": "Observation/14",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -488,14 +643,18 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/7"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/14",
+            "id": "Observation/15",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -525,14 +684,18 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/8"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Condition/15",
+            "id": "Condition/16",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -547,11 +710,15 @@
                         }
                     ],
                     "text": "Essential hypertension"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Condition/16",
+            "id": "Condition/17",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -566,11 +733,15 @@
                         }
                     ],
                     "text": "Heart failure"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/17",
+            "id": "MedicationPrescription/18",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -602,11 +773,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/18",
+            "id": "MedicationAdministration/19",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -625,7 +800,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/17"
+                    "reference": "MedicationPrescription/18"
                 },
                 "contained": [
                     {
@@ -647,11 +822,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/19",
+            "id": "MedicationPrescription/20",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -683,11 +862,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Lisinopril 10 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/20",
+            "id": "MedicationAdministration/21",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -706,7 +889,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/19"
+                    "reference": "MedicationPrescription/20"
                 },
                 "contained": [
                     {
@@ -728,11 +911,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Lisinopril 10 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/21",
+            "id": "MedicationPrescription/22",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -764,11 +951,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Metoprolol Tartrate 25 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/22",
+            "id": "MedicationAdministration/23",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -787,7 +978,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/21"
+                    "reference": "MedicationPrescription/22"
                 },
                 "contained": [
                     {
@@ -809,6 +1000,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Metoprolol Tartrate 25 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }

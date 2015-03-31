@@ -1,9 +1,78 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 29,
+    "totalResults": 30,
     "entry": [
         {
-            "id": "AllergyIntolerance/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:1.3.6.1.4.1.22812.11.0.100610",
+                        "value": "101822"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Williams"
+                    ],
+                    "given": [
+                        "John",
+                        null
+                    ]
+                },
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "M",
+                            "display": "Male"
+                        }
+                    ],
+                    "text": "Male"
+                },
+                "birthdate": "1947-04-07",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "56 reef sting"
+                        ],
+                        "city": "BEAVERTON",
+                        "zip": "97005",
+                        "country": "US"
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "2054-5",
+                                    "display": "Black or African American"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#ethnicity",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Ethnicity",
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AllergyIntolerance/1",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "sensitivityType": "allergy",
@@ -28,11 +97,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "penicillin G benzathine"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "AllergyIntolerance/1",
+            "id": "AllergyIntolerance/2",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "sensitivityType": "allergy",
@@ -57,11 +130,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "codeine"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/2",
+            "id": "Observation/3",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -102,11 +179,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/3",
+            "id": "Observation/4",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -147,11 +228,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -189,11 +274,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/5",
+            "id": "Observation/6",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -234,11 +323,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -279,11 +372,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/7",
+            "id": "Observation/8",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -324,11 +421,15 @@
                         }
                     ],
                     "text": "High"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/8",
+            "id": "Observation/9",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -366,11 +467,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/9",
+            "id": "Observation/10",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -400,20 +505,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/2"
+                            "reference": "Observation/3"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
+                            "reference": "Observation/4"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/10",
+            "id": "Observation/11",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -443,13 +552,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/4"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/5"
                         }
                     },
                     {
@@ -457,12 +560,22 @@
                         "target": {
                             "reference": "Observation/7"
                         }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/8"
+                        }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Condition/11",
+            "id": "Condition/12",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -477,11 +590,15 @@
                         }
                     ],
                     "text": "Acute angina"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Condition/12",
+            "id": "Condition/13",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -496,11 +613,15 @@
                         }
                     ],
                     "text": "Type 2 diabetes mellitus"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Condition/13",
+            "id": "Condition/14",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -515,11 +636,15 @@
                         }
                     ],
                     "text": "Hypercholesterolemia"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/14",
+            "id": "Observation/15",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -565,11 +690,15 @@
                         },
                         "text": "ng/mL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/15",
+            "id": "Observation/16",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -615,11 +744,15 @@
                         },
                         "text": "mMol/L"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/16",
+            "id": "Observation/17",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -665,11 +798,15 @@
                         },
                         "text": "mMol/L"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/17",
+            "id": "Observation/18",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -715,11 +852,15 @@
                         },
                         "text": "mg/dL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/18",
+            "id": "Observation/19",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -765,11 +906,15 @@
                         },
                         "text": "mMol/L"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/19",
+            "id": "Observation/20",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -815,11 +960,15 @@
                         },
                         "text": "mMol/L"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/20",
+            "id": "Observation/21",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -865,11 +1014,15 @@
                         },
                         "text": "mg/dL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/21",
+            "id": "Observation/22",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -915,11 +1068,15 @@
                         },
                         "text": "mg/dL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/22",
+            "id": "Observation/23",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -935,12 +1092,6 @@
                 "status": "final",
                 "reliability": "ok",
                 "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/15"
-                        }
-                    },
                     {
                         "type": "has-component",
                         "target": {
@@ -976,6 +1127,12 @@
                         "target": {
                             "reference": "Observation/21"
                         }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/22"
+                        }
                     }
                 ],
                 "extension": [
@@ -987,11 +1144,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/23",
+            "id": "Observation/24",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -1037,11 +1198,15 @@
                         },
                         "text": "ng/mL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/24",
+            "id": "Observation/25",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -1087,11 +1252,15 @@
                         },
                         "text": "mg/dL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "MedicationPrescription/25",
+            "id": "MedicationPrescription/26",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1139,11 +1308,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "insulin aspart 100 units/mL subcutaneous solution"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/26",
+            "id": "MedicationPrescription/27",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1191,11 +1364,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Lantus 100 units/mL subcutaneous solution"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/27",
+            "id": "MedicationPrescription/28",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1244,11 +1421,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "atorvastatin 40 mg oral tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/28",
+            "id": "MedicationPrescription/29",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1297,6 +1478,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Ascriptin Maximum Strength 75 mg-500 mg-75 mg-75 mg oral tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }

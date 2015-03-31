@@ -1,9 +1,112 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 35,
+    "totalResults": 36,
     "entry": [
         {
-            "id": "AllergyIntolerance/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.19.5.99999.2",
+                        "value": "998991"
+                    },
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.4.1",
+                        "value": "111-00-2330"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Rowe"
+                    ],
+                    "given": [
+                        "Troy",
+                        null
+                    ]
+                },
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "(603)521-7620",
+                        "use": "mobile"
+                    }
+                ],
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "M",
+                            "display": "Male"
+                        }
+                    ],
+                    "text": "Male"
+                },
+                "birthdate": "1951-06-22",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "539 Grasselli Street"
+                        ],
+                        "city": "Manchester",
+                        "state": "NH",
+                        "zip": "3101",
+                        "country": "US"
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/MaritalStatus",
+                            "code": "M",
+                            "display": "Married"
+                        }
+                    ],
+                    "text": "Married"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/us-core-religion",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/vs/ReligiousAffiliation",
+                                    "code": "1020",
+                                    "display": "Hinduism"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "2106-3",
+                                    "display": "White"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#ethnicity",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Ethnicity",
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AllergyIntolerance/1",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "fatal",
@@ -29,11 +132,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Eggs"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "AllergyIntolerance/1",
+            "id": "AllergyIntolerance/2",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
@@ -59,11 +166,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Amikacin Sulfate 50 MG/ML Injectable Solution"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "AllergyIntolerance/2",
+            "id": "AllergyIntolerance/3",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "fatal",
@@ -89,11 +200,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Doxycycline 75 MG Enteric Coated Tablet"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/3",
+            "id": "Observation/4",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -124,11 +239,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -159,11 +278,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/5",
+            "id": "Observation/6",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -194,11 +317,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -229,11 +356,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/7",
+            "id": "Observation/8",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -264,11 +395,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/8",
+            "id": "Observation/9",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -299,11 +434,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/9",
+            "id": "Observation/10",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -334,11 +473,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/10",
+            "id": "Observation/11",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -368,14 +511,18 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
+                            "reference": "Observation/4"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/11",
+            "id": "Observation/12",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -405,14 +552,18 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/4"
+                            "reference": "Observation/5"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/12",
+            "id": "Observation/13",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -442,14 +593,18 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/8"
+                            "reference": "Observation/9"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/13",
+            "id": "Observation/14",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -479,14 +634,18 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/9"
+                            "reference": "Observation/10"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/14",
+            "id": "Observation/15",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -516,20 +675,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/5"
+                            "reference": "Observation/6"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/8"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Condition/15",
+            "id": "Condition/16",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -544,25 +707,10 @@
                         }
                     ],
                     "text": "Diabetes mellitus type 2"
-                }
-            }
-        },
-        {
-            "id": "Condition/16",
-            "content": {
-                "resourceType": "Condition",
-                "status": "confirmed",
-                "onsetDate": "2010-06-10",
-                "dateAsserted": "2010-06-10",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://snomed.info/sct",
-                            "code": "261650005",
-                            "display": "Tumor stage T1c"
-                        }
-                    ],
-                    "text": "Tumor stage T1c"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
@@ -577,16 +725,43 @@
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
-                            "code": "399068003",
-                            "display": "Malignant tumor of prostate"
+                            "code": "261650005",
+                            "display": "Tumor stage T1c"
                         }
                     ],
-                    "text": "Malignant tumor of prostate"
+                    "text": "Tumor stage T1c"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
             "id": "Condition/18",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "onsetDate": "2010-06-10",
+                "dateAsserted": "2010-06-10",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "399068003",
+                            "display": "Malignant tumor of prostate"
+                        }
+                    ],
+                    "text": "Malignant tumor of prostate"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
+            }
+        },
+        {
+            "id": "Condition/19",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -601,11 +776,15 @@
                         }
                     ],
                     "text": "Open-angle glaucoma"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/19",
+            "id": "Observation/20",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -661,11 +840,15 @@
                         },
                         "text": "2-10"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/20",
+            "id": "Observation/21",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -684,7 +867,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/19"
+                            "reference": "Observation/20"
                         }
                     }
                 ],
@@ -697,11 +880,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/21",
+            "id": "Observation/22",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -757,11 +944,15 @@
                         },
                         "text": "4-5.6%"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/22",
+            "id": "Observation/23",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -780,7 +971,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/21"
+                            "reference": "Observation/22"
                         }
                     }
                 ],
@@ -793,11 +984,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/23",
+            "id": "Observation/24",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -853,11 +1048,15 @@
                         },
                         "text": ">=40 mg/dL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/24",
+            "id": "Observation/25",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -913,11 +1112,15 @@
                         },
                         "text": "<130 mg/dL (calc)"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/25",
+            "id": "Observation/26",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -936,13 +1139,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/23"
+                            "reference": "Observation/24"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/24"
+                            "reference": "Observation/25"
                         }
                     }
                 ],
@@ -955,11 +1158,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/26",
+            "id": "Observation/27",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -1015,11 +1222,15 @@
                         },
                         "text": "<2.5 ng/mL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/27",
+            "id": "Observation/28",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -1038,7 +1249,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/26"
+                            "reference": "Observation/27"
                         }
                     }
                 ],
@@ -1051,11 +1262,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/28",
+            "id": "Observation/29",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -1111,11 +1326,15 @@
                         },
                         "text": "125-200 mg/dL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/29",
+            "id": "Observation/30",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -1171,11 +1390,15 @@
                         },
                         "text": "10-39 years: 55-110 mg/dL | 40-59 years: 70-150 mg/dL | >60 years: 80-150 mg/dL | Therapeutic Target: <100 mg/dL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/30",
+            "id": "Observation/31",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -1194,13 +1417,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/28"
+                            "reference": "Observation/29"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/29"
+                            "reference": "Observation/30"
                         }
                     }
                 ],
@@ -1213,11 +1436,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "MedicationPrescription/31",
+            "id": "MedicationPrescription/32",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1249,11 +1476,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Metformin hydrochloride 500 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/32",
+            "id": "MedicationAdministration/33",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -1272,7 +1503,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/31"
+                    "reference": "MedicationPrescription/32"
                 },
                 "contained": [
                     {
@@ -1294,11 +1525,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Metformin hydrochloride 500 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/33",
+            "id": "MedicationPrescription/34",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1330,11 +1565,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "24 HR Nicotine 0.313 MG/HR Transdermal Patch"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/34",
+            "id": "MedicationAdministration/35",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -1353,7 +1592,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/33"
+                    "reference": "MedicationPrescription/34"
                 },
                 "contained": [
                     {
@@ -1375,6 +1614,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "24 HR Nicotine 0.313 MG/HR Transdermal Patch"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }

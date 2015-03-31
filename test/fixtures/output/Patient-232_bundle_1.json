@@ -1,9 +1,112 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 32,
+    "totalResults": 33,
     "entry": [
         {
-            "id": "AllergyIntolerance/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.19.5.99999.2",
+                        "value": "998991"
+                    },
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.4.1",
+                        "value": "111-00-2330"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Neal"
+                    ],
+                    "given": [
+                        "Mark",
+                        null
+                    ]
+                },
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "(281)593-5449",
+                        "use": "mobile"
+                    }
+                ],
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "M",
+                            "display": "Male"
+                        }
+                    ],
+                    "text": "Male"
+                },
+                "birthdate": "1975-01-28",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "1204 Bird Spring Lane"
+                        ],
+                        "city": "Cleveland",
+                        "state": "TX",
+                        "zip": "77327",
+                        "country": "US"
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/MaritalStatus",
+                            "code": "M",
+                            "display": "Married"
+                        }
+                    ],
+                    "text": "Married"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/us-core-religion",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/vs/ReligiousAffiliation",
+                                    "code": "1020",
+                                    "display": "Hinduism"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "2054-5",
+                                    "display": "Black or African American"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#ethnicity",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Ethnicity",
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AllergyIntolerance/1",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "high",
@@ -29,11 +132,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Eggs"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "AllergyIntolerance/1",
+            "id": "AllergyIntolerance/2",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "fatal",
@@ -59,11 +166,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "AllergyIntolerance/2",
+            "id": "AllergyIntolerance/3",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
@@ -88,11 +199,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Codeine"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/3",
+            "id": "Observation/4",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -123,11 +238,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -158,11 +277,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/5",
+            "id": "Observation/6",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -193,11 +316,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -228,11 +355,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/7",
+            "id": "Observation/8",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -263,11 +394,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/8",
+            "id": "Observation/9",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -298,11 +433,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/9",
+            "id": "Observation/10",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -333,11 +472,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/10",
+            "id": "Observation/11",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -368,11 +511,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/11",
+            "id": "Observation/12",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -402,14 +549,18 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
+                            "reference": "Observation/4"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/12",
+            "id": "Observation/13",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -439,14 +590,18 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/8"
+                            "reference": "Observation/9"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/13",
+            "id": "Observation/14",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -476,20 +631,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/4"
+                            "reference": "Observation/5"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/5"
+                            "reference": "Observation/6"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/14",
+            "id": "Observation/15",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -519,20 +678,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/7"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/8"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/15",
+            "id": "Observation/16",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -562,34 +725,19 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/9"
+                            "reference": "Observation/10"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/10"
+                            "reference": "Observation/11"
                         }
                     }
-                ]
-            }
-        },
-        {
-            "id": "Condition/16",
-            "content": {
-                "resourceType": "Condition",
-                "status": "confirmed",
-                "onsetDate": "2010-04-16",
-                "dateAsserted": "2010-04-16",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://snomed.info/sct",
-                            "code": "195979001",
-                            "display": "Asthma unspecified"
-                        }
-                    ],
-                    "text": "Asthma unspecified"
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
@@ -604,11 +752,15 @@
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
-                            "code": "370202007",
-                            "display": "Asthma causes daytime symptoms 1 to 2 times per month"
+                            "code": "195979001",
+                            "display": "Asthma unspecified"
                         }
                     ],
-                    "text": "Asthma causes daytime symptoms 1 to 2 times per month"
+                    "text": "Asthma unspecified"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
@@ -623,11 +775,15 @@
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
-                            "code": "370205009",
-                            "display": "Asthma causes night symptoms 1 to 2 times per month"
+                            "code": "370202007",
+                            "display": "Asthma causes daytime symptoms 1 to 2 times per month"
                         }
                     ],
-                    "text": "Asthma causes night symptoms 1 to 2 times per month"
+                    "text": "Asthma causes daytime symptoms 1 to 2 times per month"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
@@ -642,16 +798,43 @@
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
+                            "code": "370205009",
+                            "display": "Asthma causes night symptoms 1 to 2 times per month"
+                        }
+                    ],
+                    "text": "Asthma causes night symptoms 1 to 2 times per month"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
+            }
+        },
+        {
+            "id": "Condition/20",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "onsetDate": "2010-04-16",
+                "dateAsserted": "2010-04-16",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
                             "code": "44054006",
                             "display": "Diabetes mellitus type 2"
                         }
                     ],
                     "text": "Diabetes mellitus type 2"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/20",
+            "id": "Observation/21",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -707,11 +890,15 @@
                         },
                         "text": "4-5.6%"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/21",
+            "id": "Observation/22",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -730,7 +917,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/20"
+                            "reference": "Observation/21"
                         }
                     }
                 ],
@@ -743,11 +930,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/22",
+            "id": "Observation/23",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -803,11 +994,15 @@
                         },
                         "text": "4-5.6%"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/23",
+            "id": "Observation/24",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -826,7 +1021,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/22"
+                            "reference": "Observation/23"
                         }
                     }
                 ],
@@ -839,11 +1034,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/24",
+            "id": "Observation/25",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -899,11 +1098,15 @@
                         },
                         "text": "4-5.6%"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/25",
+            "id": "Observation/26",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -922,7 +1125,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/24"
+                            "reference": "Observation/25"
                         }
                     }
                 ],
@@ -935,11 +1138,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "MedicationPrescription/26",
+            "id": "MedicationPrescription/27",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -971,11 +1178,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/27",
+            "id": "MedicationAdministration/28",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -994,7 +1205,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/26"
+                    "reference": "MedicationPrescription/27"
                 },
                 "contained": [
                     {
@@ -1016,11 +1227,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/28",
+            "id": "MedicationPrescription/29",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1052,11 +1267,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Long acting inhaled beta 2 agonist + salmeterol 0.05 MG/ACTUAT Inhalant Powder"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/29",
+            "id": "MedicationAdministration/30",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -1075,7 +1294,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/28"
+                    "reference": "MedicationPrescription/29"
                 },
                 "contained": [
                     {
@@ -1097,11 +1316,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Long acting inhaled beta 2 agonist + salmeterol 0.05 MG/ACTUAT Inhalant Powder"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/30",
+            "id": "MedicationPrescription/31",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1133,11 +1356,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Short acting beta 2 agonist + Albuterol 0.83 MG/ML Inhalant Solution"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/31",
+            "id": "MedicationAdministration/32",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -1156,7 +1383,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/30"
+                    "reference": "MedicationPrescription/31"
                 },
                 "contained": [
                     {
@@ -1178,6 +1405,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Short acting beta 2 agonist + Albuterol 0.83 MG/ML Inhalant Solution"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }

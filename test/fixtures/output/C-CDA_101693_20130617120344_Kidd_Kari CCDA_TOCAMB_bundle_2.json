@@ -1,9 +1,67 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 18,
+    "totalResults": 19,
     "entry": [
         {
-            "id": "AllergyIntolerance/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:1.3.6.1.4.1.22812.11.0.100610",
+                        "value": "101693"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Kidd"
+                    ],
+                    "given": [
+                        "Kari",
+                        "CCDA"
+                    ]
+                },
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "F",
+                            "display": "Female"
+                        }
+                    ],
+                    "text": "Female"
+                },
+                "birthdate": "2000-10-22",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "2106-3",
+                                    "display": "White"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#ethnicity",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Ethnicity",
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AllergyIntolerance/1",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "sensitivityType": "allergy",
@@ -27,11 +85,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "penicillin G benzathine"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/1",
+            "id": "Observation/2",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -69,11 +131,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/2",
+            "id": "Observation/3",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -111,11 +177,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/3",
+            "id": "Observation/4",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -156,11 +226,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -201,11 +275,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/5",
+            "id": "Observation/6",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -235,20 +313,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/1"
+                            "reference": "Observation/2"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/2"
+                            "reference": "Observation/3"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -278,20 +360,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
+                            "reference": "Observation/4"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/4"
+                            "reference": "Observation/5"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Condition/7",
+            "id": "Condition/8",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -304,11 +390,15 @@
                         }
                     ],
                     "text": "Urinary tract infection, site not specified"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Condition/8",
+            "id": "Condition/9",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -323,23 +413,10 @@
                         }
                     ],
                     "text": "Asthma"
-                }
-            }
-        },
-        {
-            "id": "Condition/9",
-            "content": {
-                "resourceType": "Condition",
-                "status": "confirmed",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://snomed.info/sct",
-                            "code": "78691002",
-                            "display": "Staggering gait"
-                        }
-                    ],
-                    "text": "Staggering gait"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
@@ -352,11 +429,15 @@
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
-                            "code": "195967001",
-                            "display": "Asthma"
+                            "code": "78691002",
+                            "display": "Staggering gait"
                         }
                     ],
-                    "text": "Asthma"
+                    "text": "Staggering gait"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
@@ -369,16 +450,41 @@
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
-                            "code": "95891005",
-                            "display": "Flu-like symptoms"
+                            "code": "195967001",
+                            "display": "Asthma"
                         }
                     ],
-                    "text": "Flu-like symptoms"
+                    "text": "Asthma"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
             "id": "Condition/12",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "95891005",
+                            "display": "Flu-like symptoms"
+                        }
+                    ],
+                    "text": "Flu-like symptoms"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
+            }
+        },
+        {
+            "id": "Condition/13",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -393,11 +499,15 @@
                         }
                     ],
                     "text": "Flu-like symptoms"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/13",
+            "id": "Observation/14",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -443,11 +553,15 @@
                         },
                         "text": "13.5 - 18.0 g/dl"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/14",
+            "id": "Observation/15",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -493,11 +607,15 @@
                         },
                         "text": "41 - 53 %"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/15",
+            "id": "Observation/16",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -543,11 +661,15 @@
                         },
                         "text": "4.3 - 10.8 ul"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "MedicationPrescription/16",
+            "id": "MedicationPrescription/17",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -595,11 +717,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "oseltamivir 30 mg oral capsule"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/17",
+            "id": "MedicationPrescription/18",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -637,6 +763,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Proventil HFA CFC free 90 mcg/inh inhalation aerosol"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }
