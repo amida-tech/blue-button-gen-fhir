@@ -1,9 +1,112 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 34,
+    "totalResults": 35,
     "entry": [
         {
-            "id": "AllergyIntolerance/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.19.5.99999.2",
+                        "value": "998991"
+                    },
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.4.1",
+                        "value": "111-00-2330"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Evans"
+                    ],
+                    "given": [
+                        "Scott",
+                        null
+                    ]
+                },
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "(423)263-3016",
+                        "use": "mobile"
+                    }
+                ],
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "M",
+                            "display": "Male"
+                        }
+                    ],
+                    "text": "Male"
+                },
+                "birthdate": "1933-10-17",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "1977 Nixon Avenue"
+                        ],
+                        "city": "Etowah",
+                        "state": "TN",
+                        "zip": "37331",
+                        "country": "US"
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/MaritalStatus",
+                            "code": "M",
+                            "display": "Married"
+                        }
+                    ],
+                    "text": "Married"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/us-core-religion",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/vs/ReligiousAffiliation",
+                                    "code": "1020",
+                                    "display": "Hinduism"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "2054-5",
+                                    "display": "Black or African American"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#ethnicity",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Ethnicity",
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AllergyIntolerance/1",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
@@ -29,11 +132,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Eggs"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "AllergyIntolerance/1",
+            "id": "AllergyIntolerance/2",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
@@ -59,11 +166,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Fosfomycin 33.3 MG/ML Oral Suspension"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "AllergyIntolerance/2",
+            "id": "AllergyIntolerance/3",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "fatal",
@@ -89,11 +200,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Doxycycline 75 MG Enteric Coated Tablet"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/3",
+            "id": "Observation/4",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -124,11 +239,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -159,11 +278,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/5",
+            "id": "Observation/6",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -194,11 +317,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -229,11 +356,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/7",
+            "id": "Observation/8",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -264,11 +395,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/8",
+            "id": "Observation/9",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -298,14 +433,18 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
+                            "reference": "Observation/4"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/9",
+            "id": "Observation/10",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -335,14 +474,18 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/8"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/10",
+            "id": "Observation/11",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -372,34 +515,19 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/4"
+                            "reference": "Observation/5"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/7"
                         }
                     }
-                ]
-            }
-        },
-        {
-            "id": "Condition/11",
-            "content": {
-                "resourceType": "Condition",
-                "status": "confirmed",
-                "onsetDate": "2010-07-15",
-                "dateAsserted": "2010-07-15",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://snomed.info/sct",
-                            "code": "49436004",
-                            "display": "Atrial fibrillation"
-                        }
-                    ],
-                    "text": "Atrial fibrillation"
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
@@ -414,11 +542,15 @@
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
-                            "code": "84114007",
-                            "display": "Heart failure"
+                            "code": "49436004",
+                            "display": "Atrial fibrillation"
                         }
                     ],
-                    "text": "Heart failure"
+                    "text": "Atrial fibrillation"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
@@ -433,11 +565,15 @@
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
-                            "code": "59621000",
-                            "display": "Essential hypertension"
+                            "code": "84114007",
+                            "display": "Heart failure"
                         }
                     ],
-                    "text": "Essential hypertension"
+                    "text": "Heart failure"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
@@ -446,17 +582,21 @@
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2010-08-31",
-                "dateAsserted": "2010-08-31",
+                "onsetDate": "2010-07-15",
+                "dateAsserted": "2010-07-15",
                 "code": {
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
-                            "code": "261650005",
-                            "display": "Tumor stage T1c"
+                            "code": "59621000",
+                            "display": "Essential hypertension"
                         }
                     ],
-                    "text": "Tumor stage T1c"
+                    "text": "Essential hypertension"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
@@ -471,16 +611,43 @@
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
-                            "code": "399068003",
-                            "display": "Malignant tumor of prostate"
+                            "code": "261650005",
+                            "display": "Tumor stage T1c"
                         }
                     ],
-                    "text": "Malignant tumor of prostate"
+                    "text": "Tumor stage T1c"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
             "id": "Condition/16",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "onsetDate": "2010-08-31",
+                "dateAsserted": "2010-08-31",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "399068003",
+                            "display": "Malignant tumor of prostate"
+                        }
+                    ],
+                    "text": "Malignant tumor of prostate"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
+            }
+        },
+        {
+            "id": "Condition/17",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -495,11 +662,15 @@
                         }
                     ],
                     "text": "Malignant bone pain"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/17",
+            "id": "Observation/18",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -555,11 +726,15 @@
                         },
                         "text": "2-10"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/18",
+            "id": "Observation/19",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -578,7 +753,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/17"
+                            "reference": "Observation/18"
                         }
                     }
                 ],
@@ -591,11 +766,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/19",
+            "id": "Observation/20",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -651,11 +830,15 @@
                         },
                         "text": "<2.5 ng/mL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/20",
+            "id": "Observation/21",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -674,7 +857,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/19"
+                            "reference": "Observation/20"
                         }
                     }
                 ],
@@ -687,11 +870,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/21",
+            "id": "Observation/22",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -747,11 +934,15 @@
                         },
                         "text": ">=40 mg/dL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/22",
+            "id": "Observation/23",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -807,11 +998,15 @@
                         },
                         "text": "<130 mg/dL (calc)"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/23",
+            "id": "Observation/24",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -867,11 +1062,15 @@
                         },
                         "text": "125-200 mg/dL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/24",
+            "id": "Observation/25",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -927,11 +1126,15 @@
                         },
                         "text": "10-39 years: 55-110 mg/dL | 40-59 years: 70-150 mg/dL | >60 years: 80-150 mg/dL | Therapeutic Target: <100 mg/dL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/25",
+            "id": "Observation/26",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -950,12 +1153,6 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/21"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
                             "reference": "Observation/22"
                         }
                     },
@@ -970,6 +1167,12 @@
                         "target": {
                             "reference": "Observation/24"
                         }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/25"
+                        }
                     }
                 ],
                 "extension": [
@@ -981,11 +1184,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "MedicationPrescription/26",
+            "id": "MedicationPrescription/27",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1017,11 +1224,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "ACE inhibitor or ARB + Lisinopril 10 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/27",
+            "id": "MedicationAdministration/28",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -1040,7 +1251,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/26"
+                    "reference": "MedicationPrescription/27"
                 },
                 "contained": [
                     {
@@ -1062,11 +1273,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "ACE inhibitor or ARB + Lisinopril 10 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/28",
+            "id": "MedicationPrescription/29",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1098,11 +1313,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Anticoagulants + Warfarin Sodium 4 MG Oral Tablet [Coumadin]"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/29",
+            "id": "MedicationAdministration/30",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -1121,7 +1340,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/28"
+                    "reference": "MedicationPrescription/29"
                 },
                 "contained": [
                     {
@@ -1143,11 +1362,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Anticoagulants + Warfarin Sodium 4 MG Oral Tablet [Coumadin]"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/30",
+            "id": "MedicationPrescription/31",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1179,11 +1402,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Beta Blocker Therapy + Metoprolol Tartrate 25 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/31",
+            "id": "MedicationAdministration/32",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -1202,7 +1429,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/30"
+                    "reference": "MedicationPrescription/31"
                 },
                 "contained": [
                     {
@@ -1224,11 +1451,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Beta Blocker Therapy + Metoprolol Tartrate 25 MG Oral Tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/32",
+            "id": "MedicationPrescription/33",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1260,11 +1491,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Smoking Cessation Agents + 24 HR Nicotine 0.313 MG/HR Transdermal Patch"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/33",
+            "id": "MedicationAdministration/34",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -1283,7 +1518,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/32"
+                    "reference": "MedicationPrescription/33"
                 },
                 "contained": [
                     {
@@ -1305,6 +1540,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Smoking Cessation Agents + 24 HR Nicotine 0.313 MG/HR Transdermal Patch"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }

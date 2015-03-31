@@ -1,9 +1,85 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 25,
+    "totalResults": 26,
     "entry": [
         {
-            "id": "AllergyIntolerance/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:1.3.6.1.4.1.22812.4.111.0",
+                        "value": "170314e2"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Jones"
+                    ],
+                    "given": [
+                        "Isabella",
+                        null
+                    ]
+                },
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "+1-(919)888-9658"
+                    }
+                ],
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "F",
+                            "display": "Female"
+                        }
+                    ],
+                    "text": "Female"
+                },
+                "birthdate": "1947-05-01",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "1234 DGI Blvd"
+                        ],
+                        "city": "Raleigh",
+                        "state": "NC",
+                        "zip": "27615",
+                        "country": "US"
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "2106-3",
+                                    "display": "White"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#ethnicity",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Ethnicity",
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AllergyIntolerance/1",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "sensitivityType": "allergy",
@@ -28,11 +104,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Aspirin *ANALGESICS - NonNarcotic*"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "AllergyIntolerance/1",
+            "id": "AllergyIntolerance/2",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "sensitivityType": "allergy",
@@ -57,11 +137,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Codeine Sulfate *ANALGESICS - OPIOID*"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "AllergyIntolerance/2",
+            "id": "AllergyIntolerance/3",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "sensitivityType": "allergy",
@@ -86,11 +170,15 @@
                 "substance": {
                     "reference": "#allergen",
                     "display": "Penicillin G Benzathine *PENICILLINS*"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/3",
+            "id": "Observation/4",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -121,11 +209,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -156,11 +248,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/5",
+            "id": "Observation/6",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -191,11 +287,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -226,11 +326,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/7",
+            "id": "Observation/8",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -261,11 +365,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/8",
+            "id": "Observation/9",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -293,11 +401,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/9",
+            "id": "Observation/10",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -327,20 +439,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
+                            "reference": "Observation/4"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/4"
+                            "reference": "Observation/5"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/10",
+            "id": "Observation/11",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -370,12 +486,6 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/5"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
                             "reference": "Observation/6"
                         }
                     },
@@ -384,24 +494,17 @@
                         "target": {
                             "reference": "Observation/7"
                         }
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Condition/11",
-            "content": {
-                "resourceType": "Condition",
-                "status": "confirmed",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://snomed.info/sct",
-                            "code": "427295004",
-                            "display": "Asthma, moderate persistent"
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/8"
                         }
-                    ],
-                    "text": "Asthma, moderate persistent"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
@@ -414,11 +517,15 @@
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
-                            "code": "385093006",
-                            "display": "Community acquired pneumonia"
+                            "code": "427295004",
+                            "display": "Asthma, moderate persistent"
                         }
                     ],
-                    "text": "Community acquired pneumonia"
+                    "text": "Asthma, moderate persistent"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
@@ -431,16 +538,41 @@
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
+                            "code": "385093006",
+                            "display": "Community acquired pneumonia"
+                        }
+                    ],
+                    "text": "Community acquired pneumonia"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
+            }
+        },
+        {
+            "id": "Condition/14",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
                             "code": "389087006",
                             "display": "Hypoxemia"
                         }
                     ],
                     "text": "Hypoxemia"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/14",
+            "id": "Observation/15",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -496,11 +628,15 @@
                         },
                         "text": "42.9 - 49.1"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/15",
+            "id": "Observation/16",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -519,7 +655,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/14"
+                            "reference": "Observation/15"
                         }
                     }
                 ],
@@ -532,11 +668,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/16",
+            "id": "Observation/17",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -592,11 +732,15 @@
                         },
                         "text": "14.4 - 16.6"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/17",
+            "id": "Observation/18",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -615,7 +759,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/16"
+                            "reference": "Observation/17"
                         }
                     }
                 ],
@@ -628,11 +772,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/18",
+            "id": "Observation/19",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -673,11 +821,15 @@
                         }
                     ],
                     "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/19",
+            "id": "Observation/20",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -696,7 +848,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/18"
+                            "reference": "Observation/19"
                         }
                     }
                 ],
@@ -709,11 +861,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/20",
+            "id": "Observation/21",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -769,11 +925,15 @@
                         },
                         "text": "4.5 - 11.0"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/21",
+            "id": "Observation/22",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -792,7 +952,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/20"
+                            "reference": "Observation/21"
                         }
                     }
                 ],
@@ -805,11 +965,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "MedicationPrescription/22",
+            "id": "MedicationPrescription/23",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -866,11 +1030,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "CLARITHROMYCIN, 500MG (Oral Tablet)"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/23",
+            "id": "MedicationPrescription/24",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -927,11 +1095,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "METOPROLOL TARTRATE, 25MG (Oral Tablet)"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/24",
+            "id": "MedicationPrescription/25",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -979,6 +1151,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "PROVENTIL HFA, 108 (90 Base)MCG/ACT (Inhalation Aerosol Solution)"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }

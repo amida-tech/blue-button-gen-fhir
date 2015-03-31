@@ -9,6 +9,7 @@ Blue Button Model To FHIR Translator
 [![Coverage Status](https://coveralls.io/repos/amida-tech/blue-button-gen-fhir/badge.png)](https://coveralls.io/r/amida-tech/blue-button-gen-fhir)
 
 This library translates health data in [blue button model](https://github.com/amida-tech/blue-button-model) to a FHIR Bundle Resource.  Currently the following sections are supported
+* Demographics
 * Medications
 * Problems
 * Vitals
@@ -34,7 +35,7 @@ var bundle = mtfhir.contentToFHIR(content);
 console.log(bundle);	
 ```
 
-You can also pass a Patient resource to contain patient references
+You can also pass a Patient resource to contain patient references.  In this case demographics section is ignored
 ``` javascript
 var patientEntry = {
     id: 'Patient/123456789'
@@ -53,7 +54,7 @@ var patientEntry = {
 
 mtfhir.contentToFHIR(content, patientEntry);
 ```
-and all the patient references in the Bundle will be updated.  Otherwise the patient references are not assigned.
+and all the patient references in the Bundle will be updated.  Otherwise the patient references are assigned from the newly created patient resource.
 
 
 By default Medication and Substance resources are included as internal resources. You can request them as external resources instead

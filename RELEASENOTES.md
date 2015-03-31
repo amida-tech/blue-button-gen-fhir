@@ -1,3 +1,7 @@
+# v1.5.0 - TBD
+
+- Demographics section is now supported.
+
 # v1.4.0 - March 9, 2015
 
 This is the initial release of blue-button-gen-fhir library.

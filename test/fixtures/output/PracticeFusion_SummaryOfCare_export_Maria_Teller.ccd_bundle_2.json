@@ -1,9 +1,60 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 22,
+    "totalResults": 23,
     "entry": [
         {
-            "id": "Observation/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.3.3388.1.1.1.383206.3",
+                        "value": "15E0F586-DCE2-4A1E-980D-B84C4B0BD777"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Teller"
+                    ],
+                    "given": [
+                        "Maria",
+                        null
+                    ]
+                },
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "(510)555-1234",
+                        "use": "home"
+                    }
+                ],
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "F",
+                            "display": "Female"
+                        }
+                    ],
+                    "text": "Female"
+                },
+                "birthdate": "1970-12-10",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "123 Main St"
+                        ],
+                        "city": "Anytown",
+                        "state": "CA",
+                        "zip": "91000",
+                        "country": "United States of America"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Observation/1",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -34,11 +85,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/1",
+            "id": "Observation/2",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -69,11 +124,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/2",
+            "id": "Observation/3",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -104,11 +163,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/3",
+            "id": "Observation/4",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -139,11 +202,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -174,11 +241,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/5",
+            "id": "Observation/6",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -209,11 +280,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -244,11 +319,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/7",
+            "id": "Observation/8",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -279,11 +358,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/8",
+            "id": "Observation/9",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -314,11 +397,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/9",
+            "id": "Observation/10",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -348,20 +435,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/2"
+                            "reference": "Observation/3"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
+                            "reference": "Observation/4"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/10",
+            "id": "Observation/11",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -391,13 +482,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/5"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/6"
                         }
                     },
                     {
@@ -405,24 +490,17 @@
                         "target": {
                             "reference": "Observation/8"
                         }
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Condition/11",
-            "content": {
-                "resourceType": "Condition",
-                "status": "confirmed",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "urn:oid:2.16.840.1.113883.6.103",
-                            "code": "401.1",
-                            "display": "Hypertension, benign"
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/9"
                         }
-                    ],
-                    "text": "Hypertension, benign"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
@@ -435,11 +513,15 @@
                     "coding": [
                         {
                             "system": "urn:oid:2.16.840.1.113883.6.103",
-                            "code": "272.2",
-                            "display": "Hyperlipidemia, mixed"
+                            "code": "401.1",
+                            "display": "Hypertension, benign"
                         }
                     ],
-                    "text": "Hyperlipidemia, mixed"
+                    "text": "Hypertension, benign"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
@@ -452,16 +534,41 @@
                     "coding": [
                         {
                             "system": "urn:oid:2.16.840.1.113883.6.103",
+                            "code": "272.2",
+                            "display": "Hyperlipidemia, mixed"
+                        }
+                    ],
+                    "text": "Hyperlipidemia, mixed"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
+            }
+        },
+        {
+            "id": "Condition/14",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.6.103",
                             "code": "250.00",
                             "display": "Diabetes II, uncomplicated"
                         }
                     ],
                     "text": "Diabetes II, uncomplicated"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/14",
+            "id": "MedicationPrescription/15",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -485,11 +592,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "lisinopril 10 mg"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/15",
+            "id": "MedicationAdministration/16",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -498,7 +609,7 @@
                     "display": "Unknown"
                 },
                 "prescription": {
-                    "reference": "MedicationPrescription/14"
+                    "reference": "MedicationPrescription/15"
                 },
                 "contained": [
                     {
@@ -520,11 +631,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "lisinopril 10 mg"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/16",
+            "id": "MedicationPrescription/17",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -548,11 +663,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "glyBURIDE 5 mg"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/17",
+            "id": "MedicationAdministration/18",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -561,7 +680,7 @@
                     "display": "Unknown"
                 },
                 "prescription": {
-                    "reference": "MedicationPrescription/16"
+                    "reference": "MedicationPrescription/17"
                 },
                 "contained": [
                     {
@@ -583,11 +702,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "glyBURIDE 5 mg"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/18",
+            "id": "MedicationPrescription/19",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -611,11 +734,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "lovastatin 20 mg"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/19",
+            "id": "MedicationAdministration/20",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -624,7 +751,7 @@
                     "display": "Unknown"
                 },
                 "prescription": {
-                    "reference": "MedicationPrescription/18"
+                    "reference": "MedicationPrescription/19"
                 },
                 "contained": [
                     {
@@ -646,11 +773,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "lovastatin 20 mg"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/20",
+            "id": "MedicationPrescription/21",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -681,11 +812,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "metFORMIN 500 mg"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationAdministration/21",
+            "id": "MedicationAdministration/22",
             "content": {
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
@@ -704,7 +839,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/20"
+                    "reference": "MedicationPrescription/21"
                 },
                 "contained": [
                     {
@@ -726,6 +861,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "metFORMIN 500 mg"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }

@@ -1,9 +1,86 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 30,
+    "totalResults": 31,
     "entry": [
         {
-            "id": "AdverseReaction/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.1.13.99999.1",
+                        "value": "106"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Williamson"
+                    ],
+                    "given": [
+                        "Steve",
+                        null
+                    ]
+                },
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "(503) 325-7464",
+                        "use": "home"
+                    }
+                ],
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "M",
+                            "display": "Male"
+                        }
+                    ],
+                    "text": "Male"
+                },
+                "birthdate": "1947-04-07",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "8745 W Willenow Rd"
+                        ],
+                        "city": "Beaverton",
+                        "state": "OR",
+                        "zip": "97005-",
+                        "country": "US"
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "2054-5",
+                                    "display": "Black or African American"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#ethnicity",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Ethnicity",
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "AdverseReaction/1",
             "content": {
                 "resourceType": "AdverseReaction",
                 "symptom": [
@@ -20,11 +97,15 @@
                         }
                     }
                 ],
-                "didNotOccurFlag": false
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "AllergyIntolerance/1",
+            "id": "AllergyIntolerance/2",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
@@ -52,14 +133,18 @@
                 },
                 "reaction": [
                     {
-                        "reference": "AdverseReaction/0",
+                        "reference": "AdverseReaction/1",
                         "display": "Nausea (finding)"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "AdverseReaction/2",
+            "id": "AdverseReaction/3",
             "content": {
                 "resourceType": "AdverseReaction",
                 "symptom": [
@@ -76,11 +161,15 @@
                         }
                     }
                 ],
-                "didNotOccurFlag": false
+                "didNotOccurFlag": false,
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "AllergyIntolerance/3",
+            "id": "AllergyIntolerance/4",
             "content": {
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
@@ -108,14 +197,18 @@
                 },
                 "reaction": [
                     {
-                        "reference": "AdverseReaction/2",
+                        "reference": "AdverseReaction/3",
                         "display": "Weal (disorder)"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -144,11 +237,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/5",
+            "id": "Observation/6",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -187,11 +284,15 @@
                         }
                     ],
                     "text": "High"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -220,11 +321,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/7",
+            "id": "Observation/8",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -253,11 +358,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/8",
+            "id": "Observation/9",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -296,11 +405,15 @@
                         }
                     ],
                     "text": "High"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/9",
+            "id": "Observation/10",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -330,20 +443,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/5"
+                            "reference": "Observation/6"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/8"
+                            "reference": "Observation/9"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/10",
+            "id": "Observation/11",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -373,20 +490,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/7"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/8"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Condition/11",
+            "id": "Condition/12",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -401,11 +522,15 @@
                         }
                     ],
                     "text": "Angina (disorder)"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Condition/12",
+            "id": "Condition/13",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -420,11 +545,15 @@
                         }
                     ],
                     "text": "Diabetes mellitus type 2 (disorder)"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Condition/13",
+            "id": "Condition/14",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -439,11 +568,15 @@
                         }
                     ],
                     "text": "Hypercholesterolemia (disorder)"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Condition/14",
+            "id": "Condition/15",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -458,11 +591,15 @@
                         }
                     ],
                     "text": "Angina (disorder)"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Condition/15",
+            "id": "Condition/16",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -477,11 +614,15 @@
                         }
                     ],
                     "text": "Angina (disorder)"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/16",
+            "id": "Observation/17",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -537,11 +678,15 @@
                         },
                         "text": "0.00-0.20 ng/mL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/17",
+            "id": "Observation/18",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -558,7 +703,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/16"
+                            "reference": "Observation/17"
                         }
                     }
                 ],
@@ -571,11 +716,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/18",
+            "id": "Observation/19",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -631,11 +780,15 @@
                         },
                         "text": "3.5-5.0 mmol/L"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/19",
+            "id": "Observation/20",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -691,11 +844,15 @@
                         },
                         "text": "4-18 mg/dL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/20",
+            "id": "Observation/21",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -751,11 +908,15 @@
                         },
                         "text": "22-33 mmol/L"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/21",
+            "id": "Observation/22",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -811,11 +972,15 @@
                         },
                         "text": "135-145 mmol/L"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/22",
+            "id": "Observation/23",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -871,11 +1036,15 @@
                         },
                         "text": "95-110 mmol/L"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/23",
+            "id": "Observation/24",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -931,11 +1100,15 @@
                         },
                         "text": "65-110 mg/dL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/24",
+            "id": "Observation/25",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -991,11 +1164,15 @@
                         },
                         "text": "0.5-1.2 mg/dL"
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/25",
+            "id": "Observation/26",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -1009,12 +1186,6 @@
                 "status": "final",
                 "reliability": "ok",
                 "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/18"
-                        }
-                    },
                     {
                         "type": "has-component",
                         "target": {
@@ -1050,6 +1221,12 @@
                         "target": {
                             "reference": "Observation/24"
                         }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/25"
+                        }
                     }
                 ],
                 "extension": [
@@ -1061,11 +1238,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "MedicationPrescription/26",
+            "id": "MedicationPrescription/27",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1114,11 +1295,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Lantus 100 units/ml subcutaneous solution"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/27",
+            "id": "MedicationPrescription/28",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1164,11 +1349,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "atorvastatin 40 mg oral tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/28",
+            "id": "MedicationPrescription/29",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1196,11 +1385,15 @@
                 "text": {
                     "status": "generated",
                     "div": "15 units, Subcutaneous, TIDAC, 10 mL"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/29",
+            "id": "MedicationPrescription/30",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -1246,6 +1439,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "aspirin 81 mg oral tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }

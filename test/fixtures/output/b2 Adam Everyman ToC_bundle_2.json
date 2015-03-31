@@ -1,9 +1,79 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 14,
+    "totalResults": 15,
     "entry": [
         {
-            "id": "Observation/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:1.3.6.1.4.1.22812.3.9999341.3",
+                        "value": "130115235147857"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Everyman"
+                    ],
+                    "given": [
+                        "Adam",
+                        null
+                    ]
+                },
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "M",
+                            "display": "Male"
+                        }
+                    ],
+                    "text": "Male"
+                },
+                "birthdate": "1962-10-22",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "99 Forest Park"
+                        ],
+                        "city": "Chicago",
+                        "state": "IL",
+                        "zip": "60301",
+                        "country": "US"
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#race",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Race",
+                                    "code": "2106-3",
+                                    "display": "White"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/Profile/us-core#ethnicity",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/v3/Ethnicity",
+                                    "code": "2186-5",
+                                    "display": "Not Hispanic or Latino"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Observation/1",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -34,11 +104,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/1",
+            "id": "Observation/2",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -69,11 +143,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/2",
+            "id": "Observation/3",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -104,11 +182,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/3",
+            "id": "Observation/4",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -139,11 +221,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/4",
+            "id": "Observation/5",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -174,11 +260,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/5",
+            "id": "Observation/6",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -206,11 +296,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/6",
+            "id": "Observation/7",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -240,20 +334,24 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/0"
+                            "reference": "Observation/1"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/1"
+                            "reference": "Observation/2"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/7",
+            "id": "Observation/8",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -283,12 +381,6 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/2"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
                             "reference": "Observation/3"
                         }
                     },
@@ -297,12 +389,22 @@
                         "target": {
                             "reference": "Observation/4"
                         }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/5"
+                        }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Condition/8",
+            "id": "Condition/9",
             "content": {
                 "resourceType": "Condition",
                 "status": "confirmed",
@@ -317,25 +419,10 @@
                         }
                     ],
                     "text": "Asthma"
-                }
-            }
-        },
-        {
-            "id": "Condition/9",
-            "content": {
-                "resourceType": "Condition",
-                "status": "confirmed",
-                "onsetDate": "2013-07-11",
-                "dateAsserted": "2013-07-11",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://snomed.info/sct",
-                            "code": "64109004",
-                            "display": "Costal chondritis"
-                        }
-                    ],
-                    "text": "Costal chondritis"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
@@ -350,16 +437,43 @@
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
+                            "code": "64109004",
+                            "display": "Costal chondritis"
+                        }
+                    ],
+                    "text": "Costal chondritis"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
+            }
+        },
+        {
+            "id": "Condition/11",
+            "content": {
+                "resourceType": "Condition",
+                "status": "confirmed",
+                "onsetDate": "2013-07-11",
+                "dateAsserted": "2013-07-11",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
                             "code": "66557003",
                             "display": "No impairment"
                         }
                     ],
                     "text": "No impairment"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "Observation/11",
+            "id": "Observation/12",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -390,11 +504,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "Observation/12",
+            "id": "Observation/13",
             "content": {
                 "resourceType": "Observation",
                 "name": {
@@ -413,7 +531,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/11"
+                            "reference": "Observation/12"
                         }
                     }
                 ],
@@ -426,11 +544,15 @@
                             "system": "http://loinc.org"
                         }
                     }
-                ]
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": ", "
+                }
             }
         },
         {
-            "id": "MedicationPrescription/13",
+            "id": "MedicationPrescription/14",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -468,6 +590,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Proventil HFA 108 (90 Base) MCG/ACT Inhalation Aerosol Solution"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }

@@ -1,9 +1,60 @@
 {
     "resourceType": "Bundle",
-    "totalResults": 6,
+    "totalResults": 7,
     "entry": [
         {
-            "id": "MedicationPrescription/0",
+            "id": "Patient/0",
+            "content": {
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "urn:oid:2.16.840.1.113883.3.13.300.1.1.2.1",
+                        "value": "9473"
+                    }
+                ],
+                "name": {
+                    "family": [
+                        "Wade"
+                    ],
+                    "given": [
+                        "Victoria",
+                        "E"
+                    ]
+                },
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "+13093548275",
+                        "use": "home"
+                    }
+                ],
+                "gender": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
+                            "code": "F",
+                            "display": "Female"
+                        }
+                    ],
+                    "text": "Female"
+                },
+                "birthdate": "1954-03-23",
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "266 York Street"
+                        ],
+                        "city": "Morton",
+                        "state": "IL",
+                        "zip": "61550-",
+                        "country": "US"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "MedicationPrescription/1",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -52,11 +103,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "lisinopril 10 mg oral tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/1",
+            "id": "MedicationPrescription/2",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -105,11 +160,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Lipitor 20 mg oral tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/2",
+            "id": "MedicationPrescription/3",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -137,11 +196,15 @@
                 "text": {
                     "status": "generated",
                     "div": "75 mg = 1 tab(s), PO, Once Daily, 30 tab(s)"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/3",
+            "id": "MedicationPrescription/4",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -169,11 +232,15 @@
                 "text": {
                     "status": "generated",
                     "div": "5 mg = 1 tab(s), PO, Once Daily, 30 tab(s)"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/4",
+            "id": "MedicationPrescription/5",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -212,11 +279,15 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Catapres 0.1 mg oral tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         },
         {
-            "id": "MedicationPrescription/5",
+            "id": "MedicationPrescription/6",
             "content": {
                 "resourceType": "MedicationPrescription",
                 "status": "active",
@@ -255,6 +326,10 @@
                 "medication": {
                     "reference": "#med",
                     "display": "Zestril 30 mg oral tablet"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": ", "
                 }
             }
         }
