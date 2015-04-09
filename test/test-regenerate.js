@@ -78,13 +78,15 @@ describe('gen fhir->gen ccda->gen fhir-> gen ccda', function () {
 
     var fileNames = fs.readdirSync(rootDir);
 
+    //fileNames = ['170.314(b)(1)InPt_Discharge Summary CED Type.xml'];
+
     fileNames.forEach(function (fileName) {
         it('regenerate for ' + fileName, testContent(fileName, '_1', '_2'));
     });
 
     var patientEntry = {
-        id: "Patient/some-id-here-1987",
-        content: {
+        resource: {
+            id: "Patient/some-id-here-1987",
             resourceType: "Patient",
             identifier: [{
                 "system": "http://www.midea-tecg.com",
