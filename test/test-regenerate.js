@@ -35,13 +35,13 @@ describe('gen fhir->gen ccda->gen fhir-> gen ccda', function () {
     var makeIdsDeterministic = exports.makeIdsDeterministic = function (bundle) {
         var ids = {};
         bundle.entry.forEach(function (bundleEntry, index) {
-            var id = bundleEntry.id;
-            var newId = bundleEntry.content.resourceType + '/' + index.toString();
+            var id = bundleEntry.resource.id;
+            var newId = bundleEntry.resource.resourceType + '/' + index.toString();
             ids[id] = newId;
-            bundleEntry.id = newId;
+            bundleEntry.resource.id = newId;
         });
         bundle.entry.forEach(function (bundleEntry) {
-            replaceReferences(bundleEntry.content, ids);
+            replaceReferences(bundleEntry.resource, ids);
         });
     };
 
@@ -78,13 +78,15 @@ describe('gen fhir->gen ccda->gen fhir-> gen ccda', function () {
 
     var fileNames = fs.readdirSync(rootDir);
 
+    //fileNames = ['170.314(b)(1)InPt_Discharge Summary CED Type.xml'];
+
     fileNames.forEach(function (fileName) {
         it('regenerate for ' + fileName, testContent(fileName, '_1', '_2'));
     });
 
     var patientEntry = {
-        id: "Patient/some-id-here-1987",
-        content: {
+        resource: {
+            id: "Patient/some-id-here-1987",
             resourceType: "Patient",
             identifier: [{
                 "system": "http://www.midea-tecg.com",
