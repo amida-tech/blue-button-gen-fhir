@@ -1,6 +1,7 @@
 # v1.5.0 - TBD
 
 - Demographics section is now supported.
+- Output is now DTSU2 bundle.
 
 # v1.4.0 - March 9, 2015
 
