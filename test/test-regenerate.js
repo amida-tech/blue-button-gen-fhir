@@ -45,19 +45,33 @@ describe('gen fhir->gen ccda->gen fhir-> gen ccda', function () {
         });
     };
 
+    var toDSTU2 = function (bundle) {
+        var result = {
+            resourceType: 'Bundle'
+        };
+        result.entry = bundle.entry.map(function (entry) {
+            return {
+                resource: _.assign({
+                    id: entry.id
+                }, entry.content)
+            };
+        });
+        return result;
+    };
+
     var testContent = function (fileName, outId1, outId2, patient, externalize) {
         return function () {
             var filePath = path.join(rootDir, fileName);
             var content = fs.readFileSync(filePath, 'utf8');
             var bundle = m2fhir.contentToFHIR(content, patient, externalize);
             expect(bundle).to.exist();
-            var model1 = bbfhir.toModel(bundle);
+            var model1 = bbfhir.toModel(toDSTU2(bundle));
             expect(model1).to.exist();
             var model1FileName = path.join(outputDir, genModelFileName(fileName, outId1));
             fs.writeFileSync(model1FileName, JSON.stringify(model1, undefined, 4));
             var bundle2 = m2fhir.modelToFHIR(model1, patient, externalize);
             expect(bundle2).to.exist();
-            var model2 = bbfhir.toModel(bundle2);
+            var model2 = bbfhir.toModel(toDSTU2(bundle2));
             expect(model2).to.exist();
             var model2FileName = path.join(outputDir, genModelFileName(fileName, outId2));
             fs.writeFileSync(model2FileName, JSON.stringify(model2, undefined, 4));
