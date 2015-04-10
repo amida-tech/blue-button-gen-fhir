@@ -21,21 +21,11 @@
                         "BWHLMREOVTEST"
                     ],
                     "given": [
-                        "ONEA",
-                        null
+                        "ONEA"
                     ]
                 },
-                "gender": {
-                    "coding": [
-                        {
-                            "system": "http://hl7.org/fhir/v3/AdministrativeGender",
-                            "code": "F",
-                            "display": "Female"
-                        }
-                    ],
-                    "text": "Female"
-                },
-                "birthdate": "1955-01-01",
+                "gender": "female",
+                "birthDate": "1955-01-01",
                 "address": [
                     {
                         "line": [
@@ -43,17 +33,30 @@
                         ],
                         "city": "BOSTON",
                         "state": "MA",
-                        "zip": "02198",
+                        "postalCode": "02198",
                         "country": "US"
+                    }
+                ],
+                "communication": [
+                    {
+                        "language": {
+                            "coding": [
+                                {
+                                    "code": "eng",
+                                    "system": "urn:ietf:params:language"
+                                }
+                            ]
+                        },
+                        "preferred": true
                     }
                 ],
                 "extension": [
                     {
-                        "url": "http://hl7.org/fhir/Profile/us-core#ethnicity",
+                        "url": "http://hl7.org/fhir/StructureDefinition/us-core-ethnicity",
                         "valueCodeableConcept": {
                             "coding": [
                                 {
-                                    "system": "http://hl7.org/fhir/v3/Ethnicity",
+                                    "system": "urn:oid:2.16.840.1.113883.6.238",
                                     "code": "2186-5",
                                     "display": "Not Hispanic or Latino"
                                 }
