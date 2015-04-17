@@ -4,11 +4,13 @@ var fs = require('fs');
 var path = require('path');
 var chai = require('chai');
 var bbfhir = require('blue-button-fhir');
+var bbm = require('blue-button-model');
 var _ = require('lodash');
 
 var m2fhir = require('../index');
 
 var expect = chai.expect;
+var validator = bbm.validator;
 
 describe('gen fhir->gen ccda->gen fhir-> gen ccda', function () {
     var genModelFileName = function (fileName, addl) {
@@ -53,6 +55,11 @@ describe('gen fhir->gen ccda->gen fhir-> gen ccda', function () {
             expect(bundle).to.exist();
             var model1 = bbfhir.toModel(bundle);
             expect(model1).to.exist();
+            //var v = validator.validateDocumentModel(model1);
+            //if (!v) {
+            //    console.log(JSON.stringify(validator.getLastError(), undefined, 4));
+            //}
+            //expect(v).to.equal(true);
             var model1FileName = path.join(outputDir, genModelFileName(fileName, outId1));
             fs.writeFileSync(model1FileName, JSON.stringify(model1, undefined, 4));
             var bundle2 = m2fhir.modelToFHIR(model1, patient, externalize);
