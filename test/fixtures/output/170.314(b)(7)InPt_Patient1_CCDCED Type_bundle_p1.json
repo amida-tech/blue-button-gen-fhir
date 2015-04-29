@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 38,
+    "total": 36,
     "entry": [
         {
             "resource": {
@@ -26,23 +26,36 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "247472004",
-                                    "display": "Hives"
-                                }
-                            ],
-                            "text": "Hives"
+                "id": "AllergyIntolerance/1",
+                "resourceType": "AllergyIntolerance",
+                "recordedDate": "1998-01-10",
+                "status": "confirmed",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "7982",
+                            "display": "Penicillin G benzathine"
                         }
+                    ],
+                    "text": "Penicillin G benzathine"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "247472004",
+                                        "display": "Hives"
+                                    }
+                                ],
+                                "text": "Hives"
+                            }
+                        ]
                     }
                 ],
-                "didNotOccurFlag": false,
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -53,97 +66,32 @@
             "resource": {
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
-                "recordedDate": "1998-01-10",
-                "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "7982",
-                                    "display": "Penicillin G benzathine"
-                                }
-                            ],
-                            "text": "Penicillin G benzathine"
-                        }
-                    }
-                ],
-                "substance": {
-                    "reference": "#allergen",
-                    "display": "Penicillin G benzathine"
-                },
-                "reaction": [
-                    {
-                        "reference": "AdverseReaction/1",
-                        "display": "Hives"
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AdverseReaction/3",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "65124004",
-                                    "display": "Swelling"
-                                }
-                            ],
-                            "text": "Swelling"
-                        }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/4",
-                "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
                 "recordedDate": "2011-01-10",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "1191",
-                                    "display": "Aspirin"
-                                }
-                            ],
-                            "text": "Aspirin"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "Aspirin"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1191",
+                            "display": "Aspirin"
+                        }
+                    ],
+                    "text": "Aspirin"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/3",
-                        "display": "Swelling"
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "65124004",
+                                        "display": "Swelling"
+                                    }
+                                ],
+                                "text": "Swelling"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -154,7 +102,7 @@
         },
         {
             "resource": {
-                "id": "Observation/5",
+                "id": "Observation/3",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -193,7 +141,7 @@
         },
         {
             "resource": {
-                "id": "Observation/6",
+                "id": "Observation/4",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -232,7 +180,7 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/5",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -271,7 +219,7 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/6",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -310,7 +258,7 @@
         },
         {
             "resource": {
-                "id": "Observation/9",
+                "id": "Observation/7",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -346,7 +294,7 @@
         },
         {
             "resource": {
-                "id": "Observation/10",
+                "id": "Observation/8",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -385,7 +333,7 @@
         },
         {
             "resource": {
-                "id": "Observation/11",
+                "id": "Observation/9",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -424,7 +372,7 @@
         },
         {
             "resource": {
-                "id": "Observation/12",
+                "id": "Observation/10",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -463,7 +411,7 @@
         },
         {
             "resource": {
-                "id": "Observation/13",
+                "id": "Observation/11",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -502,7 +450,7 @@
         },
         {
             "resource": {
-                "id": "Observation/14",
+                "id": "Observation/12",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -538,7 +486,7 @@
         },
         {
             "resource": {
-                "id": "Observation/15",
+                "id": "Observation/13",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -577,7 +525,7 @@
         },
         {
             "resource": {
-                "id": "Observation/16",
+                "id": "Observation/14",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -616,7 +564,7 @@
         },
         {
             "resource": {
-                "id": "Observation/17",
+                "id": "Observation/15",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -655,7 +603,7 @@
         },
         {
             "resource": {
-                "id": "Observation/18",
+                "id": "Observation/16",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -694,7 +642,7 @@
         },
         {
             "resource": {
-                "id": "Observation/19",
+                "id": "Observation/17",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -730,7 +678,7 @@
         },
         {
             "resource": {
-                "id": "Observation/20",
+                "id": "Observation/18",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -759,19 +707,19 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/15"
+                            "reference": "Observation/13"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/16"
+                            "reference": "Observation/14"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/19"
+                            "reference": "Observation/17"
                         }
                     }
                 ],
@@ -783,7 +731,7 @@
         },
         {
             "resource": {
-                "id": "Observation/21",
+                "id": "Observation/19",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -812,19 +760,19 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/10"
+                            "reference": "Observation/8"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/11"
+                            "reference": "Observation/9"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/14"
+                            "reference": "Observation/12"
                         }
                     }
                 ],
@@ -836,7 +784,7 @@
         },
         {
             "resource": {
-                "id": "Observation/22",
+                "id": "Observation/20",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -865,19 +813,19 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/5"
+                            "reference": "Observation/3"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/4"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/9"
+                            "reference": "Observation/7"
                         }
                     }
                 ],
@@ -889,7 +837,7 @@
         },
         {
             "resource": {
-                "id": "Observation/23",
+                "id": "Observation/21",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -918,13 +866,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/17"
+                            "reference": "Observation/15"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/18"
+                            "reference": "Observation/16"
                         }
                     }
                 ],
@@ -936,7 +884,7 @@
         },
         {
             "resource": {
-                "id": "Observation/24",
+                "id": "Observation/22",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -965,13 +913,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/12"
+                            "reference": "Observation/10"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/13"
+                            "reference": "Observation/11"
                         }
                     }
                 ],
@@ -983,7 +931,7 @@
         },
         {
             "resource": {
-                "id": "Observation/25",
+                "id": "Observation/23",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -1012,13 +960,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/5"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/8"
+                            "reference": "Observation/6"
                         }
                     }
                 ],
@@ -1030,7 +978,7 @@
         },
         {
             "resource": {
-                "id": "Condition/26",
+                "id": "Condition/24",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2010-01-10",
@@ -1053,7 +1001,7 @@
         },
         {
             "resource": {
-                "id": "Condition/27",
+                "id": "Condition/25",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2013-01-30",
@@ -1076,7 +1024,7 @@
         },
         {
             "resource": {
-                "id": "Condition/28",
+                "id": "Condition/26",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2011-03-10",
@@ -1099,7 +1047,7 @@
         },
         {
             "resource": {
-                "id": "Observation/29",
+                "id": "Observation/27",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -1138,7 +1086,7 @@
         },
         {
             "resource": {
-                "id": "Observation/30",
+                "id": "Observation/28",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -1177,7 +1125,7 @@
         },
         {
             "resource": {
-                "id": "Observation/31",
+                "id": "Observation/29",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -1216,7 +1164,7 @@
         },
         {
             "resource": {
-                "id": "Observation/32",
+                "id": "Observation/30",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -1255,7 +1203,7 @@
         },
         {
             "resource": {
-                "id": "Observation/33",
+                "id": "Observation/31",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -1273,6 +1221,18 @@
                     {
                         "type": "has-component",
                         "target": {
+                            "reference": "Observation/27"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/28"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
                             "reference": "Observation/29"
                         }
                     },
@@ -1280,18 +1240,6 @@
                         "type": "has-component",
                         "target": {
                             "reference": "Observation/30"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/31"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/32"
                         }
                     }
                 ],
@@ -1313,7 +1261,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/34",
+                "id": "MedicationPrescription/32",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2010-01-10",
@@ -1365,7 +1313,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/35",
+                "id": "MedicationPrescription/33",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2013-01-30",
@@ -1408,7 +1356,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/36",
+                "id": "MedicationPrescription/34",
                 "resourceType": "MedicationPrescription",
                 "status": "completed",
                 "dateWritten": "2013-01-30",
@@ -1461,7 +1409,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/37",
+                "id": "MedicationPrescription/35",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2011-04-13T04:00:00.000Z",

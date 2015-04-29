@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 66,
+    "total": 64,
     "entry": [
         {
             "resource": {
@@ -26,24 +26,37 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "severity": "moderate",
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "404640003",
-                                    "display": "Dizziness"
-                                }
-                            ],
-                            "text": "Dizziness"
+                "id": "AllergyIntolerance/1",
+                "resourceType": "AllergyIntolerance",
+                "recordedDate": "1960-01-01",
+                "status": "confirmed",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "70618",
+                            "display": "Penicillin"
                         }
+                    ],
+                    "text": "Penicillin"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "404640003",
+                                        "display": "Dizziness"
+                                    }
+                                ],
+                                "text": "Dizziness"
+                            }
+                        ],
+                        "severity": "moderate"
                     }
                 ],
-                "didNotOccurFlag": false,
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -54,98 +67,33 @@
             "resource": {
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
-                "recordedDate": "1960-01-01",
-                "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "70618",
-                                    "display": "Penicillin"
-                                }
-                            ],
-                            "text": "Penicillin"
-                        }
-                    }
-                ],
-                "substance": {
-                    "reference": "#allergen",
-                    "display": "Penicillin"
-                },
-                "reaction": [
-                    {
-                        "reference": "AdverseReaction/1",
-                        "display": "Dizziness"
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AdverseReaction/3",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "severity": "severe",
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "417516000",
-                                    "display": "Anaphylaxis due to substance"
-                                }
-                            ],
-                            "text": "Anaphylaxis due to substance"
-                        }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/4",
-                "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
                 "recordedDate": "1940-01-01",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://fdasis.nlm.nih.gov",
-                                    "code": "3729L8MA2C",
-                                    "display": "Bee Pollen"
-                                }
-                            ],
-                            "text": "Bee Pollen"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "Bee Pollen"
+                    "coding": [
+                        {
+                            "system": "http://fdasis.nlm.nih.gov",
+                            "code": "3729L8MA2C",
+                            "display": "Bee Pollen"
+                        }
+                    ],
+                    "text": "Bee Pollen"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/3",
-                        "display": "Anaphylaxis due to substance"
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "417516000",
+                                        "display": "Anaphylaxis due to substance"
+                                    }
+                                ],
+                                "text": "Anaphylaxis due to substance"
+                            }
+                        ],
+                        "severity": "severe"
                     }
                 ],
                 "subject": {
@@ -156,7 +104,7 @@
         },
         {
             "resource": {
-                "id": "Condition/5",
+                "id": "Condition/3",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2005-05-01",
@@ -179,7 +127,7 @@
         },
         {
             "resource": {
-                "id": "Condition/6",
+                "id": "Condition/4",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2005-05-01",
@@ -202,7 +150,7 @@
         },
         {
             "resource": {
-                "id": "Condition/7",
+                "id": "Condition/5",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2008-11-01",
@@ -225,7 +173,7 @@
         },
         {
             "resource": {
-                "id": "Condition/8",
+                "id": "Condition/6",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2009-01-01",
@@ -248,7 +196,7 @@
         },
         {
             "resource": {
-                "id": "Condition/9",
+                "id": "Condition/7",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2006-11-01",
@@ -271,7 +219,7 @@
         },
         {
             "resource": {
-                "id": "Condition/10",
+                "id": "Condition/8",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2009-07-01",
@@ -294,7 +242,7 @@
         },
         {
             "resource": {
-                "id": "Condition/11",
+                "id": "Condition/9",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2008-04-01",
@@ -317,7 +265,7 @@
         },
         {
             "resource": {
-                "id": "Condition/12",
+                "id": "Condition/10",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2010-09-01",
@@ -340,7 +288,7 @@
         },
         {
             "resource": {
-                "id": "Condition/13",
+                "id": "Condition/11",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2006-06-01",
@@ -363,7 +311,7 @@
         },
         {
             "resource": {
-                "id": "Condition/14",
+                "id": "Condition/12",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "1997-10-01",
@@ -386,7 +334,7 @@
         },
         {
             "resource": {
-                "id": "Condition/15",
+                "id": "Condition/13",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2011-09-01",
@@ -409,7 +357,7 @@
         },
         {
             "resource": {
-                "id": "Observation/16",
+                "id": "Observation/14",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -473,7 +421,7 @@
         },
         {
             "resource": {
-                "id": "Observation/17",
+                "id": "Observation/15",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -491,7 +439,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/16"
+                            "reference": "Observation/14"
                         }
                     }
                 ],
@@ -513,7 +461,7 @@
         },
         {
             "resource": {
-                "id": "Observation/18",
+                "id": "Observation/16",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -577,7 +525,7 @@
         },
         {
             "resource": {
-                "id": "Observation/19",
+                "id": "Observation/17",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -641,7 +589,7 @@
         },
         {
             "resource": {
-                "id": "Observation/20",
+                "id": "Observation/18",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -702,7 +650,7 @@
         },
         {
             "resource": {
-                "id": "Observation/21",
+                "id": "Observation/19",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -766,7 +714,7 @@
         },
         {
             "resource": {
-                "id": "Observation/22",
+                "id": "Observation/20",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -830,7 +778,7 @@
         },
         {
             "resource": {
-                "id": "Observation/23",
+                "id": "Observation/21",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -848,13 +796,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/21"
+                            "reference": "Observation/19"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/22"
+                            "reference": "Observation/20"
                         }
                     }
                 ],
@@ -876,7 +824,7 @@
         },
         {
             "resource": {
-                "id": "Observation/24",
+                "id": "Observation/22",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -910,7 +858,7 @@
         },
         {
             "resource": {
-                "id": "Observation/25",
+                "id": "Observation/23",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -928,7 +876,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/24"
+                            "reference": "Observation/22"
                         }
                     }
                 ],
@@ -950,7 +898,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/26",
+                "id": "MedicationPrescription/24",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -1017,7 +965,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/27",
+                "id": "MedicationAdministration/25",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -1050,7 +998,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/26",
+                    "reference": "MedicationPrescription/24",
                     "display": "Lisinopril - 20mg by mouth once daily"
                 },
                 "contained": [
@@ -1082,7 +1030,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/28",
+                "id": "MedicationPrescription/26",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -1149,7 +1097,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/29",
+                "id": "MedicationAdministration/27",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -1182,7 +1130,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/28",
+                    "reference": "MedicationPrescription/26",
                     "display": "Lasix - 40mg by mouth once daily"
                 },
                 "contained": [
@@ -1214,7 +1162,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/30",
+                "id": "MedicationPrescription/28",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -1281,7 +1229,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/31",
+                "id": "MedicationAdministration/29",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -1314,7 +1262,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/30",
+                    "reference": "MedicationPrescription/28",
                     "display": "K-Dur - 10mEq/L by mouth once daily"
                 },
                 "contained": [
@@ -1346,7 +1294,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/32",
+                "id": "MedicationPrescription/30",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -1413,7 +1361,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/33",
+                "id": "MedicationAdministration/31",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -1446,7 +1394,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/32",
+                    "reference": "MedicationPrescription/30",
                     "display": "Norvasc - 10mg by mouth once daily"
                 },
                 "contained": [
@@ -1478,7 +1426,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/34",
+                "id": "MedicationPrescription/32",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -1545,7 +1493,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/35",
+                "id": "MedicationAdministration/33",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -1578,7 +1526,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/34",
+                    "reference": "MedicationPrescription/32",
                     "display": "Zocor - 40mg by mouth once daily before bed"
                 },
                 "contained": [
@@ -1610,7 +1558,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/36",
+                "id": "MedicationPrescription/34",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -1680,7 +1628,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/37",
+                "id": "MedicationAdministration/35",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -1716,7 +1664,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/36",
+                    "reference": "MedicationPrescription/34",
                     "display": "Lantus - 36 units once daily before bed"
                 },
                 "contained": [
@@ -1748,7 +1696,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/38",
+                "id": "MedicationPrescription/36",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -1815,7 +1763,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/39",
+                "id": "MedicationAdministration/37",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -1848,7 +1796,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/38",
+                    "reference": "MedicationPrescription/36",
                     "display": "gliburide - 2.5mg by mouth once daily"
                 },
                 "contained": [
@@ -1880,7 +1828,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/40",
+                "id": "MedicationPrescription/38",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -1947,7 +1895,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/41",
+                "id": "MedicationAdministration/39",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -1980,7 +1928,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/40",
+                    "reference": "MedicationPrescription/38",
                     "display": "synthroid - 0.1mg by mouth once daily"
                 },
                 "contained": [
@@ -2012,7 +1960,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/42",
+                "id": "MedicationPrescription/40",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -2079,7 +2027,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/43",
+                "id": "MedicationAdministration/41",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -2112,7 +2060,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/42",
+                    "reference": "MedicationPrescription/40",
                     "display": "Aleve - 220mg by mouth twice daily"
                 },
                 "contained": [
@@ -2144,7 +2092,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/44",
+                "id": "MedicationPrescription/42",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -2211,7 +2159,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/45",
+                "id": "MedicationAdministration/43",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -2244,7 +2192,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/44",
+                    "reference": "MedicationPrescription/42",
                     "display": "Ultram - 50mg by mouth four times daily as needed for joint pain"
                 },
                 "contained": [
@@ -2276,7 +2224,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/46",
+                "id": "MedicationPrescription/44",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -2343,7 +2291,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/47",
+                "id": "MedicationAdministration/45",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -2376,7 +2324,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/46",
+                    "reference": "MedicationPrescription/44",
                     "display": "Aspirin - 81mg by mouth once daily"
                 },
                 "contained": [
@@ -2408,7 +2356,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/48",
+                "id": "MedicationPrescription/46",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -2475,7 +2423,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/49",
+                "id": "MedicationAdministration/47",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -2508,7 +2456,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/48",
+                    "reference": "MedicationPrescription/46",
                     "display": "Lopressor - 50mg by mouth twice daily"
                 },
                 "contained": [
@@ -2540,7 +2488,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/50",
+                "id": "MedicationPrescription/48",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -2607,7 +2555,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/51",
+                "id": "MedicationAdministration/49",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -2640,7 +2588,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/50",
+                    "reference": "MedicationPrescription/48",
                     "display": "Flomax - 0.4mg by mouth once daily"
                 },
                 "contained": [
@@ -2672,7 +2620,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/52",
+                "id": "MedicationPrescription/50",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -2739,7 +2687,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/53",
+                "id": "MedicationAdministration/51",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -2772,7 +2720,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/52",
+                    "reference": "MedicationPrescription/50",
                     "display": "Proscar - 5mg by mouth once daily"
                 },
                 "contained": [
@@ -2804,7 +2752,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/54",
+                "id": "MedicationPrescription/52",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -2871,7 +2819,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/55",
+                "id": "MedicationAdministration/53",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -2904,7 +2852,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/54",
+                    "reference": "MedicationPrescription/52",
                     "display": "Neurontin - 300mg by mouth three times daily"
                 },
                 "contained": [
@@ -2936,7 +2884,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/56",
+                "id": "MedicationPrescription/54",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -3003,7 +2951,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/57",
+                "id": "MedicationAdministration/55",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -3036,7 +2984,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/56",
+                    "reference": "MedicationPrescription/54",
                     "display": "Ativan - 1mg by mouth three times daily as needed for irritability"
                 },
                 "contained": [
@@ -3068,7 +3016,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/58",
+                "id": "MedicationPrescription/56",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -3135,7 +3083,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/59",
+                "id": "MedicationAdministration/57",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -3168,7 +3116,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/58",
+                    "reference": "MedicationPrescription/56",
                     "display": "miodarone - 200mg by mouth two times daily"
                 },
                 "contained": [
@@ -3200,7 +3148,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/60",
+                "id": "MedicationPrescription/58",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -3267,7 +3215,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/61",
+                "id": "MedicationAdministration/59",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -3300,7 +3248,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/60",
+                    "reference": "MedicationPrescription/58",
                     "display": "Coumadin - 5mg by mouth every other day starting 11/1/2012"
                 },
                 "contained": [
@@ -3332,7 +3280,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/62",
+                "id": "MedicationPrescription/60",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -3399,7 +3347,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/63",
+                "id": "MedicationAdministration/61",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -3432,7 +3380,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/62",
+                    "reference": "MedicationPrescription/60",
                     "display": "Coumadin - 2.5mg by mouth every other day starting 11/2/2012"
                 },
                 "contained": [
@@ -3464,7 +3412,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/64",
+                "id": "MedicationPrescription/62",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -3531,7 +3479,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/65",
+                "id": "MedicationAdministration/63",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -3564,7 +3512,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/64",
+                    "reference": "MedicationPrescription/62",
                     "display": "Ambien - 5mg by mouth once daily before bed"
                 },
                 "contained": [

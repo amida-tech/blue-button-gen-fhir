@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 42,
+    "total": 39,
     "entry": [
         {
             "resource": {
@@ -29,12 +29,17 @@
                 "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-03-31",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/31",
-                    "display": "Eggs"
+                    "coding": [
+                        {
+                            "system": "http://fdasis.nlm.nih.gov",
+                            "code": "291P45F896",
+                            "display": "Eggs"
+                        }
+                    ],
+                    "text": "Eggs"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -47,12 +52,16 @@
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-03-31",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/32",
-                    "display": "Codeine"
+                    "coding": [
+                        {
+                            "code": "N0000006691",
+                            "display": "Codeine"
+                        }
+                    ],
+                    "text": "Codeine"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -65,12 +74,17 @@
                 "id": "AllergyIntolerance/3",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-03-31",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/33",
-                    "display": "Fosfomycin 33.3 MG/ML Oral Suspension"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "808917",
+                            "display": "Fosfomycin 33.3 MG/ML Oral Suspension"
+                        }
+                    ],
+                    "text": "Fosfomycin 33.3 MG/ML Oral Suspension"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -761,7 +775,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/34",
+                    "reference": "Medication/31",
                     "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
                 },
                 "patient": {
@@ -793,7 +807,7 @@
                     "reference": "MedicationPrescription/23"
                 },
                 "medication": {
-                    "reference": "Medication/35",
+                    "reference": "Medication/32",
                     "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
                 },
                 "patient": {
@@ -816,7 +830,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/36",
+                    "reference": "Medication/33",
                     "display": "Albuterol 0.83 MG/ML Inhalant Solution"
                 },
                 "patient": {
@@ -848,7 +862,7 @@
                     "reference": "MedicationPrescription/25"
                 },
                 "medication": {
-                    "reference": "Medication/37",
+                    "reference": "Medication/34",
                     "display": "Albuterol 0.83 MG/ML Inhalant Solution"
                 },
                 "patient": {
@@ -871,7 +885,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/38",
+                    "reference": "Medication/35",
                     "display": "Cromolyn Sodium 20 MG/ML Nasal Solution"
                 },
                 "patient": {
@@ -903,7 +917,7 @@
                     "reference": "MedicationPrescription/27"
                 },
                 "medication": {
-                    "reference": "Medication/39",
+                    "reference": "Medication/36",
                     "display": "Cromolyn Sodium 20 MG/ML Nasal Solution"
                 },
                 "patient": {
@@ -926,7 +940,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/40",
+                    "reference": "Medication/37",
                     "display": "cefpodoxime 200 MG Oral Tablet"
                 },
                 "patient": {
@@ -958,7 +972,7 @@
                     "reference": "MedicationPrescription/29"
                 },
                 "medication": {
-                    "reference": "Medication/41",
+                    "reference": "Medication/38",
                     "display": "cefpodoxime 200 MG Oral Tablet"
                 },
                 "patient": {
@@ -969,48 +983,52 @@
         },
         {
             "resource": {
-                "id": "Substance/31",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://fdasis.nlm.nih.gov",
-                            "code": "291P45F896",
-                            "display": "Eggs"
-                        }
-                    ],
-                    "text": "Eggs"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Substance/32",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "code": "N0000006691",
-                            "display": "Codeine"
-                        }
-                    ],
-                    "text": "Codeine"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Substance/33",
-                "resourceType": "Substance",
-                "type": {
+                "id": "Medication/31",
+                "resourceType": "Medication",
+                "name": "salmeterol 0.05 MG/ACTUAT Inhalant Powder",
+                "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "808917",
-                            "display": "Fosfomycin 33.3 MG/ML Oral Suspension"
+                            "code": "318142",
+                            "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
                         }
                     ],
-                    "text": "Fosfomycin 33.3 MG/ML Oral Suspension"
+                    "text": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Medication/32",
+                "resourceType": "Medication",
+                "name": "salmeterol 0.05 MG/ACTUAT Inhalant Powder",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "318142",
+                            "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
+                        }
+                    ],
+                    "text": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Medication/33",
+                "resourceType": "Medication",
+                "name": "Albuterol 0.83 MG/ML Inhalant Solution",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "630208",
+                            "display": "Albuterol 0.83 MG/ML Inhalant Solution"
+                        }
+                    ],
+                    "text": "Albuterol 0.83 MG/ML Inhalant Solution"
                 }
             }
         },
@@ -1018,16 +1036,16 @@
             "resource": {
                 "id": "Medication/34",
                 "resourceType": "Medication",
-                "name": "salmeterol 0.05 MG/ACTUAT Inhalant Powder",
+                "name": "Albuterol 0.83 MG/ML Inhalant Solution",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "318142",
-                            "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
+                            "code": "630208",
+                            "display": "Albuterol 0.83 MG/ML Inhalant Solution"
                         }
                     ],
-                    "text": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
+                    "text": "Albuterol 0.83 MG/ML Inhalant Solution"
                 }
             }
         },
@@ -1035,16 +1053,16 @@
             "resource": {
                 "id": "Medication/35",
                 "resourceType": "Medication",
-                "name": "salmeterol 0.05 MG/ACTUAT Inhalant Powder",
+                "name": "Cromolyn Sodium 20 MG/ML Nasal Solution",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "318142",
-                            "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
+                            "code": "831303",
+                            "display": "Cromolyn Sodium 20 MG/ML Nasal Solution"
                         }
                     ],
-                    "text": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
+                    "text": "Cromolyn Sodium 20 MG/ML Nasal Solution"
                 }
             }
         },
@@ -1052,73 +1070,22 @@
             "resource": {
                 "id": "Medication/36",
                 "resourceType": "Medication",
-                "name": "Albuterol 0.83 MG/ML Inhalant Solution",
+                "name": "Cromolyn Sodium 20 MG/ML Nasal Solution",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "630208",
-                            "display": "Albuterol 0.83 MG/ML Inhalant Solution"
+                            "code": "831303",
+                            "display": "Cromolyn Sodium 20 MG/ML Nasal Solution"
                         }
                     ],
-                    "text": "Albuterol 0.83 MG/ML Inhalant Solution"
+                    "text": "Cromolyn Sodium 20 MG/ML Nasal Solution"
                 }
             }
         },
         {
             "resource": {
                 "id": "Medication/37",
-                "resourceType": "Medication",
-                "name": "Albuterol 0.83 MG/ML Inhalant Solution",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "630208",
-                            "display": "Albuterol 0.83 MG/ML Inhalant Solution"
-                        }
-                    ],
-                    "text": "Albuterol 0.83 MG/ML Inhalant Solution"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/38",
-                "resourceType": "Medication",
-                "name": "Cromolyn Sodium 20 MG/ML Nasal Solution",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "831303",
-                            "display": "Cromolyn Sodium 20 MG/ML Nasal Solution"
-                        }
-                    ],
-                    "text": "Cromolyn Sodium 20 MG/ML Nasal Solution"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/39",
-                "resourceType": "Medication",
-                "name": "Cromolyn Sodium 20 MG/ML Nasal Solution",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "831303",
-                            "display": "Cromolyn Sodium 20 MG/ML Nasal Solution"
-                        }
-                    ],
-                    "text": "Cromolyn Sodium 20 MG/ML Nasal Solution"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/40",
                 "resourceType": "Medication",
                 "name": "cefpodoxime 200 MG Oral Tablet",
                 "code": {
@@ -1135,7 +1102,7 @@
         },
         {
             "resource": {
-                "id": "Medication/41",
+                "id": "Medication/38",
                 "resourceType": "Medication",
                 "name": "cefpodoxime 200 MG Oral Tablet",
                 "code": {

@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 27,
+    "total": 23,
     "entry": [
         {
             "resource": {
@@ -26,23 +26,36 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "247472004",
-                                    "display": "Hives"
-                                }
-                            ],
-                            "text": "Hives"
+                "id": "AllergyIntolerance/1",
+                "resourceType": "AllergyIntolerance",
+                "recordedDate": "1998-01-10",
+                "status": "confirmed",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "7982",
+                            "display": "Penicillin G benzathine"
                         }
+                    ],
+                    "text": "Penicillin G benzathine"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "247472004",
+                                        "display": "Hives"
+                                    }
+                                ],
+                                "text": "Hives"
+                            }
+                        ]
                     }
                 ],
-                "didNotOccurFlag": false,
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -53,64 +66,31 @@
             "resource": {
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
-                "recordedDate": "1998-01-10",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/22",
-                    "display": "Penicillin G benzathine"
-                },
-                "reaction": [
-                    {
-                        "reference": "AdverseReaction/1",
-                        "display": "Hives"
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AdverseReaction/3",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "422587007",
-                                    "display": "Nausea"
-                                }
-                            ],
-                            "text": "Nausea"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1191",
+                            "display": "Aspirin"
                         }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/4",
-                "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
-                "status": "confirmed",
-                "substance": {
-                    "reference": "Substance/23",
-                    "display": "Aspirin"
+                    ],
+                    "text": "Aspirin"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/3",
-                        "display": "Nausea"
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "422587007",
+                                        "display": "Nausea"
+                                    }
+                                ],
+                                "text": "Nausea"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -121,7 +101,7 @@
         },
         {
             "resource": {
-                "id": "Observation/5",
+                "id": "Observation/3",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -160,7 +140,7 @@
         },
         {
             "resource": {
-                "id": "Observation/6",
+                "id": "Observation/4",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -199,7 +179,7 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/5",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -238,7 +218,7 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/6",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -277,7 +257,7 @@
         },
         {
             "resource": {
-                "id": "Observation/9",
+                "id": "Observation/7",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -313,7 +293,7 @@
         },
         {
             "resource": {
-                "id": "Observation/10",
+                "id": "Observation/8",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -342,19 +322,19 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/5"
+                            "reference": "Observation/3"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/4"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/9"
+                            "reference": "Observation/7"
                         }
                     }
                 ],
@@ -366,7 +346,7 @@
         },
         {
             "resource": {
-                "id": "Observation/11",
+                "id": "Observation/9",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -395,13 +375,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/5"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/8"
+                            "reference": "Observation/6"
                         }
                     }
                 ],
@@ -413,7 +393,7 @@
         },
         {
             "resource": {
-                "id": "Condition/12",
+                "id": "Condition/10",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2012-09-20",
@@ -436,7 +416,7 @@
         },
         {
             "resource": {
-                "id": "Condition/13",
+                "id": "Condition/11",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2011-11-10",
@@ -459,7 +439,7 @@
         },
         {
             "resource": {
-                "id": "Condition/14",
+                "id": "Condition/12",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2010-04-15",
@@ -482,7 +462,7 @@
         },
         {
             "resource": {
-                "id": "Observation/15",
+                "id": "Observation/13",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -521,7 +501,7 @@
         },
         {
             "resource": {
-                "id": "Observation/16",
+                "id": "Observation/14",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -560,7 +540,7 @@
         },
         {
             "resource": {
-                "id": "Observation/17",
+                "id": "Observation/15",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -599,7 +579,7 @@
         },
         {
             "resource": {
-                "id": "Observation/18",
+                "id": "Observation/16",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -617,19 +597,19 @@
                     {
                         "type": "has-component",
                         "target": {
+                            "reference": "Observation/13"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/14"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
                             "reference": "Observation/15"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/16"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/17"
                         }
                     }
                 ],
@@ -651,7 +631,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/19",
+                "id": "MedicationPrescription/17",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-09-20",
@@ -675,7 +655,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/24",
+                    "reference": "Medication/20",
                     "display": "Cephalexin 500 MG Oral Tablet"
                 },
                 "patient": {
@@ -686,7 +666,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/20",
+                "id": "MedicationPrescription/18",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2011-11-20",
@@ -720,7 +700,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/25",
+                    "reference": "Medication/21",
                     "display": "Fluoxetine 40 MG Oral Capsule"
                 },
                 "patient": {
@@ -731,7 +711,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/21",
+                "id": "MedicationPrescription/19",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2010-04-15",
@@ -765,7 +745,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/26",
+                    "reference": "Medication/22",
                     "display": "Levothyroxine Sodium 0.05 MG Oral Tablet"
                 },
                 "patient": {
@@ -776,39 +756,7 @@
         },
         {
             "resource": {
-                "id": "Substance/22",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "7982",
-                            "display": "Penicillin G benzathine"
-                        }
-                    ],
-                    "text": "Penicillin G benzathine"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Substance/23",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "1191",
-                            "display": "Aspirin"
-                        }
-                    ],
-                    "text": "Aspirin"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/24",
+                "id": "Medication/20",
                 "resourceType": "Medication",
                 "name": "Cephalexin 500 MG Oral Tablet",
                 "code": {
@@ -825,7 +773,7 @@
         },
         {
             "resource": {
-                "id": "Medication/25",
+                "id": "Medication/21",
                 "resourceType": "Medication",
                 "name": "Fluoxetine 40 MG Oral Capsule",
                 "code": {
@@ -842,7 +790,7 @@
         },
         {
             "resource": {
-                "id": "Medication/26",
+                "id": "Medication/22",
                 "resourceType": "Medication",
                 "name": "Levothyroxine Sodium 0.05 MG Oral Tablet",
                 "code": {

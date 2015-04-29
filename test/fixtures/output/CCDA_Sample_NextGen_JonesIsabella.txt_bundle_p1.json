@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 19,
+    "total": 16,
     "entry": [
         {
             "resource": {
@@ -26,16 +26,29 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "text": "Shortness of Breath"
+                "id": "AllergyIntolerance/1",
+                "resourceType": "AllergyIntolerance",
+                "recordedDate": "2012-08-06",
+                "status": "confirmed",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "2670",
+                            "display": "Codeine"
                         }
+                    ],
+                    "text": "Codeine"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "text": "Shortness of Breath"
+                            }
+                        ]
                     }
                 ],
-                "didNotOccurFlag": false,
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -46,53 +59,27 @@
             "resource": {
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
                 "recordedDate": "2012-08-06",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "2670",
-                                    "display": "Codeine"
-                                }
-                            ],
-                            "text": "Codeine"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "Codeine"
-                },
-                "reaction": [
-                    {
-                        "reference": "AdverseReaction/1",
-                        "display": "Shortness of Breath"
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AdverseReaction/3",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "text": "Hives"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1191",
+                            "display": "Aspirin"
                         }
+                    ],
+                    "text": "Aspirin"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "text": "Hives"
+                            }
+                        ]
                     }
                 ],
-                "didNotOccurFlag": false,
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -101,92 +88,27 @@
         },
         {
             "resource": {
-                "id": "AllergyIntolerance/4",
+                "id": "AllergyIntolerance/3",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
                 "recordedDate": "2012-08-06",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "1191",
-                                    "display": "Aspirin"
-                                }
-                            ],
-                            "text": "Aspirin"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "Aspirin"
-                },
-                "reaction": [
-                    {
-                        "reference": "AdverseReaction/3",
-                        "display": "Hives"
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AdverseReaction/5",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "text": "Hives"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "7982",
+                            "display": "penicillin G benzathine"
                         }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/6",
-                "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
-                "recordedDate": "2012-08-06",
-                "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "7982",
-                                    "display": "penicillin G benzathine"
-                                }
-                            ],
-                            "text": "penicillin G benzathine"
-                        }
-                    }
-                ],
-                "substance": {
-                    "reference": "#allergen",
-                    "display": "penicillin G benzathine"
+                    ],
+                    "text": "penicillin G benzathine"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/5",
-                        "display": "Hives"
+                        "manifestation": [
+                            {
+                                "text": "Hives"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -197,7 +119,7 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/4",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -236,7 +158,7 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/5",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -275,7 +197,7 @@
         },
         {
             "resource": {
-                "id": "Observation/9",
+                "id": "Observation/6",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -314,7 +236,7 @@
         },
         {
             "resource": {
-                "id": "Observation/10",
+                "id": "Observation/7",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -353,7 +275,7 @@
         },
         {
             "resource": {
-                "id": "Observation/11",
+                "id": "Observation/8",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -389,7 +311,7 @@
         },
         {
             "resource": {
-                "id": "Observation/12",
+                "id": "Observation/9",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -418,19 +340,19 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/4"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/5"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
                             "reference": "Observation/8"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/11"
                         }
                     }
                 ],
@@ -442,7 +364,7 @@
         },
         {
             "resource": {
-                "id": "Observation/13",
+                "id": "Observation/10",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -471,13 +393,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/9"
+                            "reference": "Observation/6"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/10"
+                            "reference": "Observation/7"
                         }
                     }
                 ],
@@ -489,7 +411,7 @@
         },
         {
             "resource": {
-                "id": "Observation/14",
+                "id": "Observation/11",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -519,7 +441,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/15",
+                "id": "MedicationPrescription/12",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2013-02-12",
@@ -578,7 +500,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/16",
+                "id": "MedicationPrescription/13",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-08-06",
@@ -622,7 +544,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/17",
+                "id": "MedicationPrescription/14",
                 "resourceType": "MedicationPrescription",
                 "status": "completed",
                 "dateWritten": "2012-04-02",
@@ -682,7 +604,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/18",
+                "id": "MedicationPrescription/15",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-08-06",

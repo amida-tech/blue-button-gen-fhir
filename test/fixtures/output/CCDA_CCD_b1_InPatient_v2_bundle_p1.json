@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 26,
+    "total": 23,
     "entry": [
         {
             "resource": {
@@ -26,23 +26,37 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "247472004",
-                                    "display": "Hives"
-                                }
-                            ],
-                            "text": "Hives"
+                "id": "AllergyIntolerance/1",
+                "resourceType": "AllergyIntolerance",
+                "criticality": "medium",
+                "recordedDate": "2007-05-01",
+                "status": "resolved",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "7982",
+                            "display": "Penicillin G benzathine"
                         }
+                    ],
+                    "text": "Penicillin G benzathine"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "247472004",
+                                        "display": "Hives"
+                                    }
+                                ],
+                                "text": "Hives"
+                            }
+                        ]
                     }
                 ],
-                "didNotOccurFlag": false,
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -54,125 +68,34 @@
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
-                "sensitivityType": "allergy",
-                "recordedDate": "2007-05-01",
-                "status": "resolved",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "7982",
-                                    "display": "Penicillin G benzathine"
-                                }
-                            ],
-                            "text": "Penicillin G benzathine"
-                        }
-                    }
-                ],
-                "substance": {
-                    "reference": "#allergen",
-                    "display": "Penicillin G benzathine"
-                },
-                "reaction": [
-                    {
-                        "reference": "AdverseReaction/1",
-                        "display": "Hives"
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AdverseReaction/3",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "267036007",
-                                    "display": "Shortness of Breath"
-                                }
-                            ],
-                            "text": "Shortness of Breath"
-                        }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/4",
-                "resourceType": "AllergyIntolerance",
-                "criticality": "medium",
-                "sensitivityType": "allergy",
                 "recordedDate": "2006-05-01",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "2670",
-                                    "display": "Codeine"
-                                }
-                            ],
-                            "text": "Codeine"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "Codeine"
-                },
-                "reaction": [
-                    {
-                        "reference": "AdverseReaction/3",
-                        "display": "Shortness of Breath"
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AdverseReaction/5",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "247472004",
-                                    "display": "Hives"
-                                }
-                            ],
-                            "text": "Hives"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "2670",
+                            "display": "Codeine"
                         }
+                    ],
+                    "text": "Codeine"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "267036007",
+                                        "display": "Shortness of Breath"
+                                    }
+                                ],
+                                "text": "Shortness of Breath"
+                            }
+                        ]
                     }
                 ],
-                "didNotOccurFlag": false,
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -181,36 +104,35 @@
         },
         {
             "resource": {
-                "id": "AllergyIntolerance/6",
+                "id": "AllergyIntolerance/3",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
-                "sensitivityType": "allergy",
                 "recordedDate": "2008-05-01",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "1191",
-                                    "display": "Aspirin"
-                                }
-                            ],
-                            "text": "Aspirin"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "Aspirin"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1191",
+                            "display": "Aspirin"
+                        }
+                    ],
+                    "text": "Aspirin"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/5",
-                        "display": "Hives"
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "247472004",
+                                        "display": "Hives"
+                                    }
+                                ],
+                                "text": "Hives"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -221,7 +143,7 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/4",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -270,7 +192,7 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/5",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -319,7 +241,7 @@
         },
         {
             "resource": {
-                "id": "Observation/9",
+                "id": "Observation/6",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -368,7 +290,7 @@
         },
         {
             "resource": {
-                "id": "Observation/10",
+                "id": "Observation/7",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -417,7 +339,7 @@
         },
         {
             "resource": {
-                "id": "Observation/11",
+                "id": "Observation/8",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -466,7 +388,7 @@
         },
         {
             "resource": {
-                "id": "Observation/12",
+                "id": "Observation/9",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -515,7 +437,7 @@
         },
         {
             "resource": {
-                "id": "Observation/13",
+                "id": "Observation/10",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -544,7 +466,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/4"
                         }
                     }
                 ],
@@ -556,7 +478,7 @@
         },
         {
             "resource": {
-                "id": "Observation/14",
+                "id": "Observation/11",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -585,7 +507,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/8"
+                            "reference": "Observation/5"
                         }
                     }
                 ],
@@ -597,7 +519,7 @@
         },
         {
             "resource": {
-                "id": "Observation/15",
+                "id": "Observation/12",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -626,13 +548,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/10"
+                            "reference": "Observation/7"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/11"
+                            "reference": "Observation/8"
                         }
                     }
                 ],
@@ -644,7 +566,7 @@
         },
         {
             "resource": {
-                "id": "Observation/16",
+                "id": "Observation/13",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -657,6 +579,47 @@
                     "text": "Blood pressure panel"
                 },
                 "issued": "2011-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/6"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/14",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
+                "issued": "2012-08-06",
                 "status": "final",
                 "reliability": "ok",
                 "extension": [
@@ -685,48 +648,7 @@
         },
         {
             "resource": {
-                "id": "Observation/17",
-                "resourceType": "Observation",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "35094-2",
-                            "display": "Blood pressure panel"
-                        }
-                    ],
-                    "text": "Blood pressure panel"
-                },
-                "issued": "2012-08-06",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/12"
-                        }
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Condition/18",
+                "id": "Condition/15",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2012-08-06",
@@ -749,7 +671,7 @@
         },
         {
             "resource": {
-                "id": "Condition/19",
+                "id": "Condition/16",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2012-08-06",
@@ -772,7 +694,7 @@
         },
         {
             "resource": {
-                "id": "Observation/20",
+                "id": "Observation/17",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -836,7 +758,7 @@
         },
         {
             "resource": {
-                "id": "Observation/21",
+                "id": "Observation/18",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -911,7 +833,7 @@
         },
         {
             "resource": {
-                "id": "Observation/22",
+                "id": "Observation/19",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -986,7 +908,7 @@
         },
         {
             "resource": {
-                "id": "Observation/23",
+                "id": "Observation/20",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -1004,19 +926,19 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/20"
+                            "reference": "Observation/17"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/21"
+                            "reference": "Observation/18"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/22"
+                            "reference": "Observation/19"
                         }
                     }
                 ],
@@ -1038,7 +960,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/24",
+                "id": "MedicationPrescription/21",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dosageInstruction": [
@@ -1112,7 +1034,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/25",
+                "id": "MedicationAdministration/22",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -1156,7 +1078,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/24",
+                    "reference": "MedicationPrescription/21",
                     "display": "Albuterol 0.09 MG/ACTUAT inhalant solution"
                 },
                 "contained": [

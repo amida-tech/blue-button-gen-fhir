@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 9,
+    "total": 6,
     "entry": [
         {
             "resource": {
@@ -116,23 +116,37 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "247472004",
-                                    "display": "Hives"
-                                }
-                            ],
-                            "text": "Hives"
+                "id": "AllergyIntolerance/1",
+                "resourceType": "AllergyIntolerance",
+                "criticality": "medium",
+                "recordedDate": "2009-09-02",
+                "status": "confirmed",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "314422",
+                            "display": "ALLERGENIC EXTRACT, PENICILLIN"
                         }
+                    ],
+                    "text": "ALLERGENIC EXTRACT, PENICILLIN"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "247472004",
+                                        "display": "Hives"
+                                    }
+                                ],
+                                "text": "Hives"
+                            }
+                        ]
                     }
                 ],
-                "didNotOccurFlag": false,
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everyman, Adam Frankie"
@@ -144,60 +158,34 @@
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
-                "sensitivityType": "allergy",
                 "recordedDate": "2009-09-02",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "314422",
-                                    "display": "ALLERGENIC EXTRACT, PENICILLIN"
-                                }
-                            ],
-                            "text": "ALLERGENIC EXTRACT, PENICILLIN"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "ALLERGENIC EXTRACT, PENICILLIN"
-                },
-                "reaction": [
-                    {
-                        "reference": "AdverseReaction/1",
-                        "display": "Hives"
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Everyman, Adam Frankie"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AdverseReaction/3",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "56018004",
-                                    "display": "Wheezing"
-                                }
-                            ],
-                            "text": "Wheezing"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1191",
+                            "display": "ASPIRIN"
                         }
+                    ],
+                    "text": "ASPIRIN"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "56018004",
+                                        "display": "Wheezing"
+                                    }
+                                ],
+                                "text": "Wheezing"
+                            }
+                        ]
                     }
                 ],
-                "didNotOccurFlag": false,
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everyman, Adam Frankie"
@@ -206,101 +194,35 @@
         },
         {
             "resource": {
-                "id": "AllergyIntolerance/4",
+                "id": "AllergyIntolerance/3",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
-                "sensitivityType": "allergy",
                 "recordedDate": "2009-09-02",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "1191",
-                                    "display": "ASPIRIN"
-                                }
-                            ],
-                            "text": "ASPIRIN"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "ASPIRIN"
-                },
-                "reaction": [
-                    {
-                        "reference": "AdverseReaction/3",
-                        "display": "Wheezing"
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Everyman, Adam Frankie"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AdverseReaction/5",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "73879007",
-                                    "display": "Nausea"
-                                }
-                            ],
-                            "text": "Nausea"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "2670",
+                            "display": "Codeine"
                         }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Everyman, Adam Frankie"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/6",
-                "resourceType": "AllergyIntolerance",
-                "criticality": "medium",
-                "sensitivityType": "allergy",
-                "recordedDate": "2009-09-02",
-                "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "2670",
-                                    "display": "Codeine"
-                                }
-                            ],
-                            "text": "Codeine"
-                        }
-                    }
-                ],
-                "substance": {
-                    "reference": "#allergen",
-                    "display": "Codeine"
+                    ],
+                    "text": "Codeine"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/5",
-                        "display": "Nausea"
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "73879007",
+                                        "display": "Nausea"
+                                    }
+                                ],
+                                "text": "Nausea"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -311,7 +233,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/7",
+                "id": "MedicationPrescription/4",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2011-03-01",
@@ -388,7 +310,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/8",
+                "id": "MedicationAdministration/5",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -431,7 +353,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/7",
+                    "reference": "MedicationPrescription/4",
                     "display": "Proventil 0.09 MG/ACTUAT inhalant solution"
                 },
                 "contained": [

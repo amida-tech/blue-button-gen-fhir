@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 18,
+    "total": 17,
     "entry": [
         {
             "resource": {
@@ -28,11 +28,16 @@
             "resource": {
                 "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/15",
-                    "display": "Ecpirin"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1001473",
+                            "display": "Ecpirin"
+                        }
+                    ],
+                    "text": "Ecpirin"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -510,7 +515,7 @@
                     "div": "inhale 2 puffs by inhalation route at least 15 minutes before exertion for 30 days"
                 },
                 "medication": {
-                    "reference": "Medication/16",
+                    "reference": "Medication/15",
                     "display": "200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler"
                 },
                 "patient": {
@@ -544,7 +549,7 @@
                     "div": "inject 1 milliliter (30 mg) by intramuscular route every 6 hours as needed for up to 5 days total use for 6 days"
                 },
                 "medication": {
-                    "reference": "Medication/17",
+                    "reference": "Medication/16",
                     "display": "1 ML Ketorolac Tromethamine 30 MG/ML Prefilled Syringe"
                 },
                 "patient": {
@@ -555,23 +560,7 @@
         },
         {
             "resource": {
-                "id": "Substance/15",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "1001473",
-                            "display": "Ecpirin"
-                        }
-                    ],
-                    "text": "Ecpirin"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/16",
+                "id": "Medication/15",
                 "resourceType": "Medication",
                 "name": "200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
                 "code": {
@@ -588,7 +577,7 @@
         },
         {
             "resource": {
-                "id": "Medication/17",
+                "id": "Medication/16",
                 "resourceType": "Medication",
                 "name": "1 ML Ketorolac Tromethamine 30 MG/ML Prefilled Syringe",
                 "code": {

@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 16,
+    "total": 15,
     "entry": [
         {
             "resource": {
@@ -26,60 +26,34 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "247472004",
-                                    "display": "Hives"
-                                }
-                            ],
-                            "text": "Hives"
-                        }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/2",
+                "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
-                "sensitivityType": "allergy",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "1191",
-                                    "display": "Aspirin"
-                                }
-                            ],
-                            "text": "Aspirin"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "Aspirin"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1191",
+                            "display": "Aspirin"
+                        }
+                    ],
+                    "text": "Aspirin"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/1",
-                        "display": "Hives"
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "247472004",
+                                        "display": "Hives"
+                                    }
+                                ],
+                                "text": "Hives"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -90,7 +64,7 @@
         },
         {
             "resource": {
-                "id": "Observation/3",
+                "id": "Observation/2",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -129,7 +103,7 @@
         },
         {
             "resource": {
-                "id": "Observation/4",
+                "id": "Observation/3",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -168,7 +142,7 @@
         },
         {
             "resource": {
-                "id": "Observation/5",
+                "id": "Observation/4",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -207,7 +181,7 @@
         },
         {
             "resource": {
-                "id": "Observation/6",
+                "id": "Observation/5",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -246,7 +220,7 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/6",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -282,7 +256,7 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/7",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -311,19 +285,19 @@
                     {
                         "type": "has-component",
                         "target": {
+                            "reference": "Observation/2"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
                             "reference": "Observation/3"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/4"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/6"
                         }
                     }
                 ],
@@ -335,7 +309,7 @@
         },
         {
             "resource": {
-                "id": "Observation/9",
+                "id": "Observation/8",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -364,13 +338,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/5"
+                            "reference": "Observation/4"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/5"
                         }
                     }
                 ],
@@ -382,7 +356,7 @@
         },
         {
             "resource": {
-                "id": "Condition/10",
+                "id": "Condition/9",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2009-05-01",
@@ -405,7 +379,7 @@
         },
         {
             "resource": {
-                "id": "Condition/11",
+                "id": "Condition/10",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2007-01-03",
@@ -428,7 +402,7 @@
         },
         {
             "resource": {
-                "id": "Observation/12",
+                "id": "Observation/11",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -467,7 +441,7 @@
         },
         {
             "resource": {
-                "id": "Observation/13",
+                "id": "Observation/12",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -485,7 +459,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/12"
+                            "reference": "Observation/11"
                         }
                     }
                 ],
@@ -507,7 +481,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/14",
+                "id": "MedicationPrescription/13",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2007-10-01",
@@ -572,7 +546,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/15",
+                "id": "MedicationPrescription/14",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2009-05-01",

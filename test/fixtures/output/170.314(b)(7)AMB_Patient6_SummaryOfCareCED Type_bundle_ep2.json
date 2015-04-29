@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 36,
+    "total": 34,
     "entry": [
         {
             "resource": {
@@ -26,44 +26,34 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "247472004",
-                                    "display": "Hives"
-                                }
-                            ],
-                            "text": "Hives"
-                        }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/2",
+                "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
                 "recordedDate": "2005-01-10",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/33",
-                    "display": "Penicillin G benzathine"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "7982",
+                            "display": "Penicillin G benzathine"
+                        }
+                    ],
+                    "text": "Penicillin G benzathine"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/1",
-                        "display": "Hives"
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "247472004",
+                                        "display": "Hives"
+                                    }
+                                ],
+                                "text": "Hives"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -74,7 +64,7 @@
         },
         {
             "resource": {
-                "id": "Observation/3",
+                "id": "Observation/2",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -113,7 +103,7 @@
         },
         {
             "resource": {
-                "id": "Observation/4",
+                "id": "Observation/3",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -152,7 +142,7 @@
         },
         {
             "resource": {
-                "id": "Observation/5",
+                "id": "Observation/4",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -191,7 +181,7 @@
         },
         {
             "resource": {
-                "id": "Observation/6",
+                "id": "Observation/5",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -230,7 +220,7 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/6",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -266,7 +256,7 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/7",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -305,7 +295,7 @@
         },
         {
             "resource": {
-                "id": "Observation/9",
+                "id": "Observation/8",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -344,7 +334,7 @@
         },
         {
             "resource": {
-                "id": "Observation/10",
+                "id": "Observation/9",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -383,7 +373,7 @@
         },
         {
             "resource": {
-                "id": "Observation/11",
+                "id": "Observation/10",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -422,7 +412,7 @@
         },
         {
             "resource": {
-                "id": "Observation/12",
+                "id": "Observation/11",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -458,7 +448,7 @@
         },
         {
             "resource": {
-                "id": "Observation/13",
+                "id": "Observation/12",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -497,7 +487,7 @@
         },
         {
             "resource": {
-                "id": "Observation/14",
+                "id": "Observation/13",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -536,7 +526,7 @@
         },
         {
             "resource": {
-                "id": "Observation/15",
+                "id": "Observation/14",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -575,7 +565,7 @@
         },
         {
             "resource": {
-                "id": "Observation/16",
+                "id": "Observation/15",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -614,7 +604,7 @@
         },
         {
             "resource": {
-                "id": "Observation/17",
+                "id": "Observation/16",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -650,7 +640,7 @@
         },
         {
             "resource": {
-                "id": "Observation/18",
+                "id": "Observation/17",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -679,19 +669,72 @@
                     {
                         "type": "has-component",
                         "target": {
+                            "reference": "Observation/12"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
                             "reference": "Observation/13"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/14"
+                            "reference": "Observation/16"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/18",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2011-03-12",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/7"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/17"
+                            "reference": "Observation/8"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/11"
                         }
                     }
                 ],
@@ -715,59 +758,6 @@
                     ],
                     "text": "Weight and Height tracking panel"
                 },
-                "issued": "2011-03-12",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/8"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/9"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/12"
-                        }
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Observation/20",
-                "resourceType": "Observation",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "55418-8",
-                            "display": "Weight and Height tracking panel"
-                        }
-                    ],
-                    "text": "Weight and Height tracking panel"
-                },
                 "issued": "2013-01-30",
                 "status": "final",
                 "reliability": "ok",
@@ -785,19 +775,19 @@
                     {
                         "type": "has-component",
                         "target": {
+                            "reference": "Observation/2"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
                             "reference": "Observation/3"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/4"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/6"
                         }
                     }
                 ],
@@ -809,7 +799,7 @@
         },
         {
             "resource": {
-                "id": "Observation/21",
+                "id": "Observation/20",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -838,13 +828,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/15"
+                            "reference": "Observation/14"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/16"
+                            "reference": "Observation/15"
                         }
                     }
                 ],
@@ -856,7 +846,7 @@
         },
         {
             "resource": {
-                "id": "Observation/22",
+                "id": "Observation/21",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -885,13 +875,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/10"
+                            "reference": "Observation/9"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/11"
+                            "reference": "Observation/10"
                         }
                     }
                 ],
@@ -903,7 +893,7 @@
         },
         {
             "resource": {
-                "id": "Observation/23",
+                "id": "Observation/22",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -932,13 +922,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/5"
+                            "reference": "Observation/4"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/5"
                         }
                     }
                 ],
@@ -950,7 +940,7 @@
         },
         {
             "resource": {
-                "id": "Condition/24",
+                "id": "Condition/23",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2013-01-30",
@@ -973,7 +963,7 @@
         },
         {
             "resource": {
-                "id": "Condition/25",
+                "id": "Condition/24",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2011-03-12",
@@ -996,7 +986,7 @@
         },
         {
             "resource": {
-                "id": "Observation/26",
+                "id": "Observation/25",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -1035,7 +1025,7 @@
         },
         {
             "resource": {
-                "id": "Observation/27",
+                "id": "Observation/26",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -1074,7 +1064,7 @@
         },
         {
             "resource": {
-                "id": "Observation/28",
+                "id": "Observation/27",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -1113,7 +1103,7 @@
         },
         {
             "resource": {
-                "id": "Observation/29",
+                "id": "Observation/28",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -1152,7 +1142,7 @@
         },
         {
             "resource": {
-                "id": "Observation/30",
+                "id": "Observation/29",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -1170,6 +1160,12 @@
                     {
                         "type": "has-component",
                         "target": {
+                            "reference": "Observation/25"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
                             "reference": "Observation/26"
                         }
                     },
@@ -1183,12 +1179,6 @@
                         "type": "has-component",
                         "target": {
                             "reference": "Observation/28"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/29"
                         }
                     }
                 ],
@@ -1210,7 +1200,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/31",
+                "id": "MedicationPrescription/30",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2013-01-30",
@@ -1234,7 +1224,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/34",
+                    "reference": "Medication/32",
                     "display": "Oseltamivir 30 MG Oral Capsule"
                 },
                 "patient": {
@@ -1245,7 +1235,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/32",
+                "id": "MedicationPrescription/31",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2010-01-30",
@@ -1272,7 +1262,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/35",
+                    "reference": "Medication/33",
                     "display": "Proventil 0.09 MG/ ACTUAT metered dose"
                 },
                 "patient": {
@@ -1283,23 +1273,7 @@
         },
         {
             "resource": {
-                "id": "Substance/33",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "7982",
-                            "display": "Penicillin G benzathine"
-                        }
-                    ],
-                    "text": "Penicillin G benzathine"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/34",
+                "id": "Medication/32",
                 "resourceType": "Medication",
                 "name": "Oseltamivir 30 MG Oral Capsule",
                 "code": {
@@ -1316,7 +1290,7 @@
         },
         {
             "resource": {
-                "id": "Medication/35",
+                "id": "Medication/33",
                 "resourceType": "Medication",
                 "name": "Proventil 0.09 MG/ ACTUAT metered dose",
                 "code": {

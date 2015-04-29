@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 15,
+    "total": 14,
     "entry": [
         {
             "resource": {
@@ -87,52 +87,26 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "text": "hives"
-                        }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "ClinicalSummary, Another"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/2",
+                "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "1001473",
-                                    "display": "Ecpirin"
-                                }
-                            ],
-                            "text": "Ecpirin"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "Ecpirin"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1001473",
+                            "display": "Ecpirin"
+                        }
+                    ],
+                    "text": "Ecpirin"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/1",
-                        "display": "hives"
+                        "manifestation": [
+                            {
+                                "text": "hives"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -143,7 +117,7 @@
         },
         {
             "resource": {
-                "id": "Observation/3",
+                "id": "Observation/2",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -182,7 +156,7 @@
         },
         {
             "resource": {
-                "id": "Observation/4",
+                "id": "Observation/3",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -221,7 +195,7 @@
         },
         {
             "resource": {
-                "id": "Observation/5",
+                "id": "Observation/4",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -260,7 +234,7 @@
         },
         {
             "resource": {
-                "id": "Observation/6",
+                "id": "Observation/5",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -299,7 +273,7 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/6",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -338,7 +312,7 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/7",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -367,13 +341,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
+                            "reference": "Observation/2"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/4"
+                            "reference": "Observation/3"
                         }
                     }
                 ],
@@ -385,7 +359,7 @@
         },
         {
             "resource": {
-                "id": "Observation/9",
+                "id": "Observation/8",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -414,13 +388,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/5"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/6"
                         }
                     }
                 ],
@@ -432,7 +406,7 @@
         },
         {
             "resource": {
-                "id": "Observation/10",
+                "id": "Observation/9",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -471,7 +445,7 @@
         },
         {
             "resource": {
-                "id": "Observation/11",
+                "id": "Observation/10",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -510,7 +484,7 @@
         },
         {
             "resource": {
-                "id": "Observation/12",
+                "id": "Observation/11",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -549,7 +523,7 @@
         },
         {
             "resource": {
-                "id": "Observation/13",
+                "id": "Observation/12",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -588,7 +562,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/14",
+                "id": "MedicationPrescription/13",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2013-01-21",

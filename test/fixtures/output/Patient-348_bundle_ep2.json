@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 46,
+    "total": 43,
     "entry": [
         {
             "resource": {
@@ -29,12 +29,17 @@
                 "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-03-31",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/37",
-                    "display": "Eggs"
+                    "coding": [
+                        {
+                            "system": "http://fdasis.nlm.nih.gov",
+                            "code": "291P45F896",
+                            "display": "Eggs"
+                        }
+                    ],
+                    "text": "Eggs"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -47,12 +52,17 @@
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-03-31",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/38",
-                    "display": "Amikacin Sulfate 50 MG/ML Injectable Solution"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "905148",
+                            "display": "Amikacin Sulfate 50 MG/ML Injectable Solution"
+                        }
+                    ],
+                    "text": "Amikacin Sulfate 50 MG/ML Injectable Solution"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -65,12 +75,16 @@
                 "id": "AllergyIntolerance/3",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "fatal",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-03-31",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/39",
-                    "display": "Penicillin V"
+                    "coding": [
+                        {
+                            "code": "N0000011298",
+                            "display": "Penicillin V"
+                        }
+                    ],
+                    "text": "Penicillin V"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -1137,7 +1151,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/40",
+                    "reference": "Medication/37",
                     "display": "Lisinopril 10 MG Oral Tablet"
                 },
                 "patient": {
@@ -1169,7 +1183,7 @@
                     "reference": "MedicationPrescription/31"
                 },
                 "medication": {
-                    "reference": "Medication/41",
+                    "reference": "Medication/38",
                     "display": "Lisinopril 10 MG Oral Tablet"
                 },
                 "patient": {
@@ -1192,7 +1206,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/42",
+                    "reference": "Medication/39",
                     "display": "Warfarin Sodium 4 MG Oral Tablet [Coumadin]"
                 },
                 "patient": {
@@ -1224,7 +1238,7 @@
                     "reference": "MedicationPrescription/33"
                 },
                 "medication": {
-                    "reference": "Medication/43",
+                    "reference": "Medication/40",
                     "display": "Warfarin Sodium 4 MG Oral Tablet [Coumadin]"
                 },
                 "patient": {
@@ -1247,7 +1261,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/44",
+                    "reference": "Medication/41",
                     "display": "Metoprolol Tartrate 25 MG Oral Tablet"
                 },
                 "patient": {
@@ -1279,7 +1293,7 @@
                     "reference": "MedicationPrescription/35"
                 },
                 "medication": {
-                    "reference": "Medication/45",
+                    "reference": "Medication/42",
                     "display": "Metoprolol Tartrate 25 MG Oral Tablet"
                 },
                 "patient": {
@@ -1290,48 +1304,52 @@
         },
         {
             "resource": {
-                "id": "Substance/37",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://fdasis.nlm.nih.gov",
-                            "code": "291P45F896",
-                            "display": "Eggs"
-                        }
-                    ],
-                    "text": "Eggs"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Substance/38",
-                "resourceType": "Substance",
-                "type": {
+                "id": "Medication/37",
+                "resourceType": "Medication",
+                "name": "Lisinopril 10 MG Oral Tablet",
+                "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "905148",
-                            "display": "Amikacin Sulfate 50 MG/ML Injectable Solution"
+                            "code": "314076",
+                            "display": "Lisinopril 10 MG Oral Tablet"
                         }
                     ],
-                    "text": "Amikacin Sulfate 50 MG/ML Injectable Solution"
+                    "text": "Lisinopril 10 MG Oral Tablet"
                 }
             }
         },
         {
             "resource": {
-                "id": "Substance/39",
-                "resourceType": "Substance",
-                "type": {
+                "id": "Medication/38",
+                "resourceType": "Medication",
+                "name": "Lisinopril 10 MG Oral Tablet",
+                "code": {
                     "coding": [
                         {
-                            "code": "N0000011298",
-                            "display": "Penicillin V"
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "314076",
+                            "display": "Lisinopril 10 MG Oral Tablet"
                         }
                     ],
-                    "text": "Penicillin V"
+                    "text": "Lisinopril 10 MG Oral Tablet"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Medication/39",
+                "resourceType": "Medication",
+                "name": "Warfarin Sodium 4 MG Oral Tablet [Coumadin]",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "855326",
+                            "display": "Warfarin Sodium 4 MG Oral Tablet [Coumadin]"
+                        }
+                    ],
+                    "text": "Warfarin Sodium 4 MG Oral Tablet [Coumadin]"
                 }
             }
         },
@@ -1339,73 +1357,22 @@
             "resource": {
                 "id": "Medication/40",
                 "resourceType": "Medication",
-                "name": "Lisinopril 10 MG Oral Tablet",
+                "name": "Warfarin Sodium 4 MG Oral Tablet [Coumadin]",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "314076",
-                            "display": "Lisinopril 10 MG Oral Tablet"
+                            "code": "855326",
+                            "display": "Warfarin Sodium 4 MG Oral Tablet [Coumadin]"
                         }
                     ],
-                    "text": "Lisinopril 10 MG Oral Tablet"
+                    "text": "Warfarin Sodium 4 MG Oral Tablet [Coumadin]"
                 }
             }
         },
         {
             "resource": {
                 "id": "Medication/41",
-                "resourceType": "Medication",
-                "name": "Lisinopril 10 MG Oral Tablet",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "314076",
-                            "display": "Lisinopril 10 MG Oral Tablet"
-                        }
-                    ],
-                    "text": "Lisinopril 10 MG Oral Tablet"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/42",
-                "resourceType": "Medication",
-                "name": "Warfarin Sodium 4 MG Oral Tablet [Coumadin]",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "855326",
-                            "display": "Warfarin Sodium 4 MG Oral Tablet [Coumadin]"
-                        }
-                    ],
-                    "text": "Warfarin Sodium 4 MG Oral Tablet [Coumadin]"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/43",
-                "resourceType": "Medication",
-                "name": "Warfarin Sodium 4 MG Oral Tablet [Coumadin]",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "855326",
-                            "display": "Warfarin Sodium 4 MG Oral Tablet [Coumadin]"
-                        }
-                    ],
-                    "text": "Warfarin Sodium 4 MG Oral Tablet [Coumadin]"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/44",
                 "resourceType": "Medication",
                 "name": "Metoprolol Tartrate 25 MG Oral Tablet",
                 "code": {
@@ -1422,7 +1389,7 @@
         },
         {
             "resource": {
-                "id": "Medication/45",
+                "id": "Medication/42",
                 "resourceType": "Medication",
                 "name": "Metoprolol Tartrate 25 MG Oral Tablet",
                 "code": {

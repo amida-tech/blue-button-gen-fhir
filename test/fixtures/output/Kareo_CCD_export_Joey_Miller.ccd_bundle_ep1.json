@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 11,
+    "total": 10,
     "entry": [
         {
             "resource": {
@@ -28,11 +28,18 @@
             "resource": {
                 "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
                 "status": "resolved",
                 "substance": {
-                    "reference": "Substance/8",
-                    "display": "sulfa drug"
+                    "coding": [
+                        {
+                            "code": {
+                                "name": "sulfa drug",
+                                "code_system_name": "RXNORM"
+                            },
+                            "display": "sulfa drug"
+                        }
+                    ],
+                    "text": "sulfa drug"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -185,7 +192,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/9",
+                    "reference": "Medication/8",
                     "display": "acetaminophen-aspirin"
                 },
                 "patient": {
@@ -220,7 +227,7 @@
                     "reference": "MedicationPrescription/6"
                 },
                 "medication": {
-                    "reference": "Medication/10",
+                    "reference": "Medication/9",
                     "display": "acetaminophen-aspirin"
                 },
                 "patient": {
@@ -231,25 +238,7 @@
         },
         {
             "resource": {
-                "id": "Substance/8",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "code": {
-                                "name": "sulfa drug",
-                                "code_system_name": "RXNORM"
-                            },
-                            "display": "sulfa drug"
-                        }
-                    ],
-                    "text": "sulfa drug"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/9",
+                "id": "Medication/8",
                 "resourceType": "Medication",
                 "name": "acetaminophen-aspirin",
                 "code": {
@@ -266,7 +255,7 @@
         },
         {
             "resource": {
-                "id": "Medication/10",
+                "id": "Medication/9",
                 "resourceType": "Medication",
                 "name": "acetaminophen-aspirin",
                 "code": {

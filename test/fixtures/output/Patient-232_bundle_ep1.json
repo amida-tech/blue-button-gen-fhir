@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 42,
+    "total": 39,
     "entry": [
         {
             "resource": {
@@ -29,12 +29,17 @@
                 "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "high",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-04-16",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/33",
-                    "display": "Eggs"
+                    "coding": [
+                        {
+                            "system": "http://fdasis.nlm.nih.gov",
+                            "code": "291P45F896",
+                            "display": "Eggs"
+                        }
+                    ],
+                    "text": "Eggs"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -47,12 +52,17 @@
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "fatal",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-04-16",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/34",
-                    "display": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "892677",
+                            "display": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
+                        }
+                    ],
+                    "text": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -65,12 +75,16 @@
                 "id": "AllergyIntolerance/3",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-04-16",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/35",
-                    "display": "Codeine"
+                    "coding": [
+                        {
+                            "code": "N0000006691",
+                            "display": "Codeine"
+                        }
+                    ],
+                    "text": "Codeine"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -1031,7 +1045,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/36",
+                    "reference": "Medication/33",
                     "display": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
                 },
                 "patient": {
@@ -1063,7 +1077,7 @@
                     "reference": "MedicationPrescription/27"
                 },
                 "medication": {
-                    "reference": "Medication/37",
+                    "reference": "Medication/34",
                     "display": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
                 },
                 "patient": {
@@ -1086,7 +1100,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/38",
+                    "reference": "Medication/35",
                     "display": "Long acting inhaled beta 2 agonist + salmeterol 0.05 MG/ACTUAT Inhalant Powder"
                 },
                 "patient": {
@@ -1118,7 +1132,7 @@
                     "reference": "MedicationPrescription/29"
                 },
                 "medication": {
-                    "reference": "Medication/39",
+                    "reference": "Medication/36",
                     "display": "Long acting inhaled beta 2 agonist + salmeterol 0.05 MG/ACTUAT Inhalant Powder"
                 },
                 "patient": {
@@ -1141,7 +1155,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/40",
+                    "reference": "Medication/37",
                     "display": "Short acting beta 2 agonist + Albuterol 0.83 MG/ML Inhalant Solution"
                 },
                 "patient": {
@@ -1173,7 +1187,7 @@
                     "reference": "MedicationPrescription/31"
                 },
                 "medication": {
-                    "reference": "Medication/41",
+                    "reference": "Medication/38",
                     "display": "Short acting beta 2 agonist + Albuterol 0.83 MG/ML Inhalant Solution"
                 },
                 "patient": {
@@ -1184,48 +1198,52 @@
         },
         {
             "resource": {
-                "id": "Substance/33",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://fdasis.nlm.nih.gov",
-                            "code": "291P45F896",
-                            "display": "Eggs"
-                        }
-                    ],
-                    "text": "Eggs"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Substance/34",
-                "resourceType": "Substance",
-                "type": {
+                "id": "Medication/33",
+                "resourceType": "Medication",
+                "name": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe",
+                "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "892677",
-                            "display": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
+                            "code": "847207",
+                            "display": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
                         }
                     ],
-                    "text": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
+                    "text": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
                 }
             }
         },
         {
             "resource": {
-                "id": "Substance/35",
-                "resourceType": "Substance",
-                "type": {
+                "id": "Medication/34",
+                "resourceType": "Medication",
+                "name": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe",
+                "code": {
                     "coding": [
                         {
-                            "code": "N0000006691",
-                            "display": "Codeine"
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "847207",
+                            "display": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
                         }
                     ],
-                    "text": "Codeine"
+                    "text": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Medication/35",
+                "resourceType": "Medication",
+                "name": "Long acting inhaled beta 2 agonist + salmeterol 0.05 MG/ACTUAT Inhalant Powder",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "318142",
+                            "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
+                        }
+                    ],
+                    "text": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
                 }
             }
         },
@@ -1233,73 +1251,22 @@
             "resource": {
                 "id": "Medication/36",
                 "resourceType": "Medication",
-                "name": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe",
+                "name": "Long acting inhaled beta 2 agonist + salmeterol 0.05 MG/ACTUAT Inhalant Powder",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "847207",
-                            "display": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
+                            "code": "318142",
+                            "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
                         }
                     ],
-                    "text": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
+                    "text": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
                 }
             }
         },
         {
             "resource": {
                 "id": "Medication/37",
-                "resourceType": "Medication",
-                "name": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "847207",
-                            "display": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
-                        }
-                    ],
-                    "text": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/38",
-                "resourceType": "Medication",
-                "name": "Long acting inhaled beta 2 agonist + salmeterol 0.05 MG/ACTUAT Inhalant Powder",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "318142",
-                            "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
-                        }
-                    ],
-                    "text": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/39",
-                "resourceType": "Medication",
-                "name": "Long acting inhaled beta 2 agonist + salmeterol 0.05 MG/ACTUAT Inhalant Powder",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "318142",
-                            "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
-                        }
-                    ],
-                    "text": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/40",
                 "resourceType": "Medication",
                 "name": "Short acting beta 2 agonist + Albuterol 0.83 MG/ML Inhalant Solution",
                 "code": {
@@ -1316,7 +1283,7 @@
         },
         {
             "resource": {
-                "id": "Medication/41",
+                "id": "Medication/38",
                 "resourceType": "Medication",
                 "name": "Short acting beta 2 agonist + Albuterol 0.83 MG/ML Inhalant Solution",
                 "code": {

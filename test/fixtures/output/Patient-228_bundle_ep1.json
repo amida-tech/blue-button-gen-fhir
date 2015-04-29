@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 30,
+    "total": 28,
     "entry": [
         {
             "resource": {
@@ -29,12 +29,17 @@
                 "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-07-28",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/24",
-                    "display": "Eggs"
+                    "coding": [
+                        {
+                            "system": "http://fdasis.nlm.nih.gov",
+                            "code": "291P45F896",
+                            "display": "Eggs"
+                        }
+                    ],
+                    "text": "Eggs"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -47,12 +52,16 @@
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-07-28",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/25",
-                    "display": "Codeine"
+                    "coding": [
+                        {
+                            "code": "N0000006691",
+                            "display": "Codeine"
+                        }
+                    ],
+                    "text": "Codeine"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -904,7 +913,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/26",
+                    "reference": "Medication/24",
                     "display": "Antidiabetic combinations + Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
                 },
                 "patient": {
@@ -936,7 +945,7 @@
                     "reference": "MedicationPrescription/20"
                 },
                 "medication": {
-                    "reference": "Medication/27",
+                    "reference": "Medication/25",
                     "display": "Antidiabetic combinations + Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
                 },
                 "patient": {
@@ -959,7 +968,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/28",
+                    "reference": "Medication/26",
                     "display": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
                 },
                 "patient": {
@@ -991,7 +1000,7 @@
                     "reference": "MedicationPrescription/22"
                 },
                 "medication": {
-                    "reference": "Medication/29",
+                    "reference": "Medication/27",
                     "display": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
                 },
                 "patient": {
@@ -1002,72 +1011,41 @@
         },
         {
             "resource": {
-                "id": "Substance/24",
-                "resourceType": "Substance",
-                "type": {
+                "id": "Medication/24",
+                "resourceType": "Medication",
+                "name": "Antidiabetic combinations + Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet",
+                "code": {
                     "coding": [
                         {
-                            "system": "http://fdasis.nlm.nih.gov",
-                            "code": "291P45F896",
-                            "display": "Eggs"
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "861748",
+                            "display": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
                         }
                     ],
-                    "text": "Eggs"
+                    "text": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
                 }
             }
         },
         {
             "resource": {
-                "id": "Substance/25",
-                "resourceType": "Substance",
-                "type": {
+                "id": "Medication/25",
+                "resourceType": "Medication",
+                "name": "Antidiabetic combinations + Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet",
+                "code": {
                     "coding": [
                         {
-                            "code": "N0000006691",
-                            "display": "Codeine"
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "861748",
+                            "display": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
                         }
                     ],
-                    "text": "Codeine"
+                    "text": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
                 }
             }
         },
         {
             "resource": {
                 "id": "Medication/26",
-                "resourceType": "Medication",
-                "name": "Antidiabetic combinations + Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "861748",
-                            "display": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
-                        }
-                    ],
-                    "text": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/27",
-                "resourceType": "Medication",
-                "name": "Antidiabetic combinations + Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "861748",
-                            "display": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
-                        }
-                    ],
-                    "text": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/28",
                 "resourceType": "Medication",
                 "name": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe",
                 "code": {
@@ -1084,7 +1062,7 @@
         },
         {
             "resource": {
-                "id": "Medication/29",
+                "id": "Medication/27",
                 "resourceType": "Medication",
                 "name": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe",
                 "code": {

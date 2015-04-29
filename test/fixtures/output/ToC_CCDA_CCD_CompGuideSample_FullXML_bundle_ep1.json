@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 108,
+    "total": 104,
     "entry": [
         {
             "resource": {
@@ -26,24 +26,37 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "severity": "moderate",
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "404640003",
-                                    "display": "Dizziness"
-                                }
-                            ],
-                            "text": "Dizziness"
+                "id": "AllergyIntolerance/1",
+                "resourceType": "AllergyIntolerance",
+                "recordedDate": "1960-01-01",
+                "status": "confirmed",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "70618",
+                            "display": "Penicillin"
                         }
+                    ],
+                    "text": "Penicillin"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "404640003",
+                                        "display": "Dizziness"
+                                    }
+                                ],
+                                "text": "Dizziness"
+                            }
+                        ],
+                        "severity": "moderate"
                     }
                 ],
-                "didNotOccurFlag": false,
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -54,66 +67,33 @@
             "resource": {
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
-                "recordedDate": "1960-01-01",
-                "status": "confirmed",
-                "substance": {
-                    "reference": "Substance/66",
-                    "display": "Penicillin"
-                },
-                "reaction": [
-                    {
-                        "reference": "AdverseReaction/1",
-                        "display": "Dizziness"
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AdverseReaction/3",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "severity": "severe",
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "417516000",
-                                    "display": "Anaphylaxis due to substance"
-                                }
-                            ],
-                            "text": "Anaphylaxis due to substance"
-                        }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/4",
-                "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
                 "recordedDate": "1940-01-01",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/67",
-                    "display": "Bee Pollen"
+                    "coding": [
+                        {
+                            "system": "http://fdasis.nlm.nih.gov",
+                            "code": "3729L8MA2C",
+                            "display": "Bee Pollen"
+                        }
+                    ],
+                    "text": "Bee Pollen"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/3",
-                        "display": "Anaphylaxis due to substance"
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "417516000",
+                                        "display": "Anaphylaxis due to substance"
+                                    }
+                                ],
+                                "text": "Anaphylaxis due to substance"
+                            }
+                        ],
+                        "severity": "severe"
                     }
                 ],
                 "subject": {
@@ -124,7 +104,7 @@
         },
         {
             "resource": {
-                "id": "Condition/5",
+                "id": "Condition/3",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2005-05-01",
@@ -147,7 +127,7 @@
         },
         {
             "resource": {
-                "id": "Condition/6",
+                "id": "Condition/4",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2005-05-01",
@@ -170,7 +150,7 @@
         },
         {
             "resource": {
-                "id": "Condition/7",
+                "id": "Condition/5",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2008-11-01",
@@ -193,7 +173,7 @@
         },
         {
             "resource": {
-                "id": "Condition/8",
+                "id": "Condition/6",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2009-01-01",
@@ -216,7 +196,7 @@
         },
         {
             "resource": {
-                "id": "Condition/9",
+                "id": "Condition/7",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2006-11-01",
@@ -239,7 +219,7 @@
         },
         {
             "resource": {
-                "id": "Condition/10",
+                "id": "Condition/8",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2009-07-01",
@@ -262,7 +242,7 @@
         },
         {
             "resource": {
-                "id": "Condition/11",
+                "id": "Condition/9",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2008-04-01",
@@ -285,7 +265,7 @@
         },
         {
             "resource": {
-                "id": "Condition/12",
+                "id": "Condition/10",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2010-09-01",
@@ -308,7 +288,7 @@
         },
         {
             "resource": {
-                "id": "Condition/13",
+                "id": "Condition/11",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2006-06-01",
@@ -331,7 +311,7 @@
         },
         {
             "resource": {
-                "id": "Condition/14",
+                "id": "Condition/12",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "1997-10-01",
@@ -354,7 +334,7 @@
         },
         {
             "resource": {
-                "id": "Condition/15",
+                "id": "Condition/13",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2011-09-01",
@@ -377,7 +357,7 @@
         },
         {
             "resource": {
-                "id": "Observation/16",
+                "id": "Observation/14",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -441,7 +421,7 @@
         },
         {
             "resource": {
-                "id": "Observation/17",
+                "id": "Observation/15",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -459,7 +439,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/16"
+                            "reference": "Observation/14"
                         }
                     }
                 ],
@@ -481,7 +461,7 @@
         },
         {
             "resource": {
-                "id": "Observation/18",
+                "id": "Observation/16",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -545,7 +525,7 @@
         },
         {
             "resource": {
-                "id": "Observation/19",
+                "id": "Observation/17",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -609,7 +589,7 @@
         },
         {
             "resource": {
-                "id": "Observation/20",
+                "id": "Observation/18",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -670,7 +650,7 @@
         },
         {
             "resource": {
-                "id": "Observation/21",
+                "id": "Observation/19",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -734,7 +714,7 @@
         },
         {
             "resource": {
-                "id": "Observation/22",
+                "id": "Observation/20",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -798,7 +778,7 @@
         },
         {
             "resource": {
-                "id": "Observation/23",
+                "id": "Observation/21",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -816,13 +796,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/21"
+                            "reference": "Observation/19"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/22"
+                            "reference": "Observation/20"
                         }
                     }
                 ],
@@ -844,7 +824,7 @@
         },
         {
             "resource": {
-                "id": "Observation/24",
+                "id": "Observation/22",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -878,7 +858,7 @@
         },
         {
             "resource": {
-                "id": "Observation/25",
+                "id": "Observation/23",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -896,7 +876,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/24"
+                            "reference": "Observation/22"
                         }
                     }
                 ],
@@ -911,6 +891,104 @@
                     }
                 ],
                 "subject": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "MedicationPrescription/24",
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dateWritten": "2012-11-01",
+                "dosageInstruction": [
+                    {
+                        "route": {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                                    "code": "C38288",
+                                    "display": "oral"
+                                }
+                            ],
+                            "text": "oral"
+                        },
+                        "doseQuantity": {
+                            "value": 1
+                        },
+                        "timingSchedule": {
+                            "event": [
+                                {
+                                    "start": "2012-11-01"
+                                }
+                            ],
+                            "repeat": {
+                                "frequency": 1,
+                                "duration": 24,
+                                "units": "h",
+                                "end": "2012-12-31"
+                            }
+                        }
+                    }
+                ],
+                "text": {
+                    "status": "generated",
+                    "div": "Lisinopril - 20mg by mouth once daily"
+                },
+                "medication": {
+                    "reference": "Medication/64",
+                    "display": "Lisinopril - 20mg by mouth once daily"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "MedicationAdministration/25",
+                "resourceType": "MedicationAdministration",
+                "status": "completed",
+                "practitioner": {
+                    "reference": "Practitioner/unknown",
+                    "display": "Unknown"
+                },
+                "whenGiven": {
+                    "start": "2012-11-01",
+                    "end": "2012-12-31"
+                },
+                "dosage": [
+                    {
+                        "route": {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                                    "code": "C38288",
+                                    "display": "oral"
+                                }
+                            ],
+                            "text": "oral"
+                        },
+                        "quantity": {
+                            "value": 1
+                        },
+                        "timingPeriod": {
+                            "start": "2012-11-01",
+                            "end": "2012-12-31"
+                        }
+                    }
+                ],
+                "prescription": {
+                    "reference": "MedicationPrescription/24",
+                    "display": "Lisinopril - 20mg by mouth once daily"
+                },
+                "medication": {
+                    "reference": "Medication/65",
+                    "display": "Lisinopril - 20mg by mouth once daily"
+                },
+                "patient": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
                 }
@@ -954,11 +1032,11 @@
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "Lisinopril - 20mg by mouth once daily"
+                    "div": "Lasix - 40mg by mouth once daily"
                 },
                 "medication": {
-                    "reference": "Medication/68",
-                    "display": "Lisinopril - 20mg by mouth once daily"
+                    "reference": "Medication/66",
+                    "display": "Lasix - 40mg by mouth once daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1002,11 +1080,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/26",
-                    "display": "Lisinopril - 20mg by mouth once daily"
+                    "display": "Lasix - 40mg by mouth once daily"
                 },
                 "medication": {
-                    "reference": "Medication/69",
-                    "display": "Lisinopril - 20mg by mouth once daily"
+                    "reference": "Medication/67",
+                    "display": "Lasix - 40mg by mouth once daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1052,11 +1130,11 @@
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "Lasix - 40mg by mouth once daily"
+                    "div": "K-Dur - 10mEq/L by mouth once daily"
                 },
                 "medication": {
-                    "reference": "Medication/70",
-                    "display": "Lasix - 40mg by mouth once daily"
+                    "reference": "Medication/68",
+                    "display": "K-Dur - 10mEq/L by mouth once daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1100,11 +1178,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/28",
-                    "display": "Lasix - 40mg by mouth once daily"
+                    "display": "K-Dur - 10mEq/L by mouth once daily"
                 },
                 "medication": {
-                    "reference": "Medication/71",
-                    "display": "Lasix - 40mg by mouth once daily"
+                    "reference": "Medication/69",
+                    "display": "K-Dur - 10mEq/L by mouth once daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1150,11 +1228,11 @@
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "K-Dur - 10mEq/L by mouth once daily"
+                    "div": "Norvasc - 10mg by mouth once daily"
                 },
                 "medication": {
-                    "reference": "Medication/72",
-                    "display": "K-Dur - 10mEq/L by mouth once daily"
+                    "reference": "Medication/70",
+                    "display": "Norvasc - 10mg by mouth once daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1198,11 +1276,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/30",
-                    "display": "K-Dur - 10mEq/L by mouth once daily"
+                    "display": "Norvasc - 10mg by mouth once daily"
                 },
                 "medication": {
-                    "reference": "Medication/73",
-                    "display": "K-Dur - 10mEq/L by mouth once daily"
+                    "reference": "Medication/71",
+                    "display": "Norvasc - 10mg by mouth once daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1238,21 +1316,21 @@
                                 }
                             ],
                             "repeat": {
-                                "frequency": 1,
-                                "duration": 24,
-                                "units": "h",
-                                "end": "2012-12-31"
+                                "when": "HS",
+                                "end": "2012-12-31",
+                                "duration": 1,
+                                "units": "s"
                             }
                         }
                     }
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "Norvasc - 10mg by mouth once daily"
+                    "div": "Zocor - 40mg by mouth once daily before bed"
                 },
                 "medication": {
-                    "reference": "Medication/74",
-                    "display": "Norvasc - 10mg by mouth once daily"
+                    "reference": "Medication/72",
+                    "display": "Zocor - 40mg by mouth once daily before bed"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1296,11 +1374,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/32",
-                    "display": "Norvasc - 10mg by mouth once daily"
+                    "display": "Zocor - 40mg by mouth once daily before bed"
                 },
                 "medication": {
-                    "reference": "Medication/75",
-                    "display": "Norvasc - 10mg by mouth once daily"
+                    "reference": "Medication/73",
+                    "display": "Zocor - 40mg by mouth once daily before bed"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1311,104 +1389,6 @@
         {
             "resource": {
                 "id": "MedicationPrescription/34",
-                "resourceType": "MedicationPrescription",
-                "status": "active",
-                "dateWritten": "2012-11-01",
-                "dosageInstruction": [
-                    {
-                        "route": {
-                            "coding": [
-                                {
-                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
-                                    "code": "C38288",
-                                    "display": "oral"
-                                }
-                            ],
-                            "text": "oral"
-                        },
-                        "doseQuantity": {
-                            "value": 1
-                        },
-                        "timingSchedule": {
-                            "event": [
-                                {
-                                    "start": "2012-11-01"
-                                }
-                            ],
-                            "repeat": {
-                                "when": "HS",
-                                "end": "2012-12-31",
-                                "duration": 1,
-                                "units": "s"
-                            }
-                        }
-                    }
-                ],
-                "text": {
-                    "status": "generated",
-                    "div": "Zocor - 40mg by mouth once daily before bed"
-                },
-                "medication": {
-                    "reference": "Medication/76",
-                    "display": "Zocor - 40mg by mouth once daily before bed"
-                },
-                "patient": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "MedicationAdministration/35",
-                "resourceType": "MedicationAdministration",
-                "status": "completed",
-                "practitioner": {
-                    "reference": "Practitioner/unknown",
-                    "display": "Unknown"
-                },
-                "whenGiven": {
-                    "start": "2012-11-01",
-                    "end": "2012-12-31"
-                },
-                "dosage": [
-                    {
-                        "route": {
-                            "coding": [
-                                {
-                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
-                                    "code": "C38288",
-                                    "display": "oral"
-                                }
-                            ],
-                            "text": "oral"
-                        },
-                        "quantity": {
-                            "value": 1
-                        },
-                        "timingPeriod": {
-                            "start": "2012-11-01",
-                            "end": "2012-12-31"
-                        }
-                    }
-                ],
-                "prescription": {
-                    "reference": "MedicationPrescription/34",
-                    "display": "Zocor - 40mg by mouth once daily before bed"
-                },
-                "medication": {
-                    "reference": "Medication/77",
-                    "display": "Zocor - 40mg by mouth once daily before bed"
-                },
-                "patient": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "MedicationPrescription/36",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -1450,7 +1430,7 @@
                     "div": "Lantus - 36 units once daily before bed"
                 },
                 "medication": {
-                    "reference": "Medication/78",
+                    "reference": "Medication/74",
                     "display": "Lantus - 36 units once daily before bed"
                 },
                 "patient": {
@@ -1461,7 +1441,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/37",
+                "id": "MedicationAdministration/35",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -1497,12 +1477,110 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/36",
+                    "reference": "MedicationPrescription/34",
                     "display": "Lantus - 36 units once daily before bed"
                 },
                 "medication": {
-                    "reference": "Medication/79",
+                    "reference": "Medication/75",
                     "display": "Lantus - 36 units once daily before bed"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "MedicationPrescription/36",
+                "resourceType": "MedicationPrescription",
+                "status": "active",
+                "dateWritten": "2012-11-01",
+                "dosageInstruction": [
+                    {
+                        "route": {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                                    "code": "C38288",
+                                    "display": "oral"
+                                }
+                            ],
+                            "text": "oral"
+                        },
+                        "doseQuantity": {
+                            "value": 1
+                        },
+                        "timingSchedule": {
+                            "event": [
+                                {
+                                    "start": "2012-11-01"
+                                }
+                            ],
+                            "repeat": {
+                                "frequency": 1,
+                                "duration": 24,
+                                "units": "h",
+                                "end": "2012-12-31"
+                            }
+                        }
+                    }
+                ],
+                "text": {
+                    "status": "generated",
+                    "div": "gliburide - 2.5mg by mouth once daily"
+                },
+                "medication": {
+                    "reference": "Medication/76",
+                    "display": "gliburide - 2.5mg by mouth once daily"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "MedicationAdministration/37",
+                "resourceType": "MedicationAdministration",
+                "status": "completed",
+                "practitioner": {
+                    "reference": "Practitioner/unknown",
+                    "display": "Unknown"
+                },
+                "whenGiven": {
+                    "start": "2012-11-01",
+                    "end": "2012-12-31"
+                },
+                "dosage": [
+                    {
+                        "route": {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                                    "code": "C38288",
+                                    "display": "oral"
+                                }
+                            ],
+                            "text": "oral"
+                        },
+                        "quantity": {
+                            "value": 1
+                        },
+                        "timingPeriod": {
+                            "start": "2012-11-01",
+                            "end": "2012-12-31"
+                        }
+                    }
+                ],
+                "prescription": {
+                    "reference": "MedicationPrescription/36",
+                    "display": "gliburide - 2.5mg by mouth once daily"
+                },
+                "medication": {
+                    "reference": "Medication/77",
+                    "display": "gliburide - 2.5mg by mouth once daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1548,11 +1626,11 @@
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "gliburide - 2.5mg by mouth once daily"
+                    "div": "synthroid - 0.1mg by mouth once daily"
                 },
                 "medication": {
-                    "reference": "Medication/80",
-                    "display": "gliburide - 2.5mg by mouth once daily"
+                    "reference": "Medication/78",
+                    "display": "synthroid - 0.1mg by mouth once daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1596,11 +1674,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/38",
-                    "display": "gliburide - 2.5mg by mouth once daily"
+                    "display": "synthroid - 0.1mg by mouth once daily"
                 },
                 "medication": {
-                    "reference": "Medication/81",
-                    "display": "gliburide - 2.5mg by mouth once daily"
+                    "reference": "Medication/79",
+                    "display": "synthroid - 0.1mg by mouth once daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1637,7 +1715,7 @@
                             ],
                             "repeat": {
                                 "frequency": 1,
-                                "duration": 24,
+                                "duration": 12,
                                 "units": "h",
                                 "end": "2012-12-31"
                             }
@@ -1646,11 +1724,11 @@
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "synthroid - 0.1mg by mouth once daily"
+                    "div": "Aleve - 220mg by mouth twice daily"
                 },
                 "medication": {
-                    "reference": "Medication/82",
-                    "display": "synthroid - 0.1mg by mouth once daily"
+                    "reference": "Medication/80",
+                    "display": "Aleve - 220mg by mouth twice daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1694,11 +1772,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/40",
-                    "display": "synthroid - 0.1mg by mouth once daily"
+                    "display": "Aleve - 220mg by mouth twice daily"
                 },
                 "medication": {
-                    "reference": "Medication/83",
-                    "display": "synthroid - 0.1mg by mouth once daily"
+                    "reference": "Medication/81",
+                    "display": "Aleve - 220mg by mouth twice daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1735,7 +1813,7 @@
                             ],
                             "repeat": {
                                 "frequency": 1,
-                                "duration": 12,
+                                "duration": 6,
                                 "units": "h",
                                 "end": "2012-12-31"
                             }
@@ -1744,11 +1822,11 @@
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "Aleve - 220mg by mouth twice daily"
+                    "div": "Ultram - 50mg by mouth four times daily as needed for joint pain"
                 },
                 "medication": {
-                    "reference": "Medication/84",
-                    "display": "Aleve - 220mg by mouth twice daily"
+                    "reference": "Medication/82",
+                    "display": "Ultram - 50mg by mouth four times daily as needed for joint pain"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1792,11 +1870,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/42",
-                    "display": "Aleve - 220mg by mouth twice daily"
+                    "display": "Ultram - 50mg by mouth four times daily as needed for joint pain"
                 },
                 "medication": {
-                    "reference": "Medication/85",
-                    "display": "Aleve - 220mg by mouth twice daily"
+                    "reference": "Medication/83",
+                    "display": "Ultram - 50mg by mouth four times daily as needed for joint pain"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1833,7 +1911,7 @@
                             ],
                             "repeat": {
                                 "frequency": 1,
-                                "duration": 6,
+                                "duration": 24,
                                 "units": "h",
                                 "end": "2012-12-31"
                             }
@@ -1842,11 +1920,11 @@
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "Ultram - 50mg by mouth four times daily as needed for joint pain"
+                    "div": "Aspirin - 81mg by mouth once daily"
                 },
                 "medication": {
-                    "reference": "Medication/86",
-                    "display": "Ultram - 50mg by mouth four times daily as needed for joint pain"
+                    "reference": "Medication/84",
+                    "display": "Aspirin - 81mg by mouth once daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1890,11 +1968,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/44",
-                    "display": "Ultram - 50mg by mouth four times daily as needed for joint pain"
+                    "display": "Aspirin - 81mg by mouth once daily"
                 },
                 "medication": {
-                    "reference": "Medication/87",
-                    "display": "Ultram - 50mg by mouth four times daily as needed for joint pain"
+                    "reference": "Medication/85",
+                    "display": "Aspirin - 81mg by mouth once daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1931,7 +2009,7 @@
                             ],
                             "repeat": {
                                 "frequency": 1,
-                                "duration": 24,
+                                "duration": 12,
                                 "units": "h",
                                 "end": "2012-12-31"
                             }
@@ -1940,11 +2018,11 @@
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "Aspirin - 81mg by mouth once daily"
+                    "div": "Lopressor - 50mg by mouth twice daily"
                 },
                 "medication": {
-                    "reference": "Medication/88",
-                    "display": "Aspirin - 81mg by mouth once daily"
+                    "reference": "Medication/86",
+                    "display": "Lopressor - 50mg by mouth twice daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -1988,11 +2066,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/46",
-                    "display": "Aspirin - 81mg by mouth once daily"
+                    "display": "Lopressor - 50mg by mouth twice daily"
                 },
                 "medication": {
-                    "reference": "Medication/89",
-                    "display": "Aspirin - 81mg by mouth once daily"
+                    "reference": "Medication/87",
+                    "display": "Lopressor - 50mg by mouth twice daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2029,7 +2107,7 @@
                             ],
                             "repeat": {
                                 "frequency": 1,
-                                "duration": 12,
+                                "duration": 24,
                                 "units": "h",
                                 "end": "2012-12-31"
                             }
@@ -2038,11 +2116,11 @@
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "Lopressor - 50mg by mouth twice daily"
+                    "div": "Flomax - 0.4mg by mouth once daily"
                 },
                 "medication": {
-                    "reference": "Medication/90",
-                    "display": "Lopressor - 50mg by mouth twice daily"
+                    "reference": "Medication/88",
+                    "display": "Flomax - 0.4mg by mouth once daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2086,11 +2164,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/48",
-                    "display": "Lopressor - 50mg by mouth twice daily"
+                    "display": "Flomax - 0.4mg by mouth once daily"
                 },
                 "medication": {
-                    "reference": "Medication/91",
-                    "display": "Lopressor - 50mg by mouth twice daily"
+                    "reference": "Medication/89",
+                    "display": "Flomax - 0.4mg by mouth once daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2136,11 +2214,11 @@
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "Flomax - 0.4mg by mouth once daily"
+                    "div": "Proscar - 5mg by mouth once daily"
                 },
                 "medication": {
-                    "reference": "Medication/92",
-                    "display": "Flomax - 0.4mg by mouth once daily"
+                    "reference": "Medication/90",
+                    "display": "Proscar - 5mg by mouth once daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2184,11 +2262,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/50",
-                    "display": "Flomax - 0.4mg by mouth once daily"
+                    "display": "Proscar - 5mg by mouth once daily"
                 },
                 "medication": {
-                    "reference": "Medication/93",
-                    "display": "Flomax - 0.4mg by mouth once daily"
+                    "reference": "Medication/91",
+                    "display": "Proscar - 5mg by mouth once daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2225,7 +2303,7 @@
                             ],
                             "repeat": {
                                 "frequency": 1,
-                                "duration": 24,
+                                "duration": 8,
                                 "units": "h",
                                 "end": "2012-12-31"
                             }
@@ -2234,11 +2312,11 @@
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "Proscar - 5mg by mouth once daily"
+                    "div": "Neurontin - 300mg by mouth three times daily"
                 },
                 "medication": {
-                    "reference": "Medication/94",
-                    "display": "Proscar - 5mg by mouth once daily"
+                    "reference": "Medication/92",
+                    "display": "Neurontin - 300mg by mouth three times daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2282,11 +2360,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/52",
-                    "display": "Proscar - 5mg by mouth once daily"
+                    "display": "Neurontin - 300mg by mouth three times daily"
                 },
                 "medication": {
-                    "reference": "Medication/95",
-                    "display": "Proscar - 5mg by mouth once daily"
+                    "reference": "Medication/93",
+                    "display": "Neurontin - 300mg by mouth three times daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2332,11 +2410,11 @@
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "Neurontin - 300mg by mouth three times daily"
+                    "div": "Ativan - 1mg by mouth three times daily as needed for irritability"
                 },
                 "medication": {
-                    "reference": "Medication/96",
-                    "display": "Neurontin - 300mg by mouth three times daily"
+                    "reference": "Medication/94",
+                    "display": "Ativan - 1mg by mouth three times daily as needed for irritability"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2380,11 +2458,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/54",
-                    "display": "Neurontin - 300mg by mouth three times daily"
+                    "display": "Ativan - 1mg by mouth three times daily as needed for irritability"
                 },
                 "medication": {
-                    "reference": "Medication/97",
-                    "display": "Neurontin - 300mg by mouth three times daily"
+                    "reference": "Medication/95",
+                    "display": "Ativan - 1mg by mouth three times daily as needed for irritability"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2421,7 +2499,7 @@
                             ],
                             "repeat": {
                                 "frequency": 1,
-                                "duration": 8,
+                                "duration": 12,
                                 "units": "h",
                                 "end": "2012-12-31"
                             }
@@ -2430,11 +2508,11 @@
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "Ativan - 1mg by mouth three times daily as needed for irritability"
+                    "div": "miodarone - 200mg by mouth two times daily"
                 },
                 "medication": {
-                    "reference": "Medication/98",
-                    "display": "Ativan - 1mg by mouth three times daily as needed for irritability"
+                    "reference": "Medication/96",
+                    "display": "miodarone - 200mg by mouth two times daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2478,11 +2556,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/56",
-                    "display": "Ativan - 1mg by mouth three times daily as needed for irritability"
+                    "display": "miodarone - 200mg by mouth two times daily"
                 },
                 "medication": {
-                    "reference": "Medication/99",
-                    "display": "Ativan - 1mg by mouth three times daily as needed for irritability"
+                    "reference": "Medication/97",
+                    "display": "miodarone - 200mg by mouth two times daily"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2519,8 +2597,8 @@
                             ],
                             "repeat": {
                                 "frequency": 1,
-                                "duration": 12,
-                                "units": "h",
+                                "duration": 2,
+                                "units": "d",
                                 "end": "2012-12-31"
                             }
                         }
@@ -2528,11 +2606,11 @@
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "miodarone - 200mg by mouth two times daily"
+                    "div": "Coumadin - 5mg by mouth every other day starting 11/1/2012"
                 },
                 "medication": {
-                    "reference": "Medication/100",
-                    "display": "miodarone - 200mg by mouth two times daily"
+                    "reference": "Medication/98",
+                    "display": "Coumadin - 5mg by mouth every other day starting 11/1/2012"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2576,11 +2654,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/58",
-                    "display": "miodarone - 200mg by mouth two times daily"
+                    "display": "Coumadin - 5mg by mouth every other day starting 11/1/2012"
                 },
                 "medication": {
-                    "reference": "Medication/101",
-                    "display": "miodarone - 200mg by mouth two times daily"
+                    "reference": "Medication/99",
+                    "display": "Coumadin - 5mg by mouth every other day starting 11/1/2012"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2626,11 +2704,11 @@
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "Coumadin - 5mg by mouth every other day starting 11/1/2012"
+                    "div": "Coumadin - 2.5mg by mouth every other day starting 11/2/2012"
                 },
                 "medication": {
-                    "reference": "Medication/102",
-                    "display": "Coumadin - 5mg by mouth every other day starting 11/1/2012"
+                    "reference": "Medication/100",
+                    "display": "Coumadin - 2.5mg by mouth every other day starting 11/2/2012"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2674,11 +2752,11 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/60",
-                    "display": "Coumadin - 5mg by mouth every other day starting 11/1/2012"
+                    "display": "Coumadin - 2.5mg by mouth every other day starting 11/2/2012"
                 },
                 "medication": {
-                    "reference": "Medication/103",
-                    "display": "Coumadin - 5mg by mouth every other day starting 11/1/2012"
+                    "reference": "Medication/101",
+                    "display": "Coumadin - 2.5mg by mouth every other day starting 11/2/2012"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2714,21 +2792,21 @@
                                 }
                             ],
                             "repeat": {
-                                "frequency": 1,
-                                "duration": 2,
-                                "units": "d",
-                                "end": "2012-12-31"
+                                "when": "HS",
+                                "end": "2012-12-31",
+                                "duration": 1,
+                                "units": "s"
                             }
                         }
                     }
                 ],
                 "text": {
                     "status": "generated",
-                    "div": "Coumadin - 2.5mg by mouth every other day starting 11/2/2012"
+                    "div": "Ambien - 5mg by mouth once daily before bed"
                 },
                 "medication": {
-                    "reference": "Medication/104",
-                    "display": "Coumadin - 2.5mg by mouth every other day starting 11/2/2012"
+                    "reference": "Medication/102",
+                    "display": "Ambien - 5mg by mouth once daily before bed"
                 },
                 "patient": {
                     "reference": "Patient/0",
@@ -2772,60 +2850,10 @@
                 ],
                 "prescription": {
                     "reference": "MedicationPrescription/62",
-                    "display": "Coumadin - 2.5mg by mouth every other day starting 11/2/2012"
+                    "display": "Ambien - 5mg by mouth once daily before bed"
                 },
                 "medication": {
-                    "reference": "Medication/105",
-                    "display": "Coumadin - 2.5mg by mouth every other day starting 11/2/2012"
-                },
-                "patient": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "MedicationPrescription/64",
-                "resourceType": "MedicationPrescription",
-                "status": "active",
-                "dateWritten": "2012-11-01",
-                "dosageInstruction": [
-                    {
-                        "route": {
-                            "coding": [
-                                {
-                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
-                                    "code": "C38288",
-                                    "display": "oral"
-                                }
-                            ],
-                            "text": "oral"
-                        },
-                        "doseQuantity": {
-                            "value": 1
-                        },
-                        "timingSchedule": {
-                            "event": [
-                                {
-                                    "start": "2012-11-01"
-                                }
-                            ],
-                            "repeat": {
-                                "when": "HS",
-                                "end": "2012-12-31",
-                                "duration": 1,
-                                "units": "s"
-                            }
-                        }
-                    }
-                ],
-                "text": {
-                    "status": "generated",
-                    "div": "Ambien - 5mg by mouth once daily before bed"
-                },
-                "medication": {
-                    "reference": "Medication/106",
+                    "reference": "Medication/103",
                     "display": "Ambien - 5mg by mouth once daily before bed"
                 },
                 "patient": {
@@ -2836,81 +2864,69 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/65",
-                "resourceType": "MedicationAdministration",
-                "status": "completed",
-                "practitioner": {
-                    "reference": "Practitioner/unknown",
-                    "display": "Unknown"
-                },
-                "whenGiven": {
-                    "start": "2012-11-01",
-                    "end": "2012-12-31"
-                },
-                "dosage": [
-                    {
-                        "route": {
-                            "coding": [
-                                {
-                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
-                                    "code": "C38288",
-                                    "display": "oral"
-                                }
-                            ],
-                            "text": "oral"
-                        },
-                        "quantity": {
-                            "value": 1
-                        },
-                        "timingPeriod": {
-                            "start": "2012-11-01",
-                            "end": "2012-12-31"
-                        }
-                    }
-                ],
-                "prescription": {
-                    "reference": "MedicationPrescription/64",
-                    "display": "Ambien - 5mg by mouth once daily before bed"
-                },
-                "medication": {
-                    "reference": "Medication/107",
-                    "display": "Ambien - 5mg by mouth once daily before bed"
-                },
-                "patient": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Substance/66",
-                "resourceType": "Substance",
-                "type": {
+                "id": "Medication/64",
+                "resourceType": "Medication",
+                "name": "Lisinopril - 20mg by mouth once daily",
+                "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "70618",
-                            "display": "Penicillin"
+                            "code": "314077",
+                            "display": "Lisinopril 20 MG Oral Tablet"
                         }
                     ],
-                    "text": "Penicillin"
+                    "text": "Lisinopril 20 MG Oral Tablet"
                 }
             }
         },
         {
             "resource": {
-                "id": "Substance/67",
-                "resourceType": "Substance",
-                "type": {
+                "id": "Medication/65",
+                "resourceType": "Medication",
+                "name": "Lisinopril - 20mg by mouth once daily",
+                "code": {
                     "coding": [
                         {
-                            "system": "http://fdasis.nlm.nih.gov",
-                            "code": "3729L8MA2C",
-                            "display": "Bee Pollen"
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "314077",
+                            "display": "Lisinopril 20 MG Oral Tablet"
                         }
                     ],
-                    "text": "Bee Pollen"
+                    "text": "Lisinopril 20 MG Oral Tablet"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Medication/66",
+                "resourceType": "Medication",
+                "name": "Lasix - 40mg by mouth once daily",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "313988",
+                            "display": "Furosemide 40 MG Oral Tablet"
+                        }
+                    ],
+                    "text": "Furosemide 40 MG Oral Tablet"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Medication/67",
+                "resourceType": "Medication",
+                "name": "Lasix - 40mg by mouth once daily",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "313988",
+                            "display": "Furosemide 40 MG Oral Tablet"
+                        }
+                    ],
+                    "text": "Furosemide 40 MG Oral Tablet"
                 }
             }
         },
@@ -2918,16 +2934,16 @@
             "resource": {
                 "id": "Medication/68",
                 "resourceType": "Medication",
-                "name": "Lisinopril - 20mg by mouth once daily",
+                "name": "K-Dur - 10mEq/L by mouth once daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "314077",
-                            "display": "Lisinopril 20 MG Oral Tablet"
+                            "code": "706459",
+                            "display": "K-Dur 10 MEQ Extended Release Tablet"
                         }
                     ],
-                    "text": "Lisinopril 20 MG Oral Tablet"
+                    "text": "K-Dur 10 MEQ Extended Release Tablet"
                 }
             }
         },
@@ -2935,16 +2951,16 @@
             "resource": {
                 "id": "Medication/69",
                 "resourceType": "Medication",
-                "name": "Lisinopril - 20mg by mouth once daily",
+                "name": "K-Dur - 10mEq/L by mouth once daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "314077",
-                            "display": "Lisinopril 20 MG Oral Tablet"
+                            "code": "706459",
+                            "display": "K-Dur 10 MEQ Extended Release Tablet"
                         }
                     ],
-                    "text": "Lisinopril 20 MG Oral Tablet"
+                    "text": "K-Dur 10 MEQ Extended Release Tablet"
                 }
             }
         },
@@ -2952,16 +2968,16 @@
             "resource": {
                 "id": "Medication/70",
                 "resourceType": "Medication",
-                "name": "Lasix - 40mg by mouth once daily",
+                "name": "Norvasc - 10mg by mouth once daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "313988",
-                            "display": "Furosemide 40 MG Oral Tablet"
+                            "code": "308135",
+                            "display": "Amlodipine 10 MG Oral Tablet"
                         }
                     ],
-                    "text": "Furosemide 40 MG Oral Tablet"
+                    "text": "Amlodipine 10 MG Oral Tablet"
                 }
             }
         },
@@ -2969,16 +2985,16 @@
             "resource": {
                 "id": "Medication/71",
                 "resourceType": "Medication",
-                "name": "Lasix - 40mg by mouth once daily",
+                "name": "Norvasc - 10mg by mouth once daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "313988",
-                            "display": "Furosemide 40 MG Oral Tablet"
+                            "code": "308135",
+                            "display": "Amlodipine 10 MG Oral Tablet"
                         }
                     ],
-                    "text": "Furosemide 40 MG Oral Tablet"
+                    "text": "Amlodipine 10 MG Oral Tablet"
                 }
             }
         },
@@ -2986,16 +3002,16 @@
             "resource": {
                 "id": "Medication/72",
                 "resourceType": "Medication",
-                "name": "K-Dur - 10mEq/L by mouth once daily",
+                "name": "Zocor - 40mg by mouth once daily before bed",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "706459",
-                            "display": "K-Dur 10 MEQ Extended Release Tablet"
+                            "code": "198211",
+                            "display": "Simvastatin 40 MG Oral Tablet"
                         }
                     ],
-                    "text": "K-Dur 10 MEQ Extended Release Tablet"
+                    "text": "Simvastatin 40 MG Oral Tablet"
                 }
             }
         },
@@ -3003,16 +3019,16 @@
             "resource": {
                 "id": "Medication/73",
                 "resourceType": "Medication",
-                "name": "K-Dur - 10mEq/L by mouth once daily",
+                "name": "Zocor - 40mg by mouth once daily before bed",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "706459",
-                            "display": "K-Dur 10 MEQ Extended Release Tablet"
+                            "code": "198211",
+                            "display": "Simvastatin 40 MG Oral Tablet"
                         }
                     ],
-                    "text": "K-Dur 10 MEQ Extended Release Tablet"
+                    "text": "Simvastatin 40 MG Oral Tablet"
                 }
             }
         },
@@ -3020,16 +3036,16 @@
             "resource": {
                 "id": "Medication/74",
                 "resourceType": "Medication",
-                "name": "Norvasc - 10mg by mouth once daily",
+                "name": "Lantus - 36 units once daily before bed",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "308135",
-                            "display": "Amlodipine 10 MG Oral Tablet"
+                            "code": "311041",
+                            "display": "Insulin Glargine 100 UNT/ML Injectable Solution"
                         }
                     ],
-                    "text": "Amlodipine 10 MG Oral Tablet"
+                    "text": "Insulin Glargine 100 UNT/ML Injectable Solution"
                 }
             }
         },
@@ -3037,16 +3053,16 @@
             "resource": {
                 "id": "Medication/75",
                 "resourceType": "Medication",
-                "name": "Norvasc - 10mg by mouth once daily",
+                "name": "Lantus - 36 units once daily before bed",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "308135",
-                            "display": "Amlodipine 10 MG Oral Tablet"
+                            "code": "311041",
+                            "display": "Insulin Glargine 100 UNT/ML Injectable Solution"
                         }
                     ],
-                    "text": "Amlodipine 10 MG Oral Tablet"
+                    "text": "Insulin Glargine 100 UNT/ML Injectable Solution"
                 }
             }
         },
@@ -3054,16 +3070,16 @@
             "resource": {
                 "id": "Medication/76",
                 "resourceType": "Medication",
-                "name": "Zocor - 40mg by mouth once daily before bed",
+                "name": "gliburide - 2.5mg by mouth once daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "198211",
-                            "display": "Simvastatin 40 MG Oral Tablet"
+                            "code": "861748",
+                            "display": "glyBURIDE 2.5 MG / metFORMIN hydrochloride 500 MG Oral Tablet"
                         }
                     ],
-                    "text": "Simvastatin 40 MG Oral Tablet"
+                    "text": "glyBURIDE 2.5 MG / metFORMIN hydrochloride 500 MG Oral Tablet"
                 }
             }
         },
@@ -3071,16 +3087,16 @@
             "resource": {
                 "id": "Medication/77",
                 "resourceType": "Medication",
-                "name": "Zocor - 40mg by mouth once daily before bed",
+                "name": "gliburide - 2.5mg by mouth once daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "198211",
-                            "display": "Simvastatin 40 MG Oral Tablet"
+                            "code": "861748",
+                            "display": "glyBURIDE 2.5 MG / metFORMIN hydrochloride 500 MG Oral Tablet"
                         }
                     ],
-                    "text": "Simvastatin 40 MG Oral Tablet"
+                    "text": "glyBURIDE 2.5 MG / metFORMIN hydrochloride 500 MG Oral Tablet"
                 }
             }
         },
@@ -3088,16 +3104,16 @@
             "resource": {
                 "id": "Medication/78",
                 "resourceType": "Medication",
-                "name": "Lantus - 36 units once daily before bed",
+                "name": "synthroid - 0.1mg by mouth once daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "311041",
-                            "display": "Insulin Glargine 100 UNT/ML Injectable Solution"
+                            "code": "892246",
+                            "display": "Levothyroxine Sodium 0.1 MG Oral Tablet"
                         }
                     ],
-                    "text": "Insulin Glargine 100 UNT/ML Injectable Solution"
+                    "text": "Levothyroxine Sodium 0.1 MG Oral Tablet"
                 }
             }
         },
@@ -3105,16 +3121,16 @@
             "resource": {
                 "id": "Medication/79",
                 "resourceType": "Medication",
-                "name": "Lantus - 36 units once daily before bed",
+                "name": "synthroid - 0.1mg by mouth once daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "311041",
-                            "display": "Insulin Glargine 100 UNT/ML Injectable Solution"
+                            "code": "892246",
+                            "display": "Levothyroxine Sodium 0.1 MG Oral Tablet"
                         }
                     ],
-                    "text": "Insulin Glargine 100 UNT/ML Injectable Solution"
+                    "text": "Levothyroxine Sodium 0.1 MG Oral Tablet"
                 }
             }
         },
@@ -3122,16 +3138,16 @@
             "resource": {
                 "id": "Medication/80",
                 "resourceType": "Medication",
-                "name": "gliburide - 2.5mg by mouth once daily",
+                "name": "Aleve - 220mg by mouth twice daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "861748",
-                            "display": "glyBURIDE 2.5 MG / metFORMIN hydrochloride 500 MG Oral Tablet"
+                            "code": "1112231",
+                            "display": "Naproxen sodium 220 MG Oral Capsule"
                         }
                     ],
-                    "text": "glyBURIDE 2.5 MG / metFORMIN hydrochloride 500 MG Oral Tablet"
+                    "text": "Naproxen sodium 220 MG Oral Capsule"
                 }
             }
         },
@@ -3139,16 +3155,16 @@
             "resource": {
                 "id": "Medication/81",
                 "resourceType": "Medication",
-                "name": "gliburide - 2.5mg by mouth once daily",
+                "name": "Aleve - 220mg by mouth twice daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "861748",
-                            "display": "glyBURIDE 2.5 MG / metFORMIN hydrochloride 500 MG Oral Tablet"
+                            "code": "1112231",
+                            "display": "Naproxen sodium 220 MG Oral Capsule"
                         }
                     ],
-                    "text": "glyBURIDE 2.5 MG / metFORMIN hydrochloride 500 MG Oral Tablet"
+                    "text": "Naproxen sodium 220 MG Oral Capsule"
                 }
             }
         },
@@ -3156,16 +3172,16 @@
             "resource": {
                 "id": "Medication/82",
                 "resourceType": "Medication",
-                "name": "synthroid - 0.1mg by mouth once daily",
+                "name": "Ultram - 50mg by mouth four times daily as needed for joint pain",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "892246",
-                            "display": "Levothyroxine Sodium 0.1 MG Oral Tablet"
+                            "code": "835603",
+                            "display": "traMADol hydrochloride 50 MG Oral Tablet"
                         }
                     ],
-                    "text": "Levothyroxine Sodium 0.1 MG Oral Tablet"
+                    "text": "traMADol hydrochloride 50 MG Oral Tablet"
                 }
             }
         },
@@ -3173,16 +3189,16 @@
             "resource": {
                 "id": "Medication/83",
                 "resourceType": "Medication",
-                "name": "synthroid - 0.1mg by mouth once daily",
+                "name": "Ultram - 50mg by mouth four times daily as needed for joint pain",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "892246",
-                            "display": "Levothyroxine Sodium 0.1 MG Oral Tablet"
+                            "code": "835603",
+                            "display": "traMADol hydrochloride 50 MG Oral Tablet"
                         }
                     ],
-                    "text": "Levothyroxine Sodium 0.1 MG Oral Tablet"
+                    "text": "traMADol hydrochloride 50 MG Oral Tablet"
                 }
             }
         },
@@ -3190,16 +3206,16 @@
             "resource": {
                 "id": "Medication/84",
                 "resourceType": "Medication",
-                "name": "Aleve - 220mg by mouth twice daily",
+                "name": "Aspirin - 81mg by mouth once daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "1112231",
-                            "display": "Naproxen sodium 220 MG Oral Capsule"
+                            "code": "308416",
+                            "display": "Aspirin 81 MG Enteric Coated Tablet"
                         }
                     ],
-                    "text": "Naproxen sodium 220 MG Oral Capsule"
+                    "text": "Aspirin 81 MG Enteric Coated Tablet"
                 }
             }
         },
@@ -3207,16 +3223,16 @@
             "resource": {
                 "id": "Medication/85",
                 "resourceType": "Medication",
-                "name": "Aleve - 220mg by mouth twice daily",
+                "name": "Aspirin - 81mg by mouth once daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "1112231",
-                            "display": "Naproxen sodium 220 MG Oral Capsule"
+                            "code": "308416",
+                            "display": "Aspirin 81 MG Enteric Coated Tablet"
                         }
                     ],
-                    "text": "Naproxen sodium 220 MG Oral Capsule"
+                    "text": "Aspirin 81 MG Enteric Coated Tablet"
                 }
             }
         },
@@ -3224,16 +3240,16 @@
             "resource": {
                 "id": "Medication/86",
                 "resourceType": "Medication",
-                "name": "Ultram - 50mg by mouth four times daily as needed for joint pain",
+                "name": "Lopressor - 50mg by mouth twice daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "835603",
-                            "display": "traMADol hydrochloride 50 MG Oral Tablet"
+                            "code": "866514",
+                            "display": "Metoprolol Tartrate 50 MG Oral Tablet"
                         }
                     ],
-                    "text": "traMADol hydrochloride 50 MG Oral Tablet"
+                    "text": "Metoprolol Tartrate 50 MG Oral Tablet"
                 }
             }
         },
@@ -3241,16 +3257,16 @@
             "resource": {
                 "id": "Medication/87",
                 "resourceType": "Medication",
-                "name": "Ultram - 50mg by mouth four times daily as needed for joint pain",
+                "name": "Lopressor - 50mg by mouth twice daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "835603",
-                            "display": "traMADol hydrochloride 50 MG Oral Tablet"
+                            "code": "866514",
+                            "display": "Metoprolol Tartrate 50 MG Oral Tablet"
                         }
                     ],
-                    "text": "traMADol hydrochloride 50 MG Oral Tablet"
+                    "text": "Metoprolol Tartrate 50 MG Oral Tablet"
                 }
             }
         },
@@ -3258,16 +3274,16 @@
             "resource": {
                 "id": "Medication/88",
                 "resourceType": "Medication",
-                "name": "Aspirin - 81mg by mouth once daily",
+                "name": "Flomax - 0.4mg by mouth once daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "308416",
-                            "display": "Aspirin 81 MG Enteric Coated Tablet"
+                            "code": "863671",
+                            "display": "Flomax 0.4 MG Oral Capsule"
                         }
                     ],
-                    "text": "Aspirin 81 MG Enteric Coated Tablet"
+                    "text": "Flomax 0.4 MG Oral Capsule"
                 }
             }
         },
@@ -3275,16 +3291,16 @@
             "resource": {
                 "id": "Medication/89",
                 "resourceType": "Medication",
-                "name": "Aspirin - 81mg by mouth once daily",
+                "name": "Flomax - 0.4mg by mouth once daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "308416",
-                            "display": "Aspirin 81 MG Enteric Coated Tablet"
+                            "code": "863671",
+                            "display": "Flomax 0.4 MG Oral Capsule"
                         }
                     ],
-                    "text": "Aspirin 81 MG Enteric Coated Tablet"
+                    "text": "Flomax 0.4 MG Oral Capsule"
                 }
             }
         },
@@ -3292,16 +3308,16 @@
             "resource": {
                 "id": "Medication/90",
                 "resourceType": "Medication",
-                "name": "Lopressor - 50mg by mouth twice daily",
+                "name": "Proscar - 5mg by mouth once daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "866514",
-                            "display": "Metoprolol Tartrate 50 MG Oral Tablet"
+                            "code": "201961",
+                            "display": "Proscar 5 MG Oral Tablet"
                         }
                     ],
-                    "text": "Metoprolol Tartrate 50 MG Oral Tablet"
+                    "text": "Proscar 5 MG Oral Tablet"
                 }
             }
         },
@@ -3309,16 +3325,16 @@
             "resource": {
                 "id": "Medication/91",
                 "resourceType": "Medication",
-                "name": "Lopressor - 50mg by mouth twice daily",
+                "name": "Proscar - 5mg by mouth once daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "866514",
-                            "display": "Metoprolol Tartrate 50 MG Oral Tablet"
+                            "code": "201961",
+                            "display": "Proscar 5 MG Oral Tablet"
                         }
                     ],
-                    "text": "Metoprolol Tartrate 50 MG Oral Tablet"
+                    "text": "Proscar 5 MG Oral Tablet"
                 }
             }
         },
@@ -3326,16 +3342,16 @@
             "resource": {
                 "id": "Medication/92",
                 "resourceType": "Medication",
-                "name": "Flomax - 0.4mg by mouth once daily",
+                "name": "Neurontin - 300mg by mouth three times daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "863671",
-                            "display": "Flomax 0.4 MG Oral Capsule"
+                            "code": "105029",
+                            "display": "Neurontin 300 MG Oral Capsule"
                         }
                     ],
-                    "text": "Flomax 0.4 MG Oral Capsule"
+                    "text": "Neurontin 300 MG Oral Capsule"
                 }
             }
         },
@@ -3343,16 +3359,16 @@
             "resource": {
                 "id": "Medication/93",
                 "resourceType": "Medication",
-                "name": "Flomax - 0.4mg by mouth once daily",
+                "name": "Neurontin - 300mg by mouth three times daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "863671",
-                            "display": "Flomax 0.4 MG Oral Capsule"
+                            "code": "105029",
+                            "display": "Neurontin 300 MG Oral Capsule"
                         }
                     ],
-                    "text": "Flomax 0.4 MG Oral Capsule"
+                    "text": "Neurontin 300 MG Oral Capsule"
                 }
             }
         },
@@ -3360,16 +3376,16 @@
             "resource": {
                 "id": "Medication/94",
                 "resourceType": "Medication",
-                "name": "Proscar - 5mg by mouth once daily",
+                "name": "Ativan - 1mg by mouth three times daily as needed for irritability",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "201961",
-                            "display": "Proscar 5 MG Oral Tablet"
+                            "code": "197900",
+                            "display": "Lorazepam 0.5 MG Oral Tablet"
                         }
                     ],
-                    "text": "Proscar 5 MG Oral Tablet"
+                    "text": "Lorazepam 0.5 MG Oral Tablet"
                 }
             }
         },
@@ -3377,16 +3393,16 @@
             "resource": {
                 "id": "Medication/95",
                 "resourceType": "Medication",
-                "name": "Proscar - 5mg by mouth once daily",
+                "name": "Ativan - 1mg by mouth three times daily as needed for irritability",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "201961",
-                            "display": "Proscar 5 MG Oral Tablet"
+                            "code": "197900",
+                            "display": "Lorazepam 0.5 MG Oral Tablet"
                         }
                     ],
-                    "text": "Proscar 5 MG Oral Tablet"
+                    "text": "Lorazepam 0.5 MG Oral Tablet"
                 }
             }
         },
@@ -3394,16 +3410,16 @@
             "resource": {
                 "id": "Medication/96",
                 "resourceType": "Medication",
-                "name": "Neurontin - 300mg by mouth three times daily",
+                "name": "miodarone - 200mg by mouth two times daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "105029",
-                            "display": "Neurontin 300 MG Oral Capsule"
+                            "code": "833530",
+                            "display": "Cordarone 200 MG Oral Tablet"
                         }
                     ],
-                    "text": "Neurontin 300 MG Oral Capsule"
+                    "text": "Cordarone 200 MG Oral Tablet"
                 }
             }
         },
@@ -3411,16 +3427,16 @@
             "resource": {
                 "id": "Medication/97",
                 "resourceType": "Medication",
-                "name": "Neurontin - 300mg by mouth three times daily",
+                "name": "miodarone - 200mg by mouth two times daily",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "105029",
-                            "display": "Neurontin 300 MG Oral Capsule"
+                            "code": "833530",
+                            "display": "Cordarone 200 MG Oral Tablet"
                         }
                     ],
-                    "text": "Neurontin 300 MG Oral Capsule"
+                    "text": "Cordarone 200 MG Oral Tablet"
                 }
             }
         },
@@ -3428,16 +3444,16 @@
             "resource": {
                 "id": "Medication/98",
                 "resourceType": "Medication",
-                "name": "Ativan - 1mg by mouth three times daily as needed for irritability",
+                "name": "Coumadin - 5mg by mouth every other day starting 11/1/2012",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "197900",
-                            "display": "Lorazepam 0.5 MG Oral Tablet"
+                            "code": "855332",
+                            "display": "Warfarin Sodium 5 MG Oral Tablet"
                         }
                     ],
-                    "text": "Lorazepam 0.5 MG Oral Tablet"
+                    "text": "Warfarin Sodium 5 MG Oral Tablet"
                 }
             }
         },
@@ -3445,16 +3461,16 @@
             "resource": {
                 "id": "Medication/99",
                 "resourceType": "Medication",
-                "name": "Ativan - 1mg by mouth three times daily as needed for irritability",
+                "name": "Coumadin - 5mg by mouth every other day starting 11/1/2012",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "197900",
-                            "display": "Lorazepam 0.5 MG Oral Tablet"
+                            "code": "855332",
+                            "display": "Warfarin Sodium 5 MG Oral Tablet"
                         }
                     ],
-                    "text": "Lorazepam 0.5 MG Oral Tablet"
+                    "text": "Warfarin Sodium 5 MG Oral Tablet"
                 }
             }
         },
@@ -3462,16 +3478,16 @@
             "resource": {
                 "id": "Medication/100",
                 "resourceType": "Medication",
-                "name": "miodarone - 200mg by mouth two times daily",
+                "name": "Coumadin - 2.5mg by mouth every other day starting 11/2/2012",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "833530",
-                            "display": "Cordarone 200 MG Oral Tablet"
+                            "code": "855312",
+                            "display": "Warfarin Sodium 2.5 MG Oral Tablet"
                         }
                     ],
-                    "text": "Cordarone 200 MG Oral Tablet"
+                    "text": "Warfarin Sodium 2.5 MG Oral Tablet"
                 }
             }
         },
@@ -3479,90 +3495,22 @@
             "resource": {
                 "id": "Medication/101",
                 "resourceType": "Medication",
-                "name": "miodarone - 200mg by mouth two times daily",
+                "name": "Coumadin - 2.5mg by mouth every other day starting 11/2/2012",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "833530",
-                            "display": "Cordarone 200 MG Oral Tablet"
+                            "code": "855312",
+                            "display": "Warfarin Sodium 2.5 MG Oral Tablet"
                         }
                     ],
-                    "text": "Cordarone 200 MG Oral Tablet"
+                    "text": "Warfarin Sodium 2.5 MG Oral Tablet"
                 }
             }
         },
         {
             "resource": {
                 "id": "Medication/102",
-                "resourceType": "Medication",
-                "name": "Coumadin - 5mg by mouth every other day starting 11/1/2012",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "855332",
-                            "display": "Warfarin Sodium 5 MG Oral Tablet"
-                        }
-                    ],
-                    "text": "Warfarin Sodium 5 MG Oral Tablet"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/103",
-                "resourceType": "Medication",
-                "name": "Coumadin - 5mg by mouth every other day starting 11/1/2012",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "855332",
-                            "display": "Warfarin Sodium 5 MG Oral Tablet"
-                        }
-                    ],
-                    "text": "Warfarin Sodium 5 MG Oral Tablet"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/104",
-                "resourceType": "Medication",
-                "name": "Coumadin - 2.5mg by mouth every other day starting 11/2/2012",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "855312",
-                            "display": "Warfarin Sodium 2.5 MG Oral Tablet"
-                        }
-                    ],
-                    "text": "Warfarin Sodium 2.5 MG Oral Tablet"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/105",
-                "resourceType": "Medication",
-                "name": "Coumadin - 2.5mg by mouth every other day starting 11/2/2012",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "855312",
-                            "display": "Warfarin Sodium 2.5 MG Oral Tablet"
-                        }
-                    ],
-                    "text": "Warfarin Sodium 2.5 MG Oral Tablet"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/106",
                 "resourceType": "Medication",
                 "name": "Ambien - 5mg by mouth once daily before bed",
                 "code": {
@@ -3579,7 +3527,7 @@
         },
         {
             "resource": {
-                "id": "Medication/107",
+                "id": "Medication/103",
                 "resourceType": "Medication",
                 "name": "Ambien - 5mg by mouth once daily before bed",
                 "code": {

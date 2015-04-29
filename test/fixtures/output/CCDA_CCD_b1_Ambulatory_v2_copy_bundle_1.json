@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 25,
+    "total": 24,
     "entry": [
         {
             "resource": {
@@ -112,62 +112,36 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "severity": "minor",
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "247472004",
-                                    "display": "Hives"
-                                }
-                            ],
-                            "text": "Hives"
-                        }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Jones, Myra"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/2",
+                "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
-                "sensitivityType": "allergy",
                 "recordedDate": "2007-05-01",
                 "status": "resolved",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "7982",
-                                    "display": "Penicillin G benzathine"
-                                }
-                            ],
-                            "text": "Penicillin G benzathine"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "Penicillin G benzathine"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "7982",
+                            "display": "Penicillin G benzathine"
+                        }
+                    ],
+                    "text": "Penicillin G benzathine"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/1",
-                        "display": "Hives"
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "247472004",
+                                        "display": "Hives"
+                                    }
+                                ],
+                                "text": "Hives"
+                            }
+                        ],
+                        "severity": "minor"
                     }
                 ],
                 "subject": {
@@ -178,7 +152,7 @@
         },
         {
             "resource": {
-                "id": "Observation/3",
+                "id": "Observation/2",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -227,7 +201,7 @@
         },
         {
             "resource": {
-                "id": "Observation/4",
+                "id": "Observation/3",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -266,7 +240,7 @@
         },
         {
             "resource": {
-                "id": "Observation/5",
+                "id": "Observation/4",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -315,7 +289,7 @@
         },
         {
             "resource": {
-                "id": "Observation/6",
+                "id": "Observation/5",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -364,7 +338,7 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/6",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -413,7 +387,7 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/7",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -462,7 +436,7 @@
         },
         {
             "resource": {
-                "id": "Observation/9",
+                "id": "Observation/8",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -475,6 +449,47 @@
                     "text": "Weight and Height tracking panel"
                 },
                 "issued": "2008-11-01",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/2"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "Jones, Myra"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/9",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2011-11-01",
                 "status": "final",
                 "reliability": "ok",
                 "extension": [
@@ -515,6 +530,53 @@
                     ],
                     "text": "Weight and Height tracking panel"
                 },
+                "issued": "2012-08-06",
+                "status": "final",
+                "reliability": "ok",
+                "extension": [
+                    {
+                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
+                        "valueCoding": {
+                            "code": "8716-3",
+                            "display": "Vital signs",
+                            "system": "http://loinc.org"
+                        }
+                    }
+                ],
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/5"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/6"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "Jones, Myra"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/11",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
                 "issued": "2011-11-01",
                 "status": "final",
                 "reliability": "ok",
@@ -544,17 +606,17 @@
         },
         {
             "resource": {
-                "id": "Observation/11",
+                "id": "Observation/12",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
-                            "code": "55418-8",
-                            "display": "Weight and Height tracking panel"
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
                         }
                     ],
-                    "text": "Weight and Height tracking panel"
+                    "text": "Blood pressure panel"
                 },
                 "issued": "2012-08-06",
                 "status": "final",
@@ -570,12 +632,6 @@
                     }
                 ],
                 "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/6"
-                        }
-                    },
                     {
                         "type": "has-component",
                         "target": {
@@ -591,89 +647,7 @@
         },
         {
             "resource": {
-                "id": "Observation/12",
-                "resourceType": "Observation",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "35094-2",
-                            "display": "Blood pressure panel"
-                        }
-                    ],
-                    "text": "Blood pressure panel"
-                },
-                "issued": "2011-11-01",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/5"
-                        }
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Jones, Myra"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Observation/13",
-                "resourceType": "Observation",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "35094-2",
-                            "display": "Blood pressure panel"
-                        }
-                    ],
-                    "text": "Blood pressure panel"
-                },
-                "issued": "2012-08-06",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/8"
-                        }
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Jones, Myra"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Condition/14",
+                "id": "Condition/13",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2012-08-06",
@@ -697,7 +671,7 @@
         },
         {
             "resource": {
-                "id": "Condition/15",
+                "id": "Condition/14",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2007-01-03",
@@ -720,7 +694,7 @@
         },
         {
             "resource": {
-                "id": "Condition/16",
+                "id": "Condition/15",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "onsetDateTime": "2007-01-03",
@@ -744,7 +718,7 @@
         },
         {
             "resource": {
-                "id": "Observation/17",
+                "id": "Observation/16",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -808,7 +782,7 @@
         },
         {
             "resource": {
-                "id": "Observation/18",
+                "id": "Observation/17",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -883,7 +857,7 @@
         },
         {
             "resource": {
-                "id": "Observation/19",
+                "id": "Observation/18",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -958,7 +932,7 @@
         },
         {
             "resource": {
-                "id": "Observation/20",
+                "id": "Observation/19",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -976,6 +950,12 @@
                     {
                         "type": "has-component",
                         "target": {
+                            "reference": "Observation/16"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
                             "reference": "Observation/17"
                         }
                     },
@@ -983,12 +963,6 @@
                         "type": "has-component",
                         "target": {
                             "reference": "Observation/18"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/19"
                         }
                     }
                 ],
@@ -1010,7 +984,7 @@
         },
         {
             "resource": {
-                "id": "Observation/21",
+                "id": "Observation/20",
                 "resourceType": "Observation",
                 "name": {
                     "coding": [
@@ -1064,7 +1038,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/22",
+                "id": "MedicationPrescription/21",
                 "resourceType": "MedicationPrescription",
                 "status": "completed",
                 "dateWritten": "2012-08-06",
@@ -1154,7 +1128,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/23",
+                "id": "MedicationPrescription/22",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-11-01",
@@ -1209,7 +1183,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/24",
+                "id": "MedicationPrescription/23",
                 "resourceType": "MedicationPrescription",
                 "status": "completed",
                 "dateWritten": "2012-11-01",

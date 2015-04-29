@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 33,
+    "total": 30,
     "entry": [
         {
             "resource": {
@@ -29,12 +29,17 @@
                 "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-06-05",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/24",
-                    "display": "Eggs"
+                    "coding": [
+                        {
+                            "system": "http://fdasis.nlm.nih.gov",
+                            "code": "291P45F896",
+                            "display": "Eggs"
+                        }
+                    ],
+                    "text": "Eggs"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -47,12 +52,17 @@
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-06-05",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/25",
-                    "display": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "892677",
+                            "display": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
+                        }
+                    ],
+                    "text": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -65,12 +75,16 @@
                 "id": "AllergyIntolerance/3",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "fatal",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-06-05",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/26",
-                    "display": "Penicillin V"
+                    "coding": [
+                        {
+                            "code": "N0000011298",
+                            "display": "Penicillin V"
+                        }
+                    ],
+                    "text": "Penicillin V"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -626,7 +640,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/27",
+                    "reference": "Medication/24",
                     "display": "Antihypertensive combinations + Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
                 },
                 "patient": {
@@ -658,7 +672,7 @@
                     "reference": "MedicationPrescription/18"
                 },
                 "medication": {
-                    "reference": "Medication/28",
+                    "reference": "Medication/25",
                     "display": "Antihypertensive combinations + Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
                 },
                 "patient": {
@@ -681,7 +695,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/29",
+                    "reference": "Medication/26",
                     "display": "ACE inhibitor or ARB + Lisinopril 10 MG Oral Tablet"
                 },
                 "patient": {
@@ -713,7 +727,7 @@
                     "reference": "MedicationPrescription/20"
                 },
                 "medication": {
-                    "reference": "Medication/30",
+                    "reference": "Medication/27",
                     "display": "ACE inhibitor or ARB + Lisinopril 10 MG Oral Tablet"
                 },
                 "patient": {
@@ -736,7 +750,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/31",
+                    "reference": "Medication/28",
                     "display": "Beta Blocker Therapy + Metoprolol Tartrate 25 MG Oral Tablet"
                 },
                 "patient": {
@@ -768,7 +782,7 @@
                     "reference": "MedicationPrescription/22"
                 },
                 "medication": {
-                    "reference": "Medication/32",
+                    "reference": "Medication/29",
                     "display": "Beta Blocker Therapy + Metoprolol Tartrate 25 MG Oral Tablet"
                 },
                 "patient": {
@@ -779,48 +793,52 @@
         },
         {
             "resource": {
-                "id": "Substance/24",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://fdasis.nlm.nih.gov",
-                            "code": "291P45F896",
-                            "display": "Eggs"
-                        }
-                    ],
-                    "text": "Eggs"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Substance/25",
-                "resourceType": "Substance",
-                "type": {
+                "id": "Medication/24",
+                "resourceType": "Medication",
+                "name": "Antihypertensive combinations + Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet",
+                "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "892677",
-                            "display": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
+                            "code": "858828",
+                            "display": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
                         }
                     ],
-                    "text": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
+                    "text": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
                 }
             }
         },
         {
             "resource": {
-                "id": "Substance/26",
-                "resourceType": "Substance",
-                "type": {
+                "id": "Medication/25",
+                "resourceType": "Medication",
+                "name": "Antihypertensive combinations + Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet",
+                "code": {
                     "coding": [
                         {
-                            "code": "N0000011298",
-                            "display": "Penicillin V"
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "858828",
+                            "display": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
                         }
                     ],
-                    "text": "Penicillin V"
+                    "text": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Medication/26",
+                "resourceType": "Medication",
+                "name": "ACE inhibitor or ARB + Lisinopril 10 MG Oral Tablet",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "314076",
+                            "display": "Lisinopril 10 MG Oral Tablet"
+                        }
+                    ],
+                    "text": "Lisinopril 10 MG Oral Tablet"
                 }
             }
         },
@@ -828,73 +846,22 @@
             "resource": {
                 "id": "Medication/27",
                 "resourceType": "Medication",
-                "name": "Antihypertensive combinations + Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet",
+                "name": "ACE inhibitor or ARB + Lisinopril 10 MG Oral Tablet",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "858828",
-                            "display": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
+                            "code": "314076",
+                            "display": "Lisinopril 10 MG Oral Tablet"
                         }
                     ],
-                    "text": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
+                    "text": "Lisinopril 10 MG Oral Tablet"
                 }
             }
         },
         {
             "resource": {
                 "id": "Medication/28",
-                "resourceType": "Medication",
-                "name": "Antihypertensive combinations + Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "858828",
-                            "display": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
-                        }
-                    ],
-                    "text": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/29",
-                "resourceType": "Medication",
-                "name": "ACE inhibitor or ARB + Lisinopril 10 MG Oral Tablet",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "314076",
-                            "display": "Lisinopril 10 MG Oral Tablet"
-                        }
-                    ],
-                    "text": "Lisinopril 10 MG Oral Tablet"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/30",
-                "resourceType": "Medication",
-                "name": "ACE inhibitor or ARB + Lisinopril 10 MG Oral Tablet",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "314076",
-                            "display": "Lisinopril 10 MG Oral Tablet"
-                        }
-                    ],
-                    "text": "Lisinopril 10 MG Oral Tablet"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/31",
                 "resourceType": "Medication",
                 "name": "Beta Blocker Therapy + Metoprolol Tartrate 25 MG Oral Tablet",
                 "code": {
@@ -911,7 +878,7 @@
         },
         {
             "resource": {
-                "id": "Medication/32",
+                "id": "Medication/29",
                 "resourceType": "Medication",
                 "name": "Beta Blocker Therapy + Metoprolol Tartrate 25 MG Oral Tablet",
                 "code": {
