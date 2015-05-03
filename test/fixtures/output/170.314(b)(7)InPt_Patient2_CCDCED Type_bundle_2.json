@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 39,
+    "total": 37,
     "entry": [
         {
             "resource": {
@@ -86,23 +86,36 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "247472004",
-                                    "display": "Hives"
-                                }
-                            ],
-                            "text": "Hives"
+                "id": "AllergyIntolerance/1",
+                "resourceType": "AllergyIntolerance",
+                "recordedDate": "1998-01-10",
+                "status": "confirmed",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "7982",
+                            "display": "Penicillin G benzathine"
                         }
+                    ],
+                    "text": "Penicillin G benzathine"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "247472004",
+                                        "display": "Hives"
+                                    }
+                                ],
+                                "text": "Hives"
+                            }
+                        ]
                     }
                 ],
-                "didNotOccurFlag": false,
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -113,97 +126,32 @@
             "resource": {
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
-                "recordedDate": "1998-01-10",
-                "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "7982",
-                                    "display": "Penicillin G benzathine"
-                                }
-                            ],
-                            "text": "Penicillin G benzathine"
-                        }
-                    }
-                ],
-                "substance": {
-                    "reference": "#allergen",
-                    "display": "Penicillin G benzathine"
-                },
-                "reaction": [
-                    {
-                        "reference": "AdverseReaction/1",
-                        "display": "Hives"
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Everywoman, Eve"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AdverseReaction/3",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "65124004",
-                                    "display": "Swelling"
-                                }
-                            ],
-                            "text": "Swelling"
-                        }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Everywoman, Eve"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/4",
-                "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
                 "recordedDate": "2011-01-10",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "1191",
-                                    "display": "Aspirin"
-                                }
-                            ],
-                            "text": "Aspirin"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "Aspirin"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1191",
+                            "display": "Aspirin"
+                        }
+                    ],
+                    "text": "Aspirin"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/3",
-                        "display": "Swelling"
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "65124004",
+                                        "display": "Swelling"
+                                    }
+                                ],
+                                "text": "Swelling"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -214,9 +162,9 @@
         },
         {
             "resource": {
-                "id": "Observation/5",
+                "id": "Observation/3",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -235,16 +183,6 @@
                 "issued": "2013-01-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -253,9 +191,9 @@
         },
         {
             "resource": {
-                "id": "Observation/6",
+                "id": "Observation/4",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -274,16 +212,6 @@
                 "issued": "2013-01-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -292,9 +220,9 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/5",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -313,16 +241,6 @@
                 "issued": "2013-01-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -331,9 +249,9 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/6",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -352,16 +270,6 @@
                 "issued": "2013-01-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -370,9 +278,9 @@
         },
         {
             "resource": {
-                "id": "Observation/9",
+                "id": "Observation/7",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -388,16 +296,6 @@
                 "issued": "2013-01-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -406,9 +304,9 @@
         },
         {
             "resource": {
-                "id": "Observation/10",
+                "id": "Observation/8",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -427,16 +325,6 @@
                 "issued": "2011-10-02",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -445,9 +333,9 @@
         },
         {
             "resource": {
-                "id": "Observation/11",
+                "id": "Observation/9",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -466,16 +354,6 @@
                 "issued": "2011-10-02",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -484,9 +362,9 @@
         },
         {
             "resource": {
-                "id": "Observation/12",
+                "id": "Observation/10",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -505,16 +383,6 @@
                 "issued": "2011-10-02",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -523,9 +391,9 @@
         },
         {
             "resource": {
-                "id": "Observation/13",
+                "id": "Observation/11",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -544,16 +412,6 @@
                 "issued": "2011-10-02",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -562,9 +420,9 @@
         },
         {
             "resource": {
-                "id": "Observation/14",
+                "id": "Observation/12",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -580,16 +438,6 @@
                 "issued": "2011-11-01",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -598,9 +446,9 @@
         },
         {
             "resource": {
-                "id": "Observation/15",
+                "id": "Observation/13",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -619,16 +467,6 @@
                 "issued": "2010-10-02",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -637,9 +475,9 @@
         },
         {
             "resource": {
-                "id": "Observation/16",
+                "id": "Observation/14",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -658,16 +496,6 @@
                 "issued": "2011-03-12",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -676,9 +504,9 @@
         },
         {
             "resource": {
-                "id": "Observation/17",
+                "id": "Observation/15",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -697,16 +525,6 @@
                 "issued": "2011-03-12",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -715,9 +533,9 @@
         },
         {
             "resource": {
-                "id": "Observation/18",
+                "id": "Observation/16",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -736,16 +554,6 @@
                 "issued": "2011-03-12",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -754,9 +562,9 @@
         },
         {
             "resource": {
-                "id": "Observation/19",
+                "id": "Observation/17",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -772,13 +580,71 @@
                 "issued": "2010-10-02",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "Everywoman, Eve"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/18",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2010-10-02",
+                "status": "final",
+                "reliability": "ok",
+                "related": [
                     {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/13"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/17"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "Everywoman, Eve"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/19",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2011-03-12",
+                "status": "final",
+                "reliability": "ok",
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/14"
                         }
                     }
                 ],
@@ -792,7 +658,7 @@
             "resource": {
                 "id": "Observation/20",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -802,30 +668,20 @@
                     ],
                     "text": "Weight and Height tracking panel"
                 },
-                "issued": "2010-10-02",
+                "issued": "2011-10-02",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/15"
+                            "reference": "Observation/8"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/19"
+                            "reference": "Observation/9"
                         }
                     }
                 ],
@@ -839,7 +695,7 @@
             "resource": {
                 "id": "Observation/21",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -849,20 +705,90 @@
                     ],
                     "text": "Weight and Height tracking panel"
                 },
-                "issued": "2011-03-12",
+                "issued": "2011-11-01",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
+                "related": [
                     {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/12"
                         }
                     }
                 ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "Everywoman, Eve"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/22",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2013-01-30",
+                "status": "final",
+                "reliability": "ok",
                 "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/3"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/4"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/7"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "Everywoman, Eve"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/23",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
+                "issued": "2011-03-12",
+                "status": "final",
+                "reliability": "ok",
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/15"
+                        }
+                    },
                     {
                         "type": "has-component",
                         "target": {
@@ -878,31 +804,21 @@
         },
         {
             "resource": {
-                "id": "Observation/22",
+                "id": "Observation/24",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
-                            "code": "55418-8",
-                            "display": "Weight and Height tracking panel"
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
                         }
                     ],
-                    "text": "Weight and Height tracking panel"
+                    "text": "Blood pressure panel"
                 },
                 "issued": "2011-10-02",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -925,72 +841,21 @@
         },
         {
             "resource": {
-                "id": "Observation/23",
+                "id": "Observation/25",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
-                            "code": "55418-8",
-                            "display": "Weight and Height tracking panel"
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
                         }
                     ],
-                    "text": "Weight and Height tracking panel"
-                },
-                "issued": "2011-11-01",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/14"
-                        }
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Everywoman, Eve"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Observation/24",
-                "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "55418-8",
-                            "display": "Weight and Height tracking panel"
-                        }
-                    ],
-                    "text": "Weight and Height tracking panel"
+                    "text": "Blood pressure panel"
                 },
                 "issued": "2013-01-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -1003,12 +868,6 @@
                         "target": {
                             "reference": "Observation/6"
                         }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/9"
-                        }
                     }
                 ],
                 "subject": {
@@ -1019,151 +878,10 @@
         },
         {
             "resource": {
-                "id": "Observation/25",
-                "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "35094-2",
-                            "display": "Blood pressure panel"
-                        }
-                    ],
-                    "text": "Blood pressure panel"
-                },
-                "issued": "2011-03-12",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/17"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/18"
-                        }
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Everywoman, Eve"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Observation/26",
-                "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "35094-2",
-                            "display": "Blood pressure panel"
-                        }
-                    ],
-                    "text": "Blood pressure panel"
-                },
-                "issued": "2011-10-02",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/12"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/13"
-                        }
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Everywoman, Eve"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Observation/27",
-                "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "35094-2",
-                            "display": "Blood pressure panel"
-                        }
-                    ],
-                    "text": "Blood pressure panel"
-                },
-                "issued": "2013-01-30",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/7"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/8"
-                        }
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Everywoman, Eve"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Condition/28",
+                "id": "Condition/26",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2013-01-30",
+                "onsetDateTime": "2013-01-30",
                 "dateAsserted": "2013-01-30",
                 "code": {
                     "coding": [
@@ -1183,10 +901,10 @@
         },
         {
             "resource": {
-                "id": "Condition/29",
+                "id": "Condition/27",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2012-03-12",
+                "onsetDateTime": "2012-03-12",
                 "dateAsserted": "2012-03-12",
                 "code": {
                     "coding": [
@@ -1206,10 +924,10 @@
         },
         {
             "resource": {
-                "id": "Condition/30",
+                "id": "Condition/28",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2011-03-10",
+                "onsetDateTime": "2011-03-10",
                 "dateAsserted": "2011-03-10",
                 "code": {
                     "coding": [
@@ -1229,9 +947,9 @@
         },
         {
             "resource": {
-                "id": "Observation/31",
+                "id": "Observation/29",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1250,16 +968,6 @@
                 "issued": "2013-01-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -1268,9 +976,9 @@
         },
         {
             "resource": {
-                "id": "Observation/32",
+                "id": "Observation/30",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1289,16 +997,6 @@
                 "issued": "2013-01-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -1307,9 +1005,9 @@
         },
         {
             "resource": {
-                "id": "Observation/33",
+                "id": "Observation/31",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1328,16 +1026,6 @@
                 "issued": "2013-01-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -1346,9 +1034,9 @@
         },
         {
             "resource": {
-                "id": "Observation/34",
+                "id": "Observation/32",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1367,16 +1055,6 @@
                 "issued": "2013-01-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
@@ -1385,9 +1063,9 @@
         },
         {
             "resource": {
-                "id": "Observation/35",
+                "id": "Observation/33",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "urn:oid:2.16.840.1.113883.6.12",
@@ -1403,6 +1081,18 @@
                     {
                         "type": "has-component",
                         "target": {
+                            "reference": "Observation/29"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/30"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
                             "reference": "Observation/31"
                         }
                     },
@@ -1410,28 +1100,6 @@
                         "type": "has-component",
                         "target": {
                             "reference": "Observation/32"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/33"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/34"
-                        }
-                    }
-                ],
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
                         }
                     }
                 ],
@@ -1443,7 +1111,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/36",
+                "id": "MedicationPrescription/34",
                 "resourceType": "MedicationPrescription",
                 "status": "completed",
                 "dateWritten": "2011-10-02",
@@ -1496,7 +1164,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/37",
+                "id": "MedicationPrescription/35",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2013-01-30",
@@ -1542,7 +1210,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/38",
+                "id": "MedicationPrescription/36",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2011-03-10T05:00:00.000Z",

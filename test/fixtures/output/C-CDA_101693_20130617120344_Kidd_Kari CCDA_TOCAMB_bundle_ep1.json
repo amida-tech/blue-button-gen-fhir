@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 23,
+    "total": 21,
     "entry": [
         {
             "resource": {
@@ -26,36 +26,26 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "text": "Hives"
-                        }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/2",
+                "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/20",
-                    "display": "penicillin G benzathine"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "7982",
+                            "display": "penicillin G benzathine"
+                        }
+                    ],
+                    "text": "penicillin G benzathine"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/1",
-                        "display": "Hives"
+                        "manifestation": [
+                            {
+                                "text": "Hives"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -66,9 +56,9 @@
         },
         {
             "resource": {
-                "id": "Observation/3",
+                "id": "Observation/2",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -84,16 +74,42 @@
                 "issued": "2011-03-12",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v2/0078",
+                            "code": "N",
+                            "display": "Normal"
                         }
-                    }
-                ],
+                    ],
+                    "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/3",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8462-4",
+                            "display": "BP Diastolic"
+                        }
+                    ],
+                    "text": "BP Diastolic"
+                },
+                "valueQuantity": {
+                    "value": 62
+                },
+                "issued": "2011-03-12",
+                "status": "final",
+                "reliability": "ok",
                 "interpretation": {
                     "coding": [
                         {
@@ -114,32 +130,25 @@
             "resource": {
                 "id": "Observation/4",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
-                            "code": "8462-4",
-                            "display": "BP Diastolic"
+                            "code": "3141-9",
+                            "display": "Weight"
                         }
                     ],
-                    "text": "BP Diastolic"
+                    "text": "Weight"
                 },
                 "valueQuantity": {
-                    "value": 62
+                    "value": 145,
+                    "units": "kg",
+                    "code": "kg",
+                    "system": "http://unitsofmeasure.org"
                 },
                 "issued": "2011-03-12",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -160,35 +169,25 @@
             "resource": {
                 "id": "Observation/5",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
-                            "code": "3141-9",
-                            "display": "Weight"
+                            "code": "39156-5",
+                            "display": "Body Mass Index Calculated"
                         }
                     ],
-                    "text": "Weight"
+                    "text": "Body Mass Index Calculated"
                 },
                 "valueQuantity": {
-                    "value": 145,
-                    "units": "kg",
-                    "code": "kg",
+                    "value": 26,
+                    "units": "kg/m2",
+                    "code": "kg/m2",
                     "system": "http://unitsofmeasure.org"
                 },
                 "issued": "2011-03-12",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -209,56 +208,7 @@
             "resource": {
                 "id": "Observation/6",
                 "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "39156-5",
-                            "display": "Body Mass Index Calculated"
-                        }
-                    ],
-                    "text": "Body Mass Index Calculated"
-                },
-                "valueQuantity": {
-                    "value": 26,
-                    "units": "kg/m2",
-                    "code": "kg/m2",
-                    "system": "http://unitsofmeasure.org"
-                },
-                "issued": "2011-03-12",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "interpretation": {
-                    "coding": [
-                        {
-                            "system": "http://hl7.org/fhir/v2/0078",
-                            "code": "N",
-                            "display": "Normal"
-                        }
-                    ],
-                    "text": "Normal"
-                },
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Observation/7",
-                "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -271,27 +221,17 @@
                 "issued": "2011-03-12",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
+                            "reference": "Observation/2"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/4"
+                            "reference": "Observation/3"
                         }
                     }
                 ],
@@ -303,9 +243,9 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/7",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -318,27 +258,17 @@
                 "issued": "2011-03-12",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/5"
+                            "reference": "Observation/4"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/5"
                         }
                     }
                 ],
@@ -350,7 +280,7 @@
         },
         {
             "resource": {
-                "id": "Condition/9",
+                "id": "Condition/8",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "code": {
@@ -371,10 +301,10 @@
         },
         {
             "resource": {
-                "id": "Condition/10",
+                "id": "Condition/9",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2011-03-12",
+                "onsetDateTime": "2011-03-12",
                 "dateAsserted": "2011-03-12",
                 "code": {
                     "coding": [
@@ -394,7 +324,7 @@
         },
         {
             "resource": {
-                "id": "Condition/11",
+                "id": "Condition/10",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "code": {
@@ -415,7 +345,7 @@
         },
         {
             "resource": {
-                "id": "Condition/12",
+                "id": "Condition/11",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "code": {
@@ -436,7 +366,7 @@
         },
         {
             "resource": {
-                "id": "Condition/13",
+                "id": "Condition/12",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "code": {
@@ -457,10 +387,10 @@
         },
         {
             "resource": {
-                "id": "Condition/14",
+                "id": "Condition/13",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2013-05-13",
+                "onsetDateTime": "2013-05-13",
                 "dateAsserted": "2013-05-13",
                 "code": {
                     "coding": [
@@ -480,9 +410,9 @@
         },
         {
             "resource": {
-                "id": "Observation/15",
+                "id": "Observation/14",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -501,16 +431,6 @@
                 "issued": "2013-05-13",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -534,9 +454,9 @@
         },
         {
             "resource": {
-                "id": "Observation/16",
+                "id": "Observation/15",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -555,16 +475,6 @@
                 "issued": "2013-05-13",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -588,9 +498,9 @@
         },
         {
             "resource": {
-                "id": "Observation/17",
+                "id": "Observation/16",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -609,16 +519,6 @@
                 "issued": "2013-05-13",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -642,7 +542,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/18",
+                "id": "MedicationPrescription/17",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2013-05-13",
@@ -670,7 +570,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/21",
+                    "reference": "Medication/19",
                     "display": "oseltamivir 30 mg oral capsule"
                 },
                 "patient": {
@@ -681,7 +581,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/19",
+                "id": "MedicationPrescription/18",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2011-04-13",
@@ -699,7 +599,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/22",
+                    "reference": "Medication/20",
                     "display": "Proventil HFA CFC free 90 mcg/inh inhalation aerosol"
                 },
                 "patient": {
@@ -710,23 +610,7 @@
         },
         {
             "resource": {
-                "id": "Substance/20",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "7982",
-                            "display": "penicillin G benzathine"
-                        }
-                    ],
-                    "text": "penicillin G benzathine"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/21",
+                "id": "Medication/19",
                 "resourceType": "Medication",
                 "name": "oseltamivir 30 mg oral capsule",
                 "code": {
@@ -743,7 +627,7 @@
         },
         {
             "resource": {
-                "id": "Medication/22",
+                "id": "Medication/20",
                 "resourceType": "Medication",
                 "name": "Proventil HFA CFC free 90 mcg/inh inhalation aerosol",
                 "code": {

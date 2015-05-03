@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 42,
+    "total": 39,
     "entry": [
         {
             "resource": {
@@ -29,12 +29,17 @@
                 "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "high",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-04-16",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/33",
-                    "display": "Eggs"
+                    "coding": [
+                        {
+                            "system": "http://fdasis.nlm.nih.gov",
+                            "code": "291P45F896",
+                            "display": "Eggs"
+                        }
+                    ],
+                    "text": "Eggs"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -47,12 +52,17 @@
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "fatal",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-04-16",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/34",
-                    "display": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "892677",
+                            "display": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
+                        }
+                    ],
+                    "text": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -65,12 +75,16 @@
                 "id": "AllergyIntolerance/3",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-04-16",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/35",
-                    "display": "Codeine"
+                    "coding": [
+                        {
+                            "code": "N0000006691",
+                            "display": "Codeine"
+                        }
+                    ],
+                    "text": "Codeine"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -82,7 +96,7 @@
             "resource": {
                 "id": "Observation/4",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -101,16 +115,6 @@
                 "issued": "2010-07-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -121,7 +125,7 @@
             "resource": {
                 "id": "Observation/5",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -140,16 +144,6 @@
                 "issued": "2010-07-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -160,7 +154,7 @@
             "resource": {
                 "id": "Observation/6",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -179,16 +173,6 @@
                 "issued": "2010-07-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -199,7 +183,7 @@
             "resource": {
                 "id": "Observation/7",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -218,16 +202,6 @@
                 "issued": "2010-11-06",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -238,7 +212,7 @@
             "resource": {
                 "id": "Observation/8",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -257,16 +231,6 @@
                 "issued": "2010-11-06",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -277,7 +241,7 @@
             "resource": {
                 "id": "Observation/9",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -296,16 +260,6 @@
                 "issued": "2010-12-16",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -316,7 +270,7 @@
             "resource": {
                 "id": "Observation/10",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -335,16 +289,6 @@
                 "issued": "2010-12-16",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -355,7 +299,7 @@
             "resource": {
                 "id": "Observation/11",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -374,16 +318,6 @@
                 "issued": "2010-12-16",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -394,7 +328,7 @@
             "resource": {
                 "id": "Observation/12",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -407,16 +341,6 @@
                 "issued": "2010-07-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -435,7 +359,7 @@
             "resource": {
                 "id": "Observation/13",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -448,16 +372,6 @@
                 "issued": "2010-12-16",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -476,7 +390,7 @@
             "resource": {
                 "id": "Observation/14",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -489,16 +403,6 @@
                 "issued": "2010-07-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -523,7 +427,7 @@
             "resource": {
                 "id": "Observation/15",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -536,16 +440,6 @@
                 "issued": "2010-11-06",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -570,7 +464,7 @@
             "resource": {
                 "id": "Observation/16",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -583,16 +477,6 @@
                 "issued": "2010-12-16",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -618,7 +502,7 @@
                 "id": "Condition/17",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2010-04-16",
+                "onsetDateTime": "2010-04-16",
                 "dateAsserted": "2010-04-16",
                 "code": {
                     "coding": [
@@ -641,7 +525,7 @@
                 "id": "Condition/18",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2010-04-16",
+                "onsetDateTime": "2010-04-16",
                 "dateAsserted": "2010-04-16",
                 "code": {
                     "coding": [
@@ -664,7 +548,7 @@
                 "id": "Condition/19",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2010-04-16",
+                "onsetDateTime": "2010-04-16",
                 "dateAsserted": "2010-04-16",
                 "code": {
                     "coding": [
@@ -687,7 +571,7 @@
                 "id": "Condition/20",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2010-04-16",
+                "onsetDateTime": "2010-04-16",
                 "dateAsserted": "2010-04-16",
                 "code": {
                     "coding": [
@@ -709,7 +593,7 @@
             "resource": {
                 "id": "Observation/21",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -728,16 +612,6 @@
                 "issued": "2010-04-16",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -773,7 +647,7 @@
             "resource": {
                 "id": "Observation/22",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
@@ -793,16 +667,6 @@
                         }
                     }
                 ],
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -813,7 +677,7 @@
             "resource": {
                 "id": "Observation/23",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -832,16 +696,6 @@
                 "issued": "2010-07-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -877,7 +731,7 @@
             "resource": {
                 "id": "Observation/24",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
@@ -897,16 +751,6 @@
                         }
                     }
                 ],
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -917,7 +761,7 @@
             "resource": {
                 "id": "Observation/25",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -936,16 +780,6 @@
                 "issued": "2010-12-16",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -981,7 +815,7 @@
             "resource": {
                 "id": "Observation/26",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
@@ -998,16 +832,6 @@
                         "type": "has-component",
                         "target": {
                             "reference": "Observation/25"
-                        }
-                    }
-                ],
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
                         }
                     }
                 ],
@@ -1031,7 +855,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/36",
+                    "reference": "Medication/33",
                     "display": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
                 },
                 "patient": {
@@ -1063,7 +887,7 @@
                     "reference": "MedicationPrescription/27"
                 },
                 "medication": {
-                    "reference": "Medication/37",
+                    "reference": "Medication/34",
                     "display": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
                 },
                 "patient": {
@@ -1086,7 +910,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/38",
+                    "reference": "Medication/35",
                     "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
                 },
                 "patient": {
@@ -1118,7 +942,7 @@
                     "reference": "MedicationPrescription/29"
                 },
                 "medication": {
-                    "reference": "Medication/39",
+                    "reference": "Medication/36",
                     "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
                 },
                 "patient": {
@@ -1141,7 +965,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/40",
+                    "reference": "Medication/37",
                     "display": "Albuterol 0.83 MG/ML Inhalant Solution"
                 },
                 "patient": {
@@ -1173,7 +997,7 @@
                     "reference": "MedicationPrescription/31"
                 },
                 "medication": {
-                    "reference": "Medication/41",
+                    "reference": "Medication/38",
                     "display": "Albuterol 0.83 MG/ML Inhalant Solution"
                 },
                 "patient": {
@@ -1184,48 +1008,52 @@
         },
         {
             "resource": {
-                "id": "Substance/33",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://fdasis.nlm.nih.gov",
-                            "code": "291P45F896",
-                            "display": "Eggs"
-                        }
-                    ],
-                    "text": "Eggs"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Substance/34",
-                "resourceType": "Substance",
-                "type": {
+                "id": "Medication/33",
+                "resourceType": "Medication",
+                "name": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe",
+                "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "892677",
-                            "display": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
+                            "code": "847207",
+                            "display": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
                         }
                     ],
-                    "text": "Baker's yeast allergenic extract 100 MG/ML Injectable Solution"
+                    "text": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
                 }
             }
         },
         {
             "resource": {
-                "id": "Substance/35",
-                "resourceType": "Substance",
-                "type": {
+                "id": "Medication/34",
+                "resourceType": "Medication",
+                "name": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe",
+                "code": {
                     "coding": [
                         {
-                            "code": "N0000006691",
-                            "display": "Codeine"
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "847207",
+                            "display": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
                         }
                     ],
-                    "text": "Codeine"
+                    "text": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Medication/35",
+                "resourceType": "Medication",
+                "name": "salmeterol 0.05 MG/ACTUAT Inhalant Powder",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "318142",
+                            "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
+                        }
+                    ],
+                    "text": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
                 }
             }
         },
@@ -1233,73 +1061,22 @@
             "resource": {
                 "id": "Medication/36",
                 "resourceType": "Medication",
-                "name": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe",
+                "name": "salmeterol 0.05 MG/ACTUAT Inhalant Powder",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "847207",
-                            "display": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
+                            "code": "318142",
+                            "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
                         }
                     ],
-                    "text": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
+                    "text": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
                 }
             }
         },
         {
             "resource": {
                 "id": "Medication/37",
-                "resourceType": "Medication",
-                "name": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "847207",
-                            "display": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
-                        }
-                    ],
-                    "text": "3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/38",
-                "resourceType": "Medication",
-                "name": "salmeterol 0.05 MG/ACTUAT Inhalant Powder",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "318142",
-                            "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
-                        }
-                    ],
-                    "text": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/39",
-                "resourceType": "Medication",
-                "name": "salmeterol 0.05 MG/ACTUAT Inhalant Powder",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "318142",
-                            "display": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
-                        }
-                    ],
-                    "text": "salmeterol 0.05 MG/ACTUAT Inhalant Powder"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/40",
                 "resourceType": "Medication",
                 "name": "Albuterol 0.83 MG/ML Inhalant Solution",
                 "code": {
@@ -1316,7 +1093,7 @@
         },
         {
             "resource": {
-                "id": "Medication/41",
+                "id": "Medication/38",
                 "resourceType": "Medication",
                 "name": "Albuterol 0.83 MG/ML Inhalant Solution",
                 "code": {

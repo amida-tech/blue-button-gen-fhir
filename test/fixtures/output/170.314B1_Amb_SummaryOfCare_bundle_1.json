@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 16,
+    "total": 15,
     "entry": [
         {
             "resource": {
@@ -86,60 +86,34 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "247472004",
-                                    "display": "Hives"
-                                }
-                            ],
-                            "text": "Hives"
-                        }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Jones, Myra"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/2",
+                "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
-                "sensitivityType": "allergy",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "1191",
-                                    "display": "Aspirin"
-                                }
-                            ],
-                            "text": "Aspirin"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "Aspirin"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1191",
+                            "display": "Aspirin"
+                        }
+                    ],
+                    "text": "Aspirin"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/1",
-                        "display": "Hives"
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "247472004",
+                                        "display": "Hives"
+                                    }
+                                ],
+                                "text": "Hives"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -150,9 +124,9 @@
         },
         {
             "resource": {
-                "id": "Observation/3",
+                "id": "Observation/2",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -171,16 +145,6 @@
                 "issued": "2012-08-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Jones, Myra"
@@ -189,9 +153,9 @@
         },
         {
             "resource": {
-                "id": "Observation/4",
+                "id": "Observation/3",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -210,16 +174,6 @@
                 "issued": "2012-08-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Jones, Myra"
@@ -228,9 +182,9 @@
         },
         {
             "resource": {
-                "id": "Observation/5",
+                "id": "Observation/4",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -249,16 +203,6 @@
                 "issued": "2012-08-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Jones, Myra"
@@ -267,9 +211,9 @@
         },
         {
             "resource": {
-                "id": "Observation/6",
+                "id": "Observation/5",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -288,16 +232,6 @@
                 "issued": "2012-08-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Jones, Myra"
@@ -306,9 +240,9 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/6",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -324,16 +258,6 @@
                 "issued": "2012-08-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Jones, Myra"
@@ -342,9 +266,9 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/7",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -357,74 +281,17 @@
                 "issued": "2012-08-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/2"
+                        }
+                    },
                     {
                         "type": "has-component",
                         "target": {
                             "reference": "Observation/3"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/4"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/7"
-                        }
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Jones, Myra"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Observation/9",
-                "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "35094-2",
-                            "display": "Blood pressure panel"
-                        }
-                    ],
-                    "text": "Blood pressure panel"
-                },
-                "issued": "2012-08-15",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/5"
                         }
                     },
                     {
@@ -442,10 +309,47 @@
         },
         {
             "resource": {
-                "id": "Condition/10",
+                "id": "Observation/8",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
+                "issued": "2012-08-15",
+                "status": "final",
+                "reliability": "ok",
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/4"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/5"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "Jones, Myra"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Condition/9",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2009-05-01",
+                "onsetDateTime": "2009-05-01",
                 "dateAsserted": "2009-05-01",
                 "code": {
                     "coding": [
@@ -465,10 +369,10 @@
         },
         {
             "resource": {
-                "id": "Condition/11",
+                "id": "Condition/10",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2007-01-03",
+                "onsetDateTime": "2007-01-03",
                 "dateAsserted": "2007-01-03",
                 "code": {
                     "coding": [
@@ -488,9 +392,9 @@
         },
         {
             "resource": {
-                "id": "Observation/12",
+                "id": "Observation/11",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -509,16 +413,6 @@
                 "issued": "2012-08-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Jones, Myra"
@@ -527,9 +421,9 @@
         },
         {
             "resource": {
-                "id": "Observation/13",
+                "id": "Observation/12",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "urn:oid:2.16.840.1.113883.6.12",
@@ -545,17 +439,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/12"
-                        }
-                    }
-                ],
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
+                            "reference": "Observation/11"
                         }
                     }
                 ],
@@ -567,7 +451,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/14",
+                "id": "MedicationPrescription/13",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2007-10-01",
@@ -632,7 +516,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/15",
+                "id": "MedicationPrescription/14",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2009-05-01",

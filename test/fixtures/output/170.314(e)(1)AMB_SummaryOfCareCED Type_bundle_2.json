@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 22,
+    "total": 20,
     "entry": [
         {
             "resource": {
@@ -86,23 +86,36 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "247472004",
-                                    "display": "Hives"
-                                }
-                            ],
-                            "text": "Hives"
+                "id": "AllergyIntolerance/1",
+                "resourceType": "AllergyIntolerance",
+                "recordedDate": "1998-01-10",
+                "status": "confirmed",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "7982",
+                            "display": "Penicillin G benzathine"
                         }
+                    ],
+                    "text": "Penicillin G benzathine"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "247472004",
+                                        "display": "Hives"
+                                    }
+                                ],
+                                "text": "Hives"
+                            }
+                        ]
                     }
                 ],
-                "didNotOccurFlag": false,
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Grant, Mary"
@@ -113,96 +126,31 @@
             "resource": {
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
-                "recordedDate": "1998-01-10",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "7982",
-                                    "display": "Penicillin G benzathine"
-                                }
-                            ],
-                            "text": "Penicillin G benzathine"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "Penicillin G benzathine"
-                },
-                "reaction": [
-                    {
-                        "reference": "AdverseReaction/1",
-                        "display": "Hives"
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Grant, Mary"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AdverseReaction/3",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "422587007",
-                                    "display": "Nausea"
-                                }
-                            ],
-                            "text": "Nausea"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1191",
+                            "display": "Aspirin"
                         }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Grant, Mary"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/4",
-                "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
-                "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "1191",
-                                    "display": "Aspirin"
-                                }
-                            ],
-                            "text": "Aspirin"
-                        }
-                    }
-                ],
-                "substance": {
-                    "reference": "#allergen",
-                    "display": "Aspirin"
+                    ],
+                    "text": "Aspirin"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/3",
-                        "display": "Nausea"
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "422587007",
+                                        "display": "Nausea"
+                                    }
+                                ],
+                                "text": "Nausea"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -213,9 +161,9 @@
         },
         {
             "resource": {
-                "id": "Observation/5",
+                "id": "Observation/3",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -234,16 +182,6 @@
                 "issued": "2012-09-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Grant, Mary"
@@ -252,9 +190,9 @@
         },
         {
             "resource": {
-                "id": "Observation/6",
+                "id": "Observation/4",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -273,16 +211,6 @@
                 "issued": "2012-09-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Grant, Mary"
@@ -291,9 +219,9 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/5",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -312,16 +240,6 @@
                 "issued": "2012-09-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Grant, Mary"
@@ -330,9 +248,9 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/6",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -351,16 +269,6 @@
                 "issued": "2012-09-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Grant, Mary"
@@ -369,9 +277,9 @@
         },
         {
             "resource": {
-                "id": "Observation/9",
+                "id": "Observation/7",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -387,16 +295,6 @@
                 "issued": "2012-09-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Grant, Mary"
@@ -405,9 +303,9 @@
         },
         {
             "resource": {
-                "id": "Observation/10",
+                "id": "Observation/8",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -420,33 +318,23 @@
                 "issued": "2012-09-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/5"
+                            "reference": "Observation/3"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/4"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/9"
+                            "reference": "Observation/7"
                         }
                     }
                 ],
@@ -458,9 +346,9 @@
         },
         {
             "resource": {
-                "id": "Observation/11",
+                "id": "Observation/9",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -473,27 +361,17 @@
                 "issued": "2012-09-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/5"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/8"
+                            "reference": "Observation/6"
                         }
                     }
                 ],
@@ -505,10 +383,10 @@
         },
         {
             "resource": {
-                "id": "Condition/12",
+                "id": "Condition/10",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2012-09-20",
+                "onsetDateTime": "2012-09-20",
                 "dateAsserted": "2012-09-20",
                 "code": {
                     "coding": [
@@ -528,10 +406,10 @@
         },
         {
             "resource": {
-                "id": "Condition/13",
+                "id": "Condition/11",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2011-11-10",
+                "onsetDateTime": "2011-11-10",
                 "dateAsserted": "2011-11-10",
                 "code": {
                     "coding": [
@@ -551,10 +429,10 @@
         },
         {
             "resource": {
-                "id": "Condition/14",
+                "id": "Condition/12",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2010-04-15",
+                "onsetDateTime": "2010-04-15",
                 "dateAsserted": "2010-04-15",
                 "code": {
                     "coding": [
@@ -574,9 +452,9 @@
         },
         {
             "resource": {
-                "id": "Observation/15",
+                "id": "Observation/13",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -595,16 +473,6 @@
                 "issued": "2012-09-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Grant, Mary"
@@ -613,9 +481,9 @@
         },
         {
             "resource": {
-                "id": "Observation/16",
+                "id": "Observation/14",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -634,16 +502,6 @@
                 "issued": "2012-09-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Grant, Mary"
@@ -652,9 +510,9 @@
         },
         {
             "resource": {
-                "id": "Observation/17",
+                "id": "Observation/15",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -673,16 +531,6 @@
                 "issued": "2012-09-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Grant, Mary"
@@ -691,9 +539,9 @@
         },
         {
             "resource": {
-                "id": "Observation/18",
+                "id": "Observation/16",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "urn:oid:2.16.840.1.113883.6.12",
@@ -709,29 +557,19 @@
                     {
                         "type": "has-component",
                         "target": {
+                            "reference": "Observation/13"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/14"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
                             "reference": "Observation/15"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/16"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/17"
-                        }
-                    }
-                ],
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
                         }
                     }
                 ],
@@ -743,7 +581,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/19",
+                "id": "MedicationPrescription/17",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-09-20",
@@ -795,7 +633,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/20",
+                "id": "MedicationPrescription/18",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2011-11-20",
@@ -857,7 +695,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/21",
+                "id": "MedicationPrescription/19",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2010-04-15",

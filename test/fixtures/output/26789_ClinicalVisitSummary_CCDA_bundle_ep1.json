@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 17,
+    "total": 15,
     "entry": [
         {
             "resource": {
@@ -26,36 +26,26 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "text": "hives"
-                        }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/2",
+                "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/15",
-                    "display": "Ecpirin"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1001473",
+                            "display": "Ecpirin"
+                        }
+                    ],
+                    "text": "Ecpirin"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/1",
-                        "display": "hives"
+                        "manifestation": [
+                            {
+                                "text": "hives"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -66,9 +56,9 @@
         },
         {
             "resource": {
-                "id": "Observation/3",
+                "id": "Observation/2",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -87,16 +77,6 @@
                 "issued": "2013-01-21",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -105,9 +85,9 @@
         },
         {
             "resource": {
-                "id": "Observation/4",
+                "id": "Observation/3",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -126,16 +106,6 @@
                 "issued": "2013-01-21",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -144,9 +114,9 @@
         },
         {
             "resource": {
-                "id": "Observation/5",
+                "id": "Observation/4",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -165,16 +135,6 @@
                 "issued": "2013-01-21",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -183,9 +143,9 @@
         },
         {
             "resource": {
-                "id": "Observation/6",
+                "id": "Observation/5",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -204,16 +164,6 @@
                 "issued": "2013-01-21",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -222,9 +172,9 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/6",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -243,13 +193,40 @@
                 "issued": "2013-01-21",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/7",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
+                "issued": "2013-01-21",
+                "status": "final",
+                "reliability": "ok",
+                "related": [
                     {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/2"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/3"
                         }
                     }
                 ],
@@ -263,40 +240,30 @@
             "resource": {
                 "id": "Observation/8",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
-                            "code": "35094-2",
-                            "display": "Blood pressure panel"
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
                         }
                     ],
-                    "text": "Blood pressure panel"
+                    "text": "Weight and Height tracking panel"
                 },
                 "issued": "2013-01-21",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
+                            "reference": "Observation/5"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/4"
+                            "reference": "Observation/6"
                         }
                     }
                 ],
@@ -310,54 +277,7 @@
             "resource": {
                 "id": "Observation/9",
                 "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "55418-8",
-                            "display": "Weight and Height tracking panel"
-                        }
-                    ],
-                    "text": "Weight and Height tracking panel"
-                },
-                "issued": "2013-01-21",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/6"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/7"
-                        }
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Observation/10",
-                "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -376,16 +296,6 @@
                 "issued": "2013-01-21",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -394,9 +304,9 @@
         },
         {
             "resource": {
-                "id": "Observation/11",
+                "id": "Observation/10",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -415,16 +325,6 @@
                 "issued": "2013-01-21",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -433,9 +333,9 @@
         },
         {
             "resource": {
-                "id": "Observation/12",
+                "id": "Observation/11",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -454,16 +354,6 @@
                 "issued": "2013-01-21",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -472,9 +362,9 @@
         },
         {
             "resource": {
-                "id": "Observation/13",
+                "id": "Observation/12",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -493,16 +383,6 @@
                 "issued": "2013-01-21",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -511,7 +391,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/14",
+                "id": "MedicationPrescription/13",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2013-01-21",
@@ -534,7 +414,7 @@
                     "div": "inhale 2 puffs by inhalation route at least 15 minutes before exertion for 30 days"
                 },
                 "medication": {
-                    "reference": "Medication/16",
+                    "reference": "Medication/14",
                     "display": "Proventil HFA Inhalation HFA Aerosol Inhaler 90 mcg/actuation"
                 },
                 "patient": {
@@ -545,23 +425,7 @@
         },
         {
             "resource": {
-                "id": "Substance/15",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "1001473",
-                            "display": "Ecpirin"
-                        }
-                    ],
-                    "text": "Ecpirin"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/16",
+                "id": "Medication/14",
                 "resourceType": "Medication",
                 "name": "Proventil HFA Inhalation HFA Aerosol Inhaler 90 mcg/actuation",
                 "code": {

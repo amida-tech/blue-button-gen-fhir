@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 30,
+    "total": 28,
     "entry": [
         {
             "resource": {
@@ -29,12 +29,17 @@
                 "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-07-28",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/24",
-                    "display": "Eggs"
+                    "coding": [
+                        {
+                            "system": "http://fdasis.nlm.nih.gov",
+                            "code": "291P45F896",
+                            "display": "Eggs"
+                        }
+                    ],
+                    "text": "Eggs"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -47,12 +52,16 @@
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-07-28",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/25",
-                    "display": "Codeine"
+                    "coding": [
+                        {
+                            "code": "N0000006691",
+                            "display": "Codeine"
+                        }
+                    ],
+                    "text": "Codeine"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -64,7 +73,7 @@
             "resource": {
                 "id": "Observation/3",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -83,16 +92,6 @@
                 "issued": "2010-07-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -103,7 +102,7 @@
             "resource": {
                 "id": "Observation/4",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -122,16 +121,6 @@
                 "issued": "2010-07-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -142,7 +131,7 @@
             "resource": {
                 "id": "Observation/5",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -161,16 +150,6 @@
                 "issued": "2010-07-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -181,7 +160,7 @@
             "resource": {
                 "id": "Observation/6",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -200,16 +179,6 @@
                 "issued": "2010-11-11",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -220,7 +189,7 @@
             "resource": {
                 "id": "Observation/7",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -233,16 +202,6 @@
                 "issued": "2010-07-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -261,7 +220,7 @@
             "resource": {
                 "id": "Observation/8",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -274,16 +233,6 @@
                 "issued": "2010-11-11",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -302,7 +251,7 @@
             "resource": {
                 "id": "Observation/9",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -315,16 +264,6 @@
                 "issued": "2010-07-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -350,7 +289,7 @@
                 "id": "Condition/10",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2010-07-28",
+                "onsetDateTime": "2010-07-28",
                 "dateAsserted": "2010-07-28",
                 "code": {
                     "coding": [
@@ -372,7 +311,7 @@
             "resource": {
                 "id": "Observation/11",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -391,16 +330,6 @@
                 "issued": "2010-07-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -436,7 +365,7 @@
             "resource": {
                 "id": "Observation/12",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
@@ -456,16 +385,6 @@
                         }
                     }
                 ],
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -476,7 +395,7 @@
             "resource": {
                 "id": "Observation/13",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -495,16 +414,6 @@
                 "issued": "2010-07-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -540,7 +449,7 @@
             "resource": {
                 "id": "Observation/14",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -559,16 +468,6 @@
                 "issued": "2010-07-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -604,7 +503,7 @@
             "resource": {
                 "id": "Observation/15",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -623,16 +522,6 @@
                 "issued": "2010-07-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -668,7 +557,7 @@
             "resource": {
                 "id": "Observation/16",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -687,16 +576,6 @@
                 "issued": "2010-07-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -732,7 +611,7 @@
             "resource": {
                 "id": "Observation/17",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
@@ -770,16 +649,6 @@
                         }
                     }
                 ],
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -790,7 +659,7 @@
             "resource": {
                 "id": "Observation/18",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -809,16 +678,6 @@
                 "issued": "2010-11-11",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -854,7 +713,7 @@
             "resource": {
                 "id": "Observation/19",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
@@ -871,16 +730,6 @@
                         "type": "has-component",
                         "target": {
                             "reference": "Observation/18"
-                        }
-                    }
-                ],
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
                         }
                     }
                 ],
@@ -904,7 +753,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/26",
+                    "reference": "Medication/24",
                     "display": "Antidiabetic combinations + Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
                 },
                 "patient": {
@@ -936,7 +785,7 @@
                     "reference": "MedicationPrescription/20"
                 },
                 "medication": {
-                    "reference": "Medication/27",
+                    "reference": "Medication/25",
                     "display": "Antidiabetic combinations + Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
                 },
                 "patient": {
@@ -959,7 +808,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/28",
+                    "reference": "Medication/26",
                     "display": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
                 },
                 "patient": {
@@ -991,7 +840,7 @@
                     "reference": "MedicationPrescription/22"
                 },
                 "medication": {
-                    "reference": "Medication/29",
+                    "reference": "Medication/27",
                     "display": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe"
                 },
                 "patient": {
@@ -1002,72 +851,41 @@
         },
         {
             "resource": {
-                "id": "Substance/24",
-                "resourceType": "Substance",
-                "type": {
+                "id": "Medication/24",
+                "resourceType": "Medication",
+                "name": "Antidiabetic combinations + Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet",
+                "code": {
                     "coding": [
                         {
-                            "system": "http://fdasis.nlm.nih.gov",
-                            "code": "291P45F896",
-                            "display": "Eggs"
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "861748",
+                            "display": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
                         }
                     ],
-                    "text": "Eggs"
+                    "text": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
                 }
             }
         },
         {
             "resource": {
-                "id": "Substance/25",
-                "resourceType": "Substance",
-                "type": {
+                "id": "Medication/25",
+                "resourceType": "Medication",
+                "name": "Antidiabetic combinations + Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet",
+                "code": {
                     "coding": [
                         {
-                            "code": "N0000006691",
-                            "display": "Codeine"
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "861748",
+                            "display": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
                         }
                     ],
-                    "text": "Codeine"
+                    "text": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
                 }
             }
         },
         {
             "resource": {
                 "id": "Medication/26",
-                "resourceType": "Medication",
-                "name": "Antidiabetic combinations + Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "861748",
-                            "display": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
-                        }
-                    ],
-                    "text": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/27",
-                "resourceType": "Medication",
-                "name": "Antidiabetic combinations + Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "861748",
-                            "display": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
-                        }
-                    ],
-                    "text": "Glyburide 2.5 MG / Metformin hydrochloride 500 MG Oral Tablet"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/28",
                 "resourceType": "Medication",
                 "name": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe",
                 "code": {
@@ -1084,7 +902,7 @@
         },
         {
             "resource": {
-                "id": "Medication/29",
+                "id": "Medication/27",
                 "resourceType": "Medication",
                 "name": "Insulin + 3 ML Insulin Lispro 100 UNT/ML Prefilled Syringe",
                 "code": {

@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 37,
+    "total": 35,
     "entry": [
         {
             "resource": {
@@ -70,23 +70,36 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "267036007",
-                                    "display": "Shortness of Breath"
-                                }
-                            ],
-                            "text": "Shortness of Breath"
+                "id": "AllergyIntolerance/1",
+                "resourceType": "AllergyIntolerance",
+                "recordedDate": "2013-02-22",
+                "status": "confirmed",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "2670",
+                            "display": "Codeine"
                         }
+                    ],
+                    "text": "Codeine"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "267036007",
+                                        "display": "Shortness of Breath"
+                                    }
+                                ],
+                                "text": "Shortness of Breath"
+                            }
+                        ]
                     }
                 ],
-                "didNotOccurFlag": false,
                 "subject": {
                     "reference": "Patient/0",
                     "display": "BWHLMREOVTEST, ONEA"
@@ -97,97 +110,32 @@
             "resource": {
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
                 "recordedDate": "2013-02-22",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "2670",
-                                    "display": "Codeine"
-                                }
-                            ],
-                            "text": "Codeine"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "Codeine"
-                },
-                "reaction": [
-                    {
-                        "reference": "AdverseReaction/1",
-                        "display": "Shortness of Breath"
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "BWHLMREOVTEST, ONEA"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AdverseReaction/3",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "247472004",
-                                    "display": "Hives"
-                                }
-                            ],
-                            "text": "Hives"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1191",
+                            "display": "Aspirin"
                         }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "BWHLMREOVTEST, ONEA"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/4",
-                "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
-                "recordedDate": "2013-02-22",
-                "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "1191",
-                                    "display": "Aspirin"
-                                }
-                            ],
-                            "text": "Aspirin"
-                        }
-                    }
-                ],
-                "substance": {
-                    "reference": "#allergen",
-                    "display": "Aspirin"
+                    ],
+                    "text": "Aspirin"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/3",
-                        "display": "Hives"
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "247472004",
+                                        "display": "Hives"
+                                    }
+                                ],
+                                "text": "Hives"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -198,9 +146,9 @@
         },
         {
             "resource": {
-                "id": "Observation/5",
+                "id": "Observation/3",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -219,16 +167,6 @@
                 "issued": "2013-03-07",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "BWHLMREOVTEST, ONEA"
@@ -237,9 +175,9 @@
         },
         {
             "resource": {
-                "id": "Observation/6",
+                "id": "Observation/4",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -258,16 +196,6 @@
                 "issued": "2013-03-07",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "BWHLMREOVTEST, ONEA"
@@ -276,9 +204,9 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/5",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -297,16 +225,6 @@
                 "issued": "2013-03-07",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "BWHLMREOVTEST, ONEA"
@@ -315,9 +233,9 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/6",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -336,16 +254,6 @@
                 "issued": "2013-03-07",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "BWHLMREOVTEST, ONEA"
@@ -354,9 +262,9 @@
         },
         {
             "resource": {
-                "id": "Observation/9",
+                "id": "Observation/7",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -375,16 +283,6 @@
                 "issued": "2013-03-07",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "BWHLMREOVTEST, ONEA"
@@ -393,9 +291,9 @@
         },
         {
             "resource": {
-                "id": "Observation/10",
+                "id": "Observation/8",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -414,16 +312,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "BWHLMREOVTEST, ONEA"
@@ -432,9 +320,9 @@
         },
         {
             "resource": {
-                "id": "Observation/11",
+                "id": "Observation/9",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -453,16 +341,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "BWHLMREOVTEST, ONEA"
@@ -471,9 +349,9 @@
         },
         {
             "resource": {
-                "id": "Observation/12",
+                "id": "Observation/10",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -492,16 +370,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "BWHLMREOVTEST, ONEA"
@@ -510,9 +378,9 @@
         },
         {
             "resource": {
-                "id": "Observation/13",
+                "id": "Observation/11",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -531,16 +399,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "BWHLMREOVTEST, ONEA"
@@ -549,9 +407,9 @@
         },
         {
             "resource": {
-                "id": "Observation/14",
+                "id": "Observation/12",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -570,16 +428,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "BWHLMREOVTEST, ONEA"
@@ -588,9 +436,9 @@
         },
         {
             "resource": {
-                "id": "Observation/15",
+                "id": "Observation/13",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -603,170 +451,7 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/10"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/11"
-                        }
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "BWHLMREOVTEST, ONEA"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Observation/16",
-                "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "35094-2",
-                            "display": "Blood pressure panel"
-                        }
-                    ],
-                    "text": "Blood pressure panel"
-                },
-                "issued": "2013-03-07",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/5"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/6"
-                        }
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "BWHLMREOVTEST, ONEA"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Observation/17",
-                "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "55418-8",
-                            "display": "Weight and Height tracking panel"
-                        }
-                    ],
-                    "text": "Weight and Height tracking panel"
-                },
-                "issued": "2013-02-22",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/12"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/13"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/14"
-                        }
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "BWHLMREOVTEST, ONEA"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Observation/18",
-                "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "55418-8",
-                            "display": "Weight and Height tracking panel"
-                        }
-                    ],
-                    "text": "Weight and Height tracking panel"
-                },
-                "issued": "2013-03-07",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/7"
-                        }
-                    },
                     {
                         "type": "has-component",
                         "target": {
@@ -788,7 +473,130 @@
         },
         {
             "resource": {
-                "id": "Condition/19",
+                "id": "Observation/14",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
+                "issued": "2013-03-07",
+                "status": "final",
+                "reliability": "ok",
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/3"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/4"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "BWHLMREOVTEST, ONEA"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/15",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2013-02-22",
+                "status": "final",
+                "reliability": "ok",
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/10"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/11"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/12"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "BWHLMREOVTEST, ONEA"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/16",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2013-03-07",
+                "status": "final",
+                "reliability": "ok",
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/5"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/6"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/7"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "BWHLMREOVTEST, ONEA"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Condition/17",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "code": {
@@ -809,7 +617,7 @@
         },
         {
             "resource": {
-                "id": "Condition/20",
+                "id": "Condition/18",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "code": {
@@ -830,7 +638,7 @@
         },
         {
             "resource": {
-                "id": "Condition/21",
+                "id": "Condition/19",
                 "resourceType": "Condition",
                 "status": "confirmed",
                 "code": {
@@ -850,9 +658,9 @@
         },
         {
             "resource": {
-                "id": "Observation/22",
+                "id": "Observation/20",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -871,16 +679,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -904,9 +702,9 @@
         },
         {
             "resource": {
-                "id": "Observation/23",
+                "id": "Observation/21",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -925,16 +723,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -958,9 +746,9 @@
         },
         {
             "resource": {
-                "id": "Observation/24",
+                "id": "Observation/22",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -979,16 +767,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -1012,9 +790,9 @@
         },
         {
             "resource": {
-                "id": "Observation/25",
+                "id": "Observation/23",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1033,16 +811,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -1066,9 +834,9 @@
         },
         {
             "resource": {
-                "id": "Observation/26",
+                "id": "Observation/24",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1087,16 +855,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -1120,9 +878,9 @@
         },
         {
             "resource": {
-                "id": "Observation/27",
+                "id": "Observation/25",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1141,16 +899,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -1174,9 +922,9 @@
         },
         {
             "resource": {
-                "id": "Observation/28",
+                "id": "Observation/26",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1195,16 +943,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -1228,9 +966,9 @@
         },
         {
             "resource": {
-                "id": "Observation/29",
+                "id": "Observation/27",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1249,16 +987,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -1282,9 +1010,9 @@
         },
         {
             "resource": {
-                "id": "Observation/30",
+                "id": "Observation/28",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1303,16 +1031,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -1336,9 +1054,9 @@
         },
         {
             "resource": {
-                "id": "Observation/31",
+                "id": "Observation/29",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1354,16 +1072,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -1387,9 +1095,9 @@
         },
         {
             "resource": {
-                "id": "Observation/32",
+                "id": "Observation/30",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1405,16 +1113,6 @@
                 "issued": "2013-02-22",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -1438,7 +1136,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/33",
+                "id": "MedicationPrescription/31",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2013-03-07",
@@ -1482,7 +1180,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/34",
+                "id": "MedicationAdministration/32",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -1500,7 +1198,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/33",
+                    "reference": "MedicationPrescription/31",
                     "display": "ALBUTEROL INHALER HFA 90 MCG HFA AER AD"
                 },
                 "contained": [
@@ -1532,7 +1230,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/35",
+                "id": "MedicationPrescription/33",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2013-02-22",
@@ -1577,7 +1275,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/36",
+                "id": "MedicationAdministration/34",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -1597,7 +1295,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/35",
+                    "reference": "MedicationPrescription/33",
                     "display": "CLARITHROMYCIN 500 MG TABLET"
                 },
                 "contained": [

@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 44,
+    "total": 41,
     "entry": [
         {
             "resource": {
@@ -29,12 +29,17 @@
                 "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-04-02",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/37",
-                    "display": "Eggs"
+                    "coding": [
+                        {
+                            "system": "http://fdasis.nlm.nih.gov",
+                            "code": "291P45F896",
+                            "display": "Eggs"
+                        }
+                    ],
+                    "text": "Eggs"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -47,12 +52,17 @@
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "high",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-04-02",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/38",
-                    "display": "Fosfomycin 33.3 MG/ML Oral Suspension"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "808917",
+                            "display": "Fosfomycin 33.3 MG/ML Oral Suspension"
+                        }
+                    ],
+                    "text": "Fosfomycin 33.3 MG/ML Oral Suspension"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -65,12 +75,17 @@
                 "id": "AllergyIntolerance/3",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "low",
-                "sensitivityType": "allergy",
                 "recordedDate": "2010-04-02",
                 "status": "confirmed",
                 "substance": {
-                    "reference": "Substance/39",
-                    "display": "Doxycycline 75 MG Enteric Coated Tablet"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "406524",
+                            "display": "Doxycycline 75 MG Enteric Coated Tablet"
+                        }
+                    ],
+                    "text": "Doxycycline 75 MG Enteric Coated Tablet"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -82,7 +97,7 @@
             "resource": {
                 "id": "Observation/4",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -101,16 +116,6 @@
                 "issued": "2010-04-02",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -121,7 +126,7 @@
             "resource": {
                 "id": "Observation/5",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -140,16 +145,6 @@
                 "issued": "2010-04-02",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -160,7 +155,7 @@
             "resource": {
                 "id": "Observation/6",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -179,16 +174,6 @@
                 "issued": "2010-04-02",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -199,7 +184,7 @@
             "resource": {
                 "id": "Observation/7",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -218,16 +203,6 @@
                 "issued": "2010-05-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -238,7 +213,7 @@
             "resource": {
                 "id": "Observation/8",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -257,16 +232,6 @@
                 "issued": "2010-05-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -277,7 +242,7 @@
             "resource": {
                 "id": "Observation/9",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -296,16 +261,6 @@
                 "issued": "2010-07-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -316,7 +271,7 @@
             "resource": {
                 "id": "Observation/10",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -335,16 +290,6 @@
                 "issued": "2010-07-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -355,7 +300,7 @@
             "resource": {
                 "id": "Observation/11",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -374,16 +319,6 @@
                 "issued": "2010-07-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -394,7 +329,7 @@
             "resource": {
                 "id": "Observation/12",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -413,16 +348,6 @@
                 "issued": "2010-09-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -433,7 +358,7 @@
             "resource": {
                 "id": "Observation/13",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -452,16 +377,6 @@
                 "issued": "2010-09-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -472,7 +387,7 @@
             "resource": {
                 "id": "Observation/14",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -491,16 +406,6 @@
                 "issued": "2010-11-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -511,7 +416,7 @@
             "resource": {
                 "id": "Observation/15",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -530,16 +435,6 @@
                 "issued": "2010-11-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -550,7 +445,7 @@
             "resource": {
                 "id": "Observation/16",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -563,16 +458,6 @@
                 "issued": "2010-04-02",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -591,7 +476,7 @@
             "resource": {
                 "id": "Observation/17",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -604,16 +489,6 @@
                 "issued": "2010-07-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -632,7 +507,7 @@
             "resource": {
                 "id": "Observation/18",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -645,16 +520,6 @@
                 "issued": "2010-04-02",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -679,7 +544,7 @@
             "resource": {
                 "id": "Observation/19",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -692,16 +557,6 @@
                 "issued": "2010-05-20",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -726,7 +581,7 @@
             "resource": {
                 "id": "Observation/20",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -739,16 +594,6 @@
                 "issued": "2010-07-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -773,7 +618,7 @@
             "resource": {
                 "id": "Observation/21",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -786,16 +631,6 @@
                 "issued": "2010-09-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -820,7 +655,7 @@
             "resource": {
                 "id": "Observation/22",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -833,16 +668,6 @@
                 "issued": "2010-11-30",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -868,7 +693,7 @@
                 "id": "Condition/23",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2010-04-02",
+                "onsetDateTime": "2010-04-02",
                 "dateAsserted": "2010-04-02",
                 "code": {
                     "coding": [
@@ -891,7 +716,7 @@
                 "id": "Condition/24",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2010-04-02",
+                "onsetDateTime": "2010-04-02",
                 "dateAsserted": "2010-04-02",
                 "code": {
                     "coding": [
@@ -914,7 +739,7 @@
                 "id": "Condition/25",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2010-04-02",
+                "onsetDateTime": "2010-04-02",
                 "dateAsserted": "2010-04-02",
                 "code": {
                     "coding": [
@@ -937,7 +762,7 @@
                 "id": "Condition/26",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2010-05-20",
+                "onsetDateTime": "2010-05-20",
                 "dateAsserted": "2010-05-20",
                 "code": {
                     "coding": [
@@ -960,7 +785,7 @@
                 "id": "Condition/27",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2010-07-15",
+                "onsetDateTime": "2010-07-15",
                 "dateAsserted": "2010-07-15",
                 "code": {
                     "coding": [
@@ -982,7 +807,7 @@
             "resource": {
                 "id": "Observation/28",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1001,16 +826,6 @@
                 "issued": "2010-07-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -1046,7 +861,7 @@
             "resource": {
                 "id": "Observation/29",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1065,16 +880,6 @@
                 "issued": "2010-07-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -1110,7 +915,7 @@
             "resource": {
                 "id": "Observation/30",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1129,16 +934,6 @@
                 "issued": "2010-07-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -1174,7 +969,7 @@
             "resource": {
                 "id": "Observation/31",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1193,16 +988,6 @@
                 "issued": "2010-07-15",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -1238,7 +1023,7 @@
             "resource": {
                 "id": "Observation/32",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
@@ -1276,16 +1061,6 @@
                         }
                     }
                 ],
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -1306,7 +1081,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/40",
+                    "reference": "Medication/37",
                     "display": "Albuterol 0.83 MG/ML Inhalant Solution"
                 },
                 "patient": {
@@ -1338,7 +1113,7 @@
                     "reference": "MedicationPrescription/33"
                 },
                 "medication": {
-                    "reference": "Medication/41",
+                    "reference": "Medication/38",
                     "display": "Albuterol 0.83 MG/ML Inhalant Solution"
                 },
                 "patient": {
@@ -1361,7 +1136,7 @@
                     }
                 ],
                 "medication": {
-                    "reference": "Medication/42",
+                    "reference": "Medication/39",
                     "display": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
                 },
                 "patient": {
@@ -1393,7 +1168,7 @@
                     "reference": "MedicationPrescription/35"
                 },
                 "medication": {
-                    "reference": "Medication/43",
+                    "reference": "Medication/40",
                     "display": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet"
                 },
                 "patient": {
@@ -1404,55 +1179,7 @@
         },
         {
             "resource": {
-                "id": "Substance/37",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://fdasis.nlm.nih.gov",
-                            "code": "291P45F896",
-                            "display": "Eggs"
-                        }
-                    ],
-                    "text": "Eggs"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Substance/38",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "808917",
-                            "display": "Fosfomycin 33.3 MG/ML Oral Suspension"
-                        }
-                    ],
-                    "text": "Fosfomycin 33.3 MG/ML Oral Suspension"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Substance/39",
-                "resourceType": "Substance",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "406524",
-                            "display": "Doxycycline 75 MG Enteric Coated Tablet"
-                        }
-                    ],
-                    "text": "Doxycycline 75 MG Enteric Coated Tablet"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/40",
+                "id": "Medication/37",
                 "resourceType": "Medication",
                 "name": "Albuterol 0.83 MG/ML Inhalant Solution",
                 "code": {
@@ -1469,7 +1196,7 @@
         },
         {
             "resource": {
-                "id": "Medication/41",
+                "id": "Medication/38",
                 "resourceType": "Medication",
                 "name": "Albuterol 0.83 MG/ML Inhalant Solution",
                 "code": {
@@ -1486,7 +1213,7 @@
         },
         {
             "resource": {
-                "id": "Medication/42",
+                "id": "Medication/39",
                 "resourceType": "Medication",
                 "name": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet",
                 "code": {
@@ -1503,7 +1230,7 @@
         },
         {
             "resource": {
-                "id": "Medication/43",
+                "id": "Medication/40",
                 "resourceType": "Medication",
                 "name": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet",
                 "code": {

@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 31,
+    "total": 29,
     "entry": [
         {
             "resource": {
@@ -85,23 +85,36 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "422587007",
-                                    "display": "Nausea (finding)"
-                                }
-                            ],
-                            "text": "Nausea (finding)"
+                "id": "AllergyIntolerance/1",
+                "resourceType": "AllergyIntolerance",
+                "criticality": "medium",
+                "status": "confirmed",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "2670",
+                            "display": "Codeine"
                         }
+                    ],
+                    "text": "Codeine"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "422587007",
+                                        "display": "Nausea (finding)"
+                                    }
+                                ],
+                                "text": "Nausea (finding)"
+                            }
+                        ]
                     }
                 ],
-                "didNotOccurFlag": false,
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Williamson, Steve"
@@ -113,96 +126,31 @@
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
                 "criticality": "medium",
-                "sensitivityType": "allergy",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "2670",
-                                    "display": "Codeine"
-                                }
-                            ],
-                            "text": "Codeine"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "Codeine"
-                },
-                "reaction": [
-                    {
-                        "reference": "AdverseReaction/1",
-                        "display": "Nausea (finding)"
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Williamson, Steve"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AdverseReaction/3",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "247472004",
-                                    "display": "Weal (disorder)"
-                                }
-                            ],
-                            "text": "Weal (disorder)"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "7980",
+                            "display": "Penicillin G"
                         }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Williamson, Steve"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/4",
-                "resourceType": "AllergyIntolerance",
-                "criticality": "medium",
-                "sensitivityType": "allergy",
-                "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "7980",
-                                    "display": "Penicillin G"
-                                }
-                            ],
-                            "text": "Penicillin G"
-                        }
-                    }
-                ],
-                "substance": {
-                    "reference": "#allergen",
-                    "display": "Penicillin G"
+                    ],
+                    "text": "Penicillin G"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/3",
-                        "display": "Weal (disorder)"
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "247472004",
+                                        "display": "Weal (disorder)"
+                                    }
+                                ],
+                                "text": "Weal (disorder)"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -213,9 +161,9 @@
         },
         {
             "resource": {
-                "id": "Observation/5",
+                "id": "Observation/3",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -232,16 +180,6 @@
                 "issued": "2013-07-11T03:00:00.000Z",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Williamson, Steve"
@@ -250,9 +188,9 @@
         },
         {
             "resource": {
-                "id": "Observation/6",
+                "id": "Observation/4",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -269,16 +207,6 @@
                 "issued": "2013-07-11T03:00:00.000Z",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -297,9 +225,9 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/5",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -316,16 +244,6 @@
                 "issued": "2013-07-11T03:00:00.000Z",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Williamson, Steve"
@@ -334,9 +252,9 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/6",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -353,16 +271,6 @@
                 "issued": "2013-07-11T03:00:00.000Z",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Williamson, Steve"
@@ -371,9 +279,9 @@
         },
         {
             "resource": {
-                "id": "Observation/9",
+                "id": "Observation/7",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -390,16 +298,6 @@
                 "issued": "2013-07-11T03:00:00.000Z",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -418,9 +316,9 @@
         },
         {
             "resource": {
-                "id": "Observation/10",
+                "id": "Observation/8",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -433,27 +331,17 @@
                 "issued": "2013-07-11T03:00:00.000Z",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/4"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/9"
+                            "reference": "Observation/7"
                         }
                     }
                 ],
@@ -465,9 +353,9 @@
         },
         {
             "resource": {
-                "id": "Observation/11",
+                "id": "Observation/9",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -480,27 +368,17 @@
                 "issued": "2013-07-11T03:00:00.000Z",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/5"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/8"
+                            "reference": "Observation/6"
                         }
                     }
                 ],
@@ -512,10 +390,10 @@
         },
         {
             "resource": {
-                "id": "Condition/12",
+                "id": "Condition/10",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2013-07-10",
+                "onsetDateTime": "2013-07-10",
                 "dateAsserted": "2013-07-10",
                 "code": {
                     "coding": [
@@ -535,10 +413,10 @@
         },
         {
             "resource": {
-                "id": "Condition/13",
+                "id": "Condition/11",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2009-01-09",
+                "onsetDateTime": "2009-01-09",
                 "dateAsserted": "2009-01-09",
                 "code": {
                     "coding": [
@@ -558,10 +436,10 @@
         },
         {
             "resource": {
-                "id": "Condition/14",
+                "id": "Condition/12",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2008-08-08",
+                "onsetDateTime": "2008-08-08",
                 "dateAsserted": "2008-08-08",
                 "code": {
                     "coding": [
@@ -581,10 +459,10 @@
         },
         {
             "resource": {
-                "id": "Condition/15",
+                "id": "Condition/13",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2013-07-17",
+                "onsetDateTime": "2013-07-17",
                 "dateAsserted": "2013-07-17",
                 "code": {
                     "coding": [
@@ -604,10 +482,10 @@
         },
         {
             "resource": {
-                "id": "Condition/16",
+                "id": "Condition/14",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2013-07-11",
+                "onsetDateTime": "2013-07-11",
                 "dateAsserted": "2013-07-11",
                 "code": {
                     "coding": [
@@ -627,9 +505,9 @@
         },
         {
             "resource": {
-                "id": "Observation/17",
+                "id": "Observation/15",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -648,16 +526,6 @@
                 "issued": "2013-07-11",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -691,9 +559,9 @@
         },
         {
             "resource": {
-                "id": "Observation/18",
+                "id": "Observation/16",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -707,17 +575,7 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/17"
-                        }
-                    }
-                ],
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
+                            "reference": "Observation/15"
                         }
                     }
                 ],
@@ -729,9 +587,9 @@
         },
         {
             "resource": {
-                "id": "Observation/19",
+                "id": "Observation/17",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -750,16 +608,6 @@
                 "issued": "2013-07-11",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -793,9 +641,9 @@
         },
         {
             "resource": {
-                "id": "Observation/20",
+                "id": "Observation/18",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -814,16 +662,6 @@
                 "issued": "2013-07-11",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -857,9 +695,9 @@
         },
         {
             "resource": {
-                "id": "Observation/21",
+                "id": "Observation/19",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -878,16 +716,6 @@
                 "issued": "2013-07-11",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -921,9 +749,9 @@
         },
         {
             "resource": {
-                "id": "Observation/22",
+                "id": "Observation/20",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -942,16 +770,6 @@
                 "issued": "2013-07-11",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -985,9 +803,9 @@
         },
         {
             "resource": {
-                "id": "Observation/23",
+                "id": "Observation/21",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1006,16 +824,6 @@
                 "issued": "2013-07-11",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -1049,9 +857,9 @@
         },
         {
             "resource": {
-                "id": "Observation/24",
+                "id": "Observation/22",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1070,16 +878,6 @@
                 "issued": "2013-07-11",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -1113,9 +911,9 @@
         },
         {
             "resource": {
-                "id": "Observation/25",
+                "id": "Observation/23",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1134,16 +932,6 @@
                 "issued": "2013-07-11",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -1177,9 +965,9 @@
         },
         {
             "resource": {
-                "id": "Observation/26",
+                "id": "Observation/24",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1190,6 +978,18 @@
                 "status": "final",
                 "reliability": "ok",
                 "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/17"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/18"
+                        }
+                    },
                     {
                         "type": "has-component",
                         "target": {
@@ -1219,28 +1019,6 @@
                         "target": {
                             "reference": "Observation/23"
                         }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/24"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/25"
-                        }
-                    }
-                ],
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
                     }
                 ],
                 "subject": {
@@ -1251,7 +1029,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/27",
+                "id": "MedicationPrescription/25",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2009-01-10T03:53:00.000Z",
@@ -1308,7 +1086,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/28",
+                "id": "MedicationPrescription/26",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2008-08-09T02:54:00.000Z",
@@ -1362,7 +1140,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/29",
+                "id": "MedicationPrescription/27",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2009-01-10T03:53:00.000Z",
@@ -1398,7 +1176,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/30",
+                "id": "MedicationPrescription/28",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2013-07-11T03:06:34.000Z",

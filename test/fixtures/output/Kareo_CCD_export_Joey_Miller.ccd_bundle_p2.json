@@ -28,29 +28,18 @@
             "resource": {
                 "id": "AllergyIntolerance/1",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
                 "status": "resolved",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "code": {
-                                        "name": "sulfa drug",
-                                        "code_system_name": "RXNORM"
-                                    },
-                                    "display": "sulfa drug"
-                                }
-                            ],
-                            "text": "sulfa drug"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "sulfa drug"
+                    "coding": [
+                        {
+                            "code": {
+                                "name": "sulfa drug",
+                                "code_system_name": "RXNORM"
+                            },
+                            "display": "sulfa drug"
+                        }
+                    ],
+                    "text": "sulfa drug"
                 },
                 "subject": {
                     "reference": "Patient/0",
@@ -63,7 +52,7 @@
                 "id": "Condition/2",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2012-08-05",
+                "onsetDateTime": "2012-08-05",
                 "dateAsserted": "2012-08-05",
                 "code": {
                     "coding": [
@@ -86,7 +75,7 @@
                 "id": "Condition/3",
                 "resourceType": "Condition",
                 "status": "confirmed",
-                "onsetDate": "2012-10-02",
+                "onsetDateTime": "2012-10-02",
                 "dateAsserted": "2012-10-02",
                 "code": {
                     "coding": [
@@ -108,7 +97,7 @@
             "resource": {
                 "id": "Observation/4",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -120,16 +109,6 @@
                 },
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "interpretation": {
                     "coding": [
                         {
@@ -150,7 +129,7 @@
             "resource": {
                 "id": "Observation/5",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "urn:oid:2.16.840.1.113883.6.12",
@@ -170,16 +149,6 @@
                         }
                     }
                 ],
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
@@ -191,11 +160,11 @@
                 "id": "MedicationPrescription/6",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
-                "dateWritten": "2015-04-20",
+                "dateWritten": "2015-05-03",
                 "dosageInstruction": [
                     {
                         "timingPeriod": {
-                            "start": "2015-04-20"
+                            "start": "2015-05-03"
                         }
                     }
                 ],
@@ -236,12 +205,12 @@
                     "display": "Unknown"
                 },
                 "whenGiven": {
-                    "start": "2015-04-20"
+                    "start": "2015-05-03"
                 },
                 "dosage": [
                     {
                         "timingPeriod": {
-                            "start": "2015-04-20"
+                            "start": "2015-05-03"
                         }
                     }
                 ],

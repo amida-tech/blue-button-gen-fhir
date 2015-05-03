@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 35,
+    "total": 33,
     "entry": [
         {
             "resource": {
@@ -82,16 +82,28 @@
         },
         {
             "resource": {
-                "id": "AdverseReaction/1",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "text": "Hives"
+                "id": "AllergyIntolerance/1",
+                "resourceType": "AllergyIntolerance",
+                "status": "confirmed",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "215674",
+                            "display": "Bicillin L-A"
                         }
+                    ],
+                    "text": "Bicillin L-A"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "text": "Hives"
+                            }
+                        ]
                     }
                 ],
-                "didNotOccurFlag": false,
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -102,88 +114,24 @@
             "resource": {
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
                 "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "215674",
-                                    "display": "Bicillin L-A"
-                                }
-                            ],
-                            "text": "Bicillin L-A"
-                        }
-                    }
-                ],
                 "substance": {
-                    "reference": "#allergen",
-                    "display": "Bicillin L-A"
-                },
-                "reaction": [
-                    {
-                        "reference": "AdverseReaction/1",
-                        "display": "Hives"
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Hernandez, Maria"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AdverseReaction/3",
-                "resourceType": "AdverseReaction",
-                "symptom": [
-                    {
-                        "code": {
-                            "text": "Anaphaylaxis"
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1001473",
+                            "display": "Ecpirin"
                         }
-                    }
-                ],
-                "didNotOccurFlag": false,
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Hernandez, Maria"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "AllergyIntolerance/4",
-                "resourceType": "AllergyIntolerance",
-                "sensitivityType": "allergy",
-                "status": "confirmed",
-                "contained": [
-                    {
-                        "id": "allergen",
-                        "resourceType": "Substance",
-                        "type": {
-                            "coding": [
-                                {
-                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                                    "code": "1001473",
-                                    "display": "Ecpirin"
-                                }
-                            ],
-                            "text": "Ecpirin"
-                        }
-                    }
-                ],
-                "substance": {
-                    "reference": "#allergen",
-                    "display": "Ecpirin"
+                    ],
+                    "text": "Ecpirin"
                 },
-                "reaction": [
+                "event": [
                     {
-                        "reference": "AdverseReaction/3",
-                        "display": "Anaphaylaxis"
+                        "manifestation": [
+                            {
+                                "text": "Anaphaylaxis"
+                            }
+                        ]
                     }
                 ],
                 "subject": {
@@ -194,9 +142,9 @@
         },
         {
             "resource": {
-                "id": "Observation/5",
+                "id": "Observation/3",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -215,16 +163,6 @@
                 "issued": "2011-10-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -233,9 +171,9 @@
         },
         {
             "resource": {
-                "id": "Observation/6",
+                "id": "Observation/4",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -254,16 +192,6 @@
                 "issued": "2011-10-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -272,9 +200,9 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/5",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -293,16 +221,6 @@
                 "issued": "2011-10-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -311,9 +229,9 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/6",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -332,16 +250,6 @@
                 "issued": "2011-10-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -350,9 +258,9 @@
         },
         {
             "resource": {
-                "id": "Observation/9",
+                "id": "Observation/7",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -371,16 +279,6 @@
                 "issued": "2011-10-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -389,9 +287,9 @@
         },
         {
             "resource": {
-                "id": "Observation/10",
+                "id": "Observation/8",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -410,16 +308,6 @@
                 "issued": "2012-09-25",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -428,9 +316,9 @@
         },
         {
             "resource": {
-                "id": "Observation/11",
+                "id": "Observation/9",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -449,16 +337,6 @@
                 "issued": "2012-09-25",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -467,9 +345,9 @@
         },
         {
             "resource": {
-                "id": "Observation/12",
+                "id": "Observation/10",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -488,16 +366,6 @@
                 "issued": "2012-09-25",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -506,9 +374,9 @@
         },
         {
             "resource": {
-                "id": "Observation/13",
+                "id": "Observation/11",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -527,16 +395,6 @@
                 "issued": "2012-09-25",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -545,9 +403,9 @@
         },
         {
             "resource": {
-                "id": "Observation/14",
+                "id": "Observation/12",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -566,16 +424,6 @@
                 "issued": "2012-09-25",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -584,9 +432,9 @@
         },
         {
             "resource": {
-                "id": "Observation/15",
+                "id": "Observation/13",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -605,16 +453,6 @@
                 "issued": "2013-01-24",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -623,9 +461,9 @@
         },
         {
             "resource": {
-                "id": "Observation/16",
+                "id": "Observation/14",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -644,16 +482,6 @@
                 "issued": "2013-01-24",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -662,9 +490,9 @@
         },
         {
             "resource": {
-                "id": "Observation/17",
+                "id": "Observation/15",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -683,16 +511,6 @@
                 "issued": "2013-01-24",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -701,9 +519,9 @@
         },
         {
             "resource": {
-                "id": "Observation/18",
+                "id": "Observation/16",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -722,16 +540,6 @@
                 "issued": "2013-01-24",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -740,9 +548,9 @@
         },
         {
             "resource": {
-                "id": "Observation/19",
+                "id": "Observation/17",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -761,16 +569,6 @@
                 "issued": "2013-01-24",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "subject": {
                     "reference": "Patient/0",
                     "display": "Hernandez, Maria"
@@ -779,9 +577,9 @@
         },
         {
             "resource": {
-                "id": "Observation/20",
+                "id": "Observation/18",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -794,27 +592,17 @@
                 "issued": "2011-10-28",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/5"
+                            "reference": "Observation/3"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/4"
                         }
                     }
                 ],
@@ -826,9 +614,9 @@
         },
         {
             "resource": {
-                "id": "Observation/21",
+                "id": "Observation/19",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -841,110 +629,6 @@
                 "issued": "2012-09-25",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/10"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/11"
-                        }
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Hernandez, Maria"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Observation/22",
-                "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "35094-2",
-                            "display": "Blood pressure panel"
-                        }
-                    ],
-                    "text": "Blood pressure panel"
-                },
-                "issued": "2013-01-24",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
-                "related": [
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/15"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
-                            "reference": "Observation/16"
-                        }
-                    }
-                ],
-                "subject": {
-                    "reference": "Patient/0",
-                    "display": "Hernandez, Maria"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Observation/23",
-                "resourceType": "Observation",
-                "name": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "55418-8",
-                            "display": "Weight and Height tracking panel"
-                        }
-                    ],
-                    "text": "Weight and Height tracking panel"
-                },
-                "issued": "2011-10-28",
-                "status": "final",
-                "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -967,31 +651,21 @@
         },
         {
             "resource": {
-                "id": "Observation/24",
+                "id": "Observation/20",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
-                            "code": "55418-8",
-                            "display": "Weight and Height tracking panel"
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
                         }
                     ],
-                    "text": "Weight and Height tracking panel"
+                    "text": "Blood pressure panel"
                 },
-                "issued": "2012-09-25",
+                "issued": "2013-01-24",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
@@ -1014,9 +688,83 @@
         },
         {
             "resource": {
-                "id": "Observation/25",
+                "id": "Observation/21",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2011-10-28",
+                "status": "final",
+                "reliability": "ok",
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/6"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/7"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "Hernandez, Maria"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/22",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2012-09-25",
+                "status": "final",
+                "reliability": "ok",
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/11"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/12"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "Hernandez, Maria"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/23",
+                "resourceType": "Observation",
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1029,27 +777,17 @@
                 "issued": "2013-01-24",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "8716-3",
-                            "display": "Vital signs",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "related": [
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/18"
+                            "reference": "Observation/16"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/19"
+                            "reference": "Observation/17"
                         }
                     }
                 ],
@@ -1061,9 +799,9 @@
         },
         {
             "resource": {
-                "id": "Observation/26",
+                "id": "Observation/24",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1082,16 +820,6 @@
                 "issued": "2013-01-24",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -1115,9 +843,9 @@
         },
         {
             "resource": {
-                "id": "Observation/27",
+                "id": "Observation/25",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1136,16 +864,6 @@
                 "issued": "2013-01-24",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -1169,9 +887,9 @@
         },
         {
             "resource": {
-                "id": "Observation/28",
+                "id": "Observation/26",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1190,16 +908,6 @@
                 "issued": "2013-01-24",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -1223,9 +931,9 @@
         },
         {
             "resource": {
-                "id": "Observation/29",
+                "id": "Observation/27",
                 "resourceType": "Observation",
-                "name": {
+                "code": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
@@ -1244,16 +952,6 @@
                 "issued": "2013-01-24",
                 "status": "final",
                 "reliability": "ok",
-                "extension": [
-                    {
-                        "url": "http://amida.com/fhir/Profile/extensions#observation-type",
-                        "valueCoding": {
-                            "code": "11502-2",
-                            "display": "Laboratory report",
-                            "system": "http://loinc.org"
-                        }
-                    }
-                ],
                 "referenceRange": [
                     {
                         "meaning": {
@@ -1277,7 +975,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/30",
+                "id": "MedicationPrescription/28",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2013-01-01",
@@ -1328,7 +1026,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/31",
+                "id": "MedicationAdministration/29",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -1354,7 +1052,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/30",
+                    "reference": "MedicationPrescription/28",
                     "display": "take 1 tablet (25 mg) by oral route once daily for 30 days"
                 },
                 "contained": [
@@ -1386,7 +1084,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/32",
+                "id": "MedicationPrescription/30",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2013-01-01",
@@ -1434,7 +1132,7 @@
         },
         {
             "resource": {
-                "id": "MedicationAdministration/33",
+                "id": "MedicationAdministration/31",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
                 "practitioner": {
@@ -1457,7 +1155,7 @@
                     }
                 ],
                 "prescription": {
-                    "reference": "MedicationPrescription/32",
+                    "reference": "MedicationPrescription/30",
                     "display": "inhale 2 puffs by inhalation route every 4 hours as needed for 30 days"
                 },
                 "contained": [
@@ -1489,7 +1187,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/34",
+                "id": "MedicationPrescription/32",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2013-01-24",
