@@ -206,44 +206,38 @@
                 "id": "MedicationAdministration/5",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
-                "whenGiven": {
-                    "start": "2011-03-01",
-                    "end": "2012-03-01"
-                },
-                "dosage": [
-                    {
-                        "route": {
-                            "coding": [
-                                {
-                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
-                                    "code": "C38216",
-                                    "display": "RESPIRATORY (INHALATION)"
-                                }
-                            ],
-                            "text": "RESPIRATORY (INHALATION)"
-                        },
-                        "quantity": {
-                            "value": 1
-                        },
-                        "timingPeriod": {
-                            "start": "2011-03-01",
-                            "end": "2012-03-01"
-                        },
-                        "asNeededCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "56018004",
-                                    "display": "Wheezing"
-                                }
-                            ],
-                            "text": "Wheezing"
-                        }
+                "dosage": {
+                    "route": {
+                        "coding": [
+                            {
+                                "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                                "code": "C38216",
+                                "display": "RESPIRATORY (INHALATION)"
+                            }
+                        ],
+                        "text": "RESPIRATORY (INHALATION)"
+                    },
+                    "quantity": {
+                        "value": 1
+                    },
+                    "asNeededCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "56018004",
+                                "display": "Wheezing"
+                            }
+                        ],
+                        "text": "Wheezing"
                     }
-                ],
+                },
                 "prescription": {
                     "reference": "MedicationPrescription/4",
                     "display": "Proventil 0.09 MG/ACTUAT inhalant solution"
+                },
+                "effectiveTimePeriod": {
+                    "start": "2011-03-01",
+                    "end": "2012-03-01"
                 },
                 "medication": {
                     "reference": "Medication/7",
