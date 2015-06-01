@@ -143,7 +143,7 @@
                         ]
                     }
                 ],
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Jones, Myra"
                 }
@@ -182,7 +182,7 @@
                         ]
                     }
                 ],
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Jones, Myra"
                 }
@@ -221,7 +221,7 @@
                         ]
                     }
                 ],
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Jones, Myra"
                 }
@@ -640,7 +640,7 @@
                     ],
                     "text": "Pneumonia"
                 },
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Jones, Myra"
                 }
@@ -663,7 +663,7 @@
                     ],
                     "text": "Asthma"
                 },
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Jones, Myra"
                 }
@@ -919,7 +919,7 @@
                             "code": "mg/actuat",
                             "system": "http://unitsofmeasure.org"
                         },
-                        "timingSchedule": {
+                        "scheduledTiming": {
                             "event": [
                                 {
                                     "start": "2012-08-06"
@@ -928,8 +928,10 @@
                             "repeat": {
                                 "frequency": 1,
                                 "duration": 12,
-                                "units": "h",
-                                "end": "2012-08-13"
+                                "durationUnits": "h",
+                                "bounds": {
+                                    "end": "2012-08-13"
+                                }
                             }
                         },
                         "asNeededCodeableConcept": {
@@ -980,47 +982,31 @@
                 "id": "MedicationAdministration/22",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
-                "whenGiven": {
-                    "start": "2012-08-06",
-                    "end": "2012-08-13"
-                },
-                "dosage": [
-                    {
-                        "route": {
-                            "coding": [
-                                {
-                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
-                                    "code": "C38216",
-                                    "display": "RESPIRATORY (INHALATION)"
-                                }
-                            ],
-                            "text": "RESPIRATORY (INHALATION)"
-                        },
-                        "quantity": {
-                            "value": 0.09,
-                            "units": "mg/actuat",
-                            "code": "mg/actuat",
-                            "system": "http://unitsofmeasure.org"
-                        },
-                        "timingPeriod": {
-                            "start": "2012-08-06",
-                            "end": "2012-08-13"
-                        },
-                        "asNeededCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "56018004",
-                                    "display": "Wheezing"
-                                }
-                            ],
-                            "text": "Wheezing"
-                        }
+                "dosage": {
+                    "route": {
+                        "coding": [
+                            {
+                                "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                                "code": "C38216",
+                                "display": "RESPIRATORY (INHALATION)"
+                            }
+                        ],
+                        "text": "RESPIRATORY (INHALATION)"
+                    },
+                    "quantity": {
+                        "value": 0.09,
+                        "units": "mg/actuat",
+                        "code": "mg/actuat",
+                        "system": "http://unitsofmeasure.org"
                     }
-                ],
+                },
                 "prescription": {
                     "reference": "MedicationPrescription/21",
                     "display": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                },
+                "effectiveTimePeriod": {
+                    "start": "2012-08-06",
+                    "end": "2012-08-13"
                 },
                 "contained": [
                     {

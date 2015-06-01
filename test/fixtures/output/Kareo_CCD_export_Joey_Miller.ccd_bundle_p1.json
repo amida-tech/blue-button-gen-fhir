@@ -41,7 +41,7 @@
                     ],
                     "text": "sulfa drug"
                 },
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
                 }
@@ -64,7 +64,7 @@
                     ],
                     "text": "Hypothyroidism"
                 },
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
                 }
@@ -87,7 +87,7 @@
                     ],
                     "text": "Acute bronchitis"
                 },
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
                 }
@@ -160,14 +160,14 @@
                 "id": "MedicationPrescription/6",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
-                "dateWritten": "2015-05-29T00:00:00.000Z",
+                "dateWritten": "2015-06-01T00:00:00.000Z",
                 "dosageInstruction": [
                     {
                         "route": {
                             "text": "PO"
                         },
-                        "timingPeriod": {
-                            "start": "2015-05-29T00:00:00.000Z"
+                        "scheduledPeriod": {
+                            "start": "2015-06-01T00:00:00.000Z"
                         }
                     }
                 ],
@@ -203,21 +203,16 @@
                 "id": "MedicationAdministration/7",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
-                "whenGiven": {
-                    "start": "2015-05-29T00:00:00.000Z"
-                },
-                "dosage": [
-                    {
-                        "route": {
-                            "text": "PO"
-                        },
-                        "timingPeriod": {
-                            "start": "2015-05-29T00:00:00.000Z"
-                        }
+                "dosage": {
+                    "route": {
+                        "text": "PO"
                     }
-                ],
+                },
                 "prescription": {
                     "reference": "MedicationPrescription/6"
+                },
+                "effectiveTimePeriod": {
+                    "start": "2015-06-01T00:00:00.000Z"
                 },
                 "contained": [
                     {

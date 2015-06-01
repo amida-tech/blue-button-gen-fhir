@@ -58,7 +58,7 @@
                         "severity": "minor"
                     }
                 ],
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
                 }
@@ -467,7 +467,7 @@
                     ],
                     "text": "Pneumonia"
                 },
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
                 }
@@ -490,7 +490,7 @@
                     ],
                     "text": "Asthma"
                 },
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
                 }
@@ -514,7 +514,7 @@
                     ],
                     "text": "Costochondritis"
                 },
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
                 }
@@ -794,7 +794,7 @@
             "resource": {
                 "id": "MedicationPrescription/21",
                 "resourceType": "MedicationPrescription",
-                "status": "completed",
+                "status": "active",
                 "dateWritten": "2012-08-06",
                 "dosageInstruction": [
                     {
@@ -824,7 +824,7 @@
                             "code": "mg/actuat",
                             "system": "http://unitsofmeasure.org"
                         },
-                        "timingSchedule": {
+                        "scheduledTiming": {
                             "event": [
                                 {
                                     "start": "2012-08-06"
@@ -833,8 +833,10 @@
                             "repeat": {
                                 "frequency": 1,
                                 "duration": 12,
-                                "units": "h",
-                                "end": "2012-08-13"
+                                "durationUnits": "h",
+                                "bounds": {
+                                    "end": "2012-08-13"
+                                }
                             }
                         },
                         "asNeededCodeableConcept": {
@@ -901,7 +903,7 @@
                         "doseQuantity": {
                             "value": 1
                         },
-                        "timingDateTime": "2012-11-01"
+                        "scheduledDateTime": "2012-11-01"
                     }
                 ],
                 "text": {
@@ -939,7 +941,7 @@
             "resource": {
                 "id": "MedicationPrescription/23",
                 "resourceType": "MedicationPrescription",
-                "status": "completed",
+                "status": "active",
                 "dateWritten": "2012-11-01",
                 "dosageInstruction": [
                     {
@@ -956,7 +958,7 @@
                         "doseQuantity": {
                             "value": 1
                         },
-                        "timingSchedule": {
+                        "scheduledTiming": {
                             "event": [
                                 {
                                     "start": "2012-11-01"
@@ -964,9 +966,11 @@
                             ],
                             "repeat": {
                                 "when": "HS",
-                                "end": "2012-12-31",
+                                "bounds": {
+                                    "end": "2012-12-31"
+                                },
                                 "duration": 1,
-                                "units": "s"
+                                "durationUnits": "s"
                             }
                         }
                     }

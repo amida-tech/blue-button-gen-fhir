@@ -147,7 +147,7 @@
                         ]
                     }
                 ],
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Everyman, Adam Frankie"
                 }
@@ -186,7 +186,7 @@
                         ]
                     }
                 ],
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Everyman, Adam Frankie"
                 }
@@ -225,7 +225,7 @@
                         ]
                     }
                 ],
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Everyman, Adam Frankie"
                 }
@@ -848,7 +848,7 @@
                         "doseQuantity": {
                             "value": 1
                         },
-                        "timingSchedule": {
+                        "scheduledTiming": {
                             "event": [
                                 {
                                     "start": "2011-03-01"
@@ -857,8 +857,10 @@
                             "repeat": {
                                 "frequency": 1,
                                 "duration": 6,
-                                "units": "h",
-                                "end": "2012-03-01"
+                                "durationUnits": "h",
+                                "bounds": {
+                                    "end": "2012-03-01"
+                                }
                             }
                         },
                         "asNeededCodeableConcept": {
@@ -909,44 +911,28 @@
                 "id": "MedicationAdministration/19",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
-                "whenGiven": {
-                    "start": "2011-03-01",
-                    "end": "2012-03-01"
-                },
-                "dosage": [
-                    {
-                        "route": {
-                            "coding": [
-                                {
-                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
-                                    "code": "C38216",
-                                    "display": "RESPIRATORY (INHALATION)"
-                                }
-                            ],
-                            "text": "RESPIRATORY (INHALATION)"
-                        },
-                        "quantity": {
-                            "value": 1
-                        },
-                        "timingPeriod": {
-                            "start": "2011-03-01",
-                            "end": "2012-03-01"
-                        },
-                        "asNeededCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "56018004",
-                                    "display": "Wheezing"
-                                }
-                            ],
-                            "text": "Wheezing"
-                        }
+                "dosage": {
+                    "route": {
+                        "coding": [
+                            {
+                                "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                                "code": "C38216",
+                                "display": "RESPIRATORY (INHALATION)"
+                            }
+                        ],
+                        "text": "RESPIRATORY (INHALATION)"
+                    },
+                    "quantity": {
+                        "value": 1
                     }
-                ],
+                },
                 "prescription": {
                     "reference": "MedicationPrescription/18",
                     "display": "Proventil 0.09 MG/ACTUAT inhalant solution"
+                },
+                "effectiveTimePeriod": {
+                    "start": "2011-03-01",
+                    "end": "2012-03-01"
                 },
                 "contained": [
                     {

@@ -144,7 +144,7 @@
                         "severity": "minor"
                     }
                 ],
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Jones, Isabella Isa"
                 }
@@ -183,7 +183,7 @@
                         "severity": "minor"
                     }
                 ],
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Jones, Isabella Isa"
                 }
@@ -222,7 +222,7 @@
                         "severity": "minor"
                     }
                 ],
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Jones, Isabella Isa"
                 }
@@ -616,7 +616,7 @@
                     ],
                     "text": "Pneumonia"
                 },
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Jones, Isabella Isa"
                 }
@@ -640,7 +640,7 @@
                     ],
                     "text": "Asthma"
                 },
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Jones, Isabella Isa"
                 }
@@ -896,7 +896,7 @@
                             "code": "mg/actuat",
                             "system": "http://unitsofmeasure.org"
                         },
-                        "timingSchedule": {
+                        "scheduledTiming": {
                             "event": [
                                 {
                                     "start": "2007-01-03"
@@ -905,8 +905,10 @@
                             "repeat": {
                                 "frequency": 1,
                                 "duration": 6,
-                                "units": "h",
-                                "end": "2012-05-15"
+                                "durationUnits": "h",
+                                "bounds": {
+                                    "end": "2012-05-15"
+                                }
                             }
                         },
                         "asNeededCodeableConcept": {
@@ -957,47 +959,31 @@
                 "id": "MedicationAdministration/21",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
-                "whenGiven": {
-                    "start": "2007-01-03",
-                    "end": "2012-05-15"
-                },
-                "dosage": [
-                    {
-                        "route": {
-                            "coding": [
-                                {
-                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
-                                    "code": "C38216",
-                                    "display": "RESPIRATORY (INHALATION)"
-                                }
-                            ],
-                            "text": "RESPIRATORY (INHALATION)"
-                        },
-                        "quantity": {
-                            "value": 1,
-                            "units": "mg/actuat",
-                            "code": "mg/actuat",
-                            "system": "http://unitsofmeasure.org"
-                        },
-                        "timingPeriod": {
-                            "start": "2007-01-03",
-                            "end": "2012-05-15"
-                        },
-                        "asNeededCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "56018004",
-                                    "display": "Wheezing"
-                                }
-                            ],
-                            "text": "Wheezing"
-                        }
+                "dosage": {
+                    "route": {
+                        "coding": [
+                            {
+                                "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                                "code": "C38216",
+                                "display": "RESPIRATORY (INHALATION)"
+                            }
+                        ],
+                        "text": "RESPIRATORY (INHALATION)"
+                    },
+                    "quantity": {
+                        "value": 1,
+                        "units": "mg/actuat",
+                        "code": "mg/actuat",
+                        "system": "http://unitsofmeasure.org"
                     }
-                ],
+                },
                 "prescription": {
                     "reference": "MedicationPrescription/20",
                     "display": "Proventil HFA"
+                },
+                "effectiveTimePeriod": {
+                    "start": "2007-01-03",
+                    "end": "2012-05-15"
                 },
                 "contained": [
                     {

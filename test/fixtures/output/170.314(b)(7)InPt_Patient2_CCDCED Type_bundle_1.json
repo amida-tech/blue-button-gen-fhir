@@ -116,7 +116,7 @@
                         ]
                     }
                 ],
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
                 }
@@ -154,7 +154,7 @@
                         ]
                     }
                 ],
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
                 }
@@ -893,7 +893,7 @@
                     ],
                     "text": "Asthma"
                 },
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
                 }
@@ -916,7 +916,7 @@
                     ],
                     "text": "Alzheimer disease"
                 },
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
                 }
@@ -939,7 +939,7 @@
                     ],
                     "text": "Type II DIabetes"
                 },
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "Everywoman, Eve"
                 }
@@ -1113,14 +1113,14 @@
             "resource": {
                 "id": "MedicationPrescription/34",
                 "resourceType": "MedicationPrescription",
-                "status": "completed",
+                "status": "active",
                 "dateWritten": "2011-10-02",
                 "dosageInstruction": [
                     {
                         "doseQuantity": {
                             "value": 1
                         },
-                        "timingSchedule": {
+                        "scheduledTiming": {
                             "event": [
                                 {
                                     "start": "2011-10-02"
@@ -1129,8 +1129,10 @@
                             "repeat": {
                                 "frequency": 1,
                                 "duration": 12,
-                                "units": "h",
-                                "end": "2011-10-09"
+                                "durationUnits": "h",
+                                "bounds": {
+                                    "end": "2011-10-09"
+                                }
                             }
                         }
                     }
@@ -1176,7 +1178,7 @@
                             "code": "Puff",
                             "system": "http://unitsofmeasure.org"
                         },
-                        "timingPeriod": {
+                        "scheduledPeriod": {
                             "start": "2013-01-30"
                         }
                     }
@@ -1229,7 +1231,7 @@
                         "doseQuantity": {
                             "value": 1
                         },
-                        "timingSchedule": {
+                        "scheduledTiming": {
                             "event": [
                                 {
                                     "start": "2011-03-10T05:00:00.000Z"
@@ -1238,7 +1240,7 @@
                             "repeat": {
                                 "frequency": 1,
                                 "duration": 12,
-                                "units": "h"
+                                "durationUnits": "h"
                             }
                         }
                     }

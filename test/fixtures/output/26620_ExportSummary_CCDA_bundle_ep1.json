@@ -39,7 +39,7 @@
                     ],
                     "text": "Bicillin L-A"
                 },
-                "subject": {
+                "patient": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
                 }
@@ -313,7 +313,7 @@
                             "code": "Inhaler",
                             "system": "http://unitsofmeasure.org"
                         },
-                        "timingPeriod": {
+                        "scheduledPeriod": {
                             "start": "2012-07-10",
                             "end": "2012-08-09"
                         }
@@ -338,27 +338,21 @@
                 "id": "MedicationAdministration/11",
                 "resourceType": "MedicationAdministration",
                 "status": "completed",
-                "whenGiven": {
-                    "start": "2012-07-10",
-                    "end": "2012-08-09"
-                },
-                "dosage": [
-                    {
-                        "quantity": {
-                            "value": 2,
-                            "units": "Inhaler",
-                            "code": "Inhaler",
-                            "system": "http://unitsofmeasure.org"
-                        },
-                        "timingPeriod": {
-                            "start": "2012-07-10",
-                            "end": "2012-08-09"
-                        }
+                "dosage": {
+                    "quantity": {
+                        "value": 2,
+                        "units": "Inhaler",
+                        "code": "Inhaler",
+                        "system": "http://unitsofmeasure.org"
                     }
-                ],
+                },
                 "prescription": {
                     "reference": "MedicationPrescription/10",
                     "display": "inhale 2 puffs by inhalation route every 6 hours for 30 days prn wheezing"
+                },
+                "effectiveTimePeriod": {
+                    "start": "2012-07-10",
+                    "end": "2012-08-09"
                 },
                 "medication": {
                     "reference": "Medication/13",
