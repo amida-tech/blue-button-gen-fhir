@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 26,
+    "total": 27,
     "entry": [
         {
             "resource": {
@@ -49,6 +49,20 @@
             "resource": {
                 "id": "AllergyIntolerance/2",
                 "resourceType": "AllergyIntolerance",
+                "status": "confirmed",
+                "substance": {
+                    "text": "codeine sulfate"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "AllergyIntolerance/3",
+                "resourceType": "AllergyIntolerance",
                 "recordedDate": "0001-01",
                 "status": "confirmed",
                 "substance": {
@@ -69,7 +83,7 @@
         },
         {
             "resource": {
-                "id": "Observation/3",
+                "id": "Observation/4",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -98,7 +112,7 @@
         },
         {
             "resource": {
-                "id": "Observation/4",
+                "id": "Observation/5",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -127,7 +141,7 @@
         },
         {
             "resource": {
-                "id": "Observation/5",
+                "id": "Observation/6",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -156,7 +170,7 @@
         },
         {
             "resource": {
-                "id": "Observation/6",
+                "id": "Observation/7",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -185,7 +199,7 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/8",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -214,7 +228,7 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/9",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -233,13 +247,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
+                            "reference": "Observation/4"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/4"
+                            "reference": "Observation/5"
                         }
                     }
                 ],
@@ -251,7 +265,7 @@
         },
         {
             "resource": {
-                "id": "Observation/9",
+                "id": "Observation/10",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -270,13 +284,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/6"
+                            "reference": "Observation/7"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/7"
+                            "reference": "Observation/8"
                         }
                     }
                 ],
@@ -288,7 +302,7 @@
         },
         {
             "resource": {
-                "id": "Observation/10",
+                "id": "Observation/11",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -317,7 +331,7 @@
         },
         {
             "resource": {
-                "id": "Observation/11",
+                "id": "Observation/12",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -346,7 +360,7 @@
         },
         {
             "resource": {
-                "id": "Observation/12",
+                "id": "Observation/13",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -375,7 +389,7 @@
         },
         {
             "resource": {
-                "id": "Observation/13",
+                "id": "Observation/14",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -404,7 +418,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/14",
+                "id": "MedicationPrescription/15",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dosageInstruction": [
@@ -422,33 +436,6 @@
                     "div": "take 1 tablet (500 mg) by oral route every 12 hours for 14 days"
                 },
                 "medication": {
-                    "reference": "Medication/20",
-                    "display": "clarithromycin Oral Tablet 500 mg"
-                },
-                "patient": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "MedicationAdministration/15",
-                "resourceType": "MedicationAdministration",
-                "status": "completed",
-                "dosage": {
-                    "quantity": {
-                        "value": 1,
-                        "units": "tablet",
-                        "code": "tablet",
-                        "system": "http://unitsofmeasure.org"
-                    }
-                },
-                "prescription": {
-                    "reference": "MedicationPrescription/14",
-                    "display": "take 1 tablet (500 mg) by oral route every 12 hours for 14 days"
-                },
-                "medication": {
                     "reference": "Medication/21",
                     "display": "clarithromycin Oral Tablet 500 mg"
                 },
@@ -460,7 +447,34 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/16",
+                "id": "MedicationAdministration/16",
+                "resourceType": "MedicationAdministration",
+                "status": "completed",
+                "dosage": {
+                    "quantity": {
+                        "value": 1,
+                        "units": "tablet",
+                        "code": "tablet",
+                        "system": "http://unitsofmeasure.org"
+                    }
+                },
+                "prescription": {
+                    "reference": "MedicationPrescription/15",
+                    "display": "take 1 tablet (500 mg) by oral route every 12 hours for 14 days"
+                },
+                "medication": {
+                    "reference": "Medication/22",
+                    "display": "clarithromycin Oral Tablet 500 mg"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "MedicationPrescription/17",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dosageInstruction": [
@@ -478,33 +492,6 @@
                     "div": "take 2 tablets (50 mg) by oral route once daily for 30 days"
                 },
                 "medication": {
-                    "reference": "Medication/22",
-                    "display": "metoprolol tartrate Oral Tablet 25 mg"
-                },
-                "patient": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "MedicationAdministration/17",
-                "resourceType": "MedicationAdministration",
-                "status": "completed",
-                "dosage": {
-                    "quantity": {
-                        "value": 2,
-                        "units": "tablet",
-                        "code": "tablet",
-                        "system": "http://unitsofmeasure.org"
-                    }
-                },
-                "prescription": {
-                    "reference": "MedicationPrescription/16",
-                    "display": "take 2 tablets (50 mg) by oral route once daily for 30 days"
-                },
-                "medication": {
                     "reference": "Medication/23",
                     "display": "metoprolol tartrate Oral Tablet 25 mg"
                 },
@@ -516,7 +503,34 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/18",
+                "id": "MedicationAdministration/18",
+                "resourceType": "MedicationAdministration",
+                "status": "completed",
+                "dosage": {
+                    "quantity": {
+                        "value": 2,
+                        "units": "tablet",
+                        "code": "tablet",
+                        "system": "http://unitsofmeasure.org"
+                    }
+                },
+                "prescription": {
+                    "reference": "MedicationPrescription/17",
+                    "display": "take 2 tablets (50 mg) by oral route once daily for 30 days"
+                },
+                "medication": {
+                    "reference": "Medication/24",
+                    "display": "metoprolol tartrate Oral Tablet 25 mg"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "MedicationPrescription/19",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-08-06",
@@ -538,7 +552,7 @@
                     "div": "inhale 2 puffs once"
                 },
                 "medication": {
-                    "reference": "Medication/24",
+                    "reference": "Medication/25",
                     "display": "Proventil HFA Inhalation HFA Aerosol Inhaler 90 mcg/actuation"
                 },
                 "patient": {
@@ -549,7 +563,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/19",
+                "id": "MedicationPrescription/20",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2013-05-30",
@@ -572,29 +586,12 @@
                     "div": "inhale 1 puff by inhalation route every 6 hours as needed for 30 days"
                 },
                 "medication": {
-                    "reference": "Medication/25",
+                    "reference": "Medication/26",
                     "display": "albuterol sulfate Inhalation HFA Aerosol Inhaler 90 mcg/actuation"
                 },
                 "patient": {
                     "reference": "Patient/0",
                     "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "Medication/20",
-                "resourceType": "Medication",
-                "name": "clarithromycin Oral Tablet 500 mg",
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "197517",
-                            "display": "Clarithromycin 500 MG Oral Tablet"
-                        }
-                    ],
-                    "text": "Clarithromycin 500 MG Oral Tablet"
                 }
             }
         },
@@ -619,16 +616,16 @@
             "resource": {
                 "id": "Medication/22",
                 "resourceType": "Medication",
-                "name": "metoprolol tartrate Oral Tablet 25 mg",
+                "name": "clarithromycin Oral Tablet 500 mg",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                            "code": "866924",
-                            "display": "Metoprolol Tartrate 25 MG Oral Tablet"
+                            "code": "197517",
+                            "display": "Clarithromycin 500 MG Oral Tablet"
                         }
                     ],
-                    "text": "Metoprolol Tartrate 25 MG Oral Tablet"
+                    "text": "Clarithromycin 500 MG Oral Tablet"
                 }
             }
         },
@@ -653,6 +650,23 @@
             "resource": {
                 "id": "Medication/24",
                 "resourceType": "Medication",
+                "name": "metoprolol tartrate Oral Tablet 25 mg",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "866924",
+                            "display": "Metoprolol Tartrate 25 MG Oral Tablet"
+                        }
+                    ],
+                    "text": "Metoprolol Tartrate 25 MG Oral Tablet"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Medication/25",
+                "resourceType": "Medication",
                 "name": "Proventil HFA Inhalation HFA Aerosol Inhaler 90 mcg/actuation",
                 "code": {
                     "coding": [
@@ -668,7 +682,7 @@
         },
         {
             "resource": {
-                "id": "Medication/25",
+                "id": "Medication/26",
                 "resourceType": "Medication",
                 "name": "albuterol sulfate Inhalation HFA Aerosol Inhaler 90 mcg/actuation",
                 "code": {
