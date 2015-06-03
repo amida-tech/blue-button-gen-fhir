@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "total": 14,
+    "total": 15,
     "entry": [
         {
             "resource": {
@@ -47,7 +47,21 @@
         },
         {
             "resource": {
-                "id": "Observation/2",
+                "id": "AllergyIntolerance/2",
+                "resourceType": "AllergyIntolerance",
+                "status": "confirmed",
+                "substance": {
+                    "text": "Codeine Phosphate"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/3",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -76,7 +90,7 @@
         },
         {
             "resource": {
-                "id": "Observation/3",
+                "id": "Observation/4",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -105,7 +119,7 @@
         },
         {
             "resource": {
-                "id": "Observation/4",
+                "id": "Observation/5",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -134,7 +148,7 @@
         },
         {
             "resource": {
-                "id": "Observation/5",
+                "id": "Observation/6",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -163,7 +177,7 @@
         },
         {
             "resource": {
-                "id": "Observation/6",
+                "id": "Observation/7",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -192,7 +206,7 @@
         },
         {
             "resource": {
-                "id": "Observation/7",
+                "id": "Observation/8",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -211,13 +225,13 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/2"
+                            "reference": "Observation/3"
                         }
                     },
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/3"
+                            "reference": "Observation/4"
                         }
                     }
                 ],
@@ -229,7 +243,7 @@
         },
         {
             "resource": {
-                "id": "Observation/8",
+                "id": "Observation/9",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -248,12 +262,6 @@
                     {
                         "type": "has-component",
                         "target": {
-                            "reference": "Observation/4"
-                        }
-                    },
-                    {
-                        "type": "has-component",
-                        "target": {
                             "reference": "Observation/5"
                         }
                     },
@@ -261,6 +269,12 @@
                         "type": "has-component",
                         "target": {
                             "reference": "Observation/6"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/7"
                         }
                     }
                 ],
@@ -272,7 +286,7 @@
         },
         {
             "resource": {
-                "id": "Observation/9",
+                "id": "Observation/10",
                 "resourceType": "Observation",
                 "code": {
                     "coding": [
@@ -301,7 +315,7 @@
         },
         {
             "resource": {
-                "id": "MedicationPrescription/10",
+                "id": "MedicationPrescription/11",
                 "resourceType": "MedicationPrescription",
                 "status": "active",
                 "dateWritten": "2012-07-10",
@@ -324,37 +338,6 @@
                     "div": "inhale 2 puffs by inhalation route every 6 hours for 30 days prn wheezing"
                 },
                 "medication": {
-                    "reference": "Medication/12",
-                    "display": "200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler"
-                },
-                "patient": {
-                    "reference": "Patient/0",
-                    "display": "DOE, JOE"
-                }
-            }
-        },
-        {
-            "resource": {
-                "id": "MedicationAdministration/11",
-                "resourceType": "MedicationAdministration",
-                "status": "completed",
-                "dosage": {
-                    "quantity": {
-                        "value": 2,
-                        "units": "Inhaler",
-                        "code": "Inhaler",
-                        "system": "http://unitsofmeasure.org"
-                    }
-                },
-                "prescription": {
-                    "reference": "MedicationPrescription/10",
-                    "display": "inhale 2 puffs by inhalation route every 6 hours for 30 days prn wheezing"
-                },
-                "effectiveTimePeriod": {
-                    "start": "2012-07-10",
-                    "end": "2012-08-09"
-                },
-                "medication": {
                     "reference": "Medication/13",
                     "display": "200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler"
                 },
@@ -366,7 +349,38 @@
         },
         {
             "resource": {
-                "id": "Medication/12",
+                "id": "MedicationAdministration/12",
+                "resourceType": "MedicationAdministration",
+                "status": "completed",
+                "dosage": {
+                    "quantity": {
+                        "value": 2,
+                        "units": "Inhaler",
+                        "code": "Inhaler",
+                        "system": "http://unitsofmeasure.org"
+                    }
+                },
+                "prescription": {
+                    "reference": "MedicationPrescription/11",
+                    "display": "inhale 2 puffs by inhalation route every 6 hours for 30 days prn wheezing"
+                },
+                "effectiveTimePeriod": {
+                    "start": "2012-07-10",
+                    "end": "2012-08-09"
+                },
+                "medication": {
+                    "reference": "Medication/14",
+                    "display": "200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Medication/13",
                 "resourceType": "Medication",
                 "name": "200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
                 "code": {
@@ -383,7 +397,7 @@
         },
         {
             "resource": {
-                "id": "Medication/13",
+                "id": "Medication/14",
                 "resourceType": "Medication",
                 "name": "200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
                 "code": {
