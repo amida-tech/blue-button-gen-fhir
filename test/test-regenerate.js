@@ -122,4 +122,14 @@ describe('gen fhir->gen ccda->gen fhir-> gen ccda', function () {
             externalize: true
         }));
     });
+
+    fileNames.forEach(function (fileName) {
+        it('regenerate with patient, use medicationsNew for ' + fileName, testContent(fileName, '_eq1', '_eq2', {
+            patientEntry: patientEntry,
+            externalize: true,
+            sectionKeys: {
+                medications: 'medicationsNew'
+            }
+        }));
+    });
 });
