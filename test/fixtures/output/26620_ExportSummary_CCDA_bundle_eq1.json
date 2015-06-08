@@ -1,0 +1,344 @@
+{
+    "resourceType": "Bundle",
+    "total": 12,
+    "entry": [
+        {
+            "resource": {
+                "id": "Patient/0",
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "http://www.midea-tecg.com",
+                        "value": "JOE_DOE_IDENTIFIER"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": [
+                            "DOE"
+                        ],
+                        "given": [
+                            "JOE"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "id": "AllergyIntolerance/1",
+                "resourceType": "AllergyIntolerance",
+                "status": "confirmed",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "215674",
+                            "display": "Bicillin L-A"
+                        }
+                    ],
+                    "text": "Bicillin L-A"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "AllergyIntolerance/2",
+                "resourceType": "AllergyIntolerance",
+                "status": "confirmed",
+                "substance": {
+                    "text": "Codeine Phosphate"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/3",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8462-4",
+                            "display": "BP Diastolic"
+                        }
+                    ],
+                    "text": "BP Diastolic"
+                },
+                "valueQuantity": {
+                    "value": 95,
+                    "units": "mm[Hg]"
+                },
+                "issued": "2013-01-16",
+                "status": "final",
+                "reliability": "ok",
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/4",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8480-6",
+                            "display": "BP Systolic"
+                        }
+                    ],
+                    "text": "BP Systolic"
+                },
+                "valueQuantity": {
+                    "value": 150,
+                    "units": "mm[Hg]"
+                },
+                "issued": "2013-01-16",
+                "status": "final",
+                "reliability": "ok",
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/5",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "39156-5",
+                            "display": "Body Mass Index"
+                        }
+                    ],
+                    "text": "Body Mass Index"
+                },
+                "valueQuantity": {
+                    "value": 27.9793,
+                    "units": "kg/m²"
+                },
+                "issued": "2013-01-16",
+                "status": "final",
+                "reliability": "ok",
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/6",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8302-2",
+                            "display": "Body Height (Measured)"
+                        }
+                    ],
+                    "text": "Body Height (Measured)"
+                },
+                "valueQuantity": {
+                    "value": 70,
+                    "units": "[in_us]"
+                },
+                "issued": "2013-01-16",
+                "status": "final",
+                "reliability": "ok",
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/7",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "3141-9",
+                            "display": "Body Weight (Measured)"
+                        }
+                    ],
+                    "text": "Body Weight (Measured)"
+                },
+                "valueQuantity": {
+                    "value": 195,
+                    "units": "[lb_av]"
+                },
+                "issued": "2013-01-16",
+                "status": "final",
+                "reliability": "ok",
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/8",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "35094-2",
+                            "display": "Blood pressure panel"
+                        }
+                    ],
+                    "text": "Blood pressure panel"
+                },
+                "issued": "2013-01-16",
+                "status": "final",
+                "reliability": "ok",
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/3"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/4"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/9",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55418-8",
+                            "display": "Weight and Height tracking panel"
+                        }
+                    ],
+                    "text": "Weight and Height tracking panel"
+                },
+                "issued": "2013-01-16",
+                "status": "final",
+                "reliability": "ok",
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/5"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/6"
+                        }
+                    },
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/7"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/10",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "2028-9",
+                            "display": "CO2 SerPl-sCnc"
+                        }
+                    ],
+                    "text": "CO2 SerPl-sCnc"
+                },
+                "valueQuantity": {
+                    "value": 25,
+                    "units": "mmol/L"
+                },
+                "issued": "2013-01-16",
+                "status": "final",
+                "reliability": "ok",
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "MedicationStatement/11",
+                "resourceType": "MedicationStatement",
+                "status": "completed",
+                "dosage": [
+                    {
+                        "quantity": {
+                            "value": 2,
+                            "units": "Inhaler"
+                        }
+                    }
+                ],
+                "effectivePeriod": {
+                    "start": "2012-07-10",
+                    "end": "2012-08-09"
+                },
+                "contained": [
+                    {
+                        "id": "med",
+                        "resourceType": "Medication",
+                        "name": "albuterol sulfate Inhalation HFA Aerosol Inhaler 90 mcg/actuation",
+                        "code": {
+                            "coding": [
+                                {
+                                    "code": "279394",
+                                    "display": "albuterol sulfate Inhalation HFA Aerosol Inhaler 90 mcg/actuation"
+                                }
+                            ],
+                            "text": "albuterol sulfate Inhalation HFA Aerosol Inhaler 90 mcg/actuation"
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "#med",
+                    "display": "albuterol sulfate Inhalation HFA Aerosol Inhaler 90 mcg/actuation"
+                }
+            }
+        }
+    ]
+}

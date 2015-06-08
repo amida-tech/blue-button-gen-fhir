@@ -1,0 +1,200 @@
+{
+    "resourceType": "Bundle",
+    "total": 5,
+    "entry": [
+        {
+            "resource": {
+                "id": "Patient/0",
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "http://www.midea-tecg.com",
+                        "value": "JOE_DOE_IDENTIFIER"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": [
+                            "DOE"
+                        ],
+                        "given": [
+                            "JOE"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "id": "AllergyIntolerance/1",
+                "resourceType": "AllergyIntolerance",
+                "criticality": "medium",
+                "recordedDate": "2009-09-02",
+                "status": "confirmed",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "314422",
+                            "display": "ALLERGENIC EXTRACT, PENICILLIN"
+                        }
+                    ],
+                    "text": "ALLERGENIC EXTRACT, PENICILLIN"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "247472004",
+                                        "display": "Hives"
+                                    }
+                                ],
+                                "text": "Hives"
+                            }
+                        ]
+                    }
+                ],
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "AllergyIntolerance/2",
+                "resourceType": "AllergyIntolerance",
+                "criticality": "medium",
+                "recordedDate": "2009-09-02",
+                "status": "confirmed",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1191",
+                            "display": "ASPIRIN"
+                        }
+                    ],
+                    "text": "ASPIRIN"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "56018004",
+                                        "display": "Wheezing"
+                                    }
+                                ],
+                                "text": "Wheezing"
+                            }
+                        ]
+                    }
+                ],
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "AllergyIntolerance/3",
+                "resourceType": "AllergyIntolerance",
+                "criticality": "medium",
+                "recordedDate": "2009-09-02",
+                "status": "confirmed",
+                "substance": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "2670",
+                            "display": "Codeine"
+                        }
+                    ],
+                    "text": "Codeine"
+                },
+                "event": [
+                    {
+                        "manifestation": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "73879007",
+                                        "display": "Nausea"
+                                    }
+                                ],
+                                "text": "Nausea"
+                            }
+                        ]
+                    }
+                ],
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "MedicationStatement/4",
+                "resourceType": "MedicationStatement",
+                "status": "completed",
+                "dosage": [
+                    {
+                        "route": {
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.3.26.1.1",
+                                    "code": "C38216",
+                                    "display": "RESPIRATORY (INHALATION)"
+                                }
+                            ],
+                            "text": "RESPIRATORY (INHALATION)"
+                        },
+                        "quantity": {
+                            "value": 1
+                        },
+                        "schedule": {
+                            "repeat": {
+                                "period": 6,
+                                "periodUnits": "h"
+                            }
+                        }
+                    }
+                ],
+                "effectivePeriod": {
+                    "start": "2011-03-01",
+                    "end": "2012-03-01"
+                },
+                "contained": [
+                    {
+                        "id": "med",
+                        "resourceType": "Medication",
+                        "name": "Albuterol 0.09 MG/ACTUAT inhalant solution",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "329498",
+                                    "display": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                                }
+                            ],
+                            "text": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "#med",
+                    "display": "Albuterol 0.09 MG/ACTUAT inhalant solution"
+                }
+            }
+        }
+    ]
+}

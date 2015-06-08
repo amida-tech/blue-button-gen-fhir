@@ -1,0 +1,190 @@
+{
+    "resourceType": "Bundle",
+    "total": 7,
+    "entry": [
+        {
+            "resource": {
+                "id": "Patient/0",
+                "resourceType": "Patient",
+                "identifier": [
+                    {
+                        "system": "http://www.midea-tecg.com",
+                        "value": "JOE_DOE_IDENTIFIER"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": [
+                            "DOE"
+                        ],
+                        "given": [
+                            "JOE"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "id": "AllergyIntolerance/1",
+                "resourceType": "AllergyIntolerance",
+                "status": "resolved",
+                "substance": {
+                    "coding": [
+                        {
+                            "code": {
+                                "name": "sulfa drug",
+                                "code_system_name": "RXNORM"
+                            },
+                            "display": "sulfa drug"
+                        }
+                    ],
+                    "text": "sulfa drug"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Condition/2",
+                "resourceType": "Condition",
+                "clinicalStatus": "confirmed",
+                "onsetDateTime": "2012-08-05",
+                "dateAsserted": "2012-08-05",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "40930008",
+                            "display": "Hypothyroidism"
+                        }
+                    ],
+                    "text": "Hypothyroidism"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Condition/3",
+                "resourceType": "Condition",
+                "clinicalStatus": "confirmed",
+                "onsetDateTime": "2012-10-02",
+                "dateAsserted": "2012-10-02",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "10509002",
+                            "display": "Acute bronchitis"
+                        }
+                    ],
+                    "text": "Acute bronchitis"
+                },
+                "patient": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/4",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "30954-2",
+                            "display": "Results"
+                        }
+                    ],
+                    "text": "Results"
+                },
+                "status": "final",
+                "reliability": "ok",
+                "interpretation": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/v3/ObservationInterpretation",
+                            "code": "N",
+                            "display": "Normal"
+                        }
+                    ],
+                    "text": "Normal"
+                },
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "Observation/5",
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.6.12",
+                            "code": "99499",
+                            "display": "No Procedure Performed"
+                        }
+                    ],
+                    "text": "No Procedure Performed"
+                },
+                "status": "final",
+                "reliability": "ok",
+                "related": [
+                    {
+                        "type": "has-component",
+                        "target": {
+                            "reference": "Observation/4"
+                        }
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/0",
+                    "display": "DOE, JOE"
+                }
+            }
+        },
+        {
+            "resource": {
+                "id": "MedicationStatement/6",
+                "resourceType": "MedicationStatement",
+                "status": "completed",
+                "effectivePeriod": {
+                    "start": "2015-06-08"
+                },
+                "contained": [
+                    {
+                        "id": "med",
+                        "resourceType": "Medication",
+                        "name": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                    "code": "432638",
+                                    "display": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet"
+                                }
+                            ],
+                            "text": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet"
+                        }
+                    }
+                ],
+                "medication": {
+                    "reference": "#med",
+                    "display": "acetaminophen-aspirin buffered 250 mg-250 mg oral tablet"
+                }
+            }
+        }
+    ]
+}
