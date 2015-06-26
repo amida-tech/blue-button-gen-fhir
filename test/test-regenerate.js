@@ -52,9 +52,9 @@ describe('gen fhir->gen ccda->gen fhir-> gen ccda', function () {
             var filePath = path.join(rootDir, fileName);
             var content = fs.readFileSync(filePath, 'utf8');
             var bundle = m2fhir.contentToFHIR(content, options);
-            expect(bundle).to.exist();
+            expect(bundle).to.exist;
             var model1 = bbfhir.toModel(bundle);
-            expect(model1).to.exist();
+            expect(model1).to.exist;
             //var v = validator.validateDocumentModel(model1);
             //if (!v) {
             //    console.log(JSON.stringify(validator.getLastError(), undefined, 4));
@@ -63,9 +63,9 @@ describe('gen fhir->gen ccda->gen fhir-> gen ccda', function () {
             var model1FileName = path.join(outputDir, genModelFileName(fileName, outId1));
             fs.writeFileSync(model1FileName, JSON.stringify(model1, undefined, 4));
             var bundle2 = m2fhir.modelToFHIR(model1, options);
-            expect(bundle2).to.exist();
+            expect(bundle2).to.exist;
             var model2 = bbfhir.toModel(bundle2);
-            expect(model2).to.exist();
+            expect(model2).to.exist;
             var model2FileName = path.join(outputDir, genModelFileName(fileName, outId2));
             fs.writeFileSync(model2FileName, JSON.stringify(model2, undefined, 4));
             expect(model1).to.deep.equal(model2);
